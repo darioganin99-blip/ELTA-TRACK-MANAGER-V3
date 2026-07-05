@@ -1,5 +1,3 @@
-# ELTA TRACK MANAGER V3
+ELTA TRACK MANAGER V3 - v3.1.3
 
-Version 3.1.2 - base estable sin bloqueo de version.
-
-Publicar desde GitHub Pages: main / root.
+Corrección final: app.js limpio desde la sección Docs, versión unificada y módulo Documentación único.

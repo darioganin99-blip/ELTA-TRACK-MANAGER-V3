@@ -3986,7 +3986,7 @@ tab = function(id){
 };
 
 /* ===== V1.2.50 - Publicacion desde docs: version unica + filtros sin cambiar formato ===== */
-const ELTA_APP_VERSION='3.1.2';
+const ELTA_APP_VERSION='3.1.3';
 
 function updateVersionLabels(){
   document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4204,9 +4204,9 @@ if(_refresh_v1250){
 
 
 
-/* ===== V3.1.2 - Nombre oficial del sistema ===== */
+/* ===== V3.1.3 - Nombre oficial del sistema ===== */
 (function(){
-  const APP_VERSION_V2='3.1.2';
+  const APP_VERSION_V2='3.1.3';
 
   function setVersionV2(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4376,9 +4376,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Version y menu lateral robustos ===== */
+/* ===== V3.1.3 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4410,9 +4410,9 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== V3.1.2 - Anti-cache y normalizacion final menu/version ===== */
+/* ===== V3.1.3 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4468,9 +4468,9 @@ if(_refresh_v1250){
   window.ELTA_FORCE_UI_REFRESH=applyFinal;
 })();
 
-/* ===== V3.1.2 - Correcciones GPS, clima, alertas y seguimiento ===== */
+/* ===== V3.1.3 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4648,9 +4648,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Ajustes finales clima, KM y alertas ===== */
+/* ===== V3.1.3 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4769,9 +4769,9 @@ if(_refresh_v1250){
   if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments);apply210();return r;};
 })();
 
-/* ===== V3.1.2 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
+/* ===== V3.1.3 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4912,9 +4912,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
+/* ===== V3.1.3 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5093,9 +5093,9 @@ if(_refresh_v1250){
   if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(()=>{refreshAll(); if(id==='alertas') window.renderAlerts(); if(id==='clima' && typeof renderWeatherFleets==='function') renderWeatherFleets();},0);return r;};
 })();
 
-/* ===== V3.1.2 - Vista Alertas compacta: boton Verificar visible ===== */
+/* ===== V3.1.3 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5206,9 +5206,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Torre de Control: Últimas alertas formato linea unica ===== */
+/* ===== V3.1.3 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5247,9 +5247,9 @@ if(_refresh_v1250){
   const oldTab=window.tab; if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(apply,0);return r;};
 })();
 
-/* ===== V3.1.2 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.2 ===== */
+/* ===== V3.1.3 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.3 ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5336,9 +5336,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); setTimeout(updateVersion,250); setTimeout(updateVersion,1000);});
 })();
 
-/* ===== V3.1.2 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
+/* ===== V3.1.3 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5456,9 +5456,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.3 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5597,9 +5597,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.3 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5717,9 +5717,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.3 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5892,9 +5892,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
+/* ===== V3.1.3 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6034,9 +6034,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
+/* ===== V3.1.3 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6250,9 +6250,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
+/* ===== V3.1.3 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6503,9 +6503,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
+/* ===== V3.1.3 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6577,9 +6577,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
+/* ===== V3.1.3 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6720,9 +6720,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Clima: layout compacto definitivo y Paso con consulta online ===== */
+/* ===== V3.1.3 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6791,9 +6791,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
+/* ===== V3.1.3 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6940,9 +6940,9 @@ if(_refresh_v1250){
   if(typeof oldTab234==='function') window.tab=function(id){oldTab234.apply(this,arguments); setVersionText(); if(id==='alertas') window.renderAlerts();};
 })();
 
-/* ===== V3.1.2 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
+/* ===== V3.1.3 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
 (function(){
-  const VERSION_ALERTS_2035 = "3.1.2";
+  const VERSION_ALERTS_2035 = "3.1.3";
   const $ = (id)=>document.getElementById(id);
   const esc2 = (v)=>{ try { return typeof esc === 'function' ? esc(v) : String(v ?? '').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); } catch(e){ return String(v ?? ''); } };
   const clean = (v)=>String(v ?? '').trim() || '-';
@@ -7070,7 +7070,7 @@ if(_refresh_v1250){
   if(typeof oldTab35==='function') window.tab=function(id){ oldTab35.apply(this,arguments); setVersion35(); setCounter35(); if(id==='alertas') window.renderAlerts(); };
 })();
 
-/* ===== V3.1.2 - Menu lateral: badge y efecto de campana segun pendientes ===== */
+/* ===== V3.1.3 - Menu lateral: badge y efecto de campana segun pendientes ===== */
 (function(){
   function getPendingCount236(){
     try{
@@ -7128,9 +7128,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Normalizacion final del menu lateral ===== */
+/* ===== V3.1.3 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7198,7 +7198,7 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== V3.1.2 - Refuerzo campana menu lateral ===== */
+/* ===== V3.1.3 - Refuerzo campana menu lateral ===== */
 (function(){
   function pendingCount(){
     try{
@@ -7225,9 +7225,9 @@ if(_refresh_v1250){
   setInterval(applyBellClass,1500);
 })();
 
-/* ===== V3.1.2 - contador real y badge compacto de menu ===== */
+/* ===== V3.1.3 - contador real y badge compacto de menu ===== */
 (function(){
-  const APP_VERSION_MENU_2173 = '3.1.2';
+  const APP_VERSION_MENU_2173 = '3.1.3';
   function setVersions2039(){
     document.querySelectorAll('span,small,p,div').forEach(el=>{
       if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
@@ -7296,10 +7296,10 @@ if(_refresh_v1250){
   setInterval(normalizeMenu2039,1200);
 })();
 
-/* ===== V3.1.2 - Menu base limpio: normalizadores anteriores removidos ===== */
-/* ===== V3.1.2 - Nuevo modulo Embarques ===== */
+/* ===== V3.1.3 - Menu base limpio: normalizadores anteriores removidos ===== */
+/* ===== V3.1.3 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7450,9 +7450,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(window.renderEmbarquesV244,300)));
 })();
 
-/* ===== V3.1.2 - Embarques: combos desde colecciones Firestore y estructura real ===== */
+/* ===== V3.1.3 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7655,9 +7655,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(()=>window.renderEmbarquesV244(),600)));
 })();
 
-/* ===== v3.1.2 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
+/* ===== v3.1.3 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
 (function(){
-  const APP_VERSION_PDF = '3.1.2';
+  const APP_VERSION_PDF = '3.1.3';
   function sx53(v){return String(v ?? '').trim() || '-';}
   function escAttr53(v){return String(v ?? '').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,' ');}
   function route53(t){try{return typeof ruta==='function' ? (ruta(t)||{}) : {};}catch(e){return {};}}
@@ -7886,13 +7886,13 @@ if(_refresh_v1250){
       <div class="transitRight"><h4 class="alertsTitle">⚠️ Alertas del tránsito</h4>${typeof transitAlertsCompact==='function'?transitAlertsCompact(t):''}</div>
     </div>`;
   };
-  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.1.2';});
+  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.1.3';});
 })();
 
 
-/* ===== V3.1.2 - Fix botones Actualizar global + version unificada ===== */
+/* ===== V3.1.3 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -7980,9 +7980,9 @@ if(_refresh_v1250){
   setInterval(setVersionLabels,1200);
 })();
 
-/* ===== V3.1.2 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
+/* ===== V3.1.3 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
 (function(){
-  const APP_VERSION_CFG = "3.1.2";
+  const APP_VERSION_CFG = "3.1.3";
   function byId(id){return document.getElementById(id)}
   function safe(v){return (typeof esc==='function'?esc(String(v ?? "")):String(v ?? "").replace(/[&<>'"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[m])))}
   function getActiveText(v){return v===false||String(v).toLowerCase()==='false'?'Inactivo':'Activo'}
@@ -8126,9 +8126,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(()=>{fixVersion(); if(byId('abm')?.classList.contains('active'))renderABM();},500)));
 })();
 
-/* ===== V3.1.2 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
+/* ===== V3.1.3 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8291,9 +8291,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(qid('clima')?.classList.contains('active'))window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.1.2 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
+/* ===== V3.1.3 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8458,9 +8458,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Datos reales del usuario logueado en sidebar ===== */
+/* ===== V3.1.3 - Datos reales del usuario logueado en sidebar ===== */
 (function(){
-  const APP_VERSION_LOGGED_USER_FIX = "3.1.2";
+  const APP_VERSION_LOGGED_USER_FIX = "3.1.3";
 
   function _q(id){ return document.getElementById(id); }
   function _txt(v){ return (v===undefined || v===null) ? '' : String(v).trim(); }
@@ -8562,9 +8562,9 @@ if(_refresh_v1250){
   });
 })();
 
-/* ===== V3.1.2 - Clima compacto + PDF OEA + correcciones puntuales ===== */
+/* ===== V3.1.3 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8734,9 +8734,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== V3.1.2 - Version + flotas del combo desde usuarios role=flota ===== */
+/* ===== V3.1.3 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8808,9 +8808,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== V3.1.2 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
+/* ===== V3.1.3 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8932,9 +8932,9 @@ if(_refresh_v1250){
   setVersionFinal();
 })();
 
-/* ===== V3.1.2 - Embarques: boton Ver cargas en Agregar carga ===== */
+/* ===== V3.1.3 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9170,9 +9170,9 @@ if(_refresh_v1250){
   setVersionV267();
 })();
 
-/* ===== V3.1.2 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
+/* ===== V3.1.3 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
 (function(){
-  const APP_VERSION_FIX='3.1.2';
+  const APP_VERSION_FIX='3.1.3';
   window.ELTA_APP_VERSION=APP_VERSION_FIX;
   window.APP_VERSION_V2=APP_VERSION_FIX;
   const $=(id)=>document.getElementById(id);
@@ -9301,9 +9301,9 @@ if(_refresh_v1250){
   setInterval(applyAllV270,1500);
 })();
 
-/* ===== V3.1.2 - Password visible en Configuracion y version unificada ===== */
+/* ===== V3.1.3 - Password visible en Configuracion y version unificada ===== */
 (function(){
-  const APP_VERSION_273='3.1.2';
+  const APP_VERSION_273='3.1.3';
   window.ELTA_APP_VERSION=APP_VERSION_273;
   window.APP_VERSION_V2=APP_VERSION_273;
 
@@ -9379,13 +9379,13 @@ if(_refresh_v1250){
   }
   document.addEventListener('DOMContentLoaded',()=>{setVersionLabelsV273();setTimeout(configPasswordAndLabelsV273,800);});
   window.addEventListener('load',()=>{setVersionLabelsV273();setTimeout(configPasswordAndLabelsV273,800);});
-  setInterval(setVersionLabelsV273,1000);
+  // setInterval(setVersionLabelsV273,1000); // desactivado v3.1.3
 })();
 
 
-/* ===== V3.1.2 - Version lock definitivo ===== */
+/* ===== V3.1.3 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9396,13 +9396,13 @@ if(_refresh_v1250){
     });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', applyVersionLock); else applyVersionLock();
-  setInterval(applyVersionLock, 800);
+  // setInterval(applyVersionLock, 800); // desactivado v3.1.3
 })();
 
 
-/* ===== V3.1.2 - Embarques: eliminar registro con confirmacion ===== */
+/* ===== V3.1.3 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9428,7 +9428,7 @@ if(_refresh_v1250){
     [...tbody.querySelectorAll('tr')].forEach(tr=>{const n=embFromRow(tr); if(n && del.has(n))tr.remove();});
     if(!tbody.children.length){tbody.innerHTML='<tr><td colspan="8" class="emptyRow">No hay embarques para mostrar.</td></tr>';}
   }
-  function enhanceDeleteButtons(){ /* v3.1.2 neutralizado: eliminar ya nace en el render */ return; }
+  function enhanceDeleteButtons(){ /* v3.1.3 neutralizado: eliminar ya nace en el render */ return; }
   async function deleteLocal(numero){
     ['elta_cargas_embarque_v245','elta_cargas_embarque_v244'].forEach(k=>{
       try{const arr=JSON.parse(localStorage.getItem(k)||'[]')||[]; localStorage.setItem(k,JSON.stringify(arr.filter(c=>S(c?.embarque)!==S(numero))));}catch(e){}
@@ -9496,7 +9496,7 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - Embarques: papelera sin fondo ===== */
+/* ===== V3.1.3 - Embarques: papelera sin fondo ===== */
 (function(){
   const css=document.createElement('style');
   css.id='v2080-delete-icon-clean';
@@ -9504,9 +9504,9 @@ if(_refresh_v1250){
   document.head.appendChild(css);
 })();
 
-/* ===== V3.1.2 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
+/* ===== V3.1.3 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9565,10 +9565,10 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.1.2 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
+/* ===== V3.1.3 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -9681,7 +9681,7 @@ if(_refresh_v1250){
 
 
 
-/* ===== v3.1.2 - Entregas: abreviatura en origen del render ===== */
+/* ===== v3.1.3 - Entregas: abreviatura en origen del render ===== */
 window.abreviarHitoEntrega186 = function(txt){
   const original = String(txt || '').trim();
   const n = original.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
@@ -9690,9 +9690,9 @@ window.abreviarHitoEntrega186 = function(txt){
   return original;
 };
 
-/* ===== v3.1.2 - Entregas compact override after dynamic CSS ===== */
+/* ===== v3.1.3 - Entregas compact override after dynamic CSS ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
   function injectEntrega151(){
     let st=document.getElementById('entrega-v151-compact-css');
     if(!st){
@@ -9717,9 +9717,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final Entregas tarjeta ===== */
+/* ===== v3.1.3 - CSS final Entregas tarjeta ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
+  const CSS = '\n/* ===== v3.1.3 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
   function injectEntrega152(){
     let st=document.getElementById('entrega-v152-card-css');
     if(!st){
@@ -9744,9 +9744,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final Entregas filtros/timeline ===== */
+/* ===== v3.1.3 - CSS final Entregas filtros/timeline ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega153(){
     let st=document.getElementById('entrega-v153-filters-timeline-css');
     if(!st){
@@ -9771,9 +9771,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final timeline Entregas ===== */
+/* ===== v3.1.3 - CSS final timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega154(){
     let st=document.getElementById('entrega-v154-timeline-css');
     if(!st){
@@ -9798,9 +9798,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final linea vertical hitos Entregas ===== */
+/* ===== v3.1.3 - CSS final linea vertical hitos Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega155(){
     let st=document.getElementById('entrega-v155-vertical-line-css');
     if(!st){
@@ -9825,9 +9825,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final linea desde circulo Entregas ===== */
+/* ===== v3.1.3 - CSS final linea desde circulo Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega156(){
     let st=document.getElementById('entrega-v156-linea-circulo-css');
     if(!st){
@@ -9852,9 +9852,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final hito/banderas Entregas ===== */
+/* ===== v3.1.3 - CSS final hito/banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega157(){
     let st=document.getElementById('entrega-v157-hito-banderas-css');
     if(!st){
@@ -9879,9 +9879,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final banderas Entregas ===== */
+/* ===== v3.1.3 - CSS final banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega158(){
     let st=document.getElementById('entrega-v158-flags-css');
     if(!st){
@@ -9906,9 +9906,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final Entregas ajustes solicitados ===== */
+/* ===== v3.1.3 - CSS final Entregas ajustes solicitados ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
   function injectEntrega159(){
     let st=document.getElementById('entrega-v159-final-css');
     if(!st){
@@ -9933,9 +9933,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - CSS final extremos timeline Entregas ===== */
+/* ===== v3.1.3 - CSS final extremos timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
   function injectEntrega160(){
     let st=document.getElementById('entrega-v160-extremos-css');
     if(!st){
@@ -9960,7 +9960,7 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - Entregas: avance por registros + bandera Tierra del Fuego =====
+/* ===== v3.1.3 - Entregas: avance por registros + bandera Tierra del Fuego =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
@@ -10103,7 +10103,7 @@ window.abreviarHitoEntrega186 = function(txt){
   }
 
   function replaceEntregaCards161(){
-    // v3.1.2: desactivado.
+    // v3.1.3: desactivado.
     // Este post-procesador heredado reconstruía la línea de tiempo después del render actual
     // y provocaba el flash con hitos/paises antiguos y salto del camión.
     return;
@@ -10117,11 +10117,11 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - Entregas: timeline por registros reales corregido =====
+/* ===== v3.1.3 - Entregas: timeline por registros reales corregido =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
-/* ===== v3.1.2 - Entregas: extremos y registros reales =====
+/* ===== v3.1.3 - Entregas: extremos y registros reales =====
    SOLO afecta #entrega. No modifica otros módulos ni el diseño base. */
 
 /* Mantener la línea y los extremos dentro del contenedor */
@@ -10359,7 +10359,7 @@ window.abreviarHitoEntrega186 = function(txt){
     return Math.min(idx, stages.length-1);
   }
 
-  function attach(){ /* v3.1.2: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
+  function attach(){ /* v3.1.3: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
 
   document.addEventListener('DOMContentLoaded',()=>{injectEntrega162(); attach();});
   window.addEventListener('load',()=>{injectEntrega162(); attach();});
@@ -10369,10 +10369,10 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.1.2 - Entregas: hitos desde Aduanas + camión por último registro ===== */
+/* ===== v3.1.3 - Entregas: hitos desde Aduanas + camión por último registro ===== */
 (function(){
 const CSS=`
-/* v3.1.2 - Entregas: aduanas y avance real */
+/* v3.1.3 - Entregas: aduanas y avance real */
 #entrega .entregaTimeline{padding-left:72px!important;padding-right:72px!important;overflow:hidden!important}
 #entrega .entregaLine{left:72px!important;right:72px!important}
 #entrega .entregaTimeline::after{left:72px!important;right:72px!important}
@@ -10406,16 +10406,16 @@ function records(t){const out=[];const push=r=>{if(!r||typeof r!=='object')retur
 function match(r,h){r=norm(r);h=norm(h);return r&&h&&(r===h||r.includes(h)||h.includes(r))}
 function update(){const trs=Array.isArray(window.trs)?window.trs:[], embs=Array.isArray(window.embarques)?window.embarques:[];document.querySelectorAll('#entrega .entregaCard').forEach(card=>{try{const fl=(card.querySelector('.entregaFleet h3')?.textContent.match(/\d+/)||[])[0]||'';const en=(card.querySelector('.entregaFleet small')?.textContent.match(/\d+/)||[])[0]||'';const t=trs.find(x=>clean(get(x,['flota','fleet','usuario','user']))===fl)||{};const e=embs.find(x=>clean(get(x,['numero','embarque','idEmbarque','codigo'])||x.id)===en)||{};const orig=clean(get(e,['origen','origin']))||clean(get(t,['origen','origin']))||'Inicio';const dest=clean(get(e,['destino','destination']))||clean(get(t,['destino','destination']))||'Cierre';const ini=get(t,['start','inicio','fechaInicio','createdAt'])||get(e,['fecha','createdAt','fechaHora']);const fin=get(t,['cierre','fechaCierre','closedAt','end','finalizadoEn'])||get(e,['cierre','fechaCierre','closedAt','end','finalizadoEn']);const names=hitos(dest,orig);const namesFiltrados187=window.filtrarHitosEntrega187?window.filtrarHitosEntrega187(names):names;
     const stages=namesFiltrados187.map((name,i)=>({name,time:i===0?ini:(i===names.length-1?fin:''),kind:i===0?'start':(i===names.length-1?'end':'aduana')}));records(t).forEach(r=>{let idx=stages.findIndex((s,i)=>i>0&&i<stages.length-1&&match(r.name,s.name));if(idx<0)idx=stages.findIndex((s,i)=>i>0&&match(r.name,s.name));if(idx>=0&&!hasDate(stages[idx].time))stages[idx].time=r.time});let pi=0;stages.forEach((s,i)=>{if(hasDate(s.time))pi=i});const max=Math.max(1,stages.length-1),pct=Math.max(0,Math.min(100,(pi/max)*100));const tl=card.querySelector('.entregaTimeline');if(!tl)return;const prog=tl.querySelector('.entregaLine i');if(prog)prog.style.width=pct+'%';tl.querySelectorAll('.entregaStep').forEach(x=>x.remove());const veh=tl.querySelector('.entregaVehicle');stages.forEach((s,i)=>{const d=fmt(s.time),has=d&&d!=='-';const step=document.createElement('div');step.className=['entregaStep',i===0?'timelineStart':'',i===stages.length-1?'timelineEnd':'',i<=pi?'done':'',i===pi?'current':'',has&&i>0?'hasDate':''].filter(Boolean).join(' ');step.style.left=((i/max)*100)+'%';step.innerHTML=`<b>${esc(s.name)}</b><em>${esc(d)}</em>`;tl.insertBefore(step,veh||null)});if(veh)veh.style.left=pct+'%'}catch(e){console.warn('Entregas v163',e)}})}
-function attach(){/* v3.1.2: wrapper v163 desactivado para evitar segundo render de Entregas */return}
+function attach(){/* v3.1.3: wrapper v163 desactivado para evitar segundo render de Entregas */return}
 document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.addEventListener('load',()=>{inject();attach();});setTimeout(()=>{inject();attach();},500);
 })();
 
 
 
 
-/* ===== v3.1.2 - Entregas: ajuste final camion/textos ===== */
+/* ===== v3.1.3 - Entregas: ajuste final camion/textos ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega164(){
     let st=document.getElementById('entrega-v164-camion-textos-css');
     if(!st){
@@ -10463,9 +10463,9 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.1.2 - Entregas: CSS final textos integrados ===== */
+/* ===== v3.1.3 - Entregas: CSS final textos integrados ===== */
 (function(){
-  const CSS = '\n/* ===== v3.1.2 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.3 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega165(){
     let st=document.getElementById('entrega-v165-textos-integrados-css');
     if(!st){
@@ -10492,7 +10492,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.1.2 - Entregas: abreviatura visual de hitos =====
+/* ===== v3.1.3 - Entregas: abreviatura visual de hitos =====
    Solo afecta la presentación de nombres en la línea de tiempo de Entregas.
    No modifica datos, lógica de avance, camión, banderas ni otros módulos. */
 (function(){
@@ -10554,7 +10554,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.1.2 - Entregas: hitos desde colección aduana por campo destino =====
+/* ===== v3.1.3 - Entregas: hitos desde colección aduana por campo destino =====
    Solo afecta la lógica de hitos de Entregas.
    No modifica estética, camión, textos, banderas ni otros módulos. */
 (function(){
@@ -10808,8 +10808,8 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
     });
   }
 
-  async function run167(){ /* v3.1.2 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
-function attach167(){ /* v3.1.2 desactivado */ return; }
+  async function run167(){ /* v3.1.3 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
+function attach167(){ /* v3.1.3 desactivado */ return; }
 document.addEventListener('DOMContentLoaded',()=>{});
   window.addEventListener('load',()=>{});
 })();
@@ -10817,7 +10817,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: botón Actualizar refresca timeline =====
+/* ===== v3.1.3 - Entregas: botón Actualizar refresca timeline =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol168(name){
@@ -10946,7 +10946,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: Actualizar reconstruye la línea como al reingresar =====
+/* ===== v3.1.3 - Entregas: Actualizar reconstruye la línea como al reingresar =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol169(name){
@@ -11077,7 +11077,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: Actualizar sin parpadeo =====
+/* ===== v3.1.3 - Entregas: Actualizar sin parpadeo =====
    Solo afecta el botón Actualizar de Entregas.
    Corrige el efecto visual eliminando renders repetidos y reconstrucción múltiple. */
 (function(){
@@ -11207,7 +11207,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
+/* ===== v3.1.3 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
    Solo afecta el botón Actualizar de Entregas.
    No modifica estética ni otros módulos. */
 (function(){
@@ -11493,7 +11493,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: Actualizar aislado, sin render viejo =====
+/* ===== v3.1.3 - Entregas: Actualizar aislado, sin render viejo =====
    Solo afecta el botón Actualizar de Entregas.
    No llama a renderEntrega(), no limpia entregaCards y no reconstruye tarjetas completas. */
 (function(){
@@ -11792,9 +11792,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Version final + Entregas boton aislado dominante ===== */
+/* ===== v3.1.3 - Version final + Entregas boton aislado dominante ===== */
 (function(){
-  const VERSION_FINAL_173 = '3.1.2';
+  const VERSION_FINAL_173 = '3.1.3';
   window.ELTA_APP_VERSION = VERSION_FINAL_173;
   window.APP_VERSION_V2 = VERSION_FINAL_173;
 
@@ -11898,11 +11898,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: botón Actualizar sin bucle =====
+/* ===== v3.1.3 - Entregas: botón Actualizar sin bucle =====
    Corrige el botón que quedaba en "Actualizando..." por delegación recursiva.
    Solo afecta Entregas. No modifica estética. */
 (function(){
-  const VERSION_174 = '3.1.2';
+  const VERSION_174 = '3.1.3';
   let busy174 = false;
 
   function setVersion174(){
@@ -12042,10 +12042,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Reporte PDF: hitos desde colección aduana =====
+/* ===== v3.1.3 - Reporte PDF: hitos desde colección aduana =====
    Solo modifica la lógica de Hitos del tránsito del reporte. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V; window.APP_VERSION_V2=V;
   const clean=v=>{
     if(v==null)return '';
@@ -12149,9 +12149,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Forzado final de versión visible y PDF ===== */
+/* ===== v3.1.3 - Forzado final de versión visible y PDF ===== */
 (function(){
-  const VERSION_FINAL_177 = '3.1.2';
+  const VERSION_FINAL_177 = '3.1.3';
   window.ELTA_APP_VERSION = VERSION_FINAL_177;
   window.APP_VERSION_V2 = VERSION_FINAL_177;
   window.APP_VERSION_PDF = VERSION_FINAL_177;
@@ -12171,10 +12171,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Alertas: sin KM heredado, sin observers =====
-   Base v3.1.2. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
+/* ===== v3.1.3 - Alertas: sin KM heredado, sin observers =====
+   Base v3.1.3. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
 (function(){
-  const VERSION_ALERTAS_183='3.1.2';
+  const VERSION_ALERTAS_183='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_183;
   window.APP_VERSION_V2=VERSION_ALERTAS_183;
 
@@ -12231,10 +12231,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Alertas: columnas alineadas sin KM =====
+/* ===== v3.1.3 - Alertas: columnas alineadas sin KM =====
    Solo ajusta la tabla de detalle de Alertas. No toca otros modulos. */
 (function(){
-  const VERSION_ALERTAS_185='3.1.2';
+  const VERSION_ALERTAS_185='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_185;
   window.APP_VERSION_V2=VERSION_ALERTAS_185;
   function setVersion185(){
@@ -12251,10 +12251,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: evitar flash de hito inicio largo =====
+/* ===== v3.1.3 - Entregas: evitar flash de hito inicio largo =====
    Solo afecta el texto visual del hito de inicio CLZ/CLC. */
 (function(){
-  const VERSION_ENTREGA_186='3.1.2';
+  const VERSION_ENTREGA_186='3.1.3';
   function apply186(){
     document.querySelectorAll('#entrega .entregaStep b').forEach(el=>{
       const full=el.getAttribute('data-full-hito') || el.getAttribute('title') || el.textContent || '';
@@ -12292,10 +12292,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: quitar país como hito intermedio =====
+/* ===== v3.1.3 - Entregas: quitar país como hito intermedio =====
    Solo afecta la línea de tiempo de Entregas. No toca Alertas, Tránsitos, PDF ni Firebase. */
 (function(){
-  const VERSION_ENTREGA_187='3.1.2';
+  const VERSION_ENTREGA_187='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_187;
   window.APP_VERSION_V2=VERSION_ENTREGA_187;
 
@@ -12358,10 +12358,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: render único sin postproceso heredado =====
+/* ===== v3.1.3 - Entregas: render único sin postproceso heredado =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_188='3.1.2';
+  const VERSION_ENTREGA_188='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_188;
   window.APP_VERSION_V2=VERSION_ENTREGA_188;
 
@@ -12409,10 +12409,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: render único, sin wrappers heredados =====
+/* ===== v3.1.3 - Entregas: render único, sin wrappers heredados =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_189='3.1.2';
+  const VERSION_ENTREGA_189='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_189;
   window.APP_VERSION_V2=VERSION_ENTREGA_189;
 
@@ -12454,11 +12454,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: render definitivo unico =====
+/* ===== v3.1.3 - Entregas: render definitivo unico =====
    Reemplaza el render de Entregas al final del archivo para evitar wrappers heredados.
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética general. */
 (function(){
-  const VERSION_ENTREGAS_190 = '3.1.2';
+  const VERSION_ENTREGAS_190 = '3.1.3';
   window.ELTA_APP_VERSION = VERSION_ENTREGAS_190;
   window.APP_VERSION_V2 = VERSION_ENTREGAS_190;
 
@@ -12816,10 +12816,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: marcar hito final cuando el tránsito está cerrado =====
+/* ===== v3.1.3 - Entregas: marcar hito final cuando el tránsito está cerrado =====
    Solo afecta la línea de tiempo de Entregas. */
 (function(){
-  const VERSION_ENTREGA_191='3.1.2';
+  const VERSION_ENTREGA_191='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_191;
   window.APP_VERSION_V2=VERSION_ENTREGA_191;
 })();
@@ -12827,10 +12827,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: cierre marca último hito =====
+/* ===== v3.1.3 - Entregas: cierre marca último hito =====
    Solo afecta la marcación visual de tarjetas cerradas en Entregas. */
 (function(){
-  const VERSION_ENTREGA_192='3.1.2';
+  const VERSION_ENTREGA_192='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_192;
   window.APP_VERSION_V2=VERSION_ENTREGA_192;
 
@@ -12905,10 +12905,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: cierre gana contra render heredado tardío =====
+/* ===== v3.1.3 - Entregas: cierre gana contra render heredado tardío =====
    Solo afecta la vista Entregas. Corrección finita, sin observer ni intervalos. */
 (function(){
-  const VERSION_ENTREGA_193='3.1.2';
+  const VERSION_ENTREGA_193='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_193;
   window.APP_VERSION_V2=VERSION_ENTREGA_193;
 
@@ -13012,11 +13012,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: cierre 100% verde =====
+/* ===== v3.1.3 - Entregas: cierre 100% verde =====
    Solo afecta Entregas. Cuando el tránsito está cerrado:
    línea completa, todos los círculos verdes y camión al último hito. */
 (function(){
-  const VERSION_ENTREGA_194='3.1.2';
+  const VERSION_ENTREGA_194='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_194;
   window.APP_VERSION_V2=VERSION_ENTREGA_194;
 
@@ -13119,11 +13119,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: botón Actualizar con render único =====
+/* ===== v3.1.3 - Entregas: botón Actualizar con render único =====
    Solo afecta el botón Actualizar de Entregas.
    Evita que un handler heredado vuelva a pintar datos anteriores, especialmente Última act. */
 (function(){
-  const VERSION_ENTREGA_195='3.1.2';
+  const VERSION_ENTREGA_195='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_195;
   window.APP_VERSION_V2=VERSION_ENTREGA_195;
   let busy195=false;
@@ -13198,7 +13198,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
       applyClosed195();
 
       // Gana contra renders tardíos heredados: todos usan los mismos datos frescos.
-      /* v3.1.2: renders tardíos heredados desactivados */
+      /* v3.1.3: renders tardíos heredados desactivados */
     }finally{
       setTimeout(()=>{
         if(b){ b.disabled=false; b.textContent=old || 'Actualizar'; }
@@ -13248,10 +13248,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: fecha correcta de cierre y última actualización =====
+/* ===== v3.1.3 - Entregas: fecha correcta de cierre y última actualización =====
    Solo afecta Entregas. Toma la fecha más nueva de registros del tránsito para cerrado. */
 (function(){
-  const VERSION_ENTREGA_196='3.1.2';
+  const VERSION_ENTREGA_196='3.1.3';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_196;
   window.APP_VERSION_V2=VERSION_ENTREGA_196;
 
@@ -13317,9 +13317,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Forzar version visible ===== */
+/* ===== v3.1.3 - Forzar version visible ===== */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function setV207(){
@@ -13339,11 +13339,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Embarques only: sin render heredado =====
+/* ===== v3.1.3 - Embarques only: sin render heredado =====
    Solo afecta Embarques. No toca Tránsitos, Entregas, Alertas ni PDF.
    El botón eliminar nace en el render; no se agrega con post-render. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13394,12 +13394,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Eliminar embarque real + hitos intermedios Entregas =====
+/* ===== v3.1.3 - Eliminar embarque real + hitos intermedios Entregas =====
    Corrige:
    1) Eliminar embarque: borra por docId y tambien por campos numero/embarque/idEmbarque/codigo.
    2) Entregas: asegura lectura de coleccion aduana antes de renderizar. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13561,11 +13561,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Limpieza definitiva Entregas + Embarques =====
+/* ===== v3.1.3 - Limpieza definitiva Entregas + Embarques =====
    Solo se reemplazan los renderizadores activos de Entregas y Embarques.
    No se toca Tránsitos, Alertas, Clima, PDF ni estilos generales. */
 (function(){
-  const VERSION_210='3.1.2';
+  const VERSION_210='3.1.3';
   window.ELTA_APP_VERSION=VERSION_210;
   window.APP_VERSION_V2=VERSION_210;
 
@@ -13954,9 +13954,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Forzado final de version visible ===== */
+/* ===== v3.1.3 - Forzado final de version visible ===== */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function forceVersion211(){
@@ -13976,13 +13976,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Confirmación eliminar + hitos Entregas por embarque =====
+/* ===== v3.1.3 - Confirmación eliminar + hitos Entregas por embarque =====
    Ajuste puntual:
    - Embarques: vuelve el modal de confirmación antes de eliminar.
    - Entregas: cuando el tránsito está cerrado, cruza tránsito con embarque por N° embarque
      para tomar origen/destino reales y construir hitos intermedios. */
 (function(){
-  const VERSION_212='3.1.2';
+  const VERSION_212='3.1.3';
   window.ELTA_APP_VERSION=VERSION_212;
   window.APP_VERSION_V2=VERSION_212;
 
@@ -14299,12 +14299,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Ajustes Embarques + Entregas =====
+/* ===== v3.1.3 - Ajustes Embarques + Entregas =====
    - Modal eliminar embarque más compacto.
    - Embarques: toma flota desde cargas cuando el embarque no tiene flota directa.
    - Entregas: agrega filtro Programados y fuerza el render correcto si aparece el render heredado Inicio/Cierre. */
 (function(){
-  const VERSION_213='3.1.2';
+  const VERSION_213='3.1.3';
   window.ELTA_APP_VERSION=VERSION_213;
   window.APP_VERSION_V2=VERSION_213;
 
@@ -14625,13 +14625,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Proyecto limpio deploy =====
+/* ===== v3.1.3 - Proyecto limpio deploy =====
    Version final del proyecto completo:
    - Sin referencias a versiones anteriores en index.
    - Embarques: modal compacto, flota desde carga y eliminar con confirmacion.
    - Entregas: Programados en filtro y refuerzo anti-render Inicio/Cierre. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   const S=v=>String(v??'').trim();
@@ -14741,7 +14741,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Corrección final línea de tiempo Entregas =====
+/* ===== v3.1.3 - Corrección final línea de tiempo Entregas =====
    Sólo corrige el modelo de datos de la línea de tiempo:
    - Convierte Timestamp Firebase / objetos {seconds,nanoseconds} / {_seconds,_nanoseconds}.
    - Evita mostrar [object Object].
@@ -14750,7 +14750,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - En tránsito no marca el destino como alcanzado hasta el cierre.
    - Cerrado marca todos los hitos en verde. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15072,11 +15072,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Bloqueo del último hito Entregas =====
-   Mantiene la lógica de v3.1.2, pero evita que un render heredado posterior
+/* ===== v3.1.3 - Bloqueo del último hito Entregas =====
+   Mantiene la lógica de v3.1.3, pero evita que un render heredado posterior
    cambie sólo el último hito de la línea de tiempo. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15238,9 +15238,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
+/* ===== v3.1.3 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15411,13 +15411,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Bloqueo del render heredado que escribe INICIO =====
+/* ===== v3.1.3 - Bloqueo del render heredado que escribe INICIO =====
    Corrige únicamente Entregas:
    - Si un render posterior vuelve a escribir "INICIO" en el primer hito, se reemplaza
      inmediatamente por el origen real de la tarjeta: CLZ / CLC / TZ - PUERTO ZARATE, etc.
    - Mantiene la lógica de línea de tiempo ya corregida. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15555,7 +15555,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: render final estable sin refresh heredado =====
+/* ===== v3.1.3 - Entregas: render final estable sin refresh heredado =====
    Corrige sólo Entregas:
    - No llama al render heredado de Entregas.
    - Recupera fecha real de inicio desde embarque/transito/carga.
@@ -15563,7 +15563,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - Reemplaza INICIO por origen real.
    - Separa la línea punteada vertical del texto del hito. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15897,11 +15897,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
-   Base: v3.1.2 estable. No modifica Firebase, refresh ni render principal.
+/* ===== v3.1.3 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
+   Base: v3.1.3 estable. No modifica Firebase, refresh ni render principal.
    Sólo corrige el texto INICIO si aparece después del render. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15993,12 +15993,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: fechas cierre + separación línea punteada =====
-   Base v3.1.2. No toca Firebase ni render principal.
+/* ===== v3.1.3 - Entregas: fechas cierre + separación línea punteada =====
+   Base v3.1.3. No toca Firebase ni render principal.
    Corrige fechas visibles de inicio/cierre cuando el tránsito está cerrado
    y evita superposición visual de la línea punteada con fecha/hora. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16167,10 +16167,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
-   Base v3.1.2. No toca la carga de datos. Corrige sólo visualización final. */
+/* ===== v3.1.3 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
+   Base v3.1.3. No toca la carga de datos. Corrige sólo visualización final. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16347,10 +16347,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.1.2 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
+/* ===== v3.1.3 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
    No modifica carga de datos. Lee arrays globales o variables del script y completa los hitos cerrados. */
 (function(){
-  const V='3.1.2';
+  const V='3.1.3';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16536,74 +16536,40 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-
-/* ===== v3.1.2 - Forzar versión y limpiar caché visual ===== */
-(function(){
-  const V='3.1.2';
-  window.ELTA_APP_VERSION=V;
-  window.APP_VERSION_V2=V;
-
-  function setV227(){
-    try{
-      document.title='ELTA ITS - Versión '+V;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V);
-        }
-      });
-    }catch(e){}
-  }
-
-  // Si quedó un service worker/caché viejo del navegador, lo elimina.
-  try{
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.getRegistrations().then(regs=>regs.forEach(r=>r.unregister()));
-    }
-    if(window.caches && caches.keys){
-      caches.keys().then(keys=>keys.forEach(k=>caches.delete(k)));
-    }
-  }catch(e){}
-
-  document.addEventListener('DOMContentLoaded',()=>{setV227();setTimeout(setV227,300);setTimeout(setV227,1000);});
-  window.addEventListener('load',()=>{setV227();setTimeout(setV227,300);setTimeout(setV227,1000);});
-})();
-
-
-
-/* ===== ELTA v3.1.2 - DOCUMENTOS ESTABLE / VERSION UNICA ===== */
+/* ===== ELTA v3.1.3 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.2';
+  const VERSION='3.1.3';
   const COLLECTION='embarque_documentos';
   const MAX_MB=12;
-  const QUERY_TIMEOUT=6500;
-  const WRITE_TIMEOUT=30000;
-  const LS_KEY='elta_docs_local_v311';
+  const QUERY_TIMEOUT=5000;
+  const WRITE_TIMEOUT=12000;
+  const LS_KEY='elta_docs_local_v313';
   window.ELTA_APP_VERSION=VERSION;
-  window.ELTA_FORCE_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
 
   const S=v=>(v==null?'':String(v)).trim();
-  const E=v=>S(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-  const cleanEmb=v=>{const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v).replace(/[^0-9A-Za-z_-]/g,'')};
-  const safe=n=>S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf';
-  const icon=t=>{t=S(t).toLowerCase();if(t.includes('fact'))return '🧾';if(t.includes('hr'))return '📋';if(t.includes('mic'))return '📄';if(t.includes('crt'))return '🚚';if(t.includes('oea'))return '🛡️';return '📁'};
-  const dbx=()=>{try{return window.db||(typeof db!=='undefined'?db:null)||(window.firebase&&firebase.firestore?firebase.firestore():null)}catch(e){return null}};
-  const storagex=()=>{try{return window.storage||(window.firebase&&firebase.storage?firebase.storage():null)||(typeof firebase!=='undefined'&&firebase.storage?firebase.storage():null)}catch(e){return null}};
-  const timeout=(p,ms,label)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error((label||'Operación')+' demoró demasiado')),ms))]);
-  const nowTs=()=>{try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}};
-  function toDate(v){try{return v&&v.toDate?v.toDate():(v&&v.seconds?new Date(v.seconds*1000):new Date(v))}catch(e){return null}}
-  function fmt(v){const d=toDate(v);return d&&!isNaN(d)?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-'}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(r.error||new Error('No se pudo leer el archivo'));r.readAsDataURL(file);});}
-  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true}
-  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||d.fileUrl||d.pdfUrl||''}
-  function localRows(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return []}}
-  function saveLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows.slice(-100)))}catch(e){}}
+  const cleanEmb=v=>{ const m=S(v).match(/[0-9]{5,8}/); return m?m[0]:S(v).replace(/[^0-9A-Za-z_-]/g,''); };
+  const E=v=>S(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safe=n=>S(n).replace(/[\/:*?"<>|]+/g,'_').replace(/\s+/g,'_').slice(0,140)||'documento.pdf';
+  const icon=t=>{t=S(t).toLowerCase(); if(t.includes('fact'))return '🧾'; if(t.includes('hr'))return '📋'; if(t.includes('mic'))return '📄'; if(t.includes('crt'))return '📄'; if(t.includes('oea'))return '🛡️'; if(t.includes('rem'))return '📦'; if(t.includes('cert'))return '📑'; return '📁';};
+  function dbx(){try{return window.db||(typeof db!=='undefined'?db:null)||(window.firebase&&firebase.firestore?firebase.firestore():null);}catch(e){return null;}}
+  function nowTs(){try{return firebase.firestore.FieldValue.serverTimestamp();}catch(e){return new Date().toISOString();}}
+  function timeout(p,ms,label){return Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error(label||'Tiempo agotado')),ms))]);}
+  function toMillis(v){try{if(!v)return 0;if(v.toDate)return v.toDate().getTime();if(v.seconds)return v.seconds*1000;const d=new Date(v);return isNaN(d)?0:d.getTime();}catch(e){return 0;}}
+  function fmt(v){const t=toMillis(v);return t?new Date(t).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
+  function active(d){return d && d.activo!==false && d.deleted!==true && d.eliminado!==true;}
+  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||'';}
+  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result||''));r.onerror=()=>rej(r.error||new Error('No se pudo leer el PDF'));r.readAsDataURL(file);});}
+  function readLocal(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')||[];}catch(e){return [];}}
+  function writeLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows));}catch(e){console.warn('No se pudo guardar localmente',e);}}
+  function keys(emb){emb=cleanEmb(emb);const n=String(Number(emb));return [...new Set([emb,n].filter(x=>x&&x!=='NaN'))];}
 
   function applyVersion(){
     try{
       document.title='ELTA ITS - Versión '+VERSION;
-      document.querySelectorAll('span,small,div,p,footer').forEach(el=>{
+      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
         if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
           el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
         }
@@ -16611,155 +16577,164 @@ document.addEventListener('DOMContentLoaded',()=>{});
     }catch(e){}
   }
 
-  function addStyle(){
-    if(document.getElementById('eltaDocsStyle311')) return;
-    const css=`
-      #docsOverlayV311{position:fixed;inset:0;z-index:99999;background:rgba(2,6,23,.70);display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box}
-      #docsOverlayV311 *{box-sizing:border-box}
-      #docsOverlayV311 .docsModalV311{width:min(92vw,1120px);max-height:78vh;background:#142238;border:1px solid rgba(148,163,184,.32);border-radius:14px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.42);color:#f8fafc;display:flex;flex-direction:column}
-      #docsOverlayV311 .docsHeadV311{background:#2f9137;padding:10px 18px;position:relative;flex:0 0 auto}
-      #docsOverlayV311 .docsHeadV311 h2{margin:0;font-size:22px;line-height:1.05;font-weight:900;letter-spacing:.01em}
-      #docsOverlayV311 .docsHeadV311 p{margin:4px 0 0;font-size:12px;font-weight:800;color:#ecfdf5}
-      #docsOverlayV311 .docsCloseV311{position:absolute;right:14px;top:7px;border:0;background:transparent;color:#fff;font-size:28px;font-weight:900;line-height:1;cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center}
-      #docsOverlayV311 .docsBodyV311{display:grid;grid-template-columns:300px 1fr;gap:10px;padding:10px 12px;overflow:auto;min-height:295px}
-      #docsOverlayV311 .docsFormV311,#docsOverlayV311 .docsListV311{background:#15243a;border:1px solid rgba(148,163,184,.26);border-radius:12px;padding:10px;box-sizing:border-box}
-      #docsOverlayV311 h3{margin:0 0 8px;font-size:17px;line-height:1.05;font-weight:900;color:#f8fafc}
-      #docsOverlayV311 label{display:block;margin:0 0 7px;color:#e2e8f0;font-weight:900;font-size:13px;line-height:1.1}
-      #docsOverlayV311 label small{font-size:10px;color:#cbd5e1;font-weight:800}
-      #docsOverlayV311 select,#docsOverlayV311 input[type=text]{width:100%;height:32px;border-radius:8px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:13px;font-weight:800;padding:0 9px;outline:none}
-      #docsOverlayV311 .docsDropV311{height:70px;border:1px dashed rgba(148,163,184,.45);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:6px;cursor:pointer;background:#122035}
-      #docsOverlayV311 .docsDropV311 span{font-size:17px;line-height:1}
-      #docsOverlayV311 .docsDropV311 b{font-size:15px;margin-top:3px}
-      #docsOverlayV311 .docsDropV311 small{font-size:11px;color:#cbd5e1;margin-top:2px}
-      #docsOverlayV311 .docsSelectedV311{font-size:12px;color:#dbeafe;min-height:18px;margin:6px 0;white-space:normal;overflow-wrap:anywhere}
-      #docsOverlayV311 .docsProgressV311{font-size:12px;font-weight:900;color:#86efac;min-height:18px;margin:4px 0;overflow-wrap:anywhere}
-      #docsOverlayV311 .docsPrimaryV311{width:100%;height:38px;border:0;border-radius:10px;background:#3fa533;color:#fff;font-size:14px;font-weight:900;cursor:pointer;margin-top:6px}
-      #docsOverlayV311 .docsPrimaryV311:disabled{opacity:.78;cursor:wait}
-      #docsOverlayV311 .docsListHeadV311{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
-      #docsOverlayV311 .docsRefreshV311{height:34px;padding:0 17px;border-radius:10px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:13px;font-weight:900;cursor:pointer}
-      #docsOverlayV311 .docsRefreshV311:disabled{opacity:.75;cursor:wait}
-      #docsOverlayV311 .docsEmptyV311{border:1px dashed rgba(148,163,184,.35);border-radius:10px;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#e5e7eb;font-weight:800;font-size:13px}
-      #docsOverlayV311 .docsEmptyV311 small{display:block;color:#b6c2d2;margin-top:4px;font-size:11px}
-      #docsOverlayV311 table{width:100%;border-collapse:collapse;font-size:13px}
-      #docsOverlayV311 th{background:#293a52;color:#e5e7eb;text-align:left;padding:8px 10px;font-size:13px}
-      #docsOverlayV311 td{border-bottom:1px solid rgba(148,163,184,.18);padding:8px 10px;color:#f8fafc;vertical-align:middle}
-      #docsOverlayV311 .typePillV311{display:inline-flex;align-items:center;gap:5px;border-radius:18px;background:#174b37;color:#9bff72;font-weight:900;padding:5px 9px;white-space:nowrap}
-      #docsOverlayV311 .docsActionsV311{white-space:nowrap;text-align:right}
-      #docsOverlayV311 .docsActionsV311 button{border:0;background:transparent;color:#8dff65;font-size:14px;font-weight:900;cursor:pointer;margin:0 3px;padding:3px}
-      #docsOverlayV311 .docsActionsV311 button.danger{color:#ff6b6b}
-      .transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,.docsEnabledV311{opacity:1!important;pointer-events:auto!important;filter:none!important;max-width:140px;overflow:hidden;white-space:nowrap}
-      #docsOverlayV311 .transitDocsBtn228,#docsOverlayV311 .transitDocsBtn230,#docsOverlayV311 .transitDocsBtn231,#docsOverlayV311 .transitDocsBtn233{display:none!important}
-      @media(max-width:900px){#docsOverlayV311 .docsBodyV311{grid-template-columns:1fr}#docsOverlayV311 .docsHeadV311 h2{font-size:20px}}
-    `;
-    const st=document.createElement('style'); st.id='eltaDocsStyle311'; st.textContent=css; document.head.appendChild(st);
+  async function fetchRemote(emb){
+    const db=dbx(); if(!db) return [];
+    const seen=new Set(), out=[];
+    const add=snap=>{(snap&&snap.docs||[]).forEach(x=>{if(seen.has(x.id))return; const d={id:x.id,_remote:true,...x.data()}; if(active(d)){seen.add(x.id);out.push(d);}});};
+    const jobs=[];
+    keys(emb).forEach(k=>['embarque','nroEmbarque','embarqueId'].forEach(f=>jobs.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),QUERY_TIMEOUT,'Consulta').catch(()=>null))));
+    const snaps=await Promise.all(jobs); snaps.forEach(add); return out;
   }
-
-  async function fetchDocs(emb){
-    const e=cleanEmb(emb), out=[], seen=new Set();
-    const add=d=>{if(!d||!active(d))return;const id=d.id||('local_'+Math.random());if(seen.has(id))return;seen.add(id);out.push({...d,id})};
-    localRows().filter(x=>cleanEmb(x.embarque)===e).forEach(add);
-    const db=dbx();
-    if(db&&e){
-      try{
-        const snap=await timeout(db.collection(COLLECTION).where('embarque','==',String(e)).get(),QUERY_TIMEOUT,'Consulta documentos');
-        (snap.docs||[]).forEach(doc=>add({id:doc.id,...doc.data()}));
-      }catch(err){console.warn('Docs consulta principal',err)}
-    }
-    out.sort((a,b)=>(toDate(b.fechaCarga||b.createdAt)?.getTime()||0)-(toDate(a.fechaCarga||a.createdAt)?.getTime()||0));
-    return out;
-  }
+  function localDocs(emb){emb=cleanEmb(emb);return readLocal().filter(x=>keys(emb).includes(String(x.embarque))&&active(x));}
 
   function renderRows(rows,emb){
-    window.__docsCacheV311={}; rows.forEach(d=>window.__docsCacheV311[d.id]=d);
-    if(!rows.length) return '<div class="docsEmptyV311"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
-    return '<table><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th style="text-align:right">Acciones</th></tr></thead><tbody>'+rows.map(d=>`<tr><td><span class="typePillV311">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}${d._local?' <small>(local)</small>':''}</td><td>${fmt(d.fechaCarga||d.createdAt)}</td><td class="docsActionsV311"><button type="button" onclick="window.viewDocV311('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV311('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV311('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')+'</tbody></table>';
-  }
-
-  function closeDocs(){document.querySelectorAll('#docsOverlayV311,#docsOverlayV310,#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove())}
-  function modal(emb,flota){
-    addStyle(); closeDocs(); window.__docsFilesV311=[];
-    const el=document.createElement('div'); el.id='docsOverlayV311';
-    el.innerHTML=`<div class="docsModalV311"><div class="docsHeadV311"><h2>Documentación · Emb. ${E(emb)}</h2><p>Flota ${E(flota||'-')} · PDF del embarque</p><button type="button" class="docsCloseV311" onclick="window.closeDocsModalV311()">×</button></div><div class="docsBodyV311"><section class="docsFormV311"><h3>Subir PDF</h3><label>Tipo<select id="docsTipoV311"><option>MIC/DTA</option><option>Factura</option><option>CRT</option><option>HR</option><option>OEA</option><option>Otros</option></select></label><label>Observación <small>(opcional)</small><input id="docsObsV311" type="text" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV311" for="docsFileV311"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV311" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV311" class="docsSelectedV311">Sin archivos seleccionados.</div><div id="docsProgressV311" class="docsProgressV311"></div><button type="button" id="docsUploadBtnV311" class="docsPrimaryV311" onclick="window.uploadDocsV311('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV311"><div class="docsListHeadV311"><h3>Documentos cargados</h3><button type="button" class="docsRefreshV311" id="docsRefreshV311" onclick="window.loadDocsV311('${E(emb)}')">Actualizar</button></div><div id="docsListContentV311"><div class="docsEmptyV311"><b>Cargando documentación...</b><small>La vista queda disponible mientras consulta.</small></div></div></section></div></div>`;
-    document.body.appendChild(el); el.addEventListener('click',ev=>{if(ev.target===el)closeDocs()});
-    const inp=document.getElementById('docsFileV311');
-    inp&&inp.addEventListener('change',()=>{
-      const files=[...(inp.files||[])]; window.__docsFilesV311=files;
-      document.getElementById('docsSelectedV311').textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.';
-      const p=document.getElementById('docsProgressV311'); if(p)p.textContent='';
-    });
-  }
-
-  function openDocs(emb,flota){emb=cleanEmb(emb);if(!emb){alert('No se pudo identificar el embarque.');return false}modal(emb,flota);setTimeout(()=>loadDocs(emb),10);return false}
-  async function loadDocs(emb){
-    emb=cleanEmb(emb); const box=document.getElementById('docsListContentV311'); const btn=document.getElementById('docsRefreshV311'); if(!box)return [];
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
-    box.innerHTML='<div class="docsEmptyV311"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    const slow=setTimeout(()=>{if(box&&/Cargando/.test(box.textContent||''))box.innerHTML='<div class="docsEmptyV311"><b>La consulta está demorando.</b><small>Puede subir PDF igual o tocar Actualizar.</small></div>';},1300);
-    try{const rows=await fetchDocs(emb); clearTimeout(slow); box.innerHTML=renderRows(rows,emb); return rows}
-    catch(e){clearTimeout(slow); console.error(e); box.innerHTML='<div class="docsEmptyV311"><b>No se pudo consultar Firestore.</b><small>Puede subir PDF; se intentará guardar sin bloquear la pantalla.</small></div>'; return []}
-    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} applyVersion()}
-  }
-
-  async function saveDocument(row){
-    const db=dbx();
-    if(db){
-      try{
-        const data={...row}; delete data.id; delete data._local;
-        const ref=await timeout(db.collection(COLLECTION).add(data),WRITE_TIMEOUT,'Guardar documento');
-        return {ok:true,id:ref.id,mode:'firestore'};
-      }catch(e){console.warn('Firestore rechazó la carga; se usa respaldo local.',e)}
+    const body=document.getElementById('docsRowsV313');
+    if(!body)return;
+    window.__docsCacheV313={};
+    rows.forEach(r=>window.__docsCacheV313[r.id]=r);
+    if(!rows.length){
+      body.innerHTML='<div class="docsEmptyV313">No hay documentos cargados.<br><small>Seleccione un PDF para comenzar.</small></div>';
+      return;
     }
-    const rows=localRows(); rows.push({...row,_local:true}); saveLocal(rows); return {ok:true,id:row.id,mode:'local'};
+    body.innerHTML=`<table class="docsTableV313"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${rows.map(d=>`<tr><td><span class="docTypeV313">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||d.fileName||'documento.pdf')}</td><td>${fmt(d.fechaCarga||d.createdAt||d.fecha)}</td><td class="docActionsV313"><button type="button" onclick="viewDocV313('${E(d.id)}')" title="Ver">👁</button><button type="button" onclick="downloadDocV313('${E(d.id)}')" title="Descargar">⬇</button><button type="button" onclick="deleteDocV313('${E(d.id)}','${E(emb)}')" title="Eliminar">🗑</button></td></tr>`).join('')}</tbody></table>`;
   }
+
+  async function loadDocs(emb){
+    emb=cleanEmb(emb);
+    const btn=document.getElementById('docsRefreshV313');
+    const body=document.getElementById('docsRowsV313');
+    if(btn){btn.disabled=true;btn.textContent='Actualizando...';}
+    if(body)body.innerHTML='<div class="docsEmptyV313">Cargando documentación...<br><small>Consultando documentos del embarque.</small></div>';
+    let timeoutShown=false;
+    const slow=setTimeout(()=>{timeoutShown=true;if(body)body.innerHTML='<div class="docsEmptyV313">La consulta está demorando.<br><small>Puede subir documentos mientras se actualiza la lista.</small></div>'; },1800);
+    try{
+      const rows=[...await fetchRemote(emb),...localDocs(emb)].sort((a,b)=>toMillis(b.fechaCarga||b.createdAt||b.fecha)-toMillis(a.fechaCarga||a.createdAt||a.fecha));
+      clearTimeout(slow); renderRows(rows,emb);
+    }catch(e){
+      clearTimeout(slow); console.warn('loadDocs',e); renderRows(localDocs(emb),emb);
+    }finally{ if(btn){btn.disabled=false;btn.textContent='Actualizar';} }
+  }
+
+  function buildModal(emb,flota){
+    closeDocs();
+    const overlay=document.createElement('div'); overlay.id='docsOverlayV313'; overlay.className='docsOverlayV313';
+    overlay.innerHTML=`<div class="docsModalV313"><div class="docsHeadV313"><div><h2>Documentación · Emb. ${E(emb)}</h2><p>Flota ${E(flota||'-')} · PDF del embarque</p></div><button type="button" onclick="closeDocsModalV313()">×</button></div><div class="docsBodyV313"><section class="docsUploadV313"><h3>Subir PDF</h3><label>Tipo</label><select id="docsTipoV313"><option>MIC/DTA</option><option>CRT</option><option>Factura</option><option>HR</option><option>Remito</option><option>Certificado</option><option>Otros</option></select><label>Observación <small>(opcional)</small></label><input id="docsObsV313" placeholder="Ej. MIC N° 123456"><label class="docsDropV313" for="docsFileV313"><span>☁</span><b>Seleccionar PDF</b><small>Máx. 12 MB por archivo</small></label><input id="docsFileV313" type="file" accept="application/pdf,.pdf" multiple style="display:none"><div id="docsSelectedV313" class="docsSelectedV313">Sin archivos seleccionados.</div><div id="docsProgressV313" class="docsProgressV313"></div><button id="docsUploadBtnV313" class="docsPrimaryV313" type="button" onclick="uploadDocsV313('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV313"><div class="docsListHeadV313"><h3>Documentos cargados</h3><button id="docsRefreshV313" type="button" onclick="loadDocsV313('${E(emb)}')">Actualizar</button></div><div id="docsRowsV313" class="docsRowsV313"><div class="docsEmptyV313">Abriendo vista...</div></div></section></div></div>`;
+    document.body.appendChild(overlay);
+    const input=document.getElementById('docsFileV313');
+    input?.addEventListener('change',()=>{const files=[...(input.files||[])];document.getElementById('docsSelectedV313').textContent=files.length?files.map(f=>`${f.name} (${Math.max(1,Math.round(f.size/1024))} KB)`).join(' · '):'Sin archivos seleccionados.';});
+  }
+  function openDocs(emb,flota){emb=cleanEmb(emb); if(!emb){alert('No se pudo identificar el embarque.');return false;} buildModal(emb,flota); setTimeout(()=>loadDocs(emb),50); return false;}
+  function closeDocs(){document.getElementById('docsOverlayV313')?.remove();document.getElementById('docsOverlayV3')?.remove();document.getElementById('docsOverlay246')?.remove();document.getElementById('docsOverlay228')?.remove();}
 
   async function uploadDocs(emb,flota){
-    emb=cleanEmb(emb); const inp=document.getElementById('docsFileV311');
-    let files=[...(window.__docsFilesV311||[])]; if(!files.length && inp&&inp.files) files=[...inp.files];
-    const tipo=S(document.getElementById('docsTipoV311')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV311')?.value);
-    const btn=document.getElementById('docsUploadBtnV311'); const prog=document.getElementById('docsProgressV311'); const sel=document.getElementById('docsSelectedV311');
-    if(!files.length){if(prog)prog.textContent='No hay archivo seleccionado.';alert('Seleccione uno o más archivos PDF.');return}
-    if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...'} if(prog)prog.textContent='Preparando carga...';
-    let saved=0, local=0, failed=0;
+    emb=cleanEmb(emb);
+    const input=document.getElementById('docsFileV313');
+    const files=[...(input?.files||[])];
+    const btn=document.getElementById('docsUploadBtnV313');
+    const prog=document.getElementById('docsProgressV313');
+    const selected=document.getElementById('docsSelectedV313');
+    const tipo=S(document.getElementById('docsTipoV313')?.value)||'Otros';
+    const obs=S(document.getElementById('docsObsV313')?.value);
+    if(!files.length){ alert('Seleccione uno o más archivos PDF.'); return; }
+    if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...';}
+    let ok=0,local=0,fail=0;
+    const db=dbx();
     try{
       for(let i=0;i<files.length;i++){
         const file=files[i], fname=safe(file.name);
-        if(file.type!=='application/pdf'&&!/\.pdf$/i.test(file.name)){failed++; if(prog)prog.textContent=fname+' no es PDF.'; continue}
-        if(file.size>MAX_MB*1024*1024){failed++; if(prog)prog.textContent=fname+' supera '+MAX_MB+' MB.'; continue}
-        if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`; if(prog)prog.textContent=`Procesando ${i+1}/${files.length}: ${fname}`;
-        const base64=await timeout(fileToBase64(file),WRITE_TIMEOUT,'Lectura PDF');
-        const row={id:'local_'+Date.now()+'_'+Math.random().toString(36).slice(2),embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,archivoBase64:base64,url:base64,downloadURL:base64,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:'Usuario',observaciones:obs,activo:true,almacenamiento:'firestore_base64'};
-        const res=await saveDocument(row); saved++; if(res.mode==='local')local++;
+        if(!/\.pdf$/i.test(file.name) && file.type!=='application/pdf'){fail++; alert(fname+' no es PDF.'); continue;}
+        if(file.size>MAX_MB*1024*1024){fail++; alert(fname+' supera '+MAX_MB+' MB.'); continue;}
+        if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`;
+        if(prog)prog.textContent=`Guardando ${i+1}/${files.length}: ${fname}`;
+        let base64='';
+        try{ base64=await fileToBase64(file); }catch(e){ console.warn(e); }
+        const payload={embarque:String(emb),nroEmbarque:String(emb),embarqueId:String(emb),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:S(window.ELTA_LOGGED_USER?.nombre||window.ELTA_LOGGED_USER?.user||'Usuario'),observaciones:obs,activo:true,archivoBase64:base64,origen:'firestore_base64'};
+        try{
+          if(!db) throw new Error('Firestore no disponible');
+          await timeout(db.collection(COLLECTION).add(payload),WRITE_TIMEOUT,'Guardar documento'); ok++;
+        }catch(e){
+          console.warn('Firestore rechazó, guardo local',e);
+          const rows=readLocal(); rows.push({...payload,id:'local_'+Date.now()+'_'+i,fechaCarga:new Date().toISOString(),createdAt:new Date().toISOString(),_local:true,origen:'local_fallback'}); writeLocal(rows); local++;
+        }
       }
-      if(inp)inp.value=''; window.__docsFilesV311=[]; const obsEl=document.getElementById('docsObsV311'); if(obsEl)obsEl.value=''; if(sel)sel.textContent='Sin archivos seleccionados.';
-      if(prog)prog.textContent= local ? 'Archivo guardado localmente. Revisar reglas de Firestore para compartirlo.' : `Carga finalizada: ${saved} archivo(s). Actualizando lista...`;
+      if(input)input.value=''; const obsEl=document.getElementById('docsObsV313'); if(obsEl)obsEl.value='';
+      if(selected)selected.textContent='Sin archivos seleccionados.';
+      if(prog)prog.textContent= local?`Carga finalizada: ${ok} en Firestore, ${local} local por permisos.`:`Carga finalizada: ${ok} archivo(s).`;
       await loadDocs(emb);
-    }catch(e){console.error(e); if(prog)prog.textContent='No se pudo completar la carga. Revise conexión/permisos.'; alert('No se pudo completar la carga. Revise conexión/permisos.')}
-    finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},9000)}
+    }finally{ if(btn){btn.disabled=false;btn.textContent='Subir documento';} setTimeout(()=>{if(prog)prog.textContent='';},5500); }
   }
 
-  function viewDoc(id){const d=(window.__docsCacheV311||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} window.open(url,'_blank','noopener')}
-  function downloadDoc(id){const d=(window.__docsCacheV311||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return; const d=(window.__docsCacheV311||{})[id]||{}; if(d._local||String(id).startsWith('local_')){saveLocal(localRows().map(x=>x.id===id?{...x,activo:false}:x));await loadDocs(emb);return} const db=dbx(); if(!db)return; try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),WRITE_TIMEOUT,'Eliminar');await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
+  function viewDoc(id){const d=(window.__docsCacheV313||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener');}
+  function downloadDoc(id){const d=(window.__docsCacheV313||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove();}
+  async function deleteDoc(id,emb){
+    if(!confirm('¿Eliminar este documento del embarque?'))return;
+    const d=(window.__docsCacheV313||{})[id];
+    if(d?._local){writeLocal(readLocal().map(x=>x.id===id?{...x,activo:false,deleted:true}:x)); await loadDocs(emb); return;}
+    const db=dbx(); if(!db){alert('Firestore no está disponible.');return;}
+    try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,deleted:true,fechaEliminacion:nowTs()}),WRITE_TIMEOUT,'Eliminar'); await loadDocs(emb);}catch(e){console.warn(e);alert('No se pudo eliminar el documento.');}
+  }
 
-  function embFromCard(card){const txt=card&&card.textContent||'';let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i)||txt.match(/\b([0-9]{5,8})\b/);return m?m[1]:''}
-  function flFromCard(card){const m=(card&&card.textContent||'').match(/Flota\s*([A-Za-z0-9_-]+)/i);return m?m[1]:''}
+  function embFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\w*\(['"]([^'"]+)/);return cleanEmb(btn.dataset.embarque||btn.dataset.emb||m?.[1]||'');}
+  function flotaFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\w*\(['"][^'"]+['"]\s*,\s*['"]([^'"]*)/);return S(btn.dataset.flota||m?.[1]||'');}
+  function enableButton(btn){
+    if(btn.closest('#docsOverlayV313')) return;
+    const emb=embFromButton(btn); const fl=flotaFromButton(btn);
+    if(!emb) return;
+    btn.disabled=false;btn.removeAttribute('disabled');btn.setAttribute('aria-disabled','false');btn.dataset.embarque=emb;if(fl)btn.dataset.flota=fl;btn.style.pointerEvents='auto';btn.style.opacity='1';btn.classList.remove('disabled','docsNoFiles');btn.title='Abrir documentación PDF';
+    if(/docs/i.test(btn.textContent||'')) btn.innerHTML='📄 Docs';
+    btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(embFromButton(btn)||emb,flotaFromButton(btn)||fl);};
+  }
   function enableDocsButtons(){
-    (document.getElementById('transitos')||document).querySelectorAll('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,button').forEach(btn=>{
-      if(btn.closest('#docsOverlayV311')) return;
-      const isDocs=/Docs/i.test(btn.textContent||'') || /openDocsModal/i.test(btn.getAttribute('onclick')||'');
-      if(!isDocs) return;
-      const card=btn.closest('.item,.transitCardV1210,.glassPanel')||btn.closest('div'); const emb=cleanEmb(btn.dataset.embarque||embFromCard(card)); if(!emb) return; const fl=S(btn.dataset.flota||flFromCard(card));
-      btn.disabled=false; btn.removeAttribute('disabled'); btn.classList.remove('disabled','docsNoFiles'); btn.classList.add('docsEnabledV311'); btn.style.pointerEvents='auto'; btn.style.opacity='1'; btn.innerHTML='📄 Docs'; btn.title='Abrir documentación PDF'; btn.onclick=ev=>{ev.preventDefault();ev.stopPropagation();return openDocs(emb,fl)};
-    });
+    document.querySelectorAll('button[onclick*="openDocs"],button.docsBtn,button.btnDocs,button[data-embarque][class*="Docs"],button[data-docs]').forEach(enableButton);
+    document.querySelectorAll('button').forEach(btn=>{if(btn.closest('#docsOverlayV313'))return; const t=(btn.textContent||'').trim(); if(/^📄?\s*Docs$/i.test(t)||/^Docs$/i.test(t)) enableButton(btn);});
   }
-
-  window.openDocsModalV311=openDocs; window.closeDocsModalV311=closeDocs; window.loadDocsV311=loadDocs; window.uploadDocsV311=uploadDocs; window.viewDocV311=viewDoc; window.downloadDocV311=downloadDoc; window.deleteDocV311=deleteDoc;
-  window.openDocsModalV310=openDocs; window.openDocsModalV308=openDocs; window.openDocsModalV3=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs; window.openEmbarqueDocs228=openDocs;
-  window.closeDocsModalV310=closeDocs; window.closeDocsModalV308=closeDocs; window.closeDocsModalV3=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs;
-  window.loadDocsV310=loadDocs; window.loadDocsV308=loadDocs; window.loadDocsV3=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs;
-  window.uploadDocsV310=uploadDocs; window.uploadDocsV308=uploadDocs; window.uploadDocsV3=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
-
-  function start(){addStyle();applyVersion();enableDocsButtons();[100,500,1200,2500].forEach(ms=>setTimeout(()=>{applyVersion();enableDocsButtons()},ms));}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start(); window.addEventListener('load',start);
-  if(!window.__docsObserverV311){let t=null; window.__docsObserverV311=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{applyVersion();enableDocsButtons()},160)}); try{window.__docsObserverV311.observe(document.body,{childList:true,subtree:true})}catch(e){}}
+  function injectCss(){
+    if(document.getElementById('docsCssV313'))return;
+    const st=document.createElement('style');st.id='docsCssV313';st.textContent=`
+      .docsOverlayV313{position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:99999;display:flex;align-items:center;justify-content:center;padding:10px}
+      .docsModalV313{width:min(1280px,96vw);max-height:88vh;background:#132238;border:1px solid rgba(177,201,230,.22);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.45);overflow:hidden;color:#eef5ff;font-family:inherit}
+      .docsHeadV313{background:#2f8d35;padding:16px 24px;display:flex;justify-content:space-between;align-items:flex-start}
+      .docsHeadV313 h2{font-size:28px;line-height:1.05;margin:0 0 5px;font-weight:900}
+      .docsHeadV313 p{margin:0;font-size:16px;font-weight:800}
+      .docsHeadV313 button{font-size:36px;background:transparent;border:0;color:#fff;font-weight:900;cursor:pointer;line-height:1}
+      .docsBodyV313{display:grid;grid-template-columns:380px 1fr;gap:14px;padding:16px}
+      .docsUploadV313,.docsListV313{background:#14243a;border:1px solid rgba(177,201,230,.22);border-radius:16px;padding:14px}
+      .docsUploadV313 h3,.docsListV313 h3{font-size:22px;margin:0 0 10px;font-weight:900}
+      .docsUploadV313 label{display:block;font-size:16px;font-weight:900;margin:8px 0 5px}
+      .docsUploadV313 label small{font-size:12px;color:#b8c4d5}
+      .docsUploadV313 select,.docsUploadV313 input{width:100%;height:42px;border-radius:10px;border:1px solid rgba(177,201,230,.28);background:#26374e;color:#fff;font-size:17px;font-weight:800;padding:0 12px;box-sizing:border-box}
+      .docsDropV313{height:94px;border:1px dashed rgba(177,201,230,.35)!important;border-radius:12px;display:flex!important;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:10px!important;background:#132035;cursor:pointer}
+      .docsDropV313 span{font-size:22px;line-height:1}
+      .docsDropV313 b{font-size:21px;margin-top:4px}
+      .docsDropV313 small{font-size:13px;color:#d6deeb}
+      .docsSelectedV313{font-size:14px;color:#d8e2f0;min-height:32px;margin:8px 0}
+      .docsProgressV313{font-size:14px;color:#9afa8b;font-weight:800;min-height:20px;margin:4px 0}
+      .docsPrimaryV313{width:100%;height:50px;border:0;border-radius:12px;background:#42a932;color:#fff;font-size:19px;font-weight:900;cursor:pointer;margin-top:6px}
+      .docsPrimaryV313:disabled{opacity:.7;cursor:wait}
+      .docsListHeadV313{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+      .docsListHeadV313 button{height:46px;border-radius:12px;border:1px solid rgba(177,201,230,.3);background:#293a54;color:#fff;font-size:18px;font-weight:900;padding:0 24px;cursor:pointer}
+      .docsRowsV313{min-height:280px}
+      .docsEmptyV313{border:1px dashed rgba(177,201,230,.35);border-radius:12px;padding:26px;text-align:center;font-size:18px;font-weight:900;color:#e8effa}
+      .docsEmptyV313 small{display:block;color:#b8c4d5;margin-top:5px}
+      .docsTableV313{width:100%;border-collapse:collapse;font-size:16px}
+      .docsTableV313 th{background:#2b3c55;text-align:left;padding:12px;font-weight:900}
+      .docsTableV313 td{padding:12px;border-bottom:1px solid rgba(177,201,230,.13);vertical-align:middle}
+      .docTypeV313{display:inline-flex;align-items:center;gap:6px;background:#1c5a36;border-radius:18px;color:#9dfd7b;font-weight:900;padding:7px 12px;white-space:nowrap}
+      .docActionsV313{white-space:nowrap;text-align:right}
+      .docActionsV313 button{background:transparent;border:0;color:#95ff75;font-size:17px;margin:0 4px;cursor:pointer}
+      .docActionsV313 button:last-child{color:#ff6b6b}
+      @media(max-width:900px){.docsBodyV313{grid-template-columns:1fr}.docsModalV313{max-height:94vh;overflow:auto}}
+    `;document.head.appendChild(st);
+  }
+  window.openDocsModalV313=openDocs; window.closeDocsModalV313=closeDocs; window.loadDocsV313=loadDocs; window.uploadDocsV313=uploadDocs; window.viewDocV313=viewDoc; window.downloadDocV313=downloadDoc; window.deleteDocV313=deleteDoc;
+  window.openDocsModalV3=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs;
+  window.closeDocsModalV3=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs;
+  window.loadDocsV3=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs;
+  window.uploadDocsV3=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
+  window.viewDocV3=viewDoc; window.viewDoc246=viewDoc; window.viewDoc228=viewDoc;
+  window.downloadDocV3=downloadDoc; window.downloadDoc246=downloadDoc; window.downloadDoc228=downloadDoc;
+  window.deleteDocV3=deleteDoc; window.deleteDoc246=deleteDoc; window.deleteDoc228=deleteDoc;
+  function start(){injectCss();applyVersion();enableDocsButtons();[150,500,1200,2500].forEach(ms=>setTimeout(()=>{applyVersion();enableDocsButtons();},ms));}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+  document.addEventListener('click',ev=>{const b=ev.target.closest('button'); if(!b||b.closest('#docsOverlayV313'))return; const txt=(b.textContent||'').trim(); if(/^📄?\s*Docs$/i.test(txt)||/openDocs/i.test(b.getAttribute('onclick')||'')){enableButton(b);}},true);
 })();
