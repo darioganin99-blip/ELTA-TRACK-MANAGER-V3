@@ -18456,3 +18456,111 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function start(){setVersion();enableAllDocsButtons();let t=null;const target=document.getElementById('transitos')||document.body;if(target&&!window.__docsObserver303){window.__docsObserver303=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{enableAllDocsButtons();setVersion()},70)});window.__docsObserver303.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','style','data-docs-enabled']})}[50,150,400,900,1800,3000].forEach(ms=>setTimeout(()=>{enableAllDocsButtons();setVersion()},ms));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
+
+
+/* ===== v3.0.8 - Docs estable: sin hijack de botones + fallback local ===== */
+(function(){
+  const V='3.0.8';
+  const COLLECTION='embarque_documentos';
+  const MAX_MB=12;
+  const QUERY_TIMEOUT=3500;
+  const UPLOAD_TIMEOUT=20000;
+  const LS_KEY='elta_docs_local_v308';
+  const S=v=>(v==null?'':String(v)).trim();
+  const E=v=>S(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const cleanEmb=v=>{const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v).replace(/[^0-9A-Za-z_-]/g,'')};
+  const dbx=()=>{try{return window.db||(typeof db!=='undefined'?db:null)||(window.firebase&&firebase.firestore?firebase.firestore():null)}catch(e){return null}};
+  const nowTs=()=>{try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}};
+  const timeout=(p,ms,label)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error(label||'Tiempo agotado')),ms))]);
+  const safe=n=>S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf';
+  const icon=t=>{t=S(t).toLowerCase();if(t.includes('fact'))return '🧾';if(t.includes('mic'))return '📄';if(t.includes('crt'))return '📄';if(t.includes('hr'))return '📋';if(t.includes('oea'))return '🛡️';return '📁'};
+  function setVersion(){
+    window.ELTA_APP_VERSION=V; window.APP_VERSION_V2=V; window.ELTA_FORCE_VERSION=V;
+    try{document.title='ELTA ITS - Versión '+V;document.querySelectorAll('span,small,p,div,footer').forEach(el=>{if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V)}})}catch(e){}
+  }
+  function toMillis(v){try{if(!v)return 0;if(v.toDate)return v.toDate().getTime();if(v.seconds)return v.seconds*1000;let d=new Date(v);return isNaN(d)?0:d.getTime()}catch(e){return 0}}
+  function fmt(v){const t=toMillis(v);return t?new Date(t).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-'}
+  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true}
+  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||''}
+  function readLocal(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return []}}
+  function writeLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows))}catch(e){console.warn('No se pudo guardar localmente',e)}}
+  function localDocs(emb){emb=cleanEmb(emb);return readLocal().filter(x=>x.embarque===emb&&active(x))}
+  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result||''));r.onerror=()=>rej(r.error||new Error('No se pudo leer el PDF'));r.readAsDataURL(file)})}
+  function keys(emb){emb=cleanEmb(emb);const n=String(Number(emb));return [...new Set([emb,n].filter(x=>x&&x!=='NaN'))]}
+  async function fetchRemote(emb){
+    const db=dbx(); if(!db)return [];
+    const seen=new Set(), out=[];
+    const add=snap=>{(snap&&snap.docs||[]).forEach(x=>{if(seen.has(x.id))return;const d={id:x.id,_remote:true,...x.data()};if(active(d)){seen.add(x.id);out.push(d)}})};
+    const jobs=[]; keys(emb).forEach(k=>['embarque','nroEmbarque','embarqueId'].forEach(f=>jobs.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),QUERY_TIMEOUT,'Consulta').catch(()=>null))));
+    (await Promise.all(jobs)).forEach(add); return out;
+  }
+  async function fetchDocs(emb){
+    emb=cleanEmb(emb); let rows=[];
+    try{rows=await fetchRemote(emb)}catch(e){console.warn('Docs remoto no disponible',e)}
+    rows=rows.concat(localDocs(emb));
+    const seen=new Set(); rows=rows.filter(d=>{const k=(d.id||d.nombre||'')+'_'+(d.fechaCarga||d.createdAt||''); if(seen.has(k))return false; seen.add(k); return true});
+    rows.sort((a,b)=>(toMillis(b.fechaCarga||b.createdAt)-toMillis(a.fechaCarga||a.createdAt)));
+    return rows;
+  }
+  function renderRows(rows,emb){
+    window.__docsCacheV308={}; rows.forEach(d=>window.__docsCacheV308[d.id]=d);
+    if(!rows.length)return '<div class="docsEmptyV308"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
+    return `<div class="docsTableWrapV308"><table class="docsTableV308"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${rows.map(d=>`<tr><td><span class="typePillV308">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}${d._local?'<small class="localMarkV308"> Local</small>':''}</td><td>${E(fmt(d.fechaCarga||d.createdAt))}</td><td class="docsActionsV308"><button type="button" onclick="window.viewDocV308('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV308('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV308('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')}</tbody></table></div>`;
+  }
+  function modal(emb,flota){
+    const types=['Factura','MIC/DTA','CRT','HR','OEA','Otros'];
+    document.querySelectorAll('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove());
+    const el=document.createElement('div'); el.id='docsOverlayV308'; el.className='docsOverlayV308';
+    el.innerHTML=`<div class="docsModalV308"><div class="docsHeadV308"><div><h2>Documentación · Emb. ${E(emb)}</h2><p>${flota?`Flota ${E(flota)} · `:''}PDF del embarque</p></div><button type="button" class="docsCloseV308" onclick="window.closeDocsModalV308()">×</button></div><div class="docsBodyV308"><section class="docsUploadV308"><h3>Subir PDF</h3><label><span>Tipo</span><select id="docsTipoV308">${types.map(t=>`<option value="${E(t)}">${icon(t)} ${E(t)}</option>`).join('')}</select></label><label><span>Observación <small>(opcional)</small></span><input id="docsObsV308" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV308" for="docsFileV308"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV308" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV308" class="docsSelectedV308">Sin archivos seleccionados.</div><div id="docsProgressV308" class="docsProgressV308"></div><button type="button" id="docsUploadBtnV308" class="docsPrimaryV308" onclick="window.uploadDocsV308('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV308"><div class="docsListHeadV308"><h3>Documentos cargados</h3><button type="button" id="docsRefreshV308" onclick="window.loadDocsV308('${E(emb)}')">Actualizar</button></div><div id="docsListContentV308" class="docsListContentV308"><div class="docsEmptyV308"><b>Cargando documentación...</b><small>Abriendo vista sin bloquear la carga.</small></div></div></section></div></div>`;
+    document.body.appendChild(el); el.addEventListener('click',ev=>{if(ev.target===el)closeDocs()});
+    const inp=document.getElementById('docsFileV308'); inp&&inp.addEventListener('change',()=>{const files=[...(inp.files||[])];document.getElementById('docsSelectedV308').textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.'});
+  }
+  function openDocs(emb,flota){emb=cleanEmb(emb); if(!emb){alert('No se pudo identificar el embarque.');return false} modal(emb,flota); setTimeout(()=>loadDocs(emb),20); return false}
+  function closeDocs(){document.querySelectorAll('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove())}
+  async function loadDocs(emb){
+    emb=cleanEmb(emb); const box=document.getElementById('docsListContentV308'); const btn=document.getElementById('docsRefreshV308'); if(!box)return [];
+    if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
+    box.innerHTML='<div class="docsEmptyV308"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
+    let soft=setTimeout(()=>{if(box&&/Cargando/.test(box.textContent||''))box.innerHTML='<div class="docsEmptyV308"><b>La consulta está demorando.</b><small>Puede subir documentos igual o tocar Actualizar.</small></div>'},1200);
+    try{const rows=await fetchDocs(emb); clearTimeout(soft); box.innerHTML=renderRows(rows,emb); return rows}
+    catch(e){clearTimeout(soft); console.error(e); box.innerHTML='<div class="docsEmptyV308"><b>No se pudo cargar la documentación.</b><small>Puede subir PDF o usar Actualizar.</small></div>'; return []}
+    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} setVersion()}
+  }
+  async function uploadDocs(emb,flota){
+    emb=cleanEmb(emb); const db=dbx(); const inp=document.getElementById('docsFileV308'); const files=[...(inp?.files||[])]; const tipo=S(document.getElementById('docsTipoV308')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV308')?.value); const btn=document.getElementById('docsUploadBtnV308'); const prog=document.getElementById('docsProgressV308'); const selected=document.getElementById('docsSelectedV308');
+    if(!files.length){alert('Seleccione uno o más archivos PDF.');return}
+    if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...'} if(prog)prog.textContent='Preparando carga...';
+    let ok=0, local=0, fail=0;
+    try{
+      for(let i=0;i<files.length;i++){
+        const file=files[i]; const fname=safe(file.name); if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){fail++; alert(fname+' no es PDF.'); continue} if(file.size>MAX_MB*1024*1024){fail++; alert(fname+' supera '+MAX_MB+' MB.'); continue}
+        if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`; if(prog)prog.textContent=`Procesando ${i+1}/${files.length}: ${fname}`; if(selected)selected.textContent=`Procesando: ${fname}`;
+        const base64=await timeout(fileToBase64(file),UPLOAD_TIMEOUT,'Lectura PDF');
+        const data={id:'local_'+Date.now()+'_'+Math.random().toString(36).slice(2),embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,archivoBase64:base64,url:base64,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:new Date().toISOString(),createdAt:new Date().toISOString(),usuario:'Usuario',observaciones:obs,activo:true,almacenamiento:'firestore_base64'};
+        let saved=false;
+        if(db){try{if(prog)prog.textContent=`Guardando ${i+1}/${files.length}: ${fname}`; const ref=await timeout(db.collection(COLLECTION).add({...data,id:undefined,fechaCarga:nowTs(),createdAt:nowTs(),_fallbackLocal:false}),UPLOAD_TIMEOUT,'Guardar Firestore'); data.id=ref.id; saved=true; ok++;}catch(e){console.warn('Firestore rechazó la carga; se guarda copia local.',e)}}
+        if(!saved){try{const rows=readLocal(); rows.push({...data,_local:true}); writeLocal(rows); local++;}catch(e){console.error(e);fail++;alert('No se pudo guardar '+fname+'. Revise permisos o tamaño.')}}
+      }
+      if(inp)inp.value=''; const obsEl=document.getElementById('docsObsV308'); if(obsEl)obsEl.value=''; if(selected)selected.textContent='Sin archivos seleccionados.';
+      if(prog)prog.textContent= local && !ok ? 'Guardado localmente. Firestore rechazó la carga; revise reglas/permisos.' : `Carga finalizada: ${ok+local} archivo(s). Actualizando lista...`;
+      await loadDocs(emb);
+      if(local && !ok) alert('El PDF quedó guardado localmente en este navegador. Firestore rechazó la carga; hay que revisar reglas/permisos para compartirlo con otros usuarios.');
+    }catch(e){console.error(e); if(prog)prog.textContent='No se pudo completar la carga.'; alert('No se pudo completar la carga. Revise conexión/permisos.')}
+    finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},7000)}
+  }
+  function viewDoc(id){const d=(window.__docsCacheV308||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} window.open(url,'_blank','noopener')}
+  function downloadDoc(id){const d=(window.__docsCacheV308||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
+  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return; const d=(window.__docsCacheV308||{})[id]||{}; if(d._local){writeLocal(readLocal().map(x=>x.id===id?{...x,activo:false}:x)); await loadDocs(emb);return} const db=dbx(); if(!db)return; try{await db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}); await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
+  function embFromCard(card){const txt=card?.textContent||'';let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i)||txt.match(/\b([0-9]{5,8})\b/);return m?m[1]:''}
+  function flFromCard(card){const m=(card?.textContent||'').match(/Flota\s*([A-Za-z0-9_-]+)/i);return m?m[1]:''}
+  function ensureDocsButtons(){
+    const scope=document.getElementById('transitos')||document;
+    scope.querySelectorAll('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233').forEach(btn=>{if(btn.closest('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228'))return; const card=btn.closest('.item,.transitCardV1210,.glassPanel')||btn.closest('div'); const emb=cleanEmb(btn.dataset.embarque||embFromCard(card)); const fl=S(btn.dataset.flota||flFromCard(card)); if(!emb)return; btn.disabled=false; btn.removeAttribute('disabled'); btn.style.pointerEvents='auto'; btn.style.opacity='1'; btn.innerHTML='📄 Docs'; btn.title='Abrir documentación PDF'; btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(emb,fl)}});
+    // Si no existe botón Docs, agregarlo solo junto al botón OEA dentro de tarjetas de tránsito.
+    scope.querySelectorAll('button,a').forEach(oea=>{if(!/^\s*OEA\s*$/i.test(oea.textContent||''))return; const row=oea.parentElement; if(!row||row.querySelector('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233'))return; const card=oea.closest('.item,.transitCardV1210,.glassPanel')||row; const emb=embFromCard(card); if(!emb)return; const b=document.createElement('button'); b.type='button'; b.className='transitDocsBtn228 transitDocsBtn230 transitDocsBtn231'; b.dataset.embarque=emb; b.dataset.flota=flFromCard(card); b.innerHTML='📄 Docs'; b.title='Abrir documentación PDF'; b.onclick=ev=>{ev.preventDefault();ev.stopPropagation();return openDocs(emb,b.dataset.flota)}; oea.insertAdjacentElement('afterend',b)})
+  }
+  window.openDocsModalV308=openDocs; window.closeDocsModalV308=closeDocs; window.loadDocsV308=loadDocs; window.uploadDocsV308=uploadDocs; window.viewDocV308=viewDoc; window.downloadDocV308=downloadDoc; window.deleteDocV308=deleteDoc;
+  window.openDocsModalV3=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs; window.closeDocsModalV3=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs; window.loadDocsV3=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs; window.uploadDocsV3=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
+  function start(){setVersion(); ensureDocsButtons(); let t=null; if(!window.__docsObserverV308){window.__docsObserverV308=new MutationObserver(()=>{clearTimeout(t); t=setTimeout(()=>{ensureDocsButtons();setVersion()},120)}); window.__docsObserverV308.observe(document.getElementById('transitos')||document.body,{childList:true,subtree:true})} [100,500,1200,2500].forEach(ms=>setTimeout(()=>{ensureDocsButtons();setVersion()},ms))}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start(); window.addEventListener('load',start);
+})();
