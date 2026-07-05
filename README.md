@@ -1,12 +1,1 @@
-# ELTA Track Manager Legacy v3.0.5
-
-Base limpia con corrección de carga Firebase SDK para ingreso a la app.
-
-Archivos activos:
-- index.html
-- app.js
-- style.css
-- docs/index.html
-- docs/app.js
-- docs/style.css
-
+ELTA TRACK MANAGER V3 v3.0.6 - Fix congelamiento por observer global.
