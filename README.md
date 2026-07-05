@@ -1,5 +1,5 @@
 # ELTA TRACK MANAGER V3
 
-Version 3.0.9 - base estable sin bloqueo de version.
+Versión 3.1.0 - base estable sin bloqueo de version.
 
 Publicar desde GitHub Pages: main / root.
