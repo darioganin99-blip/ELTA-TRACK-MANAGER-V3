@@ -3986,7 +3986,7 @@ tab = function(id){
 };
 
 /* ===== V1.2.50 - Publicacion desde docs: version unica + filtros sin cambiar formato ===== */
-const ELTA_APP_VERSION='3.1.0';
+const ELTA_APP_VERSION='3.1.1';
 
 function updateVersionLabels(){
   document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4204,9 +4204,9 @@ if(_refresh_v1250){
 
 
 
-/* ===== 3.1.0 - Nombre oficial del sistema ===== */
+/* ===== V3.1.1 - Nombre oficial del sistema ===== */
 (function(){
-  const APP_VERSION_V2='3.1.0';
+  const APP_VERSION_V2='3.1.1';
 
   function setVersionV2(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4376,9 +4376,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Version y menu lateral robustos ===== */
+/* ===== V3.1.1 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4410,9 +4410,9 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== 3.1.0 - Anti-cache y normalizacion final menu/version ===== */
+/* ===== V3.1.1 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4468,9 +4468,9 @@ if(_refresh_v1250){
   window.ELTA_FORCE_UI_REFRESH=applyFinal;
 })();
 
-/* ===== 3.1.0 - Correcciones GPS, clima, alertas y seguimiento ===== */
+/* ===== V3.1.1 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4648,9 +4648,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Ajustes finales clima, KM y alertas ===== */
+/* ===== V3.1.1 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4769,9 +4769,9 @@ if(_refresh_v1250){
   if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments);apply210();return r;};
 })();
 
-/* ===== 3.1.0 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
+/* ===== V3.1.1 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4912,9 +4912,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
+/* ===== V3.1.1 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5093,9 +5093,9 @@ if(_refresh_v1250){
   if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(()=>{refreshAll(); if(id==='alertas') window.renderAlerts(); if(id==='clima' && typeof renderWeatherFleets==='function') renderWeatherFleets();},0);return r;};
 })();
 
-/* ===== 3.1.0 - Vista Alertas compacta: boton Verificar visible ===== */
+/* ===== V3.1.1 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5206,9 +5206,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Torre de Control: Últimas alertas formato linea unica ===== */
+/* ===== V3.1.1 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5247,9 +5247,9 @@ if(_refresh_v1250){
   const oldTab=window.tab; if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(apply,0);return r;};
 })();
 
-/* ===== 3.1.0 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.0 ===== */
+/* ===== V3.1.1 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.1 ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5336,9 +5336,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); setTimeout(updateVersion,250); setTimeout(updateVersion,1000);});
 })();
 
-/* ===== 3.1.0 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
+/* ===== V3.1.1 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5456,9 +5456,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.1 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5597,9 +5597,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.1 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5717,9 +5717,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.1.1 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5892,9 +5892,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
+/* ===== V3.1.1 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6034,9 +6034,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
+/* ===== V3.1.1 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6250,9 +6250,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
+/* ===== V3.1.1 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6503,9 +6503,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
+/* ===== V3.1.1 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6577,9 +6577,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
+/* ===== V3.1.1 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6720,9 +6720,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Clima: layout compacto definitivo y Paso con consulta online ===== */
+/* ===== V3.1.1 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6791,9 +6791,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
+/* ===== V3.1.1 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6940,9 +6940,9 @@ if(_refresh_v1250){
   if(typeof oldTab234==='function') window.tab=function(id){oldTab234.apply(this,arguments); setVersionText(); if(id==='alertas') window.renderAlerts();};
 })();
 
-/* ===== 3.1.0 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
+/* ===== V3.1.1 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
 (function(){
-  const VERSION_ALERTS_2035 = "3.1.0";
+  const VERSION_ALERTS_2035 = "3.1.1";
   const $ = (id)=>document.getElementById(id);
   const esc2 = (v)=>{ try { return typeof esc === 'function' ? esc(v) : String(v ?? '').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); } catch(e){ return String(v ?? ''); } };
   const clean = (v)=>String(v ?? '').trim() || '-';
@@ -7070,7 +7070,7 @@ if(_refresh_v1250){
   if(typeof oldTab35==='function') window.tab=function(id){ oldTab35.apply(this,arguments); setVersion35(); setCounter35(); if(id==='alertas') window.renderAlerts(); };
 })();
 
-/* ===== 3.1.0 - Menu lateral: badge y efecto de campana segun pendientes ===== */
+/* ===== V3.1.1 - Menu lateral: badge y efecto de campana segun pendientes ===== */
 (function(){
   function getPendingCount236(){
     try{
@@ -7128,9 +7128,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Normalizacion final del menu lateral ===== */
+/* ===== V3.1.1 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7198,7 +7198,7 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== 3.1.0 - Refuerzo campana menu lateral ===== */
+/* ===== V3.1.1 - Refuerzo campana menu lateral ===== */
 (function(){
   function pendingCount(){
     try{
@@ -7225,9 +7225,9 @@ if(_refresh_v1250){
   setInterval(applyBellClass,1500);
 })();
 
-/* ===== 3.1.0 - contador real y badge compacto de menu ===== */
+/* ===== V3.1.1 - contador real y badge compacto de menu ===== */
 (function(){
-  const APP_VERSION_MENU_2173 = '3.1.0';
+  const APP_VERSION_MENU_2173 = '3.1.1';
   function setVersions2039(){
     document.querySelectorAll('span,small,p,div').forEach(el=>{
       if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
@@ -7296,10 +7296,10 @@ if(_refresh_v1250){
   setInterval(normalizeMenu2039,1200);
 })();
 
-/* ===== 3.1.0 - Menu base limpio: normalizadores anteriores removidos ===== */
-/* ===== 3.1.0 - Nuevo modulo Embarques ===== */
+/* ===== V3.1.1 - Menu base limpio: normalizadores anteriores removidos ===== */
+/* ===== V3.1.1 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7450,9 +7450,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(window.renderEmbarquesV244,300)));
 })();
 
-/* ===== 3.1.0 - Embarques: combos desde colecciones Firestore y estructura real ===== */
+/* ===== V3.1.1 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7655,9 +7655,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(()=>window.renderEmbarquesV244(),600)));
 })();
 
-/* ===== 3.1.0 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
+/* ===== v3.1.1 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
 (function(){
-  const APP_VERSION_PDF = '3.1.0';
+  const APP_VERSION_PDF = '3.1.1';
   function sx53(v){return String(v ?? '').trim() || '-';}
   function escAttr53(v){return String(v ?? '').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,' ');}
   function route53(t){try{return typeof ruta==='function' ? (ruta(t)||{}) : {};}catch(e){return {};}}
@@ -7886,13 +7886,13 @@ if(_refresh_v1250){
       <div class="transitRight"><h4 class="alertsTitle">⚠️ Alertas del tránsito</h4>${typeof transitAlertsCompact==='function'?transitAlertsCompact(t):''}</div>
     </div>`;
   };
-  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.1.0';});
+  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.1.1';});
 })();
 
 
-/* ===== 3.1.0 - Fix botones Actualizar global + version unificada ===== */
+/* ===== V3.1.1 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -7980,9 +7980,9 @@ if(_refresh_v1250){
   setInterval(setVersionLabels,1200);
 })();
 
-/* ===== 3.1.0 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
+/* ===== V3.1.1 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
 (function(){
-  const APP_VERSION_CFG = "3.1.0";
+  const APP_VERSION_CFG = "3.1.1";
   function byId(id){return document.getElementById(id)}
   function safe(v){return (typeof esc==='function'?esc(String(v ?? "")):String(v ?? "").replace(/[&<>'"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[m])))}
   function getActiveText(v){return v===false||String(v).toLowerCase()==='false'?'Inactivo':'Activo'}
@@ -8126,9 +8126,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(()=>{fixVersion(); if(byId('abm')?.classList.contains('active'))renderABM();},500)));
 })();
 
-/* ===== 3.1.0 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
+/* ===== V3.1.1 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8291,9 +8291,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(qid('clima')?.classList.contains('active'))window.ensureClimaDataAndRender();});
 })();
 
-/* ===== 3.1.0 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
+/* ===== V3.1.1 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8458,9 +8458,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Datos reales del usuario logueado en sidebar ===== */
+/* ===== V3.1.1 - Datos reales del usuario logueado en sidebar ===== */
 (function(){
-  const APP_VERSION_LOGGED_USER_FIX = "3.1.0";
+  const APP_VERSION_LOGGED_USER_FIX = "3.1.1";
 
   function _q(id){ return document.getElementById(id); }
   function _txt(v){ return (v===undefined || v===null) ? '' : String(v).trim(); }
@@ -8562,9 +8562,9 @@ if(_refresh_v1250){
   });
 })();
 
-/* ===== 3.1.0 - Clima compacto + PDF OEA + correcciones puntuales ===== */
+/* ===== V3.1.1 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8734,9 +8734,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== 3.1.0 - Version + flotas del combo desde usuarios role=flota ===== */
+/* ===== V3.1.1 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8808,9 +8808,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== 3.1.0 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
+/* ===== V3.1.1 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8932,9 +8932,9 @@ if(_refresh_v1250){
   setVersionFinal();
 })();
 
-/* ===== 3.1.0 - Embarques: boton Ver cargas en Agregar carga ===== */
+/* ===== V3.1.1 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9170,9 +9170,9 @@ if(_refresh_v1250){
   setVersionV267();
 })();
 
-/* ===== 3.1.0 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
+/* ===== V3.1.1 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
 (function(){
-  const APP_VERSION_FIX='3.1.0';
+  const APP_VERSION_FIX='3.1.1';
   window.ELTA_APP_VERSION=APP_VERSION_FIX;
   window.APP_VERSION_V2=APP_VERSION_FIX;
   const $=(id)=>document.getElementById(id);
@@ -9301,9 +9301,9 @@ if(_refresh_v1250){
   setInterval(applyAllV270,1500);
 })();
 
-/* ===== 3.1.0 - Password visible en Configuracion y version unificada ===== */
+/* ===== V3.1.1 - Password visible en Configuracion y version unificada ===== */
 (function(){
-  const APP_VERSION_273='3.1.0';
+  const APP_VERSION_273='3.1.1';
   window.ELTA_APP_VERSION=APP_VERSION_273;
   window.APP_VERSION_V2=APP_VERSION_273;
 
@@ -9383,9 +9383,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Version lock definitivo ===== */
+/* ===== V3.1.1 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9400,9 +9400,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Embarques: eliminar registro con confirmacion ===== */
+/* ===== V3.1.1 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9428,7 +9428,7 @@ if(_refresh_v1250){
     [...tbody.querySelectorAll('tr')].forEach(tr=>{const n=embFromRow(tr); if(n && del.has(n))tr.remove();});
     if(!tbody.children.length){tbody.innerHTML='<tr><td colspan="8" class="emptyRow">No hay embarques para mostrar.</td></tr>';}
   }
-  function enhanceDeleteButtons(){ /* 3.1.0 neutralizado: eliminar ya nace en el render */ return; }
+  function enhanceDeleteButtons(){ /* v3.1.1 neutralizado: eliminar ya nace en el render */ return; }
   async function deleteLocal(numero){
     ['elta_cargas_embarque_v245','elta_cargas_embarque_v244'].forEach(k=>{
       try{const arr=JSON.parse(localStorage.getItem(k)||'[]')||[]; localStorage.setItem(k,JSON.stringify(arr.filter(c=>S(c?.embarque)!==S(numero))));}catch(e){}
@@ -9496,7 +9496,7 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - Embarques: papelera sin fondo ===== */
+/* ===== V3.1.1 - Embarques: papelera sin fondo ===== */
 (function(){
   const css=document.createElement('style');
   css.id='v2080-delete-icon-clean';
@@ -9504,9 +9504,9 @@ if(_refresh_v1250){
   document.head.appendChild(css);
 })();
 
-/* ===== 3.1.0 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
+/* ===== V3.1.1 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9565,10 +9565,10 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== 3.1.0 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
+/* ===== V3.1.1 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -9681,7 +9681,7 @@ if(_refresh_v1250){
 
 
 
-/* ===== 3.1.0 - Entregas: abreviatura en origen del render ===== */
+/* ===== v3.1.1 - Entregas: abreviatura en origen del render ===== */
 window.abreviarHitoEntrega186 = function(txt){
   const original = String(txt || '').trim();
   const n = original.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
@@ -9690,9 +9690,9 @@ window.abreviarHitoEntrega186 = function(txt){
   return original;
 };
 
-/* ===== 3.1.0 - Entregas compact override after dynamic CSS ===== */
+/* ===== v3.1.1 - Entregas compact override after dynamic CSS ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
   function injectEntrega151(){
     let st=document.getElementById('entrega-v151-compact-css');
     if(!st){
@@ -9717,9 +9717,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final Entregas tarjeta ===== */
+/* ===== v3.1.1 - CSS final Entregas tarjeta ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
+  const CSS = '\n/* ===== v3.1.1 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
   function injectEntrega152(){
     let st=document.getElementById('entrega-v152-card-css');
     if(!st){
@@ -9744,9 +9744,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final Entregas filtros/timeline ===== */
+/* ===== v3.1.1 - CSS final Entregas filtros/timeline ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega153(){
     let st=document.getElementById('entrega-v153-filters-timeline-css');
     if(!st){
@@ -9771,9 +9771,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final timeline Entregas ===== */
+/* ===== v3.1.1 - CSS final timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega154(){
     let st=document.getElementById('entrega-v154-timeline-css');
     if(!st){
@@ -9798,9 +9798,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final linea vertical hitos Entregas ===== */
+/* ===== v3.1.1 - CSS final linea vertical hitos Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega155(){
     let st=document.getElementById('entrega-v155-vertical-line-css');
     if(!st){
@@ -9825,9 +9825,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final linea desde circulo Entregas ===== */
+/* ===== v3.1.1 - CSS final linea desde circulo Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega156(){
     let st=document.getElementById('entrega-v156-linea-circulo-css');
     if(!st){
@@ -9852,9 +9852,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final hito/banderas Entregas ===== */
+/* ===== v3.1.1 - CSS final hito/banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega157(){
     let st=document.getElementById('entrega-v157-hito-banderas-css');
     if(!st){
@@ -9879,9 +9879,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final banderas Entregas ===== */
+/* ===== v3.1.1 - CSS final banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega158(){
     let st=document.getElementById('entrega-v158-flags-css');
     if(!st){
@@ -9906,9 +9906,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final Entregas ajustes solicitados ===== */
+/* ===== v3.1.1 - CSS final Entregas ajustes solicitados ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
   function injectEntrega159(){
     let st=document.getElementById('entrega-v159-final-css');
     if(!st){
@@ -9933,9 +9933,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - CSS final extremos timeline Entregas ===== */
+/* ===== v3.1.1 - CSS final extremos timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
   function injectEntrega160(){
     let st=document.getElementById('entrega-v160-extremos-css');
     if(!st){
@@ -9960,7 +9960,7 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - Entregas: avance por registros + bandera Tierra del Fuego =====
+/* ===== v3.1.1 - Entregas: avance por registros + bandera Tierra del Fuego =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
@@ -10103,7 +10103,7 @@ window.abreviarHitoEntrega186 = function(txt){
   }
 
   function replaceEntregaCards161(){
-    // 3.1.0: desactivado.
+    // v3.1.1: desactivado.
     // Este post-procesador heredado reconstruía la línea de tiempo después del render actual
     // y provocaba el flash con hitos/paises antiguos y salto del camión.
     return;
@@ -10117,11 +10117,11 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - Entregas: timeline por registros reales corregido =====
+/* ===== v3.1.1 - Entregas: timeline por registros reales corregido =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
-/* ===== 3.1.0 - Entregas: extremos y registros reales =====
+/* ===== v3.1.1 - Entregas: extremos y registros reales =====
    SOLO afecta #entrega. No modifica otros módulos ni el diseño base. */
 
 /* Mantener la línea y los extremos dentro del contenedor */
@@ -10359,7 +10359,7 @@ window.abreviarHitoEntrega186 = function(txt){
     return Math.min(idx, stages.length-1);
   }
 
-  function attach(){ /* 3.1.0: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
+  function attach(){ /* v3.1.1: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
 
   document.addEventListener('DOMContentLoaded',()=>{injectEntrega162(); attach();});
   window.addEventListener('load',()=>{injectEntrega162(); attach();});
@@ -10369,10 +10369,10 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== 3.1.0 - Entregas: hitos desde Aduanas + camión por último registro ===== */
+/* ===== v3.1.1 - Entregas: hitos desde Aduanas + camión por último registro ===== */
 (function(){
 const CSS=`
-/* 3.1.0 - Entregas: aduanas y avance real */
+/* v3.1.1 - Entregas: aduanas y avance real */
 #entrega .entregaTimeline{padding-left:72px!important;padding-right:72px!important;overflow:hidden!important}
 #entrega .entregaLine{left:72px!important;right:72px!important}
 #entrega .entregaTimeline::after{left:72px!important;right:72px!important}
@@ -10406,16 +10406,16 @@ function records(t){const out=[];const push=r=>{if(!r||typeof r!=='object')retur
 function match(r,h){r=norm(r);h=norm(h);return r&&h&&(r===h||r.includes(h)||h.includes(r))}
 function update(){const trs=Array.isArray(window.trs)?window.trs:[], embs=Array.isArray(window.embarques)?window.embarques:[];document.querySelectorAll('#entrega .entregaCard').forEach(card=>{try{const fl=(card.querySelector('.entregaFleet h3')?.textContent.match(/\d+/)||[])[0]||'';const en=(card.querySelector('.entregaFleet small')?.textContent.match(/\d+/)||[])[0]||'';const t=trs.find(x=>clean(get(x,['flota','fleet','usuario','user']))===fl)||{};const e=embs.find(x=>clean(get(x,['numero','embarque','idEmbarque','codigo'])||x.id)===en)||{};const orig=clean(get(e,['origen','origin']))||clean(get(t,['origen','origin']))||'Inicio';const dest=clean(get(e,['destino','destination']))||clean(get(t,['destino','destination']))||'Cierre';const ini=get(t,['start','inicio','fechaInicio','createdAt'])||get(e,['fecha','createdAt','fechaHora']);const fin=get(t,['cierre','fechaCierre','closedAt','end','finalizadoEn'])||get(e,['cierre','fechaCierre','closedAt','end','finalizadoEn']);const names=hitos(dest,orig);const namesFiltrados187=window.filtrarHitosEntrega187?window.filtrarHitosEntrega187(names):names;
     const stages=namesFiltrados187.map((name,i)=>({name,time:i===0?ini:(i===names.length-1?fin:''),kind:i===0?'start':(i===names.length-1?'end':'aduana')}));records(t).forEach(r=>{let idx=stages.findIndex((s,i)=>i>0&&i<stages.length-1&&match(r.name,s.name));if(idx<0)idx=stages.findIndex((s,i)=>i>0&&match(r.name,s.name));if(idx>=0&&!hasDate(stages[idx].time))stages[idx].time=r.time});let pi=0;stages.forEach((s,i)=>{if(hasDate(s.time))pi=i});const max=Math.max(1,stages.length-1),pct=Math.max(0,Math.min(100,(pi/max)*100));const tl=card.querySelector('.entregaTimeline');if(!tl)return;const prog=tl.querySelector('.entregaLine i');if(prog)prog.style.width=pct+'%';tl.querySelectorAll('.entregaStep').forEach(x=>x.remove());const veh=tl.querySelector('.entregaVehicle');stages.forEach((s,i)=>{const d=fmt(s.time),has=d&&d!=='-';const step=document.createElement('div');step.className=['entregaStep',i===0?'timelineStart':'',i===stages.length-1?'timelineEnd':'',i<=pi?'done':'',i===pi?'current':'',has&&i>0?'hasDate':''].filter(Boolean).join(' ');step.style.left=((i/max)*100)+'%';step.innerHTML=`<b>${esc(s.name)}</b><em>${esc(d)}</em>`;tl.insertBefore(step,veh||null)});if(veh)veh.style.left=pct+'%'}catch(e){console.warn('Entregas v163',e)}})}
-function attach(){/* 3.1.0: wrapper v163 desactivado para evitar segundo render de Entregas */return}
+function attach(){/* v3.1.1: wrapper v163 desactivado para evitar segundo render de Entregas */return}
 document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.addEventListener('load',()=>{inject();attach();});setTimeout(()=>{inject();attach();},500);
 })();
 
 
 
 
-/* ===== 3.1.0 - Entregas: ajuste final camion/textos ===== */
+/* ===== v3.1.1 - Entregas: ajuste final camion/textos ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega164(){
     let st=document.getElementById('entrega-v164-camion-textos-css');
     if(!st){
@@ -10463,9 +10463,9 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== 3.1.0 - Entregas: CSS final textos integrados ===== */
+/* ===== v3.1.1 - Entregas: CSS final textos integrados ===== */
 (function(){
-  const CSS = '\n/* ===== 3.1.0 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.1.1 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega165(){
     let st=document.getElementById('entrega-v165-textos-integrados-css');
     if(!st){
@@ -10492,7 +10492,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== 3.1.0 - Entregas: abreviatura visual de hitos =====
+/* ===== v3.1.1 - Entregas: abreviatura visual de hitos =====
    Solo afecta la presentación de nombres en la línea de tiempo de Entregas.
    No modifica datos, lógica de avance, camión, banderas ni otros módulos. */
 (function(){
@@ -10554,7 +10554,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== 3.1.0 - Entregas: hitos desde colección aduana por campo destino =====
+/* ===== v3.1.1 - Entregas: hitos desde colección aduana por campo destino =====
    Solo afecta la lógica de hitos de Entregas.
    No modifica estética, camión, textos, banderas ni otros módulos. */
 (function(){
@@ -10808,8 +10808,8 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
     });
   }
 
-  async function run167(){ /* 3.1.0 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
-function attach167(){ /* 3.1.0 desactivado */ return; }
+  async function run167(){ /* v3.1.1 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
+function attach167(){ /* v3.1.1 desactivado */ return; }
 document.addEventListener('DOMContentLoaded',()=>{});
   window.addEventListener('load',()=>{});
 })();
@@ -10817,7 +10817,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: botón Actualizar refresca timeline =====
+/* ===== v3.1.1 - Entregas: botón Actualizar refresca timeline =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol168(name){
@@ -10946,7 +10946,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: Actualizar reconstruye la línea como al reingresar =====
+/* ===== v3.1.1 - Entregas: Actualizar reconstruye la línea como al reingresar =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol169(name){
@@ -11077,7 +11077,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: Actualizar sin parpadeo =====
+/* ===== v3.1.1 - Entregas: Actualizar sin parpadeo =====
    Solo afecta el botón Actualizar de Entregas.
    Corrige el efecto visual eliminando renders repetidos y reconstrucción múltiple. */
 (function(){
@@ -11207,7 +11207,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
+/* ===== v3.1.1 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
    Solo afecta el botón Actualizar de Entregas.
    No modifica estética ni otros módulos. */
 (function(){
@@ -11493,7 +11493,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: Actualizar aislado, sin render viejo =====
+/* ===== v3.1.1 - Entregas: Actualizar aislado, sin render viejo =====
    Solo afecta el botón Actualizar de Entregas.
    No llama a renderEntrega(), no limpia entregaCards y no reconstruye tarjetas completas. */
 (function(){
@@ -11792,9 +11792,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Version final + Entregas boton aislado dominante ===== */
+/* ===== v3.1.1 - Version final + Entregas boton aislado dominante ===== */
 (function(){
-  const VERSION_FINAL_173 = '3.1.0';
+  const VERSION_FINAL_173 = '3.1.1';
   window.ELTA_APP_VERSION = VERSION_FINAL_173;
   window.APP_VERSION_V2 = VERSION_FINAL_173;
 
@@ -11898,11 +11898,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: botón Actualizar sin bucle =====
+/* ===== v3.1.1 - Entregas: botón Actualizar sin bucle =====
    Corrige el botón que quedaba en "Actualizando..." por delegación recursiva.
    Solo afecta Entregas. No modifica estética. */
 (function(){
-  const VERSION_174 = '3.1.0';
+  const VERSION_174 = '3.1.1';
   let busy174 = false;
 
   function setVersion174(){
@@ -12042,10 +12042,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Reporte PDF: hitos desde colección aduana =====
+/* ===== v3.1.1 - Reporte PDF: hitos desde colección aduana =====
    Solo modifica la lógica de Hitos del tránsito del reporte. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V; window.APP_VERSION_V2=V;
   const clean=v=>{
     if(v==null)return '';
@@ -12149,9 +12149,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Forzado final de versión visible y PDF ===== */
+/* ===== v3.1.1 - Forzado final de versión visible y PDF ===== */
 (function(){
-  const VERSION_FINAL_177 = '3.1.0';
+  const VERSION_FINAL_177 = '3.1.1';
   window.ELTA_APP_VERSION = VERSION_FINAL_177;
   window.APP_VERSION_V2 = VERSION_FINAL_177;
   window.APP_VERSION_PDF = VERSION_FINAL_177;
@@ -12171,10 +12171,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Alertas: sin KM heredado, sin observers =====
-   Base 3.1.0. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
+/* ===== v3.1.1 - Alertas: sin KM heredado, sin observers =====
+   Base v3.1.1. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
 (function(){
-  const VERSION_ALERTAS_183='3.1.0';
+  const VERSION_ALERTAS_183='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_183;
   window.APP_VERSION_V2=VERSION_ALERTAS_183;
 
@@ -12231,10 +12231,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Alertas: columnas alineadas sin KM =====
+/* ===== v3.1.1 - Alertas: columnas alineadas sin KM =====
    Solo ajusta la tabla de detalle de Alertas. No toca otros modulos. */
 (function(){
-  const VERSION_ALERTAS_185='3.1.0';
+  const VERSION_ALERTAS_185='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_185;
   window.APP_VERSION_V2=VERSION_ALERTAS_185;
   function setVersion185(){
@@ -12251,10 +12251,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: evitar flash de hito inicio largo =====
+/* ===== v3.1.1 - Entregas: evitar flash de hito inicio largo =====
    Solo afecta el texto visual del hito de inicio CLZ/CLC. */
 (function(){
-  const VERSION_ENTREGA_186='3.1.0';
+  const VERSION_ENTREGA_186='3.1.1';
   function apply186(){
     document.querySelectorAll('#entrega .entregaStep b').forEach(el=>{
       const full=el.getAttribute('data-full-hito') || el.getAttribute('title') || el.textContent || '';
@@ -12292,10 +12292,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: quitar país como hito intermedio =====
+/* ===== v3.1.1 - Entregas: quitar país como hito intermedio =====
    Solo afecta la línea de tiempo de Entregas. No toca Alertas, Tránsitos, PDF ni Firebase. */
 (function(){
-  const VERSION_ENTREGA_187='3.1.0';
+  const VERSION_ENTREGA_187='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_187;
   window.APP_VERSION_V2=VERSION_ENTREGA_187;
 
@@ -12358,10 +12358,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: render único sin postproceso heredado =====
+/* ===== v3.1.1 - Entregas: render único sin postproceso heredado =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_188='3.1.0';
+  const VERSION_ENTREGA_188='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_188;
   window.APP_VERSION_V2=VERSION_ENTREGA_188;
 
@@ -12409,10 +12409,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: render único, sin wrappers heredados =====
+/* ===== v3.1.1 - Entregas: render único, sin wrappers heredados =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_189='3.1.0';
+  const VERSION_ENTREGA_189='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_189;
   window.APP_VERSION_V2=VERSION_ENTREGA_189;
 
@@ -12454,11 +12454,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: render definitivo unico =====
+/* ===== v3.1.1 - Entregas: render definitivo unico =====
    Reemplaza el render de Entregas al final del archivo para evitar wrappers heredados.
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética general. */
 (function(){
-  const VERSION_ENTREGAS_190 = '3.1.0';
+  const VERSION_ENTREGAS_190 = '3.1.1';
   window.ELTA_APP_VERSION = VERSION_ENTREGAS_190;
   window.APP_VERSION_V2 = VERSION_ENTREGAS_190;
 
@@ -12816,10 +12816,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: marcar hito final cuando el tránsito está cerrado =====
+/* ===== v3.1.1 - Entregas: marcar hito final cuando el tránsito está cerrado =====
    Solo afecta la línea de tiempo de Entregas. */
 (function(){
-  const VERSION_ENTREGA_191='3.1.0';
+  const VERSION_ENTREGA_191='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_191;
   window.APP_VERSION_V2=VERSION_ENTREGA_191;
 })();
@@ -12827,10 +12827,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: cierre marca último hito =====
+/* ===== v3.1.1 - Entregas: cierre marca último hito =====
    Solo afecta la marcación visual de tarjetas cerradas en Entregas. */
 (function(){
-  const VERSION_ENTREGA_192='3.1.0';
+  const VERSION_ENTREGA_192='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_192;
   window.APP_VERSION_V2=VERSION_ENTREGA_192;
 
@@ -12905,10 +12905,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: cierre gana contra render heredado tardío =====
+/* ===== v3.1.1 - Entregas: cierre gana contra render heredado tardío =====
    Solo afecta la vista Entregas. Corrección finita, sin observer ni intervalos. */
 (function(){
-  const VERSION_ENTREGA_193='3.1.0';
+  const VERSION_ENTREGA_193='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_193;
   window.APP_VERSION_V2=VERSION_ENTREGA_193;
 
@@ -13012,11 +13012,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: cierre 100% verde =====
+/* ===== v3.1.1 - Entregas: cierre 100% verde =====
    Solo afecta Entregas. Cuando el tránsito está cerrado:
    línea completa, todos los círculos verdes y camión al último hito. */
 (function(){
-  const VERSION_ENTREGA_194='3.1.0';
+  const VERSION_ENTREGA_194='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_194;
   window.APP_VERSION_V2=VERSION_ENTREGA_194;
 
@@ -13119,11 +13119,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: botón Actualizar con render único =====
+/* ===== v3.1.1 - Entregas: botón Actualizar con render único =====
    Solo afecta el botón Actualizar de Entregas.
    Evita que un handler heredado vuelva a pintar datos anteriores, especialmente Última act. */
 (function(){
-  const VERSION_ENTREGA_195='3.1.0';
+  const VERSION_ENTREGA_195='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_195;
   window.APP_VERSION_V2=VERSION_ENTREGA_195;
   let busy195=false;
@@ -13198,7 +13198,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
       applyClosed195();
 
       // Gana contra renders tardíos heredados: todos usan los mismos datos frescos.
-      /* 3.1.0: renders tardíos heredados desactivados */
+      /* v3.1.1: renders tardíos heredados desactivados */
     }finally{
       setTimeout(()=>{
         if(b){ b.disabled=false; b.textContent=old || 'Actualizar'; }
@@ -13248,10 +13248,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: fecha correcta de cierre y última actualización =====
+/* ===== v3.1.1 - Entregas: fecha correcta de cierre y última actualización =====
    Solo afecta Entregas. Toma la fecha más nueva de registros del tránsito para cerrado. */
 (function(){
-  const VERSION_ENTREGA_196='3.1.0';
+  const VERSION_ENTREGA_196='3.1.1';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_196;
   window.APP_VERSION_V2=VERSION_ENTREGA_196;
 
@@ -13317,9 +13317,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Forzar version visible ===== */
+/* ===== v3.1.1 - Forzar version visible ===== */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function setV207(){
@@ -13332,18 +13332,18 @@ document.addEventListener('DOMContentLoaded',()=>{});
       });
     }catch(e){}
   }
-  document.addEventListener('DOMContentLoaded',()=>{/* setV207 call disabled *//* setV207 timeout disabled */});
-  window.addEventListener('load',()=>{/* setV207 call disabled *//* setV207 timeout disabled */});
+  document.addEventListener('DOMContentLoaded',()=>{setV207();setTimeout(setV207,500);});
+  window.addEventListener('load',()=>{setV207();setTimeout(setV207,500);});
 })();
 
 
 
 
-/* ===== 3.1.0 - Embarques only: sin render heredado =====
+/* ===== v3.1.1 - Embarques only: sin render heredado =====
    Solo afecta Embarques. No toca Tránsitos, Entregas, Alertas ni PDF.
    El botón eliminar nace en el render; no se agrega con post-render. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13394,12 +13394,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Eliminar embarque real + hitos intermedios Entregas =====
+/* ===== v3.1.1 - Eliminar embarque real + hitos intermedios Entregas =====
    Corrige:
    1) Eliminar embarque: borra por docId y tambien por campos numero/embarque/idEmbarque/codigo.
    2) Entregas: asegura lectura de coleccion aduana antes de renderizar. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13561,11 +13561,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Limpieza definitiva Entregas + Embarques =====
+/* ===== v3.1.1 - Limpieza definitiva Entregas + Embarques =====
    Solo se reemplazan los renderizadores activos de Entregas y Embarques.
    No se toca Tránsitos, Alertas, Clima, PDF ni estilos generales. */
 (function(){
-  const VERSION_210='3.1.0';
+  const VERSION_210='3.1.1';
   window.ELTA_APP_VERSION=VERSION_210;
   window.APP_VERSION_V2=VERSION_210;
 
@@ -13954,9 +13954,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Forzado final de version visible ===== */
+/* ===== v3.1.1 - Forzado final de version visible ===== */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function forceVersion211(){
@@ -13976,13 +13976,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Confirmación eliminar + hitos Entregas por embarque =====
+/* ===== v3.1.1 - Confirmación eliminar + hitos Entregas por embarque =====
    Ajuste puntual:
    - Embarques: vuelve el modal de confirmación antes de eliminar.
    - Entregas: cuando el tránsito está cerrado, cruza tránsito con embarque por N° embarque
      para tomar origen/destino reales y construir hitos intermedios. */
 (function(){
-  const VERSION_212='3.1.0';
+  const VERSION_212='3.1.1';
   window.ELTA_APP_VERSION=VERSION_212;
   window.APP_VERSION_V2=VERSION_212;
 
@@ -14299,12 +14299,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Ajustes Embarques + Entregas =====
+/* ===== v3.1.1 - Ajustes Embarques + Entregas =====
    - Modal eliminar embarque más compacto.
    - Embarques: toma flota desde cargas cuando el embarque no tiene flota directa.
    - Entregas: agrega filtro Programados y fuerza el render correcto si aparece el render heredado Inicio/Cierre. */
 (function(){
-  const VERSION_213='3.1.0';
+  const VERSION_213='3.1.1';
   window.ELTA_APP_VERSION=VERSION_213;
   window.APP_VERSION_V2=VERSION_213;
 
@@ -14625,13 +14625,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Proyecto limpio deploy =====
+/* ===== v3.1.1 - Proyecto limpio deploy =====
    Version final del proyecto completo:
    - Sin referencias a versiones anteriores en index.
    - Embarques: modal compacto, flota desde carga y eliminar con confirmacion.
    - Entregas: Programados en filtro y refuerzo anti-render Inicio/Cierre. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   const S=v=>String(v??'').trim();
@@ -14696,7 +14696,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
           await window.renderEntrega(false);
         }
       }catch(e){console.warn('v214 entrega repair',e);}
-      finally{fixing=false;/* setV214 call disabled */}
+      finally{fixing=false;setV214();}
     },90);
   }
 
@@ -14705,7 +14705,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     window.renderEmbarquesV244=async function(){
       const r=await oldEmb.apply(this,arguments);
       fillFlotasEmbarques214();
-      /* setV214 call disabled */
+      setV214();
       return r;
     };
     window.renderEmbarquesV244.__v214Deploy=true;
@@ -14715,7 +14715,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
   if(typeof oldTab==='function' && !oldTab.__v214Deploy){
     window.tab=function(id){
       const r=oldTab.apply(this,arguments);
-      /* setV214 call disabled */
+      setV214();
       if(id==='entrega'){
         ensureProgramados214();
         [120,350,900].forEach(ms=>setTimeout(()=>repairEntrega214(true),ms));
@@ -14734,14 +14734,14 @@ document.addEventListener('DOMContentLoaded',()=>{});
       box.__obs214.observe(box,{childList:true,subtree:true,characterData:true});
     }
   }
-  document.addEventListener('DOMContentLoaded',()=>{/* setV214 call disabled */ensureProgramados214();setTimeout(installObs,500);});
-  window.addEventListener('load',()=>{/* setV214 call disabled */ensureProgramados214();setTimeout(installObs,500);});
+  document.addEventListener('DOMContentLoaded',()=>{setV214();ensureProgramados214();setTimeout(installObs,500);});
+  window.addEventListener('load',()=>{setV214();ensureProgramados214();setTimeout(installObs,500);});
 })();
 
 
 
 
-/* ===== 3.1.0 - Corrección final línea de tiempo Entregas =====
+/* ===== v3.1.1 - Corrección final línea de tiempo Entregas =====
    Sólo corrige el modelo de datos de la línea de tiempo:
    - Convierte Timestamp Firebase / objetos {seconds,nanoseconds} / {_seconds,_nanoseconds}.
    - Evita mostrar [object Object].
@@ -14750,7 +14750,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - En tránsito no marca el destino como alcanzado hasta el cierre.
    - Cerrado marca todos los hitos en verde. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15034,7 +15034,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     });
     const box=$('entregaCards');
     if(box)box.innerHTML=rows.length?rows.map(card215).join(''):'<div class="glassPanel entregaEmpty">No hay flotas para el filtro seleccionado.</div>';
-    /* setV215 call disabled */
+    setV215();
   }
 
   window.renderEntrega=renderEntrega215;
@@ -15048,7 +15048,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
         renderEntrega215(false);
         [160,420,900].forEach(ms=>setTimeout(()=>renderEntrega215(false),ms));
       }
-      /* setV215 call disabled */
+      setV215();
       return r;
     };
     window.tab.__v215Timeline=true;
@@ -15065,18 +15065,18 @@ document.addEventListener('DOMContentLoaded',()=>{});
     });
     box.__obs215.observe(box,{childList:true,subtree:true,characterData:true});
   }
-  document.addEventListener('DOMContentLoaded',()=>{/* setV215 call disabled */ensureProgramados215();setTimeout(installObserver215,500);});
-  window.addEventListener('load',()=>{/* setV215 call disabled */ensureProgramados215();setTimeout(installObserver215,500);});
+  document.addEventListener('DOMContentLoaded',()=>{setV215();ensureProgramados215();setTimeout(installObserver215,500);});
+  window.addEventListener('load',()=>{setV215();ensureProgramados215();setTimeout(installObserver215,500);});
 })();
 
 
 
 
-/* ===== 3.1.0 - Bloqueo del último hito Entregas =====
-   Mantiene la lógica de 3.1.0, pero evita que un render heredado posterior
+/* ===== v3.1.1 - Bloqueo del último hito Entregas =====
+   Mantiene la lógica de v3.1.1, pero evita que un render heredado posterior
    cambie sólo el último hito de la línea de tiempo. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15190,7 +15190,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
       const box=$('entregaCards');
       if(!box) return;
       box.querySelectorAll('.entregaCard').forEach(stabilizeEntregaCard216);
-      /* setV216 call disabled */
+      setV216();
     }catch(e){console.warn('v216 stabilize entrega',e);}
   }
 
@@ -15213,7 +15213,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     window.tab=function(id){
       const r=oldTab216.apply(this,arguments);
       if(id==='entrega') stabilizeBurst216();
-      /* setV216 call disabled */
+      setV216();
       return r;
     };
     window.tab.__v216LastHito=true;
@@ -15231,16 +15231,16 @@ document.addEventListener('DOMContentLoaded',()=>{});
     box.__obs216.observe(box,{childList:true,subtree:true,attributes:true,characterData:true,attributeFilter:['class','style']});
   }
 
-  document.addEventListener('DOMContentLoaded',()=>{/* setV216 call disabled */setTimeout(installObserver216,500);stabilizeBurst216();});
-  window.addEventListener('load',()=>{/* setV216 call disabled */setTimeout(installObserver216,500);stabilizeBurst216();});
+  document.addEventListener('DOMContentLoaded',()=>{setV216();setTimeout(installObserver216,500);stabilizeBurst216();});
+  window.addEventListener('load',()=>{setV216();setTimeout(installObserver216,500);stabilizeBurst216();});
 })();
 
 
 
 
-/* ===== 3.1.0 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
+/* ===== v3.1.1 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15352,7 +15352,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     const box=$('entregaCards');
     if(!box) return;
     box.querySelectorAll('.entregaCard').forEach(hardLockEntregaTimeline217);
-    /* setV217 call disabled */
+    setV217();
   }
 
   function burst217(){
@@ -15374,7 +15374,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     window.tab=function(id){
       const r=prevTab217.apply(this,arguments);
       if(id==='entrega') burst217();
-      /* setV217 call disabled */
+      setV217();
       return r;
     };
     window.tab.__v217HardLock=true;
@@ -15404,20 +15404,20 @@ document.addEventListener('DOMContentLoaded',()=>{});
     }
   },true);
 
-  document.addEventListener('DOMContentLoaded',()=>{/* setV217 call disabled */setTimeout(installObs217,400);burst217();});
-  window.addEventListener('load',()=>{/* setV217 call disabled */setTimeout(installObs217,400);burst217();});
+  document.addEventListener('DOMContentLoaded',()=>{setV217();setTimeout(installObs217,400);burst217();});
+  window.addEventListener('load',()=>{setV217();setTimeout(installObs217,400);burst217();});
 })();
 
 
 
 
-/* ===== 3.1.0 - Bloqueo del render heredado que escribe INICIO =====
+/* ===== v3.1.1 - Bloqueo del render heredado que escribe INICIO =====
    Corrige únicamente Entregas:
    - Si un render posterior vuelve a escribir "INICIO" en el primer hito, se reemplaza
      inmediatamente por el origen real de la tarjeta: CLZ / CLC / TZ - PUERTO ZARATE, etc.
    - Mantiene la lógica de línea de tiempo ya corregida. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15499,7 +15499,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     const box=$('entregaCards');
     if(!box) return;
     box.querySelectorAll('.entregaCard').forEach(lockFirstHito218);
-    /* setV218 call disabled */
+    setV218();
   }
 
   function burst218(){
@@ -15521,7 +15521,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     window.tab=function(id){
       const r=oldTab218.apply(this,arguments);
       if(id==='entrega') burst218();
-      /* setV218 call disabled */
+      setV218();
       return r;
     };
     window.tab.__v218InicioLock=true;
@@ -15548,14 +15548,14 @@ document.addEventListener('DOMContentLoaded',()=>{});
     if(/actualizar/i.test(b.textContent||b.title||'')) setTimeout(burst218,120);
   },true);
 
-  document.addEventListener('DOMContentLoaded',()=>{/* setV218 call disabled */setTimeout(installObserver218,400);burst218();});
-  window.addEventListener('load',()=>{/* setV218 call disabled */setTimeout(installObserver218,400);burst218();});
+  document.addEventListener('DOMContentLoaded',()=>{setV218();setTimeout(installObserver218,400);burst218();});
+  window.addEventListener('load',()=>{setV218();setTimeout(installObserver218,400);burst218();});
 })();
 
 
 
 
-/* ===== 3.1.0 - Entregas: render final estable sin refresh heredado =====
+/* ===== v3.1.1 - Entregas: render final estable sin refresh heredado =====
    Corrige sólo Entregas:
    - No llama al render heredado de Entregas.
    - Recupera fecha real de inicio desde embarque/transito/carga.
@@ -15563,7 +15563,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - Reemplaza INICIO por origen real.
    - Separa la línea punteada vertical del texto del hito. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15850,7 +15850,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     });
     const box=$('entregaCards');
     if(box)box.innerHTML=rows.length?rows.map(card).join(''):'<div class="glassPanel entregaEmpty">No hay flotas para el filtro seleccionado.</div>';
-    /* setV219 call disabled */
+    setV219();
   }
 
   window.renderEntrega=renderEntregaStable;
@@ -15865,11 +15865,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
         [...document.querySelectorAll('.sideNav button')].find(b=>(b.dataset.menuId==='entrega')||((b.getAttribute('onclick')||'').includes("'entrega'"))||((b.getAttribute('onclick')||'').includes('"entrega"')))?.classList.add('active');
         $('entrega')?.classList.add('active');
         renderEntregaStable(false);
-        /* setV219 call disabled */
+        setV219();
         return;
       }
       const r=oldTab.apply(this,arguments);
-      /* setV219 call disabled */
+      setV219();
       return r;
     };
     window.tab.__v219Stable=true;
@@ -15890,18 +15890,18 @@ document.addEventListener('DOMContentLoaded',()=>{});
     }
   },true);
 
-  document.addEventListener('DOMContentLoaded',()=>{/* setV219 call disabled */});
-  window.addEventListener('load',()=>{/* setV219 call disabled */});
+  document.addEventListener('DOMContentLoaded',()=>{setV219();});
+  window.addEventListener('load',()=>{setV219();});
 })();
 
 
 
 
-/* ===== 3.1.0 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
-   Base: 3.1.0 estable. No modifica Firebase, refresh ni render principal.
+/* ===== v3.1.1 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
+   Base: v3.1.1 estable. No modifica Firebase, refresh ni render principal.
    Sólo corrige el texto INICIO si aparece después del render. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15993,12 +15993,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: fechas cierre + separación línea punteada =====
-   Base 3.1.0. No toca Firebase ni render principal.
+/* ===== v3.1.1 - Entregas: fechas cierre + separación línea punteada =====
+   Base v3.1.1. No toca Firebase ni render principal.
    Corrige fechas visibles de inicio/cierre cuando el tránsito está cerrado
    y evita superposición visual de la línea punteada con fecha/hora. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16167,10 +16167,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
-   Base 3.1.0. No toca la carga de datos. Corrige sólo visualización final. */
+/* ===== v3.1.1 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
+   Base v3.1.1. No toca la carga de datos. Corrige sólo visualización final. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16347,10 +16347,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
+/* ===== v3.1.1 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
    No modifica carga de datos. Lee arrays globales o variables del script y completa los hitos cerrados. */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16537,9 +16537,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== 3.1.0 - Forzar versión y limpiar caché visual ===== */
+/* ===== v3.1.1 - Forzar versión y limpiar caché visual ===== */
 (function(){
-  const V='3.1.0';
+  const V='3.1.1';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16556,2166 +16556,210 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
   // Si quedó un service worker/caché viejo del navegador, lo elimina.
   try{
-    /* serviceWorker cleanup disabled v3.1.0 */
-    /* cache cleanup disabled v3.1.0 */
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.getRegistrations().then(regs=>regs.forEach(r=>r.unregister()));
+    }
+    if(window.caches && caches.keys){
+      caches.keys().then(keys=>keys.forEach(k=>caches.delete(k)));
+    }
   }catch(e){}
 
-  document.addEventListener('DOMContentLoaded',()=>{/* setV227 call disabled *//* setV227 timeout disabled *//* setV227 timeout disabled */});
-  window.addEventListener('load',()=>{/* setV227 call disabled *//* setV227 timeout disabled *//* setV227 timeout disabled */});
+  document.addEventListener('DOMContentLoaded',()=>{setV227();setTimeout(setV227,300);setTimeout(setV227,1000);});
+  window.addEventListener('load',()=>{setV227();setTimeout(setV227,300);setTimeout(setV227,1000);});
 })();
 
 
 
-
-/* ===== 3.1.0 - Modulo independiente Documentacion PDF por embarque =====
-   No modifica menus, disenos ni logica existente. Agrega boton Docs junto a OEA en Transitos. */
-(function(){
-  const VERSION='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const TYPES=['MIC','CRT','Factura','HR','Remito','Certificado','Otros'];
-  window.ELTA_APP_VERSION=VERSION;
-  window.APP_VERSION_V2=VERSION;
-
-  const S=v=>String(v??'').trim();
-  const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  function setVersion(){
-    try{
-      document.title='ELTA ITS - Versión '+VERSION;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
-        }
-      });
-    }catch(e){}
-  }
-  function dbx(){try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return window.db||null;}}
-  function storagex(){
-    try{ if(window.firebase && typeof window.firebase.storage==='function') return window.firebase.storage(); }catch(e){}
-    try{ if(typeof firebase!=='undefined' && firebase.storage) return firebase.storage(); }catch(e){}
-    return null;
-  }
-  function userName(){
-    try{return S(window.ELTA_LOGGED_USER?.name||window.ELTA_LOGGED_USER?.displayName||window.ELTA_LOGGED_USER?.email||window.ELTA_LOGGED_USER_ID||document.getElementById('user')?.value||'Usuario');}catch(e){return 'Usuario';}
-  }
-  function nowTs(){try{if(window.firebase&&window.firebase.firestore&&window.firebase.firestore.FieldValue)return window.firebase.firestore.FieldValue.serverTimestamp();}catch(e){} return new Date();}
-  function toDate(v){try{if(!v)return null;if(v.toDate)return v.toDate();if(v.seconds)return new Date(v.seconds*1000);const d=new Date(v);return isNaN(d)?null:d;}catch(e){return null;}}
-  function fmt(v){const d=toDate(v);return d?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
-  function safeFileName(v){return S(v).replace(/[\\/:*?"<>|]+/g,'_').replace(/\s+/g,'_').slice(0,120)||'documento.pdf';}
-  function iconForType(t){t=S(t).toUpperCase(); if(t==='MIC'||t==='CRT')return '📄'; if(t==='FACTURA')return '🧾'; if(t==='HR')return '📋'; if(t==='REMITO')return '📦'; if(t==='CERTIFICADO')return '📑'; return '📁';}
-
-  function getEmbFromCard(card){
-    const txt=card?.textContent||'';
-    // Prioridad: formato visual correcto "Emb. 020703".
-    let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-    if(m) return m[1];
-    // Fallback: buscar atributo/dato o primer número razonable luego de Embarque.
-    m=txt.match(/Embarque\s*([0-9]{5,8})\b/i);
-    if(m) return m[1];
-    m=txt.match(/\b([0-9]{5,8})\b/);
-    return m?m[1]:'';
-  }
-  function getFleetFromCard(card){
-    const txt=card?.textContent||'';
-    const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);
-    return m?m[1]:'';
-  }
-
-  async function fetchDocs(embarque){
-    const d=dbx();
-    if(!d||!embarque)return [];
-    try{
-      let snap=await d.collection(COLLECTION).where('embarque','==',String(embarque)).get();
-      const rows=snap.docs.map(x=>({id:x.id,...x.data()}));
-      rows.sort((a,b)=>(toDate(b.fechaCarga)?.getTime()||0)-(toDate(a.fechaCarga)?.getTime()||0));
-      return rows;
-    }catch(e){console.warn('Docs: no se pudo listar documentación',e);return [];}
-  }
-
-  async function refreshDocCounts(){
-    const btns=[...document.querySelectorAll('.transitDocsBtn228')];
-    for(const btn of btns){
-      const emb=btn.dataset.embarque;
-      if(!emb)continue;
-      try{const docs=await fetchDocs(emb);btn.innerHTML='📄 Docs';btn.classList.toggle('hasDocs',docs.length>0);}catch(e){}
-    }
-  }
-
-  function ensureButtons(){
-    document.querySelectorAll('#transitos .item, #transitos .transitCardV1210, .transitCardV1210').forEach(card=>{
-      if(card.querySelector('.transitDocsBtn228'))return;
-      const oea=card.querySelector('.transitOeaIconBtn63');
-      const emb=getEmbFromCard(card);
-      if(!oea||!emb)return;
-      const fl=getFleetFromCard(card);
-      const btn=document.createElement('button');
-      btn.type='button';
-      btn.className='transitDocsBtn228';
-      btn.title='Documentación PDF del embarque';
-      btn.dataset.embarque=emb;
-      btn.dataset.flota=fl;
-      btn.innerHTML='📄 Docs';
-      btn.addEventListener('click',ev=>{ev.preventDefault();ev.stopPropagation();openDocsModal(emb,fl);});
-      oea.insertAdjacentElement('afterend',btn);
-    });
-    setVersion();
-    setTimeout(refreshDocCounts,80);
-  }
-
-  function modalHtml(embarque,flota){
-    return `<div class="docsOverlay228" id="docsOverlay228">
-      <div class="docsModal228">
-        <div class="docsModalHead228"><div><h2>Documentación del embarque ${E(embarque)}</h2><p>${flota?`Flota ${E(flota)} · `:''}Documentos PDF opcionales</p></div><button type="button" class="docsClose228" onclick="window.closeDocsModal228()">×</button></div>
-        <div class="docsModalBody228">
-          <div class="docsUploadBox228">
-            <h3>Subir PDF</h3>
-            <div class="docsUploadGrid228">
-              <label>Tipo
-                <select id="docsTipo228">${TYPES.map(t=>`<option value="${E(t)}">${iconForType(t)} ${E(t)}</option>`).join('')}</select>
-              </label>
-              <label>Observación <small>(opcional)</small>
-                <input id="docsObs228" placeholder="Ej. MIC N° 123456">
-              </label>
-            </div>
-            <label class="docsDrop228" for="docsFile228"><span>☁️</span><b>Seleccionar archivo PDF</b><em>También puede seleccionar varios archivos</em></label>
-            <input id="docsFile228" type="file" accept="application/pdf,.pdf" multiple hidden>
-            <div id="docsSelected228" class="docsSelected228">Sin archivos seleccionados.</div>
-            <button type="button" class="docsPrimary228" onclick="window.uploadDocs228('${E(embarque)}','${E(flota)}')">Subir documento</button>
-          </div>
-          <div class="docsListBox228">
-            <div class="docsListHead228"><h3>Documentos cargados</h3><button type="button" onclick="window.loadDocs228('${E(embarque)}')">Actualizar</button></div>
-            <div id="docsList228" class="docsList228">Cargando...</div>
-          </div>
-        </div>
-      </div>
-    </div>`;
-  }
-
-  async function openDocsModal(embarque,flota){
-    document.getElementById('docsOverlay228')?.remove();
-    document.body.insertAdjacentHTML('beforeend',modalHtml(embarque,flota));
-    const file=document.getElementById('docsFile228');
-    file?.addEventListener('change',()=>{
-      const files=[...file.files||[]];
-      document.getElementById('docsSelected228').textContent=files.length?files.map(f=>f.name).join(' · '):'Sin archivos seleccionados.';
-    });
-    document.getElementById('docsOverlay228')?.addEventListener('click',ev=>{if(ev.target.id==='docsOverlay228')closeDocsModal();});
-    await loadDocs(embarque);
-  }
-  function closeDocsModal(){document.getElementById('docsOverlay228')?.remove();}
-
-  async function loadDocs(embarque){
-    const box=document.getElementById('docsList228');
-    if(!box)return;
-    box.innerHTML='Cargando...';
-    const docs=await fetchDocs(embarque);
-    if(!docs.length){box.innerHTML='<div class="docsEmpty228">Este embarque no posee documentación cargada.<br><small>Puede cargar uno o más documentos si lo desea.</small></div>'; refreshDocCounts(); return;}
-    box.innerHTML=`<table class="docsTable228"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="docsType228">${iconForType(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td title="${E(d.nombre||'')}">${E(d.nombre||'Documento.pdf')}</td><td>${E(fmt(d.fechaCarga))}</td><td><button title="Ver" onclick="window.openDoc228('${E(d.url||'')}')">👁</button><button title="Descargar" onclick="window.downloadDoc228('${E(d.url||'')}','${E(d.nombre||'documento.pdf')}')">⬇</button><button class="danger" title="Eliminar" onclick="window.deleteDoc228('${E(d.id)}','${E(d.storagePath||'')}','${E(embarque)}')">🗑</button></td></tr>`).join('')}</tbody></table>`;
-    refreshDocCounts();
-  }
-
-  async function uploadDocs(embarque,flota){
-    const input=document.getElementById('docsFile228');
-    const files=[...input?.files||[]];
-    const tipo=S(document.getElementById('docsTipo228')?.value)||'Otros';
-    const obs=S(document.getElementById('docsObs228')?.value);
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;}
-    const d=dbx(), st=storagex();
-    if(!d||!st){alert('Firebase Storage / Firestore no está disponible. No se pudo subir la documentación.');return;}
-    const btn=document.querySelector('.docsPrimary228');
-    const old=btn?.textContent||'Subir documento';
-    if(btn){btn.disabled=true;btn.textContent='Subiendo...';}
-    try{
-      for(const file of files){
-        if(!/\.pdf$/i.test(file.name) && file.type!=='application/pdf'){alert(`El archivo ${file.name} no es PDF.`);continue;}
-        const fname=safeFileName(file.name);
-        const storagePath=`embarques/${safeFileName(embarque)}/${Date.now()}_${fname}`;
-        const ref=st.ref().child(storagePath);
-        await ref.put(file,{contentType:'application/pdf'});
-        const url=await ref.getDownloadURL();
-        await d.collection(COLLECTION).add({embarque:String(embarque),flota:String(flota||''),tipo,nombre:fname,url,storagePath,fechaCarga:nowTs(),usuario:userName(),observaciones:obs,activo:true});
-      }
-      if(input)input.value='';
-      document.getElementById('docsSelected228').textContent='Sin archivos seleccionados.';
-      document.getElementById('docsObs228').value='';
-      await loadDocs(embarque);
-      alert('Documento cargado correctamente.');
-    }catch(e){console.error(e);alert('No se pudo subir el documento.');}
-    finally{if(btn){btn.disabled=false;btn.textContent=old;}}
-  }
-
-  function openDoc(url){if(!url){alert('Documento sin URL disponible.');return;} window.open(url,'_blank','noopener');}
-  async function downloadDoc(url,name){
-    if(!url){alert('Documento sin URL disponible.');return;}
-    const a=document.createElement('a');a.href=url;a.target='_blank';a.download=name||'documento.pdf';document.body.appendChild(a);a.click();a.remove();
-  }
-  async function deleteDoc(id,storagePath,embarque){
-    if(!confirm('¿Realmente desea eliminar este documento?'))return;
-    const d=dbx(), st=storagex();
-    try{
-      if(storagePath&&st) await st.ref().child(storagePath).delete().catch(()=>{});
-      if(d&&id) await d.collection(COLLECTION).doc(id).delete();
-      await loadDocs(embarque);
-      alert('Documento eliminado correctamente.');
-    }catch(e){console.error(e);alert('No se pudo eliminar el documento.');}
-  }
-
-  window.openEmbarqueDocs228=openDocsModal;
-  window.closeDocsModal228=closeDocsModal;
-  window.loadDocs228=loadDocs;
-  window.uploadDocs228=uploadDocs;
-  window.openDoc228=openDoc;
-  window.downloadDoc228=downloadDoc;
-  window.deleteDoc228=deleteDoc;
-
-  const oldRender=typeof window.renderTransitos==='function'?window.renderTransitos:(typeof renderTransitos==='function'?renderTransitos:null);
-  if(oldRender&&!oldRender.__docs228){
-    const wrapped=function(){const r=oldRender.apply(this,arguments);setTimeout(ensureButtons,50);setTimeout(ensureButtons,400);return r;};
-    wrapped.__docs228=true;
-    try{renderTransitos=wrapped;}catch(e){}
-    window.renderTransitos=wrapped;
-  }
-  document.addEventListener('DOMContentLoaded',()=>{setVersion();setTimeout(ensureButtons,700);});
-  window.addEventListener('load',()=>{setVersion();setTimeout(ensureButtons,700);});
-  setInterval(()=>{if(document.getElementById('transitos')?.classList.contains('active'))ensureButtons();},2500);
-})();
-
-
-
-
-/* ===== 3.1.0 - Ajuste Docs PDF: título limpio + validación Storage ===== */
-(function(){
-  const V='3.1.0';
-  window.ELTA_APP_VERSION=V;
-  window.APP_VERSION_V2=V;
-
-  function setV229(){
-    try{
-      document.title='ELTA ITS - Versión '+V;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V);
-        }
-      });
-    }catch(e){}
-  }
-
-  function cleanDocsTitle229(){
-    document.querySelectorAll('.docsModalHead228 h2').forEach(h=>{
-      const m=(h.textContent||'').match(/embarque\s+([0-9]{5,8})/i);
-      if(m) h.textContent='Documentación del embarque '+m[1];
-    });
-  }
-
-  const oldOpen229=window.openDocsModal228;
-  if(typeof oldOpen229==='function' && !oldOpen229.__v229Title){
-    window.openDocsModal228=function(embarque,flota){
-      const emb=String(embarque||'').match(/[0-9]{5,8}/);
-      const cleanEmb=emb?emb[0]:embarque;
-      const r=oldOpen229.call(this,cleanEmb,flota);
-      setTimeout(cleanDocsTitle229,30);
-      setTimeout(cleanDocsTitle229,150);
-      return r;
-    };
-    window.openDocsModal228.__v229Title=true;
-  }
-
-  document.addEventListener('DOMContentLoaded',()=>{/* setV229 call disabled */setTimeout(cleanDocsTitle229,300);});
-  window.addEventListener('load',()=>{/* setV229 call disabled */setTimeout(cleanDocsTitle229,300);});
-})();
-
-
-
-
-/* ===== 3.1.0 - Docs PDF por embarque usando SOLO Firestore =====
-   No usa Firebase Storage ni plan Blaze. Mantiene mismo diseño y flujo.
-   Guarda PDF en base64 dentro de Firestore en la colección embarque_documentos. */
-(function(){
-  const VERSION='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const TYPES=['MIC','CRT','Factura','HR','Remito','Certificado','Otros'];
-  const MAX_MB=0.85; // Firestore admite 1 MiB por documento; se deja margen por base64 y metadatos.
-  window.ELTA_APP_VERSION=VERSION;
-  window.APP_VERSION_V2=VERSION;
-
-  const S=v=>String(v??'').trim();
-  const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-
-  function setVersion(){
-    try{
-      document.title='ELTA ITS - Versión '+VERSION;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
-        }
-      });
-    }catch(e){}
-  }
-
-  function dbx(){try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return window.db||null;}}
-  function userName(){try{return S(window.ELTA_LOGGED_USER?.name||window.ELTA_LOGGED_USER?.displayName||window.currentUser?.name||window.currentUser?.email)||'Usuario';}catch(e){return 'Usuario';}}
-  function nowTs(){try{return firebase.firestore.FieldValue.serverTimestamp();}catch(e){return new Date();}}
-  function toDate(v){try{return v?.toDate?v.toDate():(v?.seconds?new Date(v.seconds*1000):new Date(v));}catch(e){return null;}}
-  function fmt(v){const d=toDate(v);return d&&!isNaN(d)?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
-  function iconForType(t){return {MIC:'📄',CRT:'📄',Factura:'🧾',HR:'📋',Remito:'📦',Certificado:'📑',Otros:'📁'}[t]||'📁';}
-  function safeFileName(name){return S(name).replace(/[\\/:*?"<>|]+/g,'_').slice(0,120);}
-
-  function cleanEmb(v){
-    const m=String(v||'').match(/[0-9]{5,8}/);
-    return m?m[0]:S(v);
-  }
-  function getEmbFromCard(card){
-    const txt=card?.textContent||'';
-    let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-    if(m)return m[1];
-    m=txt.match(/Embarque\s*([0-9]{5,8})\b/i);
-    if(m)return m[1];
-    m=txt.match(/\b([0-9]{5,8})\b/);
-    return m?m[1]:'';
-  }
-  function getFleetFromCard(card){
-    const txt=card?.textContent||'';
-    const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);
-    return m?m[1]:'';
-  }
-
-  function fileToBase64(file){
-    return new Promise((resolve,reject)=>{
-      const r=new FileReader();
-      r.onerror=()=>reject(r.error);
-      r.onload=()=>resolve(String(r.result||''));
-      r.readAsDataURL(file);
-    });
-  }
-
-  async function fetchDocs(embarque){
-    const d=dbx(); embarque=cleanEmb(embarque);
-    if(!d||!embarque)return [];
-    try{
-      const snap=await d.collection(COLLECTION).where('embarque','==',String(embarque)).where('activo','==',true).get();
-      const rows=snap.docs.map(x=>({id:x.id,...x.data()}));
-      rows.sort((a,b)=>(toDate(b.fechaCarga)?.getTime()||0)-(toDate(a.fechaCarga)?.getTime()||0));
-      return rows;
-    }catch(e){
-      try{
-        const snap=await d.collection(COLLECTION).where('embarque','==',String(embarque)).get();
-        const rows=snap.docs.map(x=>({id:x.id,...x.data()})).filter(x=>x.activo!==false);
-        rows.sort((a,b)=>(toDate(b.fechaCarga)?.getTime()||0)-(toDate(a.fechaCarga)?.getTime()||0));
-        return rows;
-      }catch(err){console.warn('Docs Firestore: no se pudo listar',err);return [];}
-    }
-  }
-
-  async function refreshDocCounts(){
-    const btns=[...document.querySelectorAll('.transitDocsBtn228,.transitDocsBtn230')];
-    for(const btn of btns){
-      const emb=btn.dataset.embarque;
-      if(!emb)continue;
-      try{const docs=await fetchDocs(emb);btn.innerHTML='📄 Docs';btn.classList.toggle('hasDocs',docs.length>0);}catch(e){}
-    }
-  }
-
-  function ensureButtons(){
-    document.querySelectorAll('#transitos .item, #transitos .transitCardV1210, .transitCardV1210').forEach(card=>{
-      if(card.querySelector('.transitDocsBtn228,.transitDocsBtn230'))return;
-      const oea=card.querySelector('.transitOeaIconBtn63');
-      const emb=getEmbFromCard(card);
-      if(!oea||!emb)return;
-      const fl=getFleetFromCard(card);
-      const btn=document.createElement('button');
-      btn.type='button';
-      btn.className='transitDocsBtn228 transitDocsBtn230';
-      btn.title='Documentación PDF del embarque';
-      btn.dataset.embarque=emb;
-      btn.dataset.flota=fl;
-      btn.innerHTML='📄 Docs';
-      btn.addEventListener('click',ev=>{ev.preventDefault();ev.stopPropagation();openDocsModal(emb,fl);});
-      oea.insertAdjacentElement('afterend',btn);
-    });
-    setVersion();
-    setTimeout(refreshDocCounts,80);
-  }
-
-  function modalHtml(embarque,flota){
-    embarque=cleanEmb(embarque);
-    return `<div class="docsOverlay228" id="docsOverlay228">
-      <div class="docsModal228">
-        <div class="docsModalHead228"><div><h2>Documentación del embarque ${E(embarque)}</h2><p>${flota?`Flota ${E(flota)} · `:''}Documentos PDF opcionales</p></div><button type="button" class="docsClose228" onclick="window.closeDocsModal228()">×</button></div>
-        <div class="docsModalBody228">
-          <div class="docsUploadBox228">
-            <h3>Subir PDF</h3>
-            <div class="docsUploadGrid228">
-              <label>Tipo
-                <select id="docsTipo228">${TYPES.map(t=>`<option value="${E(t)}">${iconForType(t)} ${E(t)}</option>`).join('')}</select>
-              </label>
-              <label>Observación <small>(opcional)</small>
-                <input id="docsObs228" placeholder="Ej. MIC N° 123456">
-              </label>
-            </div>
-            <label class="docsDrop228" for="docsFile228"><span>☁️</span><b>Seleccionar archivo PDF</b><em>Máximo recomendado: ${MAX_MB} MB por archivo</em></label>
-            <input id="docsFile228" type="file" accept="application/pdf,.pdf" multiple hidden>
-            <div id="docsSelected228" class="docsSelected228">Sin archivos seleccionados.</div>
-            <button type="button" class="docsPrimary228" onclick="window.uploadDocs228('${E(embarque)}','${E(flota)}')">Subir documento</button>
-          </div>
-          <div class="docsListBox228">
-            <div class="docsListHead228"><h3>Documentos cargados</h3><button type="button" onclick="window.loadDocs228('${E(embarque)}')">Actualizar</button></div>
-            <div id="docsList228" class="docsList228">Cargando documentación...</div>
-          </div>
-        </div>
-      </div>
-    </div>`;
-  }
-
-  async function openDocsModal(embarque,flota){
-    embarque=cleanEmb(embarque);
-    document.getElementById('docsOverlay228')?.remove();
-    document.body.insertAdjacentHTML('beforeend',modalHtml(embarque,flota));
-    const input=document.getElementById('docsFile228');
-    input?.addEventListener('change',()=>{
-      const files=[...input.files||[]];
-      document.getElementById('docsSelected228').textContent=files.length?files.map(f=>`${f.name} (${(f.size/1024).toFixed(0)} KB)`).join(' · '):'Sin archivos seleccionados.';
-    });
-    await loadDocs(embarque);
-  }
-
-  function closeDocsModal(){document.getElementById('docsOverlay228')?.remove();}
-
-  function docUrl(doc){
-    if(doc.archivoBase64)return doc.archivoBase64;
-    if(doc.url)return doc.url;
-    return '';
-  }
-  function openDoc(doc){
-    const url=docUrl(doc);
-    if(!url){alert('El documento no tiene archivo disponible.');return;}
-    const w=window.open();
-    if(w)w.document.write(`<iframe src="${url}" style="border:0;width:100%;height:100vh"></iframe>`);
-    else window.location.href=url;
-  }
-  function downloadDoc(doc){
-    const url=docUrl(doc);
-    if(!url){alert('El documento no tiene archivo disponible.');return;}
-    const a=document.createElement('a');
-    a.href=url;
-    a.download=doc.nombre||'documento.pdf';
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  }
-
-  async function loadDocs(embarque){
-    embarque=cleanEmb(embarque);
-    const box=document.getElementById('docsList228');
-    if(!box)return;
-    const docs=await fetchDocs(embarque);
-    if(!docs.length){
-      box.innerHTML='<div class="docsEmpty228">Este embarque no posee documentación cargada.<br><small>Puede cargar uno o más documentos si lo desea.</small></div>';
-      refreshDocCounts();
-      return;
-    }
-    window.__docsCache228=window.__docsCache228||{};
-    docs.forEach(d=>window.__docsCache228[d.id]=d);
-    box.innerHTML=`<table class="docsTable228"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="docsType228">${iconForType(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}</td><td>${fmt(d.fechaCarga)}</td><td class="docsActions228"><button onclick="window.viewDoc228('${d.id}')">👁</button><button onclick="window.downloadDoc228('${d.id}')">⬇</button><button class="danger" onclick="window.deleteDoc228('${d.id}','${E(embarque)}')">🗑</button></td></tr>`).join('')}</tbody></table>`;
-    refreshDocCounts();
-  }
-
-  async function uploadDocs(embarque,flota){
-    embarque=cleanEmb(embarque);
-    const input=document.getElementById('docsFile228');
-    const files=[...input?.files||[]];
-    const tipo=S(document.getElementById('docsTipo228')?.value)||'Otros';
-    const obs=S(document.getElementById('docsObs228')?.value);
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;}
-    const d=dbx();
-    if(!d){alert('Firestore no está disponible. No se pudo subir la documentación.');return;}
-    const btn=document.querySelector('.docsPrimary228');
-    const old=btn?.textContent||'Subir documento';
-    if(btn){btn.disabled=true;btn.textContent='Subiendo...';}
-    try{
-      for(const file of files){
-        if(!/\.pdf$/i.test(file.name) && file.type!=='application/pdf'){alert(`El archivo ${file.name} no es PDF.`);continue;}
-        if(file.size > MAX_MB*1024*1024){alert(`El archivo ${file.name} supera ${MAX_MB} MB. Optimice o comprima el PDF antes de subirlo.`);continue;}
-        const fname=safeFileName(file.name);
-        const archivoBase64=await fileToBase64(file);
-        await d.collection(COLLECTION).add({
-          embarque:String(embarque),
-          flota:String(flota||''),
-          tipo,
-          nombre:fname,
-          archivoBase64,
-          mimeType:file.type||'application/pdf',
-          sizeBytes:file.size,
-          fechaCarga:nowTs(),
-          usuario:userName(),
-          observaciones:obs,
-          activo:true,
-          almacenamiento:'firestore_base64'
-        });
-      }
-      if(input)input.value='';
-      document.getElementById('docsSelected228').textContent='Sin archivos seleccionados.';
-      const obsEl=document.getElementById('docsObs228'); if(obsEl)obsEl.value='';
-      await loadDocs(embarque);
-      alert('Documento cargado correctamente.');
-    }catch(e){console.error(e);alert('No se pudo subir la documentación. Verifique permisos de Firestore y tamaño del PDF.');}
-    finally{if(btn){btn.disabled=false;btn.textContent=old;}}
-  }
-
-  async function deleteDoc(id,embarque){
-    if(!confirm('¿Eliminar este documento del embarque?'))return;
-    const d=dbx();
-    try{
-      await d.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()});
-      await loadDocs(embarque);
-    }catch(e){console.error(e);alert('No se pudo eliminar el documento.');}
-  }
-
-  window.openDocsModal228=openDocsModal;
-  window.closeDocsModal228=closeDocsModal;
-  window.uploadDocs228=uploadDocs;
-  window.loadDocs228=loadDocs;
-  window.viewDoc228=id=>openDoc((window.__docsCache228||{})[id]||{});
-  window.downloadDoc228=id=>downloadDoc((window.__docsCache228||{})[id]||{});
-  window.deleteDoc228=deleteDoc;
-
-  const oldTab=window.tab;
-  if(typeof oldTab==='function'&&!oldTab.__docs230){
-    window.tab=function(id){
-      const r=oldTab.apply(this,arguments);
-      if(id==='transitos')setTimeout(ensureButtons,120);
-      return r;
-    };
-    window.tab.__docs230=true;
-  }
-
-  const oldRender=window.renderTransitos;
-  if(typeof oldRender==='function'&&!oldRender.__docs230){
-    window.renderTransitos=function(){
-      const r=oldRender.apply(this,arguments);
-      setTimeout(ensureButtons,120);
-      return r;
-    };
-    window.renderTransitos.__docs230=true;
-  }
-
-  const obs=new MutationObserver(()=>setTimeout(ensureButtons,120));
-  document.addEventListener('DOMContentLoaded',()=>{
-    setVersion();
-    setTimeout(ensureButtons,600);
-    const target=document.getElementById('transitos')||document.body;
-    obs.observe(target,{childList:true,subtree:true});
-  });
-  window.addEventListener('load',()=>{setVersion();setTimeout(ensureButtons,600);});
-})();
-
-
-
-
-/* ===== 3.1.0 - Docs: inserción directa del botón en Tránsitos =====
-   No modifica diseño ni funcionalidades existentes.
-   Agrega el botón Docs al lado de OEA aunque cambie la estructura de la tarjeta. */
-(function(){
-  const VERSION='3.1.0';
-  window.ELTA_APP_VERSION=VERSION;
-  window.APP_VERSION_V2=VERSION;
-
-  const S=v=>String(v??'').trim();
-  const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-
-  function setVersion231(){
-    try{
-      document.title='ELTA ITS - Versión '+VERSION;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
-        }
-      });
-    }catch(e){}
-  }
-
-  function cleanEmb231(v){
-    const m=String(v||'').match(/[0-9]{5,8}/);
-    return m?m[0]:S(v);
-  }
-
-  function closestTransitCard231(el){
-    return el.closest('.transitCardV1210,.item,.transitCard,.glassPanel') || el.closest('div');
-  }
-
-  function embFromCard231(card){
-    const txt=card?.textContent||'';
-    let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-    if(m)return m[1];
-    m=txt.match(/Embarque\s*([0-9]{5,8})\b/i);
-    if(m)return m[1];
-    m=txt.match(/\b([0-9]{5,8})\b/);
-    return m?m[1]:'';
-  }
-
-  function flotaFromCard231(card){
-    const txt=card?.textContent||'';
-    const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);
-    return m?m[1]:'';
-  }
-
-  async function refreshCount231(btn){
-    try{
-      if(typeof window.__docsFetchCount231 !== 'function'){
-        window.__docsFetchCount231 = async function(emb){
-          try{
-            const d = window.db || (typeof db!=='undefined'?db:null);
-            if(!d || !emb) return 0;
-            const snap = await d.collection('embarque_documentos').where('embarque','==',String(emb)).get();
-            return snap.docs.map(x=>x.data()).filter(x=>x.activo!==false).length;
-          }catch(e){return 0;}
-        };
-      }
-      const n=await window.__docsFetchCount231(btn.dataset.embarque);
-      btn.innerHTML='📄 Docs';
-      btn.classList.toggle('hasDocs',n>0);
-    }catch(e){}
-  }
-
-  function makeBtn231(emb,flota){
-    const b=document.createElement('button');
-    b.type='button';
-    b.className='transitDocsBtn228 transitDocsBtn230 transitDocsBtn231';
-    b.title='Documentación PDF del embarque';
-    b.dataset.embarque=cleanEmb231(emb);
-    b.dataset.flota=flota||'';
-    b.innerHTML='📄 Docs';
-    b.addEventListener('click',ev=>{
-      ev.preventDefault();
-      ev.stopPropagation();
-      const fn=window.openDocsModal228;
-      if(typeof fn==='function') fn(cleanEmb231(b.dataset.embarque), b.dataset.flota||'');
-      else alert('El módulo de documentación no está disponible.');
-    });
-    setTimeout(()=>refreshCount231(b),80);
-    return b;
-  }
-
-  function ensureDocsButtons231(){
-    const scope=document.getElementById('transitos') || document;
-    // Buscar cualquier botón OEA visible, sin depender de una clase específica.
-    const oeaButtons=[...scope.querySelectorAll('button,a')].filter(x=>/^\s*OEA\s*$/i.test(x.textContent||'') || x.classList.contains('transitOeaIconBtn63'));
-    oeaButtons.forEach(oea=>{
-      const row=oea.parentElement || closestTransitCard231(oea);
-      if(!row || row.querySelector('.transitDocsBtn231,.transitDocsBtn230,.transitDocsBtn228')) return;
-      const card=closestTransitCard231(oea);
-      const emb=embFromCard231(card);
-      if(!emb) return;
-      const fl=flotaFromCard231(card);
-      const btn=makeBtn231(emb,fl);
-      oea.insertAdjacentElement('afterend',btn);
-    });
-    setVersion231();
-  }
-
-  function burst231(){
-    [0,80,180,400,800,1400,2200].forEach(ms=>setTimeout(ensureDocsButtons231,ms));
-  }
-
-  const oldRender231=window.renderTransitos || (typeof renderTransitos==='function'?renderTransitos:null);
-  if(typeof oldRender231==='function' && !oldRender231.__docs231){
-    const wrapped=function(){
-      const r=oldRender231.apply(this,arguments);
-      burst231();
-      return r;
-    };
-    wrapped.__docs231=true;
-    try{renderTransitos=wrapped;}catch(e){}
-    window.renderTransitos=wrapped;
-  }
-
-  const oldTab231=window.tab || (typeof tab==='function'?tab:null);
-  if(typeof oldTab231==='function' && !oldTab231.__docs231){
-    const wrappedTab=function(id){
-      const r=oldTab231.apply(this,arguments);
-      if(id==='transitos') burst231();
-      return r;
-    };
-    wrappedTab.__docs231=true;
-    try{tab=wrappedTab;}catch(e){}
-    window.tab=wrappedTab;
-  }
-
-  const oldRefresh231=window.refresh || (typeof refresh==='function'?refresh:null);
-  if(typeof oldRefresh231==='function' && !oldRefresh231.__docs231){
-    const wrappedRefresh=async function(){
-      const r=await oldRefresh231.apply(this,arguments);
-      burst231();
-      return r;
-    };
-    wrappedRefresh.__docs231=true;
-    try{refresh=wrappedRefresh;}catch(e){}
-    window.refresh=wrappedRefresh;
-  }
-
-  let obs231=null;
-  function startObserver231(){
-    if(obs231)return;
-    const target=document.getElementById('transitos') || document.body;
-    obs231=new MutationObserver(()=>{
-      clearTimeout(window.__docs231Timer);
-      window.__docs231Timer=setTimeout(ensureDocsButtons231,120);
-    });
-    obs231.observe(target,{childList:true,subtree:true});
-  }
-
-  document.addEventListener('DOMContentLoaded',()=>{setVersion231();startObserver231();burst231();});
-  window.addEventListener('load',()=>{setVersion231();startObserver231();burst231();});
-})();
-
-
-
-
-/* ===== 3.1.0 - Forzar version visible y Docs ===== */
-(function(){
-  const V='3.1.0';
-  window.ELTA_APP_VERSION=V;
-  window.APP_VERSION_V2=V;
-
-  function setV232(){
-    try{
-      document.title='ELTA ITS - Versión '+V;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V);
-        }
-      });
-    }catch(e){}
-  }
-
-  // Limpia posibles caches del navegador.
-  try{
-    /* serviceWorker cleanup disabled v3.1.0 */
-    /* cache cleanup disabled v3.1.0 */
-  }catch(e){}
-
-  document.addEventListener('DOMContentLoaded',()=>{/* setV232 call disabled *//* setV232 timeout disabled *//* setV232 timeout disabled *//* setV232 timeout disabled */});
-  window.addEventListener('load',()=>{/* setV232 call disabled *//* setV232 timeout disabled *//* setV232 timeout disabled *//* setV232 timeout disabled */});
-})();
-
-
-
-
-/* ===== 3.1.0 - Docs directo en tarjeta Tránsitos ===== */
-(function(){
-  const V='3.1.0';
-  window.ELTA_APP_VERSION=V;
-  window.APP_VERSION_V2=V;
-
-  function setV233(){
-    try{
-      document.title='ELTA ITS - Versión '+V;
-      document.querySelectorAll('span,small,p,div,footer').forEach(el=>{
-        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
-          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V);
-        }
-      });
-    }catch(e){}
-  }
-
-  function addDocsFallback233(){
-    const scope=document.getElementById('transitos')||document;
-    [...scope.querySelectorAll('button,a')].filter(b=>/^\s*OEA\s*$/i.test(b.textContent||'')).forEach(oea=>{
-      const parent=oea.parentElement;
-      if(!parent || parent.querySelector('.transitDocsBtn233'))return;
-      let card=oea.closest('.transitCardV1210,.item,.glassPanel')||oea.closest('div');
-      let txt=card?.textContent||'';
-      let emb=(txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/\b([0-9]{5,8})\b/)||[])[1]||'';
-      let fl=(txt.match(/Flota\s*([A-Za-z0-9_-]+)/i)||[])[1]||'';
-      if(!emb)return;
-      const b=document.createElement('button');
-      b.type='button';
-      b.className='transitDocsBtn228 transitDocsBtn230 transitDocsBtn231 transitDocsBtn233';
-      b.title='Documentación PDF del embarque';
-      b.innerHTML='📄 Docs';
-      b.onclick=function(ev){ev.preventDefault();ev.stopPropagation(); if(window.openDocsModal228)window.openDocsModal228(emb,fl); else alert('Módulo Docs no disponible.');};
-      oea.insertAdjacentElement('afterend',b);
-    });
-    /* setV233 call disabled */
-  }
-
-  function burst233(){[0,100,300,700,1500,2500].forEach(ms=>setTimeout(addDocsFallback233,ms));}
-
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null);
-  if(typeof oldRender==='function'&&!oldRender.__docs233){
-    const wr=function(){const r=oldRender.apply(this,arguments);burst233();return r;};
-    wr.__docs233=true;
-    try{renderTransitos=wr;}catch(e){}
-    window.renderTransitos=wr;
-  }
-
-  const oldTab=window.tab||(typeof tab==='function'?tab:null);
-  if(typeof oldTab==='function'&&!oldTab.__docs233){
-    const wt=function(id){const r=oldTab.apply(this,arguments); if(id==='transitos')burst233(); return r;};
-    wt.__docs233=true;
-    try{tab=wt;}catch(e){}
-    window.tab=wt;
-  }
-
-  document.addEventListener('DOMContentLoaded',()=>{/* setV233 call disabled */burst233();});
-  window.addEventListener('load',()=>{/* setV233 call disabled */burst233();});
-})();
-
-
-
-
-/* ===== 3.1.0 - contador simple Docs sin tocar render ni modal ===== */
-(function(){
-  const COLLECTION='embarque_documentos';
-
-  function dbx(){
-    try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return window.db||null;}
-  }
-
-  function cleanEmb(v){
-    const m=String(v||'').match(/[0-9]{5,8}/);
-    return m ? m[0] : String(v||'').trim();
-  }
-
-  function embVariants(v){
-    const s=cleanEmb(v);
-    const n=String(Number(s));
-    const set=new Set([s,n]);
-    if(s && s.length<6) set.add(s.padStart(6,'0'));
-    if(s && s.length<7) set.add(s.padStart(7,'0'));
-    set.add('Emb. '+s);
-    set.add('Emb. '+n);
-    return [...set].filter(x=>x && x!=='NaN');
-  }
-
-  function activeDoc(d){
-    return d && d.activo !== false && d.deleted !== true && d.eliminado !== true;
-  }
-
-  function docMatches(d, variants){
-    const values=[
-      d.embarque,
-      d.embarqueId,
-      d.idEmbarque,
-      d.numeroEmbarque,
-      d.numero,
-      d.emb
-    ].map(x=>String(x??'').trim()).filter(Boolean);
-
-    return values.some(v=>{
-      const c=cleanEmb(v);
-      const n=String(Number(c));
-      return variants.includes(v) || variants.includes(c) || variants.includes(n);
-    });
-  }
-
-  async function countDocs(embarque){
-    const d=dbx();
-    const emb=cleanEmb(embarque);
-    if(!d || !emb) return 0;
-    const variants=embVariants(emb);
-    let rows=[];
-
-    try{
-      for(const v of variants){
-        const snap=await d.collection(COLLECTION).where('embarque','==',String(v)).get();
-        snap.docs.forEach(x=>rows.push({id:x.id,...x.data()}));
-      }
-    }catch(e){}
-
-    if(!rows.length){
-      try{
-        const snap=await d.collection(COLLECTION).get();
-        rows=snap.docs.map(x=>({id:x.id,...x.data()})).filter(x=>docMatches(x,variants));
-      }catch(e){
-        rows=[];
-      }
-    }
-
-    const seen=new Set();
-    return rows.filter(x=>{
-      if(!activeDoc(x)) return false;
-      if(seen.has(x.id)) return false;
-      if(!docMatches(x,variants)) return false;
-      seen.add(x.id);
-      return true;
-    }).length;
-  }
-
-  function getEmbFromButton(btn){
-    let emb=cleanEmb(btn.dataset.embarque);
-    if(emb) return emb;
-
-    const card=btn.closest('.transitCardV1210,.item,.glassPanel') || btn.closest('div');
-    const txt=card?.textContent || '';
-    let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-    if(m) return m[1];
-    m=txt.match(/Embarque\s*([0-9]{5,8})\b/i);
-    if(m) return m[1];
-    m=txt.match(/\b([0-9]{5,8})\b/);
-    return m ? m[1] : '';
-  }
-
-  async function updateDocsCount(btn){
-    const emb=getEmbFromButton(btn);
-    if(!emb) return;
-
-    btn.dataset.embarque=emb;
-    const n=await countDocs(emb);
-
-    btn.classList.add('docsCounterSimple233');
-    btn.classList.toggle('hasDocs', n>0);
-    btn.innerHTML='📄 Docs';
-    btn.title=n>0
-      ? 'Documentación PDF del embarque ('+n+' documento'+(n===1?'':'s')+')'
-      : 'Documentación PDF del embarque';
-  }
-
-  function refreshDocsCounters(){
-    document
-      .querySelectorAll('#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233')
-      .forEach(btn=>updateDocsCount(btn));
-  }
-
-  function burst(){
-    [0,150,500,1200,2500].forEach(ms=>setTimeout(refreshDocsCounters,ms));
-  }
-
-  const oldOpen=window.openDocsModal228;
-  if(typeof oldOpen==='function' && !oldOpen.__counter233){
-    window.openDocsModal228=function(){
-      const r=oldOpen.apply(this,arguments);
-      setTimeout(refreshDocsCounters,400);
-      return r;
-    };
-    window.openDocsModal228.__counter233=true;
-  }
-
-  const oldUpload=window.uploadDocs228;
-  if(typeof oldUpload==='function' && !oldUpload.__counter233){
-    window.uploadDocs228=async function(){
-      const r=await oldUpload.apply(this,arguments);
-      setTimeout(refreshDocsCounters,500);
-      return r;
-    };
-    window.uploadDocs228.__counter233=true;
-  }
-
-  const oldDelete=window.deleteDoc228;
-  if(typeof oldDelete==='function' && !oldDelete.__counter233){
-    window.deleteDoc228=async function(){
-      const r=await oldDelete.apply(this,arguments);
-      setTimeout(refreshDocsCounters,500);
-      return r;
-    };
-    window.deleteDoc228.__counter233=true;
-  }
-
-  const oldRender=window.renderTransitos || (typeof renderTransitos==='function' ? renderTransitos : null);
-  if(typeof oldRender==='function' && !oldRender.__counter233){
-    const wrapped=function(){
-      const r=oldRender.apply(this,arguments);
-      burst();
-      return r;
-    };
-    wrapped.__counter233=true;
-    try{renderTransitos=wrapped;}catch(e){}
-    window.renderTransitos=wrapped;
-  }
-
-  const oldTab=window.tab || (typeof tab==='function' ? tab : null);
-  if(typeof oldTab==='function' && !oldTab.__counter233){
-    const wrappedTab=function(id){
-      const r=oldTab.apply(this,arguments);
-      if(id==='transitos') burst();
-      return r;
-    };
-    wrappedTab.__counter233=true;
-    try{tab=wrappedTab;}catch(e){}
-    window.tab=wrappedTab;
-  }
-
-  window.refreshDocsCounters233=refreshDocsCounters;
-
-  document.addEventListener('DOMContentLoaded',burst);
-  window.addEventListener('load',burst);
-})();
-
-
-
-
-
-
-
-/* ===== 3.1.0 - Docs habilitado exacto por embarque, sin contador ===== */
-(function(){
-  const COLLECTION='embarque_documentos';
-
-  function dbx(){
-    try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return window.db||null;}
-  }
-
-  function cleanEmb(v){
-    const m=String(v||'').match(/[0-9]{5,8}/);
-    return m ? m[0] : String(v||'').trim();
-  }
-
-  function embKeys(v){
-    const s=cleanEmb(v);
-    const n=String(Number(s));
-    const set=new Set([s, n]);
-    if(s && s.length < 6) set.add(s.padStart(6,'0'));
-    if(s && s.length < 7) set.add(s.padStart(7,'0'));
-    set.add('Emb. '+s);
-    set.add('Emb. '+n);
-    return [...set].filter(x=>x && x !== 'NaN');
-  }
-
-  function activeDoc(d){
-    return d && d.activo !== false && d.deleted !== true && d.eliminado !== true;
-  }
-
-  function docEmbValues(d){
-    return [
-      d.embarque,
-      d.embarqueId,
-      d.idEmbarque,
-      d.numeroEmbarque,
-      d.numero,
-      d.emb
-    ].map(x=>String(x??'').trim()).filter(Boolean);
-  }
-
-  function exactDocMatch(d, keys){
-    const vals=docEmbValues(d);
-    return vals.some(v=>{
-      const c=cleanEmb(v);
-      const n=String(Number(c));
-      return keys.includes(v) || keys.includes(c) || keys.includes(n);
-    });
-  }
-
-  async function hasDocsExact(embarque){
-    const db=dbx();
-    const emb=cleanEmb(embarque);
-    if(!db || !emb) return false;
-
-    const keys=embKeys(emb);
-
-    // Direct exact checks against all possible embarque representations.
-    try{
-      for(const k of keys){
-        const snap=await db.collection(COLLECTION).where('embarque','==',String(k)).get();
-        if(snap.docs.some(doc=>activeDoc(doc.data()||{}))) return true;
-      }
-    }catch(e){}
-
-    // Fallback exact comparison only against embarque fields. No flota/path/name fallback.
-    try{
-      const snap=await db.collection(COLLECTION).get();
-      return snap.docs
-        .map(doc=>({id:doc.id,...doc.data()}))
-        .some(d=>activeDoc(d) && exactDocMatch(d, keys));
-    }catch(e){
-      return false;
-    }
-  }
-
-  function embFromButton(btn){
-    let emb=cleanEmb(btn.dataset.embarque);
-    if(emb) return emb;
-
-    let node=btn;
-    for(let i=0; node && i<12; i++, node=node.parentElement){
-      const txt=node.textContent||'';
-      const m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-      if(m) return m[1];
-    }
-    return '';
-  }
-
-  function normalizeText(btn){
-    if((btn.textContent||'').trim() !== '📄 Docs' || btn.innerHTML.includes('docsCountBadge')){
-      btn.innerHTML='📄 Docs';
-    }
-  }
-
-  function setButton(btn, enabled){
-    btn.classList.add('docsExactEnable237');
-    btn.classList.toggle('docsHasFiles', !!enabled);
-    btn.classList.toggle('docsNoFiles', !enabled);
-    btn.disabled = !enabled;
-    btn.setAttribute('aria-disabled', enabled ? 'false' : 'true');
-    btn.title = enabled ? 'Abrir documentación PDF del embarque' : 'Sin documentación cargada';
-    btn.innerHTML='📄 Docs';
-  }
-
-  async function updateButton(btn){
-    const emb=embFromButton(btn);
-    if(!emb){
-      setButton(btn,false);
-      return;
-    }
-    btn.dataset.embarque=emb;
-    const ok=await hasDocsExact(emb);
-    setButton(btn,ok);
-  }
-
-  function buttons(){
-    return [...document.querySelectorAll('#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233')];
-  }
-
-  function refresh(){
-    buttons().forEach(btn=>{
-      normalizeText(btn);
-      updateButton(btn);
-    });
-  }
-
-  function stripOnly(){
-    buttons().forEach(normalizeText);
-  }
-
-  document.addEventListener('click',function(ev){
-    const btn=ev.target?.closest?.('#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233');
-    if(!btn) return;
-
-    normalizeText(btn);
-
-    if(btn.disabled || btn.classList.contains('docsNoFiles')){
-      ev.preventDefault();
-      ev.stopPropagation();
-      if(ev.stopImmediatePropagation) ev.stopImmediatePropagation();
-      return false;
-    }
-  }, true);
-
-  let timer=null;
-  function observe(){
-    const target=document.getElementById('transitos') || document.body;
-    if(!target || window.__docsExactEnableObserver237) return;
-    window.__docsExactEnableObserver237=new MutationObserver(()=>{
-      clearTimeout(timer);
-      timer=setTimeout(()=>{stripOnly();refresh();},80);
-    });
-    window.__docsExactEnableObserver237.observe(target,{childList:true,subtree:true,characterData:true});
-  }
-
-  const oldRender=window.renderTransitos || (typeof renderTransitos==='function' ? renderTransitos : null);
-  if(typeof oldRender==='function' && !oldRender.__docsExactEnable237){
-    const wrapped=function(){
-      const r=oldRender.apply(this,arguments);
-      [120,500,1200,2500].forEach(ms=>setTimeout(refresh,ms));
-      return r;
-    };
-    wrapped.__docsExactEnable237=true;
-    try{renderTransitos=wrapped;}catch(e){}
-    window.renderTransitos=wrapped;
-  }
-
-  const oldTab=window.tab || (typeof tab==='function' ? tab : null);
-  if(typeof oldTab==='function' && !oldTab.__docsExactEnable237){
-    const wrappedTab=function(id){
-      const r=oldTab.apply(this,arguments);
-      if(id==='transitos') [120,500,1200,2500].forEach(ms=>setTimeout(refresh,ms));
-      return r;
-    };
-    wrappedTab.__docsExactEnable237=true;
-    try{tab=wrappedTab;}catch(e){}
-    window.tab=wrappedTab;
-  }
-
-  ['loadDocs228','uploadDocs228','deleteDoc228'].forEach(name=>{
-    const old=window[name];
-    if(typeof old==='function' && !old.__docsExactEnable237){
-      window[name]=async function(){
-        const r=await old.apply(this,arguments);
-        setTimeout(refresh,400);
-        return r;
-      };
-      window[name].__docsExactEnable237=true;
-    }
-  });
-
-  window.refreshDocsExactEnable237=refresh;
-
-  document.addEventListener('DOMContentLoaded',()=>{observe();[120,500,1200,2500,4000].forEach(ms=>setTimeout(refresh,ms));});
-  window.addEventListener('load',()=>{observe();[120,500,1200,2500,4000].forEach(ms=>setTimeout(refresh,ms));});
-})();
-
-
-
-
-/* ===== 3.1.0 - Docs exacto por onclick, sin contador ===== */
-(function(){
-  const COLLECTION='embarque_documentos';
-
-  function dbx(){try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return window.db||null;}}
-  function cleanEmb(v){const m=String(v||'').match(/[0-9]{5,8}/); return m?m[0]:String(v||'').trim();}
-  function keysFor(v){
-    const s=cleanEmb(v), n=String(Number(s));
-    const set=new Set([s,n]);
-    if(s && s.length<6) set.add(s.padStart(6,'0'));
-    if(s && s.length<7) set.add(s.padStart(7,'0'));
-    set.add('Emb. '+s); set.add('Emb. '+n);
-    return [...set].filter(x=>x && x!=='NaN');
-  }
-  function activeDoc(d){return d && d.activo!==false && d.deleted!==true && d.eliminado!==true;}
-  function docMatches(d,keys){
-    const vals=[d.embarque,d.embarqueId,d.idEmbarque,d.numeroEmbarque,d.numero,d.emb]
-      .map(x=>String(x??'').trim()).filter(Boolean);
-    return vals.some(v=>{
-      const c=cleanEmb(v), n=String(Number(c));
-      return keys.includes(v)||keys.includes(c)||keys.includes(n);
-    });
-  }
-  async function hasDocsForEmb(emb){
-    const db=dbx(); emb=cleanEmb(emb);
-    if(!db||!emb) return false;
-    const keys=keysFor(emb);
-    try{
-      for(const k of keys){
-        const snap=await db.collection(COLLECTION).where('embarque','==',String(k)).get();
-        if(snap.docs.some(x=>activeDoc(x.data()||{}))) return true;
-      }
-    }catch(e){}
-    try{
-      const snap=await db.collection(COLLECTION).get();
-      return snap.docs.map(x=>({id:x.id,...x.data()})).some(x=>activeDoc(x)&&docMatches(x,keys));
-    }catch(e){return false;}
-  }
-
-  function embFromButton(btn){
-    // 1) el render existente tiene el valor correcto en el onclick: openDocsModal228('020703','307')
-    const on=btn.getAttribute('onclick')||'';
-    let m=on.match(/openDocsModal228&&window\.openDocsModal228\('([^']+)'/);
-    if(!m) m=on.match(/openDocsModal228\('([^']+)'/);
-    if(!m) m=on.match(/openDocsModal\d*\('([^']+)'/);
-    if(m && cleanEmb(m[1])) return cleanEmb(m[1]);
-
-    // 2) dataset si existe
-    const ds=cleanEmb(btn.dataset.embarque);
-    if(ds) return ds;
-
-    // 3) tarjeta inmediata, no contenedor general
-    let node=btn;
-    for(let i=0; node && i<8; i++, node=node.parentElement){
-      const txt=node.textContent||'';
-      const mm=txt.match(/Emb\.\s*([0-9]{5,8})\b/i);
-      if(mm) return mm[1];
-    }
-    return '';
-  }
-
-  function normalizeText(btn){
-    if((btn.textContent||'').trim()!=='📄 Docs' || btn.innerHTML.includes('docsCountBadge')){
-      btn.innerHTML='📄 Docs';
-    }
-  }
-
-  function applyState(btn,enabled){
-    normalizeText(btn);
-    btn.classList.remove('hasDocs');
-    btn.classList.add('docsOnclickExact238');
-    btn.classList.toggle('docsHasFiles',!!enabled);
-    btn.classList.toggle('docsNoFiles',!enabled);
-    btn.disabled=!enabled;
-    btn.dataset.docsEnabled=enabled?'1':'0';
-    btn.setAttribute('aria-disabled',enabled?'false':'true');
-    btn.title=enabled?'Abrir documentación PDF del embarque':'Sin documentación cargada';
-  }
-
-  async function update(btn){
-    const emb=embFromButton(btn);
-    if(!emb){applyState(btn,false);return;}
-    btn.dataset.embarque=emb;
-    const ok=await hasDocsForEmb(emb);
-    applyState(btn,ok);
-  }
-
-  function buttons(){
-    return [...document.querySelectorAll('#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233')];
-  }
-
-  function refresh(){
-    buttons().forEach(update);
-  }
-  function strip(){
-    buttons().forEach(btn=>{
-      normalizeText(btn);
-      if(btn.dataset.docsEnabled==='0') applyState(btn,false);
-    });
-  }
-
-  document.addEventListener('click',function(ev){
-    const btn=ev.target?.closest?.('#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233');
-    if(!btn) return;
-    normalizeText(btn);
-    if(btn.dataset.docsEnabled!=='1'){
-      ev.preventDefault(); ev.stopPropagation();
-      if(ev.stopImmediatePropagation) ev.stopImmediatePropagation();
-      return false;
-    }
-  },true);
-
-  let timer=null;
-  function observe(){
-    const target=document.getElementById('transitos')||document.body;
-    if(!target || window.__docsOnclickExact238) return;
-    window.__docsOnclickExact238=new MutationObserver(()=>{
-      clearTimeout(timer);
-      timer=setTimeout(()=>{strip();refresh();},100);
-    });
-    window.__docsOnclickExact238.observe(target,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class','disabled']});
-  }
-
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null);
-  if(typeof oldRender==='function'&&!oldRender.__docsOnclickExact238){
-    const wr=function(){const r=oldRender.apply(this,arguments);[100,400,1000,2200].forEach(ms=>setTimeout(refresh,ms));return r;};
-    wr.__docsOnclickExact238=true; try{renderTransitos=wr;}catch(e){} window.renderTransitos=wr;
-  }
-  const oldTab=window.tab||(typeof tab==='function'?tab:null);
-  if(typeof oldTab==='function'&&!oldTab.__docsOnclickExact238){
-    const wt=function(id){const r=oldTab.apply(this,arguments); if(id==='transitos')[100,400,1000,2200].forEach(ms=>setTimeout(refresh,ms)); return r;};
-    wt.__docsOnclickExact238=true; try{tab=wt;}catch(e){} window.tab=wt;
-  }
-  ['loadDocs228','uploadDocs228','deleteDoc228'].forEach(name=>{
-    const old=window[name];
-    if(typeof old==='function'&&!old.__docsOnclickExact238){
-      window[name]=async function(){const r=await old.apply(this,arguments); setTimeout(refresh,400); return r;};
-      window[name].__docsOnclickExact238=true;
-    }
-  });
-
-  window.refreshDocsOnclickExact238=refresh;
-  document.addEventListener('DOMContentLoaded',()=>{observe();[100,400,1000,2200,4000].forEach(ms=>setTimeout(refresh,ms));});
-  window.addEventListener('load',()=>{observe();[100,400,1000,2200,4000].forEach(ms=>setTimeout(refresh,ms));});
-})();
-
-
-/* ===== 3.1.0 - Docs: acceso siempre habilitado + actualización real + subida optimizada =====
-   Corrección solicitada: el botón Docs debe abrir la vista aunque no haya documentos,
-   Actualizar debe recargar la lista y la subida no debe bloquear innecesariamente. */
-(function(){
-  const COLLECTION='embarque_documentos';
-  const BTN_SEL='#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233';
-  const TYPES=['MIC','CRT','Factura','HR','Remito','Certificado','Otros'];
-  const MAX_MB=0.85;
-  function S(v){return String(v??'').trim();}
-  function E(v){return S(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-  function dbx(){try{return window.db || (typeof db!=='undefined'?db:null);}catch(e){return null;}}
-  function storagex(){try{return window.storage || (window.firebase&&window.firebase.storage?window.firebase.storage():null);}catch(e){return null;}}
-  function cleanEmb(v){const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v);}
-  function keysFor(v){const s=cleanEmb(v), n=String(Number(s));const set=new Set([s,n]);if(s&&s.length<6)set.add(s.padStart(6,'0'));if(s&&s.length<7)set.add(s.padStart(7,'0'));return [...set].filter(x=>x&&x!=='NaN');}
-  function activeDoc(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true;}
-  function nowTs(){try{if(window.firebase&&window.firebase.firestore&&window.firebase.firestore.FieldValue)return window.firebase.firestore.FieldValue.serverTimestamp();}catch(e){}return new Date();}
-  function toDate(v){try{if(!v)return null;if(v.toDate)return v.toDate();if(v.seconds)return new Date(v.seconds*1000);const d=new Date(v);return isNaN(d)?null:d;}catch(e){return null;}}
-  function fmt(v){const d=toDate(v);return d?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
-  function safeFileName(v){return S(v).replace(/[\\/:*?"<>|]+/g,'_').replace(/\s+/g,'_').slice(0,120)||'documento.pdf';}
-  function iconForType(t){t=S(t).toUpperCase();if(t==='MIC'||t==='CRT')return '📄';if(t==='FACTURA')return '🧾';if(t==='HR')return '📋';if(t==='REMITO')return '📦';if(t==='CERTIFICADO')return '📑';return '📁';}
-  function userName(){try{return S(window.ELTA_LOGGED_USER?.name||window.ELTA_LOGGED_USER?.displayName||window.ELTA_LOGGED_USER?.email||window.ELTA_LOGGED_USER_ID||document.getElementById('user')?.value||'Usuario');}catch(e){return 'Usuario';}}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  function docUrl(d){return d?.url||d?.archivoBase64||'';}
-  function embFromButton(btn){
-    const on=btn.getAttribute('onclick')||'';
-    let m=on.match(/openDocsModal228(?:&&window\.openDocsModal228)?\('([^']+)'/);
-    if(!m)m=on.match(/openDocsModal\d*\('([^']+)'/);
-    if(m&&cleanEmb(m[1]))return cleanEmb(m[1]);
-    if(cleanEmb(btn.dataset.embarque))return cleanEmb(btn.dataset.embarque);
-    let node=btn;for(let i=0;node&&i<10;i++,node=node.parentElement){const txt=node.textContent||'';const mm=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i);if(mm)return mm[1];}
-    return '';
-  }
-  function flotaFromButton(btn){
-    if(S(btn.dataset.flota))return S(btn.dataset.flota);
-    let node=btn;for(let i=0;node&&i<10;i++,node=node.parentElement){const txt=node.textContent||'';const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);if(m)return m[1];}
-    return '';
-  }
-  async function fetchDocsFast(embarque){
-    const db=dbx();const emb=cleanEmb(embarque);if(!db||!emb)return [];
-    const seen=new Set(), out=[];
-    async function addQuery(field,val){
-      try{const snap=await db.collection(COLLECTION).where(field,'==',String(val)).get();snap.docs.forEach(x=>{if(!seen.has(x.id)){const d={id:x.id,...x.data()};if(activeDoc(d)){seen.add(x.id);out.push(d);}}});}catch(e){}
-    }
-    for(const k of keysFor(emb)) await addQuery('embarque',k);
-    out.sort((a,b)=>(toDate(b.fechaCarga)?.getTime()||0)-(toDate(a.fechaCarga)?.getTime()||0));
-    return out;
-  }
-  function renderDocsRows(docs,embarque){
-    if(!docs.length)return '<div class="docsEmpty228">Este embarque no posee documentación cargada.<br><small>Puede cargar uno o más documentos si lo desea.</small></div>';
-    window.__docsCache228=window.__docsCache228||{};docs.forEach(d=>window.__docsCache228[d.id]=d);
-    return `<table class="docsTable228"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="docsType228">${iconForType(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga))}</td><td class="docsActions228"><button type="button" title="Ver" onclick="window.viewDoc228('${E(d.id)}')">👁</button><button type="button" title="Descargar" onclick="window.downloadDoc228('${E(d.id)}')">⬇</button><button type="button" class="danger" title="Eliminar" onclick="window.deleteDoc228('${E(d.id)}','${E(embarque)}')">🗑</button></td></tr>`).join('')}</tbody></table>`;
-  }
-  async function loadDocs(embarque){
-    embarque=cleanEmb(embarque);const box=document.getElementById('docsList228');if(!box)return;
-    const btn=document.querySelector('.docsListHead228 button');const old=btn?.textContent||'Actualizar';
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...';}
-    box.innerHTML='Actualizando documentación...';
-    try{const docs=await fetchDocsFast(embarque);box.innerHTML=renderDocsRows(docs,embarque);enableAllDocsButtons();return docs;}
-    catch(e){console.error(e);box.innerHTML='<div class="docsEmpty228">No se pudo actualizar la documentación.<br><small>Revise la conexión y vuelva a intentar.</small></div>';return [];}
-    finally{if(btn){btn.disabled=false;btn.textContent=old;}}
-  }
-  function viewDoc(id){const d=(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener');}
-  function downloadDoc(id){const d=(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove();}
-  async function uploadDocs(embarque,flota){
-    embarque=cleanEmb(embarque);const input=document.getElementById('docsFile228');const files=[...input?.files||[]];
-    const tipo=S(document.getElementById('docsTipo228')?.value)||'Otros';const obs=S(document.getElementById('docsObs228')?.value);
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;}
-    const db=dbx();if(!db){alert('Firestore no está disponible. No se pudo subir la documentación.');return;}
-    const btn=document.querySelector('.docsPrimary228');const old=btn?.textContent||'Subir documento';const selected=document.getElementById('docsSelected228');
-    if(btn){btn.disabled=true;btn.textContent='Preparando subida...';}
-    try{
-      let ok=0;
-      for(let i=0;i<files.length;i++){
-        const file=files[i];
-        if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){alert(`El archivo ${file.name} no es PDF.`);continue;}
-        if(file.size>MAX_MB*1024*1024){alert(`El archivo ${file.name} supera ${MAX_MB} MB. Optimice o comprima el PDF antes de subirlo.`);continue;}
-        const fname=safeFileName(file.name);let payload={};
-        if(btn)btn.textContent=`Subiendo ${i+1}/${files.length}...`;
-        if(selected)selected.textContent=`Subiendo ${fname}...`;
-        const storage=storagex();
-        if(storage){
-          try{const path=`embarques/${safeFileName(embarque)}/${Date.now()}_${fname}`;const ref=storage.ref().child(path);await ref.put(file,{contentType:'application/pdf'});payload={url:await ref.getDownloadURL(),storagePath:path,almacenamiento:'firebase_storage'};}catch(e){payload={archivoBase64:await fileToBase64(file),almacenamiento:'firestore_base64'};}
-        }else{
-          payload={archivoBase64:await fileToBase64(file),almacenamiento:'firestore_base64'};
-        }
-        await db.collection(COLLECTION).add({embarque:String(embarque),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),usuario:userName(),observaciones:obs,activo:true,...payload});
-        ok++;
-      }
-      if(input)input.value='';const obsEl=document.getElementById('docsObs228');if(obsEl)obsEl.value='';if(selected)selected.textContent='Sin archivos seleccionados.';
-      await loadDocs(embarque);
-      alert(ok?`Documento${ok===1?'':'s'} cargado${ok===1?'':'s'} correctamente.`:'No se cargaron documentos.');
-    }catch(e){console.error(e);alert('No se pudo subir la documentación. Verifique conexión, permisos y tamaño del PDF.');}
-    finally{if(btn){btn.disabled=false;btn.textContent=old;}}
-  }
-  async function deleteDoc(id,embarque){
-    if(!confirm('¿Eliminar este documento del embarque?'))return;const db=dbx();if(!db)return;
-    try{await db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()});await loadDocs(embarque);}catch(e){console.error(e);alert('No se pudo eliminar el documento.');}
-  }
-  function enableButton(btn){
-    const emb=embFromButton(btn);const fl=flotaFromButton(btn);if(emb)btn.dataset.embarque=emb;if(fl)btn.dataset.flota=fl;
-    btn.disabled=false;btn.dataset.docsEnabled='1';btn.setAttribute('aria-disabled','false');btn.classList.remove('docsNoFiles');btn.classList.add('docsUploadEnabled240');btn.title='Abrir documentación PDF del embarque';btn.innerHTML='📄 Docs';
-    btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();const e=embFromButton(btn)||emb;const f=flotaFromButton(btn)||fl;if(window.openDocsModal228)window.openDocsModal228(e,f);return false;};
-  }
-  function enableAllDocsButtons(){document.querySelectorAll(BTN_SEL).forEach(enableButton);}
-  const oldOpen=window.openDocsModal228;
-  window.openDocsModal228=function(embarque,flota){
-    embarque=cleanEmb(embarque);if(!embarque){alert('No se pudo identificar el embarque.');return;}
-    let r;
-    if(typeof oldOpen==='function') r=oldOpen.apply(this,[embarque,flota]);
-    setTimeout(()=>loadDocs(embarque),80);
-    return r;
-  };
-  window.loadDocs228=loadDocs;
-  window.uploadDocs228=uploadDocs;
-  window.viewDoc228=viewDoc;
-  window.downloadDoc228=downloadDoc;
-  window.deleteDoc228=deleteDoc;
-  window.refreshDocsButtons240=enableAllDocsButtons;
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null);
-  if(typeof oldRender==='function'&&!oldRender.__docs240){const wr=function(){const r=oldRender.apply(this,arguments);[50,250,800,1600].forEach(ms=>setTimeout(enableAllDocsButtons,ms));return r;};wr.__docs240=true;try{renderTransitos=wr;}catch(e){}window.renderTransitos=wr;}
-  const oldTab=window.tab||(typeof tab==='function'?tab:null);
-  if(typeof oldTab==='function'&&!oldTab.__docs240){const wt=function(id){const r=oldTab.apply(this,arguments);if(id==='transitos')[50,250,800,1600].forEach(ms=>setTimeout(enableAllDocsButtons,ms));return r;};wt.__docs240=true;try{tab=wt;}catch(e){}window.tab=wt;}
-  let t=null;function observe(){const target=document.getElementById('transitos')||document.body;if(!target||window.__docsObserver240)return;window.__docsObserver240=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(enableAllDocsButtons,60);});window.__docsObserver240.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','data-docs-enabled']});}
-  document.addEventListener('DOMContentLoaded',()=>{observe();[50,250,800,1600,3000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));});
-  window.addEventListener('load',()=>{observe();[50,250,800,1600,3000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));});
-})();
-
-
-/* ===== 3.1.0 - DOCUMENTACION: MODULO UNICO, COMPACTO Y SUBIDA CON TIMEOUT ===== */
-(function(){
-  const VERSION='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const BTN_SEL='#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233,.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233';
-  const TYPES=['MIC','CRT','Factura','HR','Remito','Certificado','Otros'];
-  const MAX_MB=0.85;
-  const TIMEOUT_MS=18000;
-  window.ELTA_APP_VERSION=VERSION;
-  window.APP_VERSION_V2=VERSION;
-  function S(v){return String(v??'').trim();}
-  function E(v){return S(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-  function cleanEmb(v){const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v);}
-  function dbx(){try{if(window.db)return window.db;if(typeof db!=='undefined'&&db)return db;if(window.firebase&&window.firebase.firestore)return window.firebase.firestore();}catch(e){}return null;}
-  function storagex(){try{if(window.firebase&&typeof window.firebase.storage==='function')return window.firebase.storage();}catch(e){}return null;}
-  function nowTs(){try{if(window.firebase&&window.firebase.firestore&&window.firebase.firestore.FieldValue)return window.firebase.firestore.FieldValue.serverTimestamp();}catch(e){}return new Date();}
-  function toDate(v){try{if(!v)return null;if(v.toDate)return v.toDate();if(v.seconds)return new Date(v.seconds*1000);const d=new Date(v);return isNaN(d)?null:d;}catch(e){return null;}}
-  function fmt(v){const d=toDate(v);return d?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
-  function safeName(v){return S(v).replace(/[\\/:*?"<>|]+/g,'_').replace(/\s+/g,'_').slice(0,120)||'documento.pdf';}
-  function keysFor(v){const s=cleanEmb(v), n=String(Number(s));const a=[s,n]; if(s&&s.length<6)a.push(s.padStart(6,'0')); if(s&&s.length<7)a.push(s.padStart(7,'0')); return [...new Set(a)].filter(x=>x&&x!=='NaN');}
-  function activeDoc(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true;}
-  function iconForType(t){t=S(t).toUpperCase();if(t==='MIC'||t==='CRT')return '📄';if(t==='FACTURA')return '🧾';if(t==='HR')return '📋';if(t==='REMITO')return '📦';if(t==='CERTIFICADO')return '📑';return '📁';}
-  function withTimeout(p,ms,label){return new Promise((resolve,reject)=>{let done=false;const t=setTimeout(()=>{if(!done){done=true;reject(new Error((label||'Operacion')+' demorada'))}},ms);Promise.resolve(p).then(v=>{if(!done){done=true;clearTimeout(t);resolve(v)}}).catch(e=>{if(!done){done=true;clearTimeout(t);reject(e)}});});}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  function docUrl(d){return d?.url||d?.archivoBase64||'';}
-  function userName(){try{return S(window.ELTA_LOGGED_USER?.name||window.ELTA_LOGGED_USER?.displayName||window.ELTA_LOGGED_USER?.email||window.ELTA_LOGGED_USER_ID||document.getElementById('user')?.value||'Usuario');}catch(e){return 'Usuario';}}
-  function setVersionVisible(){try{document.querySelectorAll('span,small,div,p,b').forEach(el=>{if(el.childElementCount===0&&/Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);}});document.title='ITS Intelligent Traffic System';}catch(e){}}
-  function embFromButton(btn){
-    const on=btn.getAttribute('onclick')||'';
-    let m=on.match(/openDocsModal\d*(?:&&window\.openDocsModal\d*)?\('([^']+)'/);
-    if(m&&cleanEmb(m[1]))return cleanEmb(m[1]);
-    if(cleanEmb(btn.dataset.embarque))return cleanEmb(btn.dataset.embarque);
-    let node=btn;for(let i=0;node&&i<12;i++,node=node.parentElement){const txt=node.textContent||'';const mm=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i);if(mm)return mm[1];}
-    return '';
-  }
-  function flotaFromButton(btn){if(S(btn.dataset.flota))return S(btn.dataset.flota);let node=btn;for(let i=0;node&&i<12;i++,node=node.parentElement){const txt=node.textContent||'';const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);if(m)return m[1];}return '';}
-  async function fetchDocs(embarque){
-    const db=dbx(), emb=cleanEmb(embarque); if(!db||!emb)return [];
-    const out=[], seen=new Set();
-    for(const k of keysFor(emb)){
-      try{const snap=await withTimeout(db.collection(COLLECTION).where('embarque','==',String(k)).get(),TIMEOUT_MS,'Consulta documentos');
-        snap.docs.forEach(x=>{if(!seen.has(x.id)){const d={id:x.id,...x.data()};if(activeDoc(d)){seen.add(x.id);out.push(d);}}});
-      }catch(e){console.warn('Docs consulta',e);}
-    }
-    out.sort((a,b)=>(toDate(b.fechaCarga)?.getTime()||0)-(toDate(a.fechaCarga)?.getTime()||0));return out;
-  }
-  function renderRows(docs,embarque){
-    if(!docs.length)return '<div class="docsEmpty228 docsEmpty244">No hay documentos cargados para este embarque.<br><small>Seleccione un PDF para comenzar.</small></div>';
-    window.__docsCache228=window.__docsCache228||{};docs.forEach(d=>window.__docsCache228[d.id]=d);
-    return `<table class="docsTable228 docsTable244"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="docsType228">${iconForType(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td title="${E(d.nombre||'')}">${E(d.nombre||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga))}</td><td class="docsActions228"><button type="button" title="Ver" onclick="window.viewDoc228('${E(d.id)}')">👁</button><button type="button" title="Descargar" onclick="window.downloadDoc228('${E(d.id)}')">⬇</button><button type="button" class="danger" title="Eliminar" onclick="window.deleteDoc228('${E(d.id)}','${E(embarque)}')">🗑</button></td></tr>`).join('')}</tbody></table>`;
-  }
-  function buildModal(embarque,flota){
-    const old=document.getElementById('docsOverlay228'); if(old) old.remove();
-    const overlay=document.createElement('div'); overlay.id='docsOverlay228'; overlay.className='docsOverlay228 docsOverlay244';
-    overlay.innerHTML=`<div class="docsModal228 docsModal244" role="dialog" aria-modal="true">
-      <div class="docsModalHead228"><div><h2>Documentación del embarque ${E(embarque)}</h2><p>${flota?`Flota ${E(flota)} · `:''}Documentos PDF opcionales</p></div><button type="button" class="docsClose228" onclick="window.closeDocsModal228()">×</button></div>
-      <div class="docsModalBody228 docsModalBody244">
-        <div class="docsUpload228 docsUpload244">
-          <h3>Subir PDF</h3>
-          <label>Tipo<select id="docsTipo228">${TYPES.map(t=>`<option value="${E(t)}">📄 ${E(t)}</option>`).join('')}</select></label>
-          <label>Observación <small>(opcional)</small><input id="docsObs228" placeholder="Ej. MIC N° 123456"></label>
-          <label class="docsDrop228 docsDrop244" for="docsFile228"><span>☁️</span><b>Seleccionar archivo PDF</b><small>Máximo recomendado: ${MAX_MB} MB por archivo</small></label>
-          <input id="docsFile228" type="file" accept="application/pdf,.pdf" multiple style="display:none">
-          <div id="docsSelected228" class="docsSelected228">Sin archivos seleccionados.</div>
-          <div id="docsProgress244" class="docsProgress244"></div>
-          <button type="button" class="docsPrimary228" onclick="window.uploadDocs228('${E(embarque)}','${E(flota)}')">Subir documento</button>
-        </div>
-        <div class="docsList228 docsList244">
-          <div class="docsListHead228"><h3>Documentos cargados</h3><button type="button" onclick="window.loadDocs228('${E(embarque)}')">Actualizar</button></div>
-          <div id="docsList228" class="docsListContent228"><div class="docsEmpty228">Cargando documentación...</div></div>
-        </div>
-      </div>
-    </div>`;
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click',ev=>{if(ev.target.id==='docsOverlay228')window.closeDocsModal228();});
-    const inp=document.getElementById('docsFile228');
-    inp?.addEventListener('change',()=>{const files=[...inp.files||[]];const el=document.getElementById('docsSelected228');if(!el)return;el.textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.';});
-  }
-  async function loadDocs(embarque){
-    embarque=cleanEmb(embarque);const box=document.getElementById('docsList228');if(!box)return [];
-    const btn=document.querySelector('.docsListHead228 button');
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...';}
-    box.innerHTML='<div class="docsEmpty228">Actualizando documentación...</div>';
-    try{const docs=await fetchDocs(embarque);box.innerHTML=renderRows(docs,embarque);enableAllDocsButtons();return docs;}
-    catch(e){console.error(e);box.innerHTML='<div class="docsEmpty228">No se pudo actualizar la documentación.<br><small>Revise la conexión y vuelva a intentar.</small></div>';return [];}
-    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar';}}
-  }
-  async function uploadToStorageOrBase64(file,embarque,fname){
-    const storage=storagex();
-    if(storage){
-      try{const path=`embarques/${safeName(embarque)}/${Date.now()}_${fname}`;const ref=storage.ref().child(path);await withTimeout(ref.put(file,{contentType:'application/pdf'}),TIMEOUT_MS,'Subida Storage');const url=await withTimeout(ref.getDownloadURL(),TIMEOUT_MS,'URL Storage');return {url,storagePath:path,almacenamiento:'firebase_storage'};}catch(e){console.warn('Storage no disponible, se usa base64',e);}
-    }
-    return {archivoBase64:await withTimeout(fileToBase64(file),TIMEOUT_MS,'Lectura PDF'),almacenamiento:'firestore_base64'};
-  }
-  async function uploadDocs(embarque,flota){
-    embarque=cleanEmb(embarque);const input=document.getElementById('docsFile228');const files=[...input?.files||[]];
-    const tipo=S(document.getElementById('docsTipo228')?.value)||'Otros';const obs=S(document.getElementById('docsObs228')?.value);
-    const btn=document.querySelector('.docsPrimary228');const prog=document.getElementById('docsProgress244');const selected=document.getElementById('docsSelected228');
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;}
-    const db=dbx(); if(!db){alert('Firestore no está disponible. No se pudo subir la documentación.');return;}
-    if(btn){btn.disabled=true;btn.textContent='Subiendo...';}
-    if(prog)prog.textContent='Preparando subida...';
-    let ok=0, failed=0;
-    try{
-      for(let i=0;i<files.length;i++){
-        const file=files[i];
-        if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){failed++;alert(`El archivo ${file.name} no es PDF.`);continue;}
-        if(file.size>MAX_MB*1024*1024){failed++;alert(`El archivo ${file.name} supera ${MAX_MB} MB. Comprima el PDF antes de subirlo.`);continue;}
-        const fname=safeName(file.name);
-        if(btn)btn.textContent=`Subiendo ${i+1}/${files.length}...`;
-        if(prog)prog.textContent=`Subiendo ${i+1}/${files.length}: ${fname}`;
-        if(selected)selected.textContent=`Subiendo: ${fname}`;
-        try{
-          const payload=await uploadToStorageOrBase64(file,embarque,fname);
-          await withTimeout(db.collection(COLLECTION).add({embarque:String(embarque),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),usuario:userName(),observaciones:obs,activo:true,...payload}),TIMEOUT_MS,'Guardar documento');
-          ok++;
-        }catch(e){failed++;console.error('No se subio '+fname,e);alert(`No se pudo subir ${fname}. Revise conexión/permisos.`);}
-      }
-      if(input)input.value=''; const obsEl=document.getElementById('docsObs228'); if(obsEl)obsEl.value=''; if(selected)selected.textContent='Sin archivos seleccionados.';
-      if(prog)prog.textContent=ok?`Carga finalizada: ${ok} documento(s).`:(failed?'No se cargaron documentos.':'');
-      await loadDocs(embarque);
-    }finally{if(btn){btn.disabled=false;btn.textContent='Subir documento';}setTimeout(()=>{if(prog)prog.textContent='';},3500);}
-  }
-  function viewDoc(id){const d=(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener');}
-  function downloadDoc(id){const d=(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove();}
-  async function deleteDoc(id,embarque){if(!confirm('¿Eliminar este documento del embarque?'))return;const db=dbx();if(!db)return;try{await withTimeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),TIMEOUT_MS,'Eliminar documento');await loadDocs(embarque);}catch(e){console.error(e);alert('No se pudo eliminar el documento.');}}
-  function openDocsModal(embarque,flota){embarque=cleanEmb(embarque);if(!embarque){alert('No se pudo identificar el embarque.');return;}buildModal(embarque,flota);setTimeout(()=>loadDocs(embarque),30);return false;}
-  function closeDocsModal(){document.getElementById('docsOverlay228')?.remove();}
-  function enableButton(btn){const emb=embFromButton(btn), fl=flotaFromButton(btn);if(emb)btn.dataset.embarque=emb;if(fl)btn.dataset.flota=fl;btn.disabled=false;btn.setAttribute('aria-disabled','false');btn.dataset.docsEnabled='1';btn.classList.remove('disabled','docsNoFiles');btn.classList.add('docsEnabled244');btn.title='Abrir documentación PDF del embarque';btn.innerHTML='📄 Docs';btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();window.openDocsModal228(embFromButton(btn)||emb,flotaFromButton(btn)||fl);return false;};}
-  function enableAllDocsButtons(){document.querySelectorAll(BTN_SEL).forEach(enableButton);}
-  window.openDocsModal228=openDocsModal;window.openEmbarqueDocs228=openDocsModal;window.closeDocsModal228=closeDocsModal;window.loadDocs228=loadDocs;window.uploadDocs228=uploadDocs;window.viewDoc228=viewDoc;window.downloadDoc228=downloadDoc;window.deleteDoc228=deleteDoc;window.refreshDocsButtons244=enableAllDocsButtons;
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null); if(typeof oldRender==='function'&&!oldRender.__docs244){const wr=function(){const r=oldRender.apply(this,arguments);[30,120,350,900,1800].forEach(ms=>setTimeout(enableAllDocsButtons,ms));return r;};wr.__docs244=true;try{renderTransitos=wr;}catch(e){}window.renderTransitos=wr;}
-  const oldTab=window.tab||(typeof tab==='function'?tab:null); if(typeof oldTab==='function'&&!oldTab.__docs244){const wt=function(id){const r=oldTab.apply(this,arguments);if(id==='transitos')[30,120,350,900,1800].forEach(ms=>setTimeout(enableAllDocsButtons,ms));setVersionVisible();return r;};wt.__docs244=true;try{tab=wt;}catch(e){}window.tab=wt;}
-  function start(){setVersionVisible();enableAllDocsButtons();let timer=null;const target=document.getElementById('transitos')||document.body;if(target&&!window.__docsObserver244){window.__docsObserver244=new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(()=>{enableAllDocsButtons();setVersionVisible();},80);});window.__docsObserver244.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','style','data-docs-enabled']});}[100,300,800,1600,3000].forEach(ms=>setTimeout(()=>{enableAllDocsButtons();setVersionVisible();},ms));}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();window.addEventListener('load',start);
-})();
-/* ===== 3.1.0 - DOCUMENTACION PDF: VISTA COMPACTA + CARGA SIN BLOQUEO ===== */
-(function(){
-  const VERSION='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const TYPES=['MIC','CRT','Factura','HR','Remito','Certificado','Otros'];
-  const MAX_MB=0.85;
-  const SOFT_TIMEOUT=1200;
-  const HARD_TIMEOUT=6500;
-  const BTN_SEL='#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233,.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,[data-docs-enabled]';
-  window.ELTA_APP_VERSION=VERSION; window.APP_VERSION_V2=VERSION;
-  function S(v){return String(v??'').trim();}
-  function E(v){return S(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-  function cleanEmb(v){const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v);}
-  function dbx(){try{if(window.db&&typeof window.db.collection==='function')return window.db;if(typeof db!=='undefined'&&db&&typeof db.collection==='function')return db;if(window.firebase&&window.firebase.firestore)return window.firebase.firestore();}catch(e){}return null;}
-  function storagex(){try{if(window.firebase&&typeof window.firebase.storage==='function')return window.firebase.storage();}catch(e){}return null;}
-  function nowTs(){try{if(window.firebase&&window.firebase.firestore&&window.firebase.firestore.FieldValue)return window.firebase.firestore.FieldValue.serverTimestamp();}catch(e){}return new Date();}
-  function withTimeout(p,ms,label){return new Promise((resolve,reject)=>{let done=false;const t=setTimeout(()=>{if(!done){done=true;reject(new Error((label||'Operación')+' demorada'));}},ms);Promise.resolve(p).then(v=>{if(!done){done=true;clearTimeout(t);resolve(v);}}).catch(e=>{if(!done){done=true;clearTimeout(t);reject(e);}});});}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  function safe(v){return S(v).replace(/[\\/:*?"<>|]+/g,'_').replace(/\s+/g,'_').slice(0,120)||'documento.pdf';}
-  function keys(v){const s=cleanEmb(v);const n=String(Number(s));return [...new Set([s,n,s.padStart?.(6,'0'),s.padStart?.(7,'0')])].filter(x=>x&&x!=='NaN');}
-  function toDate(v){try{if(!v)return null;if(v.toDate)return v.toDate();if(v.seconds)return new Date(v.seconds*1000);const d=new Date(v);return isNaN(d)?null:d;}catch(e){return null;}}
-  function fmt(v){const d=toDate(v);return d?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-';}
-  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true;}
-  function icon(t){t=S(t).toUpperCase();if(t==='MIC'||t==='CRT')return '📄';if(t==='FACTURA')return '🧾';if(t==='HR')return '📋';if(t==='REMITO')return '📦';if(t==='CERTIFICADO')return '📑';return '📁';}
-  function docUrl(d){return d?.url||d?.downloadURL||d?.archivoBase64||d?.base64||'';}
-  function userName(){try{return S(window.ELTA_LOGGED_USER?.name||window.ELTA_LOGGED_USER?.displayName||window.ELTA_LOGGED_USER?.email||window.ELTA_LOGGED_USER_ID||document.getElementById('user')?.value||'Usuario');}catch(e){return 'Usuario';}}
-  function setVersion(){try{document.querySelectorAll('span,small,div,p,b').forEach(el=>{if(el.childElementCount===0&&/Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);}});}catch(e){}}
-  function embFromButton(btn){const on=btn.getAttribute('onclick')||'';let m=on.match(/(?:openDocsModal\d*|openEmbarqueDocs\d*)\('([^']+)'/);if(m&&cleanEmb(m[1]))return cleanEmb(m[1]);if(cleanEmb(btn.dataset.embarque))return cleanEmb(btn.dataset.embarque);let node=btn;for(let i=0;node&&i<14;i++,node=node.parentElement){const txt=node.textContent||'';const mm=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i);if(mm)return mm[1];}return '';}
-  function flotaFromButton(btn){if(S(btn.dataset.flota))return S(btn.dataset.flota);let node=btn;for(let i=0;node&&i<14;i++,node=node.parentElement){const txt=node.textContent||'';const m=txt.match(/Flota\s*([A-Za-z0-9_-]+)/i);if(m)return m[1];}return '';}
-  function selectedBox(){return document.getElementById('docsSelected246');}
-  function listBox(){return document.getElementById('docsList246');}
-  function progressBox(){return document.getElementById('docsProgress246');}
-  function renderRows(docs,emb){
-    if(!docs.length)return '<div class="docsEmpty246"><b>No hay documentos cargados.</b><small>Seleccione un PDF para comenzar.</small></div>';
-    window.__docsCache246={};docs.forEach(d=>window.__docsCache246[d.id]=d);
-    return `<div class="docsTableWrap246"><table class="docsTable246"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="docsType246">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td class="docName246" title="${E(d.nombre||'')}">${E(d.nombre||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga||d.createdAt||d.fecha))}</td><td class="docsActions246"><button type="button" title="Ver" onclick="window.viewDoc246('${E(d.id)}')">👁</button><button type="button" title="Descargar" onclick="window.downloadDoc246('${E(d.id)}')">⬇</button><button type="button" class="danger" title="Eliminar" onclick="window.deleteDoc246('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')}</tbody></table></div>`;
-  }
-  async function fetchDocs(emb){const db=dbx();emb=cleanEmb(emb);if(!db||!emb)return [];const out=[],seen=new Set();const qkeys=keys(emb).slice(0,3);
-    const jobs=qkeys.map(k=>withTimeout(db.collection(COLLECTION).where('embarque','==',String(k)).get(),HARD_TIMEOUT,'Consulta documentos').catch(e=>{console.warn('Docs consulta omitida',e);return null;}));
-    const snaps=await Promise.all(jobs);
-    snaps.forEach(snap=>{if(!snap)return;(snap.docs||[]).forEach(x=>{if(!seen.has(x.id)){const d={id:x.id,...(x.data?x.data():{})};if(active(d)){seen.add(x.id);out.push(d);}}});});
-    out.sort((a,b)=>(toDate(b.fechaCarga||b.createdAt||b.fecha)?.getTime()||0)-(toDate(a.fechaCarga||a.createdAt||a.fecha)?.getTime()||0));return out;}
-  async function loadDocs(emb){emb=cleanEmb(emb);const box=listBox();if(!box)return [];const btn=document.getElementById('docsRefresh246');if(btn){btn.disabled=true;btn.textContent='Actualizando...';}box.innerHTML='<div class="docsEmpty246"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    let completed=false;
-    let soft=setTimeout(()=>{if(!completed&&box&&/Cargando|Consultando/.test(box.textContent||'')){box.innerHTML='<div class="docsEmpty246"><b>No hay documentos cargados o la consulta demora.</b><small>Puede subir PDF o usar Actualizar.</small></div>';if(btn){btn.disabled=false;btn.textContent='Actualizar';}}},SOFT_TIMEOUT);
-    try{const docs=await fetchDocs(emb);completed=true;clearTimeout(soft);if(box)box.innerHTML=renderRows(docs,emb);return docs;}catch(e){clearTimeout(soft);console.error(e);if(box)box.innerHTML='<div class="docsEmpty246"><b>No se pudo cargar la documentación.</b><small>Revise conexión y vuelva a intentar.</small></div>';return [];}finally{if(btn){btn.disabled=false;btn.textContent='Actualizar';}enableAllDocsButtons();}}
-  function buildModal(emb,flota){document.getElementById('docsOverlay228')?.remove();document.getElementById('docsOverlay246')?.remove();const overlay=document.createElement('div');overlay.id='docsOverlay246';overlay.className='docsOverlay246';overlay.innerHTML=`<div class="docsModal246" role="dialog" aria-modal="true"><div class="docsHead246"><div><h2>Documentación del embarque ${E(emb)}</h2><p>${flota?`Flota ${E(flota)} · `:''}Documentos PDF opcionales</p></div><button type="button" class="docsClose246" onclick="window.closeDocsModal246()">×</button></div><div class="docsBody246"><section class="docsUpload246"><h3>Subir PDF</h3><div class="docsFormRow246"><label><span>Tipo</span><select id="docsTipo246">${TYPES.map(t=>`<option value="${E(t)}">${icon(t)} ${E(t)}</option>`).join('')}</select></label><label class="obs246"><span>Observación <small>(opcional)</small></span><input id="docsObs246" placeholder="Ej. MIC N° 123456"></label></div><label class="docsDrop246" for="docsFile246"><span>☁️</span><b>Seleccionar archivo PDF</b><small>Máx. recomendado: ${MAX_MB} MB por archivo</small></label><input id="docsFile246" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelected246" class="docsSelected246">Sin archivos seleccionados.</div><div id="docsProgress246" class="docsProgress246"></div><button type="button" class="docsPrimary246" onclick="window.uploadDocs246('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListPanel246"><div class="docsListHead246"><h3>Documentos cargados</h3><button id="docsRefresh246" type="button" onclick="window.loadDocs246('${E(emb)}')">Actualizar</button></div><div id="docsList246" class="docsListContent246"><div class="docsEmpty246"><b>Cargando documentación...</b><small>Abriendo vista sin bloquear la carga.</small></div></div></section></div></div>`;document.body.appendChild(overlay);overlay.addEventListener('click',ev=>{if(ev.target.id==='docsOverlay246')window.closeDocsModal246();});const inp=document.getElementById('docsFile246');inp?.addEventListener('change',()=>{const files=[...inp.files||[]];const el=selectedBox();if(el)el.textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.';});}
-  function openDocs(emb,flota){emb=cleanEmb(emb);if(!emb){alert('No se pudo identificar el embarque.');return false;}buildModal(emb,flota);setTimeout(()=>loadDocs(emb),60);return false;}
-  function closeDocs(){document.getElementById('docsOverlay246')?.remove();document.getElementById('docsOverlay228')?.remove();}
-  async function uploadPayload(file,emb,fname){const storage=storagex();if(storage){try{const path=`embarques/${safe(emb)}/${Date.now()}_${fname}`;const ref=storage.ref().child(path);await withTimeout(ref.put(file,{contentType:'application/pdf'}),HARD_TIMEOUT,'Subida Storage');const url=await withTimeout(ref.getDownloadURL(),HARD_TIMEOUT,'URL Storage');return {url,storagePath:path,almacenamiento:'firebase_storage'};}catch(e){console.warn('Storage no disponible o demorado, intento base64',e);}}
-    if(file.size>650*1024)throw new Error('PDF demasiado grande para respaldo base64');return {archivoBase64:await withTimeout(fileToBase64(file),HARD_TIMEOUT,'Lectura PDF'),almacenamiento:'firestore_base64'};}
-  async function uploadDocs(emb,flota){emb=cleanEmb(emb);const db=dbx();const input=document.getElementById('docsFile246');const files=[...input?.files||[]];const tipo=S(document.getElementById('docsTipo246')?.value)||'Otros';const obs=S(document.getElementById('docsObs246')?.value);const btn=document.querySelector('.docsPrimary246');const prog=progressBox();const selected=selectedBox();if(!files.length){alert('Seleccione uno o más archivos PDF.');return;}if(!db){alert('Firestore no está disponible. No se pudo subir la documentación.');return;}if(btn){btn.disabled=true;btn.textContent='Subiendo...';}let ok=0,failed=0;try{for(let i=0;i<files.length;i++){const file=files[i];const fname=safe(file.name);if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){failed++;alert(`${file.name} no es PDF.`);continue;}if(file.size>MAX_MB*1024*1024){failed++;alert(`${file.name} supera ${MAX_MB} MB.`);continue;}if(btn)btn.textContent=`Subiendo ${i+1}/${files.length}...`;if(prog)prog.textContent=`Subiendo ${i+1}/${files.length}: ${fname}`;if(selected)selected.textContent=`Subiendo: ${fname}`;try{const payload=await uploadPayload(file,emb,fname);await withTimeout(db.collection(COLLECTION).add({embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:userName(),observaciones:obs,activo:true,...payload}),HARD_TIMEOUT,'Guardar documento');ok++;}catch(e){failed++;console.error(e);alert(`No se pudo subir ${fname}. Revise conexión/permisos.`);}}
-      if(input)input.value='';const obsEl=document.getElementById('docsObs246');if(obsEl)obsEl.value='';if(selected)selected.textContent='Sin archivos seleccionados.';if(prog)prog.textContent=ok?`Carga finalizada: ${ok} documento(s).`:(failed?'No se cargaron documentos.':'');await loadDocs(emb);}finally{if(btn){btn.disabled=false;btn.textContent='Subir documento';}setTimeout(()=>{if(prog)prog.textContent='';},4000);}}
-  function viewDoc(id){const d=(window.__docsCache246||{})[id]||(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener');}
-  function downloadDoc(id){const d=(window.__docsCache246||{})[id]||(window.__docsCache228||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove();}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return;const db=dbx();if(!db)return;try{await withTimeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),HARD_TIMEOUT,'Eliminar documento');await loadDocs(emb);}catch(e){console.error(e);alert('No se pudo eliminar el documento.');}}
-  function enableButton(btn){const emb=embFromButton(btn);const fl=flotaFromButton(btn);if(emb)btn.dataset.embarque=emb;if(fl)btn.dataset.flota=fl;btn.disabled=false;btn.setAttribute('aria-disabled','false');btn.classList.remove('disabled','docsNoFiles');btn.classList.add('docsEnabled246');btn.title='Abrir documentación PDF del embarque';btn.innerHTML='📄 Docs';btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();openDocs(embFromButton(btn)||emb,flotaFromButton(btn)||fl);return false;};}
-  function enableAllDocsButtons(){document.querySelectorAll(BTN_SEL).forEach(enableButton);}
-  window.openDocsModal246=openDocs;window.openEmbarqueDocs246=openDocs;window.closeDocsModal246=closeDocs;window.loadDocs246=loadDocs;window.uploadDocs246=uploadDocs;window.viewDoc246=viewDoc;window.downloadDoc246=downloadDoc;window.deleteDoc246=deleteDoc;
-  window.openDocsModal228=openDocs;window.openEmbarqueDocs228=openDocs;window.closeDocsModal228=closeDocs;window.loadDocs228=loadDocs;window.uploadDocs228=uploadDocs;window.viewDoc228=viewDoc;window.downloadDoc228=downloadDoc;window.deleteDoc228=deleteDoc;window.refreshDocsButtons246=enableAllDocsButtons;
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null);if(typeof oldRender==='function'&&!oldRender.__docs246){const wr=function(){const r=oldRender.apply(this,arguments);[30,150,450,1000,2000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));return r;};wr.__docs246=true;try{renderTransitos=wr;}catch(e){}window.renderTransitos=wr;}
-  const oldTab=window.tab||(typeof tab==='function'?tab:null);if(typeof oldTab==='function'&&!oldTab.__docs246){const wt=function(id){const r=oldTab.apply(this,arguments);if(id==='transitos')[30,150,450,1000,2000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));setVersion();return r;};wt.__docs246=true;try{tab=wt;}catch(e){}window.tab=wt;}
-  function start(){setVersion();enableAllDocsButtons();let t=null;const target=document.getElementById('transitos')||document.body;if(target&&!window.__docsObserver246){window.__docsObserver246=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{enableAllDocsButtons();setVersion();},90);});window.__docsObserver246.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','style','data-docs-enabled']});}[100,300,800,1600,3000].forEach(ms=>setTimeout(()=>{enableAllDocsButtons();setVersion();},ms));}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();window.addEventListener('load',start);
-})();
-
-
-/* ===== ELTA 3.1.0 - BASE LIMPIA: Documentacion unica y compacta ===== */
-(function(){
-  const VERSION='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const BTN_SEL='#transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233,.transitDocsBtn246,.docsBtn,[data-docs-btn]';
-  const TYPES=['MIC/DTA','CRT','Remito','Factura','OEA','Seguro','Otros'];
-  const MAX_MB=12;
-  const HARD_TIMEOUT=18000;
-  const SOFT_TIMEOUT=4500;
-  const S=v=>String(v??'').trim();
-  const E=v=>S(v).replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
-  const cleanEmb=v=>S(v).replace(/^Emb\.\s*/i,'').replace(/^#/, '').trim();
-  const nowTs=()=>{try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}};
-  const userName=()=>S(window.currentUser?.email||window.user?.email||localStorage.getItem('elta_user')||'');
-  const dbx=()=>{try{return window.db||firebase.firestore()}catch(e){return null}};
-  const storagex=()=>{try{return window.storage||firebase.storage()}catch(e){return null}};
-  function setVersion(){
-    window.ELTA_APP_VERSION=VERSION;
-    window.ELTA_FORCE_VERSION=VERSION;
-    document.querySelectorAll('span, small, p, div').forEach(el=>{
-      if(el.children.length>0) return;
-      const tx=(el.textContent||'').trim();
-      if(/^Versi[oó]n\s+[0-9]+\.[0-9]+\.[0-9]+$/i.test(tx)) el.textContent='Versión '+VERSION;
-    });
-    document.title='ITS Intelligent Traffic System';
-  }
-  function timeout(p,ms,label){return Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error((label||'Operación')+' demoró demasiado')),ms))]);}
-  function keys(emb){const e=cleanEmb(emb);const arr=[e,String(Number(e))];return [...new Set(arr.filter(x=>x&&x!=='NaN'))];}
-  function active(d){return d && d.activo!==false && d.deleted!==true && d.eliminado!==true;}
-  function icon(t){t=S(t).toLowerCase();if(t.includes('mic'))return '📄';if(t.includes('crt'))return '🚚';if(t.includes('oea'))return '🛡️';if(t.includes('fact'))return '🧾';return '📎';}
-  function fmt(v){try{if(v?.toDate)v=v.toDate();return new Date(v).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch(e){return '-'}}
-  function docUrl(d){return d.url||d.downloadURL||d.fileUrl||d.pdfUrl||d.base64||'';}
-  function safe(n){return S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf'}
-  async function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  async function uploadPayload(file,emb,fname){
-    const st=storagex();
-    if(st?.ref){
-      const path=`embarque_documentos/${encodeURIComponent(String(emb))}/${Date.now()}_${fname}`;
-      const ref=st.ref().child(path);
-      const snap=await timeout(ref.put(file),HARD_TIMEOUT,'Subida a Storage');
-      const url=await timeout(snap.ref.getDownloadURL(),HARD_TIMEOUT,'URL de descarga');
-      return {url,downloadURL:url,storagePath:path};
-    }
-    const base64=await timeout(fileToBase64(file),HARD_TIMEOUT,'Lectura PDF');
-    return {base64,url:base64,storageMode:'base64'};
-  }
-  async function fetchDocs(emb){
-    const db=dbx(); emb=cleanEmb(emb); if(!db||!emb) return [];
-    const out=[], seen=new Set();
-    const jobs=[];
-    keys(emb).forEach(k=>['embarque','nroEmbarque','embarqueId'].forEach(f=>jobs.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),HARD_TIMEOUT,'Consulta documentos').catch(()=>null))));
-    const snaps=await Promise.all(jobs);
-    snaps.forEach(snap=>{(snap?.docs||[]).forEach(x=>{if(!seen.has(x.id)){const d={id:x.id,...x.data()};if(active(d)){seen.add(x.id);out.push(d)}}})});
-    out.sort((a,b)=>String(b.fechaCarga||b.createdAt||'').localeCompare(String(a.fechaCarga||a.createdAt||'')));
-    return out;
-  }
-  function listBox(){return document.getElementById('docsListV3')||document.getElementById('docsList246')||document.getElementById('docsList228')}
-  function renderRows(docs,emb){
-    window.__docsCacheV3=window.__docsCacheV3||{}; docs.forEach(d=>window.__docsCacheV3[d.id]=d);
-    if(!docs.length) return '<div class="docsEmptyV3"><b>No hay documentos cargados.</b><small>Seleccione un PDF para comenzar.</small></div>';
-    return `<div class="docsTableWrapV3"><table class="docsTableV3"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td>${icon(d.tipo)} ${E(d.tipo||'Otros')}</td><td>${E(d.nombre||d.filename||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga||d.createdAt))}</td><td class="docsActionsV3"><button type="button" onclick="window.viewDocV3('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV3('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV3('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')}</tbody></table></div>`;
-  }
-  async function loadDocs(emb){
-    emb=cleanEmb(emb); const box=listBox(); const btn=document.getElementById('docsRefreshV3'); if(!box) return [];
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
-    box.innerHTML='<div class="docsEmptyV3"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    let done=false;
-    const soft=setTimeout(()=>{if(!done && box){box.innerHTML='<div class="docsEmptyV3"><b>No hay documentos cargados o la consulta demora.</b><small>Puede subir PDF o usar Actualizar.</small></div>'; if(btn){btn.disabled=false;btn.textContent='Actualizar'}}},SOFT_TIMEOUT);
-    try{const docs=await fetchDocs(emb); done=true; clearTimeout(soft); box.innerHTML=renderRows(docs,emb); return docs;}
-    catch(e){console.error(e); done=true; clearTimeout(soft); box.innerHTML='<div class="docsEmptyV3"><b>No se pudo cargar la documentación.</b><small>Revise conexión y vuelva a intentar.</small></div>'; return []}
-    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} enableAllDocsButtons(); setVersion();}
-  }
-  function buildModal(emb,flota){
-    document.getElementById('docsOverlayV3')?.remove(); document.getElementById('docsOverlay246')?.remove(); document.getElementById('docsOverlay228')?.remove();
-    const overlay=document.createElement('div'); overlay.id='docsOverlayV3'; overlay.className='docsOverlayV3';
-    overlay.innerHTML=`<div class="docsModalV3" role="dialog" aria-modal="true"><div class="docsHeadV3"><div><h2>Documentación · Emb. ${E(emb)}</h2><p>${flota?`Flota ${E(flota)} · `:''}PDF del embarque</p></div><button type="button" class="docsCloseV3" onclick="window.closeDocsModalV3()">×</button></div><div class="docsBodyV3"><section class="docsUploadV3"><h3>Subir PDF</h3><label class="fieldV3"><span>Tipo</span><select id="docsTipoV3">${TYPES.map(t=>`<option value="${E(t)}">${icon(t)} ${E(t)}</option>`).join('')}</select></label><label class="fieldV3 obsV3"><span>Observación <small>(opcional)</small></span><input id="docsObsV3" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV3" for="docsFileV3"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV3" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV3" class="docsSelectedV3">Sin archivos seleccionados.</div><div id="docsProgressV3" class="docsProgressV3"></div><button type="button" class="docsPrimaryV3" onclick="window.uploadDocsV3('${E(emb)}','${E(flota||'')}')">Subir</button></section><section class="docsListPanelV3"><div class="docsListHeadV3"><h3>Documentos cargados</h3><button id="docsRefreshV3" type="button" onclick="window.loadDocsV3('${E(emb)}')">Actualizar</button></div><div id="docsListV3" class="docsListContentV3"><div class="docsEmptyV3"><b>Cargando documentación...</b><small>Abriendo vista sin bloquear la carga.</small></div></div></section></div></div>`;
-    document.body.appendChild(overlay); overlay.addEventListener('click',ev=>{if(ev.target.id==='docsOverlayV3') closeDocs();});
-    const inp=document.getElementById('docsFileV3'); inp?.addEventListener('change',()=>{const files=[...(inp.files||[])]; const el=document.getElementById('docsSelectedV3'); if(el) el.textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.'});
-  }
-  function openDocs(emb,flota){emb=cleanEmb(emb); if(!emb){alert('No se pudo identificar el embarque.'); return false;} buildModal(emb,flota); setTimeout(()=>loadDocs(emb),40); return false;}
-  function closeDocs(){document.getElementById('docsOverlayV3')?.remove();document.getElementById('docsOverlay246')?.remove();document.getElementById('docsOverlay228')?.remove();}
-  async function uploadDocs(emb,flota){
-    emb=cleanEmb(emb); const db=dbx(); const input=document.getElementById('docsFileV3')||document.getElementById('docsFile246'); const files=[...(input?.files||[])];
-    const tipo=S(document.getElementById('docsTipoV3')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV3')?.value); const btn=document.querySelector('.docsPrimaryV3'); const prog=document.getElementById('docsProgressV3'); const selected=document.getElementById('docsSelectedV3');
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;} if(!db){alert('Firestore no está disponible.');return;}
-    if(btn){btn.disabled=true;btn.textContent='Subiendo...'} let ok=0,fail=0;
-    try{for(let i=0;i<files.length;i++){const file=files[i], fname=safe(file.name); if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){fail++;alert(fname+' no es PDF.');continue;} if(file.size>MAX_MB*1024*1024){fail++;alert(fname+' supera '+MAX_MB+' MB.');continue;} if(btn)btn.textContent=`Subiendo ${i+1}/${files.length}`; if(prog)prog.textContent=`Subiendo: ${fname}`; try{const payload=await uploadPayload(file,emb,fname); await timeout(db.collection(COLLECTION).add({embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:userName(),observaciones:obs,activo:true,...payload}),HARD_TIMEOUT,'Guardar documento'); ok++;}catch(e){console.error(e); fail++; if(prog)prog.textContent='No se pudo subir '+fname+'. Revise conexión o permisos de Firestore.'; alert('No se pudo subir '+fname+'. Revise conexión o permisos de Firestore.');}}
-      if(input)input.value=''; const obsEl=document.getElementById('docsObsV3'); if(obsEl)obsEl.value=''; if(selected)selected.textContent='Sin archivos seleccionados.'; if(prog)prog.textContent=ok?`Carga finalizada: ${ok} documento(s).`: (fail?'No se cargaron documentos.':''); await loadDocs(emb);
-    } finally {if(btn){btn.disabled=false;btn.textContent='Subir'} setTimeout(()=>{if(prog)prog.textContent=''},3500)}
-  }
-  function viewDoc(id){const d=(window.__docsCacheV3||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener')}
-  function downloadDoc(id){const d=(window.__docsCacheV3||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return;const db=dbx();if(!db)return;try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),HARD_TIMEOUT,'Eliminar documento');await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
-  function embFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\d*\('([^']+)'/)||on.match(/openDocsModal228(?:&&window\.openDocsModal228)?\('([^']+)'/);return cleanEmb(btn.dataset.embarque||btn.dataset.emb||m?.[1]||'')}
-  function flotaFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\d*\('[^']+'\s*,\s*'([^']*)'/);return S(btn.dataset.flota||m?.[1]||'')}
-  function enableButton(btn){const emb=embFromButton(btn); const fl=flotaFromButton(btn); if(emb)btn.dataset.embarque=emb; if(fl)btn.dataset.flota=fl; btn.disabled=false; btn.setAttribute('aria-disabled','false'); btn.classList.remove('disabled','docsNoFiles'); btn.classList.add('docsEnabledV3'); btn.title='Abrir documentación PDF'; btn.innerHTML='📄 Docs'; btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(embFromButton(btn)||emb,flotaFromButton(btn)||fl)}}
-  function enableAllDocsButtons(){document.querySelectorAll(BTN_SEL).forEach(enableButton)}
-  window.openDocsModalV3=openDocs; window.closeDocsModalV3=closeDocs; window.loadDocsV3=loadDocs; window.uploadDocsV3=uploadDocs; window.viewDocV3=viewDoc; window.downloadDocV3=downloadDoc; window.deleteDocV3=deleteDoc;
-  window.openDocsModal246=openDocs; window.closeDocsModal246=closeDocs; window.loadDocs246=loadDocs; window.uploadDocs246=uploadDocs; window.viewDoc246=viewDoc; window.downloadDoc246=downloadDoc; window.deleteDoc246=deleteDoc;
-  window.openDocsModal228=openDocs; window.closeDocsModal228=closeDocs; window.loadDocs228=loadDocs; window.uploadDocs228=uploadDocs; window.viewDoc228=viewDoc; window.downloadDoc228=downloadDoc; window.deleteDoc228=deleteDoc;
-  const oldRender=window.renderTransitos||(typeof renderTransitos==='function'?renderTransitos:null); if(typeof oldRender==='function'&&!oldRender.__v3docs){const wr=function(){const r=oldRender.apply(this,arguments);[20,120,400,1000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));return r};wr.__v3docs=true;try{renderTransitos=wr}catch(e){}window.renderTransitos=wr}
-  const oldTab=window.tab||(typeof tab==='function'?tab:null); if(typeof oldTab==='function'&&!oldTab.__v3docs){const wt=function(id){const r=oldTab.apply(this,arguments);if(id==='transitos')[20,120,400,1000].forEach(ms=>setTimeout(enableAllDocsButtons,ms));setVersion();return r};wt.__v3docs=true;try{tab=wt}catch(e){}window.tab=wt}
-  function start(){setVersion();enableAllDocsButtons();let t=null;const target=document.getElementById('transitos')||document.body;if(target&&!window.__docsObserverV3){window.__docsObserverV3=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{enableAllDocsButtons();setVersion()},80)});window.__docsObserverV3.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','style','data-docs-enabled']})}[100,300,900,1800].forEach(ms=>setTimeout(()=>{enableAllDocsButtons();setVersion()},ms))}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
-})();
-
-
-/* ===== 3.1.0 - version unica forzada ===== */
-(function(){
-  const V='3.1.0';
-  window.ELTA_APP_VERSION=V;
-  window.ELTA_FORCE_VERSION=V;
-  window.APP_VERSION_V2=V;
-  function applyVersion(){
-    document.querySelectorAll('span,small,div,p,footer').forEach(function(el){
-      if(/Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
-        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+V);
-      }
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',applyVersion); else applyVersion();
-  [100,500,1500,3000].forEach(function(ms){setTimeout(applyVersion,ms)});
-})();
-
-/* ===== 3.1.0 - Docs Storage fallback fix ===== */
-(function(){
-  const V='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const MAX_MB=12;
-  const QUERY_TIMEOUT=4500;
-  const UPLOAD_TIMEOUT=22000;
-  function S(v){return (v==null?'':String(v)).trim();}
-  function E(s){return S(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-  function cleanEmb(v){return S(v).replace(/[^0-9A-Za-z_-]/g,'').trim();}
-  function dbx(){try{return window.db||window.firestore||firebase?.firestore?.()}catch(e){return null}}
-  function storagex(){try{return window.storage||firebase?.storage?.()}catch(e){return null}}
-  function nowTs(){try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}}
-  function timeout(p,ms,label){return Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error((label||'Operación')+' demoró demasiado')),ms))]);}
-  function safe(n){return S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf'}
-  function icon(t){t=S(t).toLowerCase();if(t.includes('mic'))return '📄';if(t.includes('crt'))return '🚚';if(t.includes('oea'))return '🛡️';if(t.includes('fact'))return '🧾';if(t.includes('hr'))return '📋';return '📁';}
-  function fmt(v){try{if(v?.toDate)v=v.toDate();return new Date(v).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return '-'}}
-  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true;}
-  function docUrl(d){return d.url||d.downloadURL||d.fileUrl||d.pdfUrl||d.archivoBase64||d.base64||'';}
-  function userName(){return S(window.currentUser?.nombre||window.currentUser?.usuario||window.loggedUser?.nombre||window.loggedUser?.usuario||localStorage.getItem('elta_user')||'Usuario')||'Usuario'}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  async function uploadPayload(file,emb,fname){
-    const st=storagex();
-    if(st?.ref){
-      try{
-        const path=`embarque_documentos/${encodeURIComponent(String(emb))}/${Date.now()}_${fname}`;
-        const ref=st.ref().child(path);
-        const snap=await timeout(ref.put(file,{contentType:'application/pdf'}),UPLOAD_TIMEOUT,'Subida a Storage');
-        const url=await timeout(snap.ref.getDownloadURL(),UPLOAD_TIMEOUT,'URL de descarga');
-        return {url,downloadURL:url,storagePath:path,storageMode:'firebase_storage'};
-      }catch(e){
-        console.warn('Firebase Storage no permitió la carga. Se guarda el PDF embebido en Firestore.', e);
-      }
-    }
-    const base64=await timeout(fileToBase64(file),UPLOAD_TIMEOUT,'Lectura PDF');
-    return {base64,url:base64,downloadURL:base64,storageMode:'firestore_base64'};
-  }
-  function keys(emb){const e=cleanEmb(emb);const n=String(Number(e));return [...new Set([e,n].filter(x=>x&&x!=='NaN'))];}
-  async function fetchDocsFast(emb){
-    const db=dbx(); emb=cleanEmb(emb); if(!db||!emb) return [];
-    const seen=new Set(), out=[];
-    const addSnap=snap=>{(snap?.docs||[]).forEach(x=>{if(seen.has(x.id))return;const d={id:x.id,...x.data()};if(active(d)){seen.add(x.id);out.push(d)}})};
-    // Consulta principal rápida: es la usada por las cargas nuevas. Evita esperar consultas heredadas lentas.
-    const primary=keys(emb).map(k=>timeout(db.collection(COLLECTION).where('embarque','==',String(k)).get(),QUERY_TIMEOUT,'Consulta documentos').catch(()=>null));
-    const snaps=await Promise.all(primary); snaps.forEach(addSnap);
-    // Si no hubo resultado, probar nombres heredados, pero sin bloquear mucho la vista.
-    if(!out.length){
-      const legacy=[]; keys(emb).forEach(k=>['nroEmbarque','embarqueId'].forEach(f=>legacy.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),2200,'Consulta heredada').catch(()=>null))));
-      const snaps2=await Promise.all(legacy); snaps2.forEach(addSnap);
-    }
-    out.sort((a,b)=>String(b.fechaCarga||b.createdAt||'').localeCompare(String(a.fechaCarga||a.createdAt||'')));
-    return out;
-  }
-  function renderRows(docs,emb){
-    window.__docsCacheV3=window.__docsCacheV3||{}; docs.forEach(d=>window.__docsCacheV3[d.id]=d);
-    if(!docs.length) return '<div class="docsEmptyV303"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
-    return `<div class="docsTableWrapV303"><table class="docsTableV303"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${docs.map(d=>`<tr><td><span class="typePillV303">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||d.filename||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga||d.createdAt))}</td><td class="docsActionsV303"><button type="button" onclick="window.viewDocV3('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV3('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV3('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')}</tbody></table></div>`;
-  }
-  function listBox(){return document.getElementById('docsListV3')||document.getElementById('docsList246')||document.getElementById('docsList228')}
-  async function loadDocs(emb){
-    emb=cleanEmb(emb); const box=listBox(); const btn=document.getElementById('docsRefreshV3'); if(!box)return [];
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
-    box.innerHTML='<div class="docsEmptyV303"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    let soft=setTimeout(()=>{if(box && /Cargando documentación/.test(box.textContent||'')) box.innerHTML='<div class="docsEmptyV303"><b>La consulta está demorando.</b><small>Puede subir documentos igual o tocar Actualizar.</small></div>';},1400);
-    try{const docs=await fetchDocsFast(emb); clearTimeout(soft); box.innerHTML=renderRows(docs,emb); return docs;}
-    catch(e){console.error(e); clearTimeout(soft); box.innerHTML='<div class="docsEmptyV303"><b>No se pudo cargar la documentación.</b><small>Use Actualizar o revise la conexión.</small></div>'; return []}
-    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} enableAllDocsButtons(); setVersion();}
-  }
-  function buildModal(emb,flota){
-    document.getElementById('docsOverlayV3')?.remove();document.getElementById('docsOverlay246')?.remove();document.getElementById('docsOverlay228')?.remove();
-    const overlay=document.createElement('div'); overlay.id='docsOverlayV3'; overlay.className='docsOverlayV3 docsOverlayV303';
-    const types=['Factura','MIC','CRT','HR','OEA','Otros'];
-    overlay.innerHTML=`<div class="docsModalV3 docsModalV303" role="dialog" aria-modal="true"><div class="docsHeadV3 docsHeadV303"><div><h2>Documentación del embarque ${E(emb)}</h2><p>${flota?`Flota ${E(flota)} · `:''}Documentos PDF opcionales</p></div><button type="button" class="docsCloseV3" onclick="window.closeDocsModalV3()">×</button></div><div class="docsBodyV3 docsBodyV303"><section class="docsUploadV3 docsUploadV303"><h3>Subir PDF</h3><label class="fieldV3"><span>Tipo</span><select id="docsTipoV3">${types.map(t=>`<option value="${E(t)}">${icon(t)} ${E(t)}</option>`).join('')}</select></label><label class="fieldV3 obsV3"><span>Observación <small>(opcional)</small></span><input id="docsObsV3" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV3 docsDropV303" for="docsFileV3"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV3" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV3" class="docsSelectedV3">Sin archivos seleccionados.</div><div id="docsProgressV3" class="docsProgressV3"></div><button type="button" class="docsPrimaryV3" onclick="window.uploadDocsV3('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListPanelV3 docsListPanelV303"><div class="docsListHeadV3"><h3>Documentos cargados</h3><button id="docsRefreshV3" type="button" onclick="window.loadDocsV3('${E(emb)}')">Actualizar</button></div><div id="docsListV3" class="docsListContentV3"><div class="docsEmptyV303"><b>Cargando documentación...</b><small>Abriendo vista sin bloquear la carga.</small></div></div></section></div></div>`;
-    document.body.appendChild(overlay); overlay.addEventListener('click',ev=>{if(ev.target.id==='docsOverlayV3')closeDocs();});
-    const inp=document.getElementById('docsFileV3'); inp?.addEventListener('change',()=>{const files=[...(inp.files||[])]; const el=document.getElementById('docsSelectedV3'); if(el)el.textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.'});
-  }
-  function openDocs(emb,flota){emb=cleanEmb(emb); if(!emb){alert('No se pudo identificar el embarque.');return false;} buildModal(emb,flota); setTimeout(()=>loadDocs(emb),30); return false;}
-  function closeDocs(){document.getElementById('docsOverlayV3')?.remove();document.getElementById('docsOverlay246')?.remove();document.getElementById('docsOverlay228')?.remove();}
-  async function uploadDocs(emb,flota){
-    emb=cleanEmb(emb); const db=dbx(); const input=document.getElementById('docsFileV3'); const files=[...(input?.files||[])]; const btn=document.querySelector('.docsPrimaryV3'); const prog=document.getElementById('docsProgressV3'); const selected=document.getElementById('docsSelectedV3');
-    const tipo=S(document.getElementById('docsTipoV3')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV3')?.value);
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return;} if(!db){alert('Firestore no está disponible.');return;}
-    if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...'} if(prog)prog.textContent='Preparando carga...';
-    let ok=0,fail=0;
-    try{for(let i=0;i<files.length;i++){const file=files[i], fname=safe(file.name); if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){fail++;alert(fname+' no es PDF.');continue;} if(file.size>MAX_MB*1024*1024){fail++;alert(fname+' supera '+MAX_MB+' MB.');continue;} if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`; if(prog)prog.textContent=`Subiendo ${i+1}/${files.length}: ${fname}`; if(selected)selected.textContent=`Procesando: ${fname}`; try{const payload=await uploadPayload(file,emb,fname); if(prog)prog.textContent=`Guardando ${i+1}/${files.length}: ${fname}`; await timeout(db.collection(COLLECTION).add({embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:userName(),observaciones:obs,activo:true,...payload}),UPLOAD_TIMEOUT,'Guardar documento'); ok++;}catch(e){console.error(e);fail++;if(prog)prog.textContent='No se pudo subir '+fname+'. Revise conexión o permisos de Firestore.'; alert('No se pudo subir '+fname+'. Revise conexión o permisos de Firestore.');}}
-      if(input)input.value=''; const obsEl=document.getElementById('docsObsV3'); if(obsEl)obsEl.value=''; if(selected)selected.textContent='Sin archivos seleccionados.'; if(prog)prog.textContent=ok?`Carga finalizada: ${ok} archivo(s). Actualizando lista...`:'No se cargaron archivos.'; await loadDocs(emb);
-    }finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},4500)}
-  }
-  function viewDoc(id){const d=(window.__docsCacheV3||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}window.open(url,'_blank','noopener')}
-  function downloadDoc(id){const d=(window.__docsCacheV3||{})[id]||{};const url=docUrl(d);if(!url){alert('El documento no tiene archivo disponible.');return;}const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return;const db=dbx();if(!db)return;try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),UPLOAD_TIMEOUT,'Eliminar documento');await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
-  function embFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\d*\('([^']+)'/)||on.match(/openDocsModal228(?:&&window\.openDocsModal228)?\('([^']+)'/);return cleanEmb(btn.dataset.embarque||btn.dataset.emb||m?.[1]||'')}
-  function flotaFromButton(btn){let on=btn.getAttribute('onclick')||'';let m=on.match(/openDocsModal\d*\('[^']+'\s*,\s*'([^']*)'/);return S(btn.dataset.flota||m?.[1]||'')}
-  function enableButton(btn){const emb=embFromButton(btn);const fl=flotaFromButton(btn);if(emb)btn.dataset.embarque=emb;if(fl)btn.dataset.flota=fl;btn.disabled=false;btn.removeAttribute('disabled');btn.setAttribute('aria-disabled','false');btn.dataset.docsEnabled='1';btn.style.pointerEvents='auto';btn.style.opacity='1';btn.classList.remove('disabled','docsNoFiles');btn.classList.add('docsEnabledV303');btn.title='Abrir documentación PDF';btn.innerHTML='📄 Docs';btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(embFromButton(btn)||emb,flotaFromButton(btn)||fl)}}
-  function enableAllDocsButtons(){document.querySelectorAll('button,.docsBtn,.btnDocs,[data-docs],[onclick*="Docs"],[onclick*="docs"]').forEach(btn=>{const txt=(btn.textContent||'')+(btn.title||'')+(btn.className||'');if(/docs|documentaci[oó]n/i.test(txt)||/openDocs/i.test(btn.getAttribute('onclick')||''))enableButton(btn);});}
-  function setVersion(){window.ELTA_APP_VERSION=V;window.ELTA_FORCE_VERSION=V;document.querySelectorAll('.loginFooter span,.headerTitle span,span,small,p,div').forEach(el=>{if(/^Versi[oó]n\s+/i.test((el.textContent||'').trim()))el.textContent='Versión '+V;});}
-  window.openDocsModalV3=openDocs;window.closeDocsModalV3=closeDocs;window.loadDocsV3=loadDocs;window.uploadDocsV3=uploadDocs;window.viewDocV3=viewDoc;window.downloadDocV3=downloadDoc;window.deleteDocV3=deleteDoc;
-  window.openDocsModal246=openDocs;window.closeDocsModal246=closeDocs;window.loadDocs246=loadDocs;window.uploadDocs246=uploadDocs;window.viewDoc246=viewDoc;window.downloadDoc246=downloadDoc;window.deleteDoc246=deleteDoc;
-  window.openDocsModal228=openDocs;window.closeDocsModal228=closeDocs;window.loadDocs228=loadDocs;window.uploadDocs228=uploadDocs;window.viewDoc228=viewDoc;window.downloadDoc228=downloadDoc;window.deleteDoc228=deleteDoc;
-  function start(){setVersion();enableAllDocsButtons();let t=null;const target=document.getElementById('transitos')||document.body;if(target&&!window.__docsObserver303){window.__docsObserver303=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{enableAllDocsButtons();setVersion()},70)});window.__docsObserver303.observe(target,{childList:true,subtree:true,attributes:true,attributeFilter:['class','disabled','style','data-docs-enabled']})}[50,150,400,900,1800,3000].forEach(ms=>setTimeout(()=>{enableAllDocsButtons();setVersion()},ms));}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
-})();
-
-
-/* ===== 3.1.0 - Docs estable: sin hijack de botones + fallback local ===== */
-(function(){
-  const V='3.1.0';
-  const COLLECTION='embarque_documentos';
-  const MAX_MB=12;
-  const QUERY_TIMEOUT=3500;
-  const UPLOAD_TIMEOUT=20000;
-  const LS_KEY='elta_docs_local_v308';
-  const S=v=>(v==null?'':String(v)).trim();
-  const E=v=>S(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const cleanEmb=v=>{const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v).replace(/[^0-9A-Za-z_-]/g,'')};
-  const dbx=()=>{try{return window.db||(typeof db!=='undefined'?db:null)||(window.firebase&&firebase.firestore?firebase.firestore():null)}catch(e){return null}};
-  const nowTs=()=>{try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}};
-  const timeout=(p,ms,label)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error(label||'Tiempo agotado')),ms))]);
-  const safe=n=>S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf';
-  const icon=t=>{t=S(t).toLowerCase();if(t.includes('fact'))return '🧾';if(t.includes('mic'))return '📄';if(t.includes('crt'))return '📄';if(t.includes('hr'))return '📋';if(t.includes('oea'))return '🛡️';return '📁'};
-  function setVersion(){
-    window.ELTA_APP_VERSION=V; window.APP_VERSION_V2=V; window.ELTA_FORCE_VERSION=V;
-    try{document.title='ELTA ITS - Versión '+V;document.querySelectorAll('span,small,p,div,footer').forEach(el=>{if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+V)}})}catch(e){}
-  }
-  function toMillis(v){try{if(!v)return 0;if(v.toDate)return v.toDate().getTime();if(v.seconds)return v.seconds*1000;let d=new Date(v);return isNaN(d)?0:d.getTime()}catch(e){return 0}}
-  function fmt(v){const t=toMillis(v);return t?new Date(t).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-'}
-  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true}
-  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||''}
-  function readLocal(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return []}}
-  function writeLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows))}catch(e){console.warn('No se pudo guardar localmente',e)}}
-  function localDocs(emb){emb=cleanEmb(emb);return readLocal().filter(x=>x.embarque===emb&&active(x))}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result||''));r.onerror=()=>rej(r.error||new Error('No se pudo leer el PDF'));r.readAsDataURL(file)})}
-  function keys(emb){emb=cleanEmb(emb);const n=String(Number(emb));return [...new Set([emb,n].filter(x=>x&&x!=='NaN'))]}
-  async function fetchRemote(emb){
-    const db=dbx(); if(!db)return [];
-    const seen=new Set(), out=[];
-    const add=snap=>{(snap&&snap.docs||[]).forEach(x=>{if(seen.has(x.id))return;const d={id:x.id,_remote:true,...x.data()};if(active(d)){seen.add(x.id);out.push(d)}})};
-    const jobs=[]; keys(emb).forEach(k=>['embarque','nroEmbarque','embarqueId'].forEach(f=>jobs.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),QUERY_TIMEOUT,'Consulta').catch(()=>null))));
-    (await Promise.all(jobs)).forEach(add); return out;
-  }
-  async function fetchDocs(emb){
-    emb=cleanEmb(emb); let rows=[];
-    try{rows=await fetchRemote(emb)}catch(e){console.warn('Docs remoto no disponible',e)}
-    rows=rows.concat(localDocs(emb));
-    const seen=new Set(); rows=rows.filter(d=>{const k=(d.id||d.nombre||'')+'_'+(d.fechaCarga||d.createdAt||''); if(seen.has(k))return false; seen.add(k); return true});
-    rows.sort((a,b)=>(toMillis(b.fechaCarga||b.createdAt)-toMillis(a.fechaCarga||a.createdAt)));
-    return rows;
-  }
-  function renderRows(rows,emb){
-    window.__docsCacheV308={}; rows.forEach(d=>window.__docsCacheV308[d.id]=d);
-    if(!rows.length)return '<div class="docsEmptyV308"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
-    return `<div class="docsTableWrapV308"><table class="docsTableV308"><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Acciones</th></tr></thead><tbody>${rows.map(d=>`<tr><td><span class="typePillV308">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}${d._local?'<small class="localMarkV308"> Local</small>':''}</td><td>${E(fmt(d.fechaCarga||d.createdAt))}</td><td class="docsActionsV308"><button type="button" onclick="window.viewDocV308('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV308('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV308('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')}</tbody></table></div>`;
-  }
-  function modal(emb,flota){
-    const types=['Factura','MIC/DTA','CRT','HR','OEA','Otros'];
-    document.querySelectorAll('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove());
-    const el=document.createElement('div'); el.id='docsOverlayV308'; el.className='docsOverlayV308';
-    el.innerHTML=`<div class="docsModalV308"><div class="docsHeadV308"><div><h2>Documentación · Emb. ${E(emb)}</h2><p>${flota?`Flota ${E(flota)} · `:''}PDF del embarque</p></div><button type="button" class="docsCloseV308" onclick="window.closeDocsModalV308()">×</button></div><div class="docsBodyV308"><section class="docsUploadV308"><h3>Subir PDF</h3><label><span>Tipo</span><select id="docsTipoV308">${types.map(t=>`<option value="${E(t)}">${icon(t)} ${E(t)}</option>`).join('')}</select></label><label><span>Observación <small>(opcional)</small></span><input id="docsObsV308" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV308" for="docsFileV308"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV308" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV308" class="docsSelectedV308">Sin archivos seleccionados.</div><div id="docsProgressV308" class="docsProgressV308"></div><button type="button" id="docsUploadBtnV308" class="docsPrimaryV308" onclick="window.uploadDocsV308('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV308"><div class="docsListHeadV308"><h3>Documentos cargados</h3><button type="button" id="docsRefreshV308" onclick="window.loadDocsV308('${E(emb)}')">Actualizar</button></div><div id="docsListContentV308" class="docsListContentV308"><div class="docsEmptyV308"><b>Cargando documentación...</b><small>Abriendo vista sin bloquear la carga.</small></div></div></section></div></div>`;
-    document.body.appendChild(el); el.addEventListener('click',ev=>{if(ev.target===el)closeDocs()});
-    const inp=document.getElementById('docsFileV308'); inp&&inp.addEventListener('change',()=>{const files=[...(inp.files||[])];document.getElementById('docsSelectedV308').textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.'});
-  }
-  function openDocs(emb,flota){emb=cleanEmb(emb); if(!emb){alert('No se pudo identificar el embarque.');return false} modal(emb,flota); setTimeout(()=>loadDocs(emb),20); return false}
-  function closeDocs(){document.querySelectorAll('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove())}
-  async function loadDocs(emb){
-    emb=cleanEmb(emb); const box=document.getElementById('docsListContentV308'); const btn=document.getElementById('docsRefreshV308'); if(!box)return [];
-    if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
-    box.innerHTML='<div class="docsEmptyV308"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    let soft=setTimeout(()=>{if(box&&/Cargando/.test(box.textContent||''))box.innerHTML='<div class="docsEmptyV308"><b>La consulta está demorando.</b><small>Puede subir documentos igual o tocar Actualizar.</small></div>'},1200);
-    try{const rows=await fetchDocs(emb); clearTimeout(soft); box.innerHTML=renderRows(rows,emb); return rows}
-    catch(e){clearTimeout(soft); console.error(e); box.innerHTML='<div class="docsEmptyV308"><b>No se pudo cargar la documentación.</b><small>Puede subir PDF o usar Actualizar.</small></div>'; return []}
-    finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} setVersion()}
-  }
-  async function uploadDocs(emb,flota){
-    emb=cleanEmb(emb); const db=dbx(); const inp=document.getElementById('docsFileV308'); const files=[...(inp?.files||[])]; const tipo=S(document.getElementById('docsTipoV308')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV308')?.value); const btn=document.getElementById('docsUploadBtnV308'); const prog=document.getElementById('docsProgressV308'); const selected=document.getElementById('docsSelectedV308');
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return}
-    if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...'} if(prog)prog.textContent='Preparando carga...';
-    let ok=0, local=0, fail=0;
-    try{
-      for(let i=0;i<files.length;i++){
-        const file=files[i]; const fname=safe(file.name); if(!/\.pdf$/i.test(file.name)&&file.type!=='application/pdf'){fail++; alert(fname+' no es PDF.'); continue} if(file.size>MAX_MB*1024*1024){fail++; alert(fname+' supera '+MAX_MB+' MB.'); continue}
-        if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`; if(prog)prog.textContent=`Procesando ${i+1}/${files.length}: ${fname}`; if(selected)selected.textContent=`Procesando: ${fname}`;
-        const base64=await timeout(fileToBase64(file),UPLOAD_TIMEOUT,'Lectura PDF');
-        const data={id:'local_'+Date.now()+'_'+Math.random().toString(36).slice(2),embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,archivoBase64:base64,url:base64,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:new Date().toISOString(),createdAt:new Date().toISOString(),usuario:'Usuario',observaciones:obs,activo:true,almacenamiento:'firestore_base64'};
-        let saved=false;
-        if(db){try{if(prog)prog.textContent=`Guardando ${i+1}/${files.length}: ${fname}`; const ref=await timeout(db.collection(COLLECTION).add({...data,id:undefined,fechaCarga:nowTs(),createdAt:nowTs(),_fallbackLocal:false}),UPLOAD_TIMEOUT,'Guardar Firestore'); data.id=ref.id; saved=true; ok++;}catch(e){console.warn('Firestore rechazó la carga; se guarda copia local.',e)}}
-        if(!saved){try{const rows=readLocal(); rows.push({...data,_local:true}); writeLocal(rows); local++;}catch(e){console.error(e);fail++;alert('No se pudo guardar '+fname+'. Revise permisos o tamaño.')}}
-      }
-      if(inp)inp.value=''; const obsEl=document.getElementById('docsObsV308'); if(obsEl)obsEl.value=''; if(selected)selected.textContent='Sin archivos seleccionados.';
-      if(prog)prog.textContent= local && !ok ? 'Guardado localmente. Firestore rechazó la carga; revise reglas/permisos.' : `Carga finalizada: ${ok+local} archivo(s). Actualizando lista...`;
-      await loadDocs(emb);
-      if(local && !ok) alert('El PDF quedó guardado localmente en este navegador. Firestore rechazó la carga; hay que revisar reglas/permisos para compartirlo con otros usuarios.');
-    }catch(e){console.error(e); if(prog)prog.textContent='No se pudo completar la carga.'; alert('No se pudo completar la carga. Revise conexión/permisos.')}
-    finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},7000)}
-  }
-  function viewDoc(id){const d=(window.__docsCacheV308||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} window.open(url,'_blank','noopener')}
-  function downloadDoc(id){const d=(window.__docsCacheV308||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return; const d=(window.__docsCacheV308||{})[id]||{}; if(d._local){writeLocal(readLocal().map(x=>x.id===id?{...x,activo:false}:x)); await loadDocs(emb);return} const db=dbx(); if(!db)return; try{await db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}); await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
-  function embFromCard(card){const txt=card?.textContent||'';let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i)||txt.match(/\b([0-9]{5,8})\b/);return m?m[1]:''}
-  function flFromCard(card){const m=(card?.textContent||'').match(/Flota\s*([A-Za-z0-9_-]+)/i);return m?m[1]:''}
-  function ensureDocsButtons(){
-    const scope=document.getElementById('transitos')||document;
-    scope.querySelectorAll('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233').forEach(btn=>{if(btn.closest('#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228'))return; const card=btn.closest('.item,.transitCardV1210,.glassPanel')||btn.closest('div'); const emb=cleanEmb(btn.dataset.embarque||embFromCard(card)); const fl=S(btn.dataset.flota||flFromCard(card)); if(!emb)return; btn.disabled=false; btn.removeAttribute('disabled'); btn.style.pointerEvents='auto'; btn.style.opacity='1'; btn.innerHTML='📄 Docs'; btn.title='Abrir documentación PDF'; btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(emb,fl)}});
-    // Si no existe botón Docs, agregarlo solo junto al botón OEA dentro de tarjetas de tránsito.
-    scope.querySelectorAll('button,a').forEach(oea=>{if(!/^\s*OEA\s*$/i.test(oea.textContent||''))return; const row=oea.parentElement; if(!row||row.querySelector('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233'))return; const card=oea.closest('.item,.transitCardV1210,.glassPanel')||row; const emb=embFromCard(card); if(!emb)return; const b=document.createElement('button'); b.type='button'; b.className='transitDocsBtn228 transitDocsBtn230 transitDocsBtn231'; b.dataset.embarque=emb; b.dataset.flota=flFromCard(card); b.innerHTML='📄 Docs'; b.title='Abrir documentación PDF'; b.onclick=ev=>{ev.preventDefault();ev.stopPropagation();return openDocs(emb,b.dataset.flota)}; oea.insertAdjacentElement('afterend',b)})
-  }
-  window.openDocsModalV308=openDocs; window.closeDocsModalV308=closeDocs; window.loadDocsV308=loadDocs; window.uploadDocsV308=uploadDocs; window.viewDocV308=viewDoc; window.downloadDocV308=downloadDoc; window.deleteDocV308=deleteDoc;
-  window.openDocsModalV3=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs; window.closeDocsModalV3=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs; window.loadDocsV3=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs; window.uploadDocsV3=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
-  function start(){setVersion(); ensureDocsButtons(); let t=null; if(!window.__docsObserverV308){window.__docsObserverV308=new MutationObserver(()=>{clearTimeout(t); t=setTimeout(()=>{ensureDocsButtons();setVersion()},120)}); window.__docsObserverV308.observe(document.getElementById('transitos')||document.body,{childList:true,subtree:true})} [100,500,1200,2500].forEach(ms=>setTimeout(()=>{ensureDocsButtons();setVersion()},ms))}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start(); window.addEventListener('load',start);
-})();
-
-
-/* ===== ELTA v3.1.0 - VERSION UNICA + DOCUMENTOS ESTABLE ===== */
+/* ===== ELTA v3.1.1 - DOCUMENTOS ESTABLE / VERSION UNICA ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.0';
+  const VERSION='3.1.1';
+  const COLLECTION='embarque_documentos';
+  const MAX_MB=12;
+  const QUERY_TIMEOUT=6500;
+  const WRITE_TIMEOUT=30000;
+  const LS_KEY='elta_docs_local_v311';
   window.ELTA_APP_VERSION=VERSION;
   window.ELTA_FORCE_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
+  const S=v=>(v==null?'':String(v)).trim();
+  const E=v=>S(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const cleanEmb=v=>{const m=S(v).match(/[0-9]{5,8}/);return m?m[0]:S(v).replace(/[^0-9A-Za-z_-]/g,'')};
+  const safe=n=>S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf';
+  const icon=t=>{t=S(t).toLowerCase();if(t.includes('fact'))return '🧾';if(t.includes('hr'))return '📋';if(t.includes('mic'))return '📄';if(t.includes('crt'))return '🚚';if(t.includes('oea'))return '🛡️';return '📁'};
+  const dbx=()=>{try{return window.db||(typeof db!=='undefined'?db:null)||(window.firebase&&firebase.firestore?firebase.firestore():null)}catch(e){return null}};
+  const storagex=()=>{try{return window.storage||(window.firebase&&firebase.storage?firebase.storage():null)||(typeof firebase!=='undefined'&&firebase.storage?firebase.storage():null)}catch(e){return null}};
+  const timeout=(p,ms,label)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error((label||'Operación')+' demoró demasiado')),ms))]);
+  const nowTs=()=>{try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}};
+  function toDate(v){try{return v&&v.toDate?v.toDate():(v&&v.seconds?new Date(v.seconds*1000):new Date(v))}catch(e){return null}}
+  function fmt(v){const d=toDate(v);return d&&!isNaN(d)?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'-'}
+  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(r.error||new Error('No se pudo leer el archivo'));r.readAsDataURL(file);});}
+  function active(d){return d&&d.activo!==false&&d.deleted!==true&&d.eliminado!==true}
+  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||d.fileUrl||d.pdfUrl||''}
+  function localRows(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return []}}
+  function saveLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows.slice(-100)))}catch(e){}}
+
   function applyVersion(){
-    document.title='ELTA ITS - Versión '+VERSION;
-    document.querySelectorAll('span,small,div,p,footer').forEach(function(el){
-      if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
-        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);
-      }
-    });
+    try{
+      document.title='ELTA ITS - Versión '+VERSION;
+      document.querySelectorAll('span,small,div,p,footer').forEach(el=>{
+        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
+          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
+        }
+      });
+    }catch(e){}
   }
 
   function addStyle(){
-    if(document.getElementById('eltaDocsStableStyle310')) return;
-    const css = `
-      #docsOverlayV310{position:fixed;inset:0;z-index:99999;background:rgba(2,6,23,.72);display:flex;align-items:center;justify-content:center;padding:12px;box-sizing:border-box}
-      #docsOverlayV310 .docsModalV310{width:min(96vw,1320px);max-height:88vh;background:#142238;border:1px solid rgba(148,163,184,.32);border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.45);color:#f8fafc;display:flex;flex-direction:column}
-      #docsOverlayV310 .docsHeadV310{background:#2f9137;padding:18px 26px;position:relative;flex:0 0 auto}
-      #docsOverlayV310 .docsHeadV310 h2{margin:0;font-size:28px;line-height:1.05;font-weight:900;letter-spacing:.01em}
-      #docsOverlayV310 .docsHeadV310 p{margin:6px 0 0;font-size:16px;font-weight:800;color:#ecfdf5}
-      #docsOverlayV310 .docsCloseV310{position:absolute;right:20px;top:12px;border:0;background:transparent;color:#fff;font-size:34px;font-weight:900;line-height:1;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
-      #docsOverlayV310 .docsBodyV310{display:grid;grid-template-columns:360px 1fr;gap:16px;padding:16px 18px;overflow:auto;min-height:410px}
-      #docsOverlayV310 .docsFormV310,#docsOverlayV310 .docsListV310{background:#15243a;border:1px solid rgba(148,163,184,.26);border-radius:14px;padding:14px;box-sizing:border-box}
-      #docsOverlayV310 h3{margin:0 0 12px;font-size:22px;line-height:1.05;font-weight:900;color:#f8fafc}
-      #docsOverlayV310 label{display:block;margin:0 0 10px;color:#e2e8f0;font-weight:900;font-size:17px;line-height:1.15}
-      #docsOverlayV310 label small{font-size:12px;color:#cbd5e1;font-weight:800}
-      #docsOverlayV310 select,#docsOverlayV310 input[type=text]{width:100%;height:42px;border-radius:10px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:16px;font-weight:800;padding:0 12px;box-sizing:border-box;outline:none}
-      #docsOverlayV310 .docsDropV310{height:104px;border:1px dashed rgba(148,163,184,.45);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:8px;cursor:pointer;background:#122035}
-      #docsOverlayV310 .docsDropV310 span{font-size:24px;line-height:1}
-      #docsOverlayV310 .docsDropV310 b{font-size:19px;margin-top:6px}
-      #docsOverlayV310 .docsDropV310 small{font-size:13px;color:#cbd5e1;margin-top:4px}
-      #docsOverlayV310 .docsSelectedV310{font-size:14px;color:#dbeafe;min-height:22px;margin:8px 0;white-space:normal;overflow-wrap:anywhere}
-      #docsOverlayV310 .docsProgressV310{font-size:14px;font-weight:900;color:#86efac;min-height:22px;margin:6px 0;overflow-wrap:anywhere}
-      #docsOverlayV310 .docsPrimaryV310{width:100%;height:48px;border:0;border-radius:12px;background:#3fa533;color:#fff;font-size:18px;font-weight:900;cursor:pointer;margin-top:8px}
-      #docsOverlayV310 .docsPrimaryV310:disabled{opacity:.75;cursor:wait}
-      #docsOverlayV310 .docsListHeadV310{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
-      #docsOverlayV310 .docsRefreshV310{height:44px;padding:0 24px;border-radius:12px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:16px;font-weight:900;cursor:pointer}
-      #docsOverlayV310 .docsRefreshV310:disabled{opacity:.75;cursor:wait}
-      #docsOverlayV310 .docsEmptyV310{border:1px dashed rgba(148,163,184,.35);border-radius:12px;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#e5e7eb;font-weight:800}
-      #docsOverlayV310 .docsEmptyV310 small{display:block;color:#b6c2d2;margin-top:5px;font-size:14px}
-      #docsOverlayV310 table{width:100%;border-collapse:collapse;font-size:15px}
-      #docsOverlayV310 th{background:#293a52;color:#e5e7eb;text-align:left;padding:11px 12px;font-size:15px}
-      #docsOverlayV310 td{border-bottom:1px solid rgba(148,163,184,.18);padding:11px 12px;color:#f8fafc;vertical-align:middle}
-      #docsOverlayV310 .typePillV310{display:inline-flex;align-items:center;gap:6px;border-radius:20px;background:#174b37;color:#9bff72;font-weight:900;padding:6px 12px;white-space:nowrap}
-      #docsOverlayV310 .docsActionsV310{white-space:nowrap;text-align:right}
-      #docsOverlayV310 .docsActionsV310 button{border:0;background:transparent;color:#8dff65;font-size:16px;font-weight:900;cursor:pointer;margin:0 4px;padding:4px}
-      #docsOverlayV310 .docsActionsV310 button.danger{color:#ff6b6b}
-      .transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,.docsEnabledV310{opacity:1!important;pointer-events:auto!important;filter:none!important}
-      @media(max-width:900px){#docsOverlayV310 .docsBodyV310{grid-template-columns:1fr}#docsOverlayV310 .docsHeadV310 h2{font-size:23px}}
+    if(document.getElementById('eltaDocsStyle311')) return;
+    const css=`
+      #docsOverlayV311{position:fixed;inset:0;z-index:99999;background:rgba(2,6,23,.70);display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box}
+      #docsOverlayV311 *{box-sizing:border-box}
+      #docsOverlayV311 .docsModalV311{width:min(95vw,1280px);max-height:86vh;background:#142238;border:1px solid rgba(148,163,184,.32);border-radius:17px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.45);color:#f8fafc;display:flex;flex-direction:column}
+      #docsOverlayV311 .docsHeadV311{background:#2f9137;padding:16px 24px;position:relative;flex:0 0 auto}
+      #docsOverlayV311 .docsHeadV311 h2{margin:0;font-size:27px;line-height:1.05;font-weight:900;letter-spacing:.01em}
+      #docsOverlayV311 .docsHeadV311 p{margin:6px 0 0;font-size:15px;font-weight:800;color:#ecfdf5}
+      #docsOverlayV311 .docsCloseV311{position:absolute;right:18px;top:10px;border:0;background:transparent;color:#fff;font-size:32px;font-weight:900;line-height:1;cursor:pointer;width:42px;height:42px;display:flex;align-items:center;justify-content:center}
+      #docsOverlayV311 .docsBodyV311{display:grid;grid-template-columns:350px 1fr;gap:14px;padding:14px 16px;overflow:auto;min-height:380px}
+      #docsOverlayV311 .docsFormV311,#docsOverlayV311 .docsListV311{background:#15243a;border:1px solid rgba(148,163,184,.26);border-radius:14px;padding:13px;box-sizing:border-box}
+      #docsOverlayV311 h3{margin:0 0 10px;font-size:21px;line-height:1.05;font-weight:900;color:#f8fafc}
+      #docsOverlayV311 label{display:block;margin:0 0 9px;color:#e2e8f0;font-weight:900;font-size:16px;line-height:1.15}
+      #docsOverlayV311 label small{font-size:12px;color:#cbd5e1;font-weight:800}
+      #docsOverlayV311 select,#docsOverlayV311 input[type=text]{width:100%;height:40px;border-radius:10px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:15px;font-weight:800;padding:0 11px;outline:none}
+      #docsOverlayV311 .docsDropV311{height:96px;border:1px dashed rgba(148,163,184,.45);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:8px;cursor:pointer;background:#122035}
+      #docsOverlayV311 .docsDropV311 span{font-size:22px;line-height:1}
+      #docsOverlayV311 .docsDropV311 b{font-size:18px;margin-top:5px}
+      #docsOverlayV311 .docsDropV311 small{font-size:13px;color:#cbd5e1;margin-top:3px}
+      #docsOverlayV311 .docsSelectedV311{font-size:13px;color:#dbeafe;min-height:21px;margin:8px 0;white-space:normal;overflow-wrap:anywhere}
+      #docsOverlayV311 .docsProgressV311{font-size:13px;font-weight:900;color:#86efac;min-height:21px;margin:6px 0;overflow-wrap:anywhere}
+      #docsOverlayV311 .docsPrimaryV311{width:100%;height:46px;border:0;border-radius:12px;background:#3fa533;color:#fff;font-size:17px;font-weight:900;cursor:pointer;margin-top:8px}
+      #docsOverlayV311 .docsPrimaryV311:disabled{opacity:.78;cursor:wait}
+      #docsOverlayV311 .docsListHeadV311{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+      #docsOverlayV311 .docsRefreshV311{height:42px;padding:0 22px;border-radius:12px;border:1px solid rgba(148,163,184,.38);background:#26364c;color:#f8fafc;font-size:15px;font-weight:900;cursor:pointer}
+      #docsOverlayV311 .docsRefreshV311:disabled{opacity:.75;cursor:wait}
+      #docsOverlayV311 .docsEmptyV311{border:1px dashed rgba(148,163,184,.35);border-radius:12px;min-height:82px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#e5e7eb;font-weight:800}
+      #docsOverlayV311 .docsEmptyV311 small{display:block;color:#b6c2d2;margin-top:5px;font-size:13px}
+      #docsOverlayV311 table{width:100%;border-collapse:collapse;font-size:15px}
+      #docsOverlayV311 th{background:#293a52;color:#e5e7eb;text-align:left;padding:10px 12px;font-size:15px}
+      #docsOverlayV311 td{border-bottom:1px solid rgba(148,163,184,.18);padding:10px 12px;color:#f8fafc;vertical-align:middle}
+      #docsOverlayV311 .typePillV311{display:inline-flex;align-items:center;gap:6px;border-radius:20px;background:#174b37;color:#9bff72;font-weight:900;padding:6px 11px;white-space:nowrap}
+      #docsOverlayV311 .docsActionsV311{white-space:nowrap;text-align:right}
+      #docsOverlayV311 .docsActionsV311 button{border:0;background:transparent;color:#8dff65;font-size:16px;font-weight:900;cursor:pointer;margin:0 4px;padding:4px}
+      #docsOverlayV311 .docsActionsV311 button.danger{color:#ff6b6b}
+      .transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,.docsEnabledV311{opacity:1!important;pointer-events:auto!important;filter:none!important;max-width:140px;overflow:hidden;white-space:nowrap}
+      #docsOverlayV311 .transitDocsBtn228,#docsOverlayV311 .transitDocsBtn230,#docsOverlayV311 .transitDocsBtn231,#docsOverlayV311 .transitDocsBtn233{display:none!important}
+      @media(max-width:900px){#docsOverlayV311 .docsBodyV311{grid-template-columns:1fr}#docsOverlayV311 .docsHeadV311 h2{font-size:23px}}
     `;
-    const st=document.createElement('style'); st.id='eltaDocsStableStyle310'; st.textContent=css; document.head.appendChild(st);
+    const st=document.createElement('style'); st.id='eltaDocsStyle311'; st.textContent=css; document.head.appendChild(st);
   }
 
-  const COLLECTION='embarque_documentos';
-  const MAX_MB=12;
-  const QUERY_TIMEOUT=4500;
-  const WRITE_TIMEOUT=20000;
-  const LS_KEY='elta_docs_local_v310';
-  function S(v){return (v==null?'':String(v)).trim();}
-  function E(s){return S(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-  function cleanEmb(v){return S(v).replace(/[^0-9A-Za-z_-]/g,'');}
-  function dbx(){try{return window.db||window.firestore||(window.firebase&&firebase.firestore&&firebase.firestore())}catch(e){return null}}
-  function nowTs(){try{return firebase.firestore.FieldValue.serverTimestamp()}catch(e){return new Date().toISOString()}}
-  function timeout(p,ms,label){return Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error((label||'Operación')+' demoró demasiado')),ms))]);}
-  function safe(n){return S(n).replace(/[\\/:*?"<>|]+/g,'_').slice(0,140)||'documento.pdf'}
-  function fmt(v){try{if(v&&v.toDate)v=v.toDate();return new Date(v).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return '-'}}
-  function icon(t){t=S(t).toLowerCase();if(t.includes('fact'))return '🧾';if(t.includes('hr'))return '📋';if(t.includes('mic'))return '📄';if(t.includes('crt'))return '🚚';if(t.includes('oea'))return '🛡️';return '📁'}
-  function active(d){return d && d.activo!==false && d.deleted!==true && d.eliminado!==true;}
-  function docUrl(d){return d.url||d.downloadURL||d.archivoBase64||d.base64||d.fileUrl||d.pdfUrl||''}
-  function localRows(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return []}}
-  function saveLocal(rows){try{localStorage.setItem(LS_KEY,JSON.stringify(rows.slice(-80)))}catch(e){}}
-  function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});}
-  function embKeys(emb){const e=cleanEmb(emb); const n=String(Number(e)); return [...new Set([e,n].filter(x=>x&&x!=='NaN'))];}
-
   async function fetchDocs(emb){
-    const e=cleanEmb(emb); const out=[]; const seen=new Set();
-    function add(d){if(!d||!active(d))return; const id=d.id||('local_'+Math.random()); if(seen.has(id))return; seen.add(id); out.push({...d,id});}
+    const e=cleanEmb(emb), out=[], seen=new Set();
+    const add=d=>{if(!d||!active(d))return;const id=d.id||('local_'+Math.random());if(seen.has(id))return;seen.add(id);out.push({...d,id})};
     localRows().filter(x=>cleanEmb(x.embarque)===e).forEach(add);
     const db=dbx();
     if(db&&e){
-      const fields=['embarque','nroEmbarque','embarqueId'];
-      const req=[]; embKeys(e).forEach(k=>fields.forEach(f=>req.push(timeout(db.collection(COLLECTION).where(f,'==',String(k)).get(),QUERY_TIMEOUT,'Consulta docs').catch(()=>null))));
-      try{(await Promise.all(req)).forEach(snap=>(snap&&snap.docs||[]).forEach(doc=>add({id:doc.id,...doc.data()})));}catch(err){console.warn('Docs query',err)}
+      try{
+        const snap=await timeout(db.collection(COLLECTION).where('embarque','==',String(e)).get(),QUERY_TIMEOUT,'Consulta documentos');
+        (snap.docs||[]).forEach(doc=>add({id:doc.id,...doc.data()}));
+      }catch(err){console.warn('Docs consulta principal',err)}
     }
-    out.sort((a,b)=>String(b.fechaCarga||b.createdAt||'').localeCompare(String(a.fechaCarga||a.createdAt||'')));
+    out.sort((a,b)=>(toDate(b.fechaCarga||b.createdAt)?.getTime()||0)-(toDate(a.fechaCarga||a.createdAt)?.getTime()||0));
     return out;
   }
 
   function renderRows(rows,emb){
-    window.__docsCacheV310={}; rows.forEach(d=>window.__docsCacheV310[d.id]=d);
-    if(!rows.length) return '<div class="docsEmptyV310"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
-    return '<table><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th style="text-align:right">Acciones</th></tr></thead><tbody>'+rows.map(d=>`<tr><td><span class="typePillV310">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||d.filename||'documento.pdf')}</td><td>${E(fmt(d.fechaCarga||d.createdAt))}</td><td class="docsActionsV310"><button type="button" onclick="window.viewDocV310('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV310('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV310('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')+'</tbody></table>';
+    window.__docsCacheV311={}; rows.forEach(d=>window.__docsCacheV311[d.id]=d);
+    if(!rows.length) return '<div class="docsEmptyV311"><b>No hay documentos cargados.</b><small>Puede subir un PDF desde el panel izquierdo.</small></div>';
+    return '<table><thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th style="text-align:right">Acciones</th></tr></thead><tbody>'+rows.map(d=>`<tr><td><span class="typePillV311">${icon(d.tipo)} ${E(d.tipo||'Otros')}</span></td><td>${E(d.nombre||'documento.pdf')}${d._local?' <small>(local)</small>':''}</td><td>${fmt(d.fechaCarga||d.createdAt)}</td><td class="docsActionsV311"><button type="button" onclick="window.viewDocV311('${E(d.id)}')">👁</button><button type="button" onclick="window.downloadDocV311('${E(d.id)}')">⬇</button><button type="button" class="danger" onclick="window.deleteDocV311('${E(d.id)}','${E(emb)}')">🗑</button></td></tr>`).join('')+'</tbody></table>';
   }
 
+  function closeDocs(){document.querySelectorAll('#docsOverlayV311,#docsOverlayV310,#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove())}
   function modal(emb,flota){
-    addStyle(); closeDocs();
-    const el=document.createElement('div'); el.id='docsOverlayV310';
-    el.innerHTML=`<div class="docsModalV310"><div class="docsHeadV310"><h2>Documentación · Emb. ${E(emb)}</h2><p>Flota ${E(flota||'-')} · PDF del embarque</p><button type="button" class="docsCloseV310" onclick="window.closeDocsModalV310()">×</button></div><div class="docsBodyV310"><section class="docsFormV310"><h3>Subir PDF</h3><label>Tipo<select id="docsTipoV310"><option>MIC/DTA</option><option>Factura</option><option>CRT</option><option>HR</option><option>OEA</option><option>Otros</option></select></label><label>Observación <small>(opcional)</small><input id="docsObsV310" type="text" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV310" for="docsFileV310"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV310" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV310" class="docsSelectedV310">Sin archivos seleccionados.</div><div id="docsProgressV310" class="docsProgressV310"></div><button type="button" id="docsUploadBtnV310" class="docsPrimaryV310" onclick="window.uploadDocsV310('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV310"><div class="docsListHeadV310"><h3>Documentos cargados</h3><button type="button" class="docsRefreshV310" id="docsRefreshV310" onclick="window.loadDocsV310('${E(emb)}')">Actualizar</button></div><div id="docsListContentV310"><div class="docsEmptyV310"><b>Cargando documentación...</b><small>La vista queda disponible mientras consulta.</small></div></div></section></div></div>`;
+    addStyle(); closeDocs(); window.__docsFilesV311=[];
+    const el=document.createElement('div'); el.id='docsOverlayV311';
+    el.innerHTML=`<div class="docsModalV311"><div class="docsHeadV311"><h2>Documentación · Emb. ${E(emb)}</h2><p>Flota ${E(flota||'-')} · PDF del embarque</p><button type="button" class="docsCloseV311" onclick="window.closeDocsModalV311()">×</button></div><div class="docsBodyV311"><section class="docsFormV311"><h3>Subir PDF</h3><label>Tipo<select id="docsTipoV311"><option>MIC/DTA</option><option>Factura</option><option>CRT</option><option>HR</option><option>OEA</option><option>Otros</option></select></label><label>Observación <small>(opcional)</small><input id="docsObsV311" type="text" placeholder="Ej. MIC N° 123456"></label><label class="docsDropV311" for="docsFileV311"><span>☁️</span><b>Seleccionar PDF</b><small>Máx. ${MAX_MB} MB por archivo</small></label><input id="docsFileV311" type="file" accept="application/pdf,.pdf" multiple hidden><div id="docsSelectedV311" class="docsSelectedV311">Sin archivos seleccionados.</div><div id="docsProgressV311" class="docsProgressV311"></div><button type="button" id="docsUploadBtnV311" class="docsPrimaryV311" onclick="window.uploadDocsV311('${E(emb)}','${E(flota||'')}')">Subir documento</button></section><section class="docsListV311"><div class="docsListHeadV311"><h3>Documentos cargados</h3><button type="button" class="docsRefreshV311" id="docsRefreshV311" onclick="window.loadDocsV311('${E(emb)}')">Actualizar</button></div><div id="docsListContentV311"><div class="docsEmptyV311"><b>Cargando documentación...</b><small>La vista queda disponible mientras consulta.</small></div></div></section></div></div>`;
     document.body.appendChild(el); el.addEventListener('click',ev=>{if(ev.target===el)closeDocs()});
-    const inp=document.getElementById('docsFileV310'); inp&&inp.addEventListener('change',()=>{const files=[...(inp.files||[])];document.getElementById('docsSelectedV310').textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.'});
+    const inp=document.getElementById('docsFileV311');
+    inp&&inp.addEventListener('change',()=>{
+      const files=[...(inp.files||[])]; window.__docsFilesV311=files;
+      document.getElementById('docsSelectedV311').textContent=files.length?files.map(f=>`${f.name} (${Math.round(f.size/1024)} KB)`).join(' · '):'Sin archivos seleccionados.';
+      const p=document.getElementById('docsProgressV311'); if(p)p.textContent='';
+    });
   }
+
   function openDocs(emb,flota){emb=cleanEmb(emb);if(!emb){alert('No se pudo identificar el embarque.');return false}modal(emb,flota);setTimeout(()=>loadDocs(emb),10);return false}
-  function closeDocs(){document.querySelectorAll('#docsOverlayV310,#docsOverlayV308,#docsOverlayV3,#docsOverlay246,#docsOverlay228').forEach(x=>x.remove())}
   async function loadDocs(emb){
-    emb=cleanEmb(emb); const box=document.getElementById('docsListContentV310'); const btn=document.getElementById('docsRefreshV310'); if(!box)return [];
+    emb=cleanEmb(emb); const box=document.getElementById('docsListContentV311'); const btn=document.getElementById('docsRefreshV311'); if(!box)return [];
     if(btn){btn.disabled=true;btn.textContent='Actualizando...'}
-    box.innerHTML='<div class="docsEmptyV310"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
-    const slow=setTimeout(()=>{if(box&&/Cargando/.test(box.textContent||''))box.innerHTML='<div class="docsEmptyV310"><b>La consulta está demorando.</b><small>Puede subir PDF igual o tocar Actualizar.</small></div>';},1500);
+    box.innerHTML='<div class="docsEmptyV311"><b>Cargando documentación...</b><small>Consultando documentos del embarque.</small></div>';
+    const slow=setTimeout(()=>{if(box&&/Cargando/.test(box.textContent||''))box.innerHTML='<div class="docsEmptyV311"><b>La consulta está demorando.</b><small>Puede subir PDF igual o tocar Actualizar.</small></div>';},1300);
     try{const rows=await fetchDocs(emb); clearTimeout(slow); box.innerHTML=renderRows(rows,emb); return rows}
-    catch(e){clearTimeout(slow); console.error(e); box.innerHTML='<div class="docsEmptyV310"><b>No se pudo consultar Firestore.</b><small>Puede subir PDF; se intentará guardar localmente si no hay permisos.</small></div>'; return []}
+    catch(e){clearTimeout(slow); console.error(e); box.innerHTML='<div class="docsEmptyV311"><b>No se pudo consultar Firestore.</b><small>Puede subir PDF; se intentará guardar sin bloquear la pantalla.</small></div>'; return []}
     finally{if(btn){btn.disabled=false;btn.textContent='Actualizar'} applyVersion()}
   }
+
+  async function saveDocument(row){
+    const db=dbx();
+    if(db){
+      try{
+        const data={...row}; delete data.id; delete data._local;
+        const ref=await timeout(db.collection(COLLECTION).add(data),WRITE_TIMEOUT,'Guardar documento');
+        return {ok:true,id:ref.id,mode:'firestore'};
+      }catch(e){console.warn('Firestore rechazó la carga; se usa respaldo local.',e)}
+    }
+    const rows=localRows(); rows.push({...row,_local:true}); saveLocal(rows); return {ok:true,id:row.id,mode:'local'};
+  }
+
   async function uploadDocs(emb,flota){
-    emb=cleanEmb(emb); const inp=document.getElementById('docsFileV310'); const files=[...(inp&&inp.files||[])]; const tipo=S(document.getElementById('docsTipoV310')&&document.getElementById('docsTipoV310').value)||'Otros'; const obs=S(document.getElementById('docsObsV310')&&document.getElementById('docsObsV310').value); const btn=document.getElementById('docsUploadBtnV310'); const prog=document.getElementById('docsProgressV310'); const sel=document.getElementById('docsSelectedV310');
-    if(!files.length){alert('Seleccione uno o más archivos PDF.');return}
+    emb=cleanEmb(emb); const inp=document.getElementById('docsFileV311');
+    let files=[...(window.__docsFilesV311||[])]; if(!files.length && inp&&inp.files) files=[...inp.files];
+    const tipo=S(document.getElementById('docsTipoV311')?.value)||'Otros'; const obs=S(document.getElementById('docsObsV311')?.value);
+    const btn=document.getElementById('docsUploadBtnV311'); const prog=document.getElementById('docsProgressV311'); const sel=document.getElementById('docsSelectedV311');
+    if(!files.length){if(prog)prog.textContent='No hay archivo seleccionado.';alert('Seleccione uno o más archivos PDF.');return}
     if(btn){btn.disabled=true;btn.textContent='Subiendo archivos...'} if(prog)prog.textContent='Preparando carga...';
-    let ok=0, local=0, fail=0; const db=dbx();
+    let saved=0, local=0, failed=0;
     try{
       for(let i=0;i<files.length;i++){
-        const file=files[i]; const fname=safe(file.name); if(file.type!=='application/pdf'&&!/\.pdf$/i.test(file.name)){fail++; if(prog)prog.textContent=fname+' no es PDF.'; continue} if(file.size>MAX_MB*1024*1024){fail++; if(prog)prog.textContent=fname+' supera '+MAX_MB+' MB.'; continue}
+        const file=files[i], fname=safe(file.name);
+        if(file.type!=='application/pdf'&&!/\.pdf$/i.test(file.name)){failed++; if(prog)prog.textContent=fname+' no es PDF.'; continue}
+        if(file.size>MAX_MB*1024*1024){failed++; if(prog)prog.textContent=fname+' supera '+MAX_MB+' MB.'; continue}
         if(btn)btn.textContent=`Subiendo archivos... ${i+1}/${files.length}`; if(prog)prog.textContent=`Procesando ${i+1}/${files.length}: ${fname}`;
         const base64=await timeout(fileToBase64(file),WRITE_TIMEOUT,'Lectura PDF');
-        const row={id:'local_'+Date.now()+'_'+Math.random().toString(36).slice(2),embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,archivoBase64:base64,url:base64,downloadURL:base64,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:new Date().toISOString(),createdAt:new Date().toISOString(),usuario:'Usuario',observaciones:obs,activo:true,almacenamiento:'base64'};
-        let saved=false;
-        if(db){try{if(prog)prog.textContent=`Guardando ${i+1}/${files.length}: ${fname}`; const ref=await timeout(db.collection(COLLECTION).add({...row,id:undefined,fechaCarga:nowTs(),createdAt:nowTs(),_fallbackLocal:false}),WRITE_TIMEOUT,'Guardar Firestore'); row.id=ref.id; saved=true; ok++;}catch(e){console.warn('Firestore rechazó la carga, fallback local.',e)}}
-        if(!saved){const rows=localRows(); rows.push({...row,_local:true}); saveLocal(rows); local++;}
+        const row={id:'local_'+Date.now()+'_'+Math.random().toString(36).slice(2),embarque:String(emb),flota:String(flota||''),tipo,nombre:fname,archivoBase64:base64,url:base64,downloadURL:base64,mimeType:file.type||'application/pdf',sizeBytes:file.size,fechaCarga:nowTs(),createdAt:nowTs(),usuario:'Usuario',observaciones:obs,activo:true,almacenamiento:'firestore_base64'};
+        const res=await saveDocument(row); saved++; if(res.mode==='local')local++;
       }
-      if(inp)inp.value=''; const obsEl=document.getElementById('docsObsV310'); if(obsEl)obsEl.value=''; if(sel)sel.textContent='Sin archivos seleccionados.';
-      if(prog)prog.textContent= local&&!ok ? 'Guardado localmente. Revisar permisos de Firestore para compartirlo.' : `Carga finalizada: ${ok+local} archivo(s). Actualizando lista...`;
+      if(inp)inp.value=''; window.__docsFilesV311=[]; const obsEl=document.getElementById('docsObsV311'); if(obsEl)obsEl.value=''; if(sel)sel.textContent='Sin archivos seleccionados.';
+      if(prog)prog.textContent= local ? 'Archivo guardado localmente. Revisar reglas de Firestore para compartirlo.' : `Carga finalizada: ${saved} archivo(s). Actualizando lista...`;
       await loadDocs(emb);
-    }catch(e){console.error(e); if(prog)prog.textContent='No se pudo completar la carga. Revise conexión/permisos.';}
-    finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},8000)}
+    }catch(e){console.error(e); if(prog)prog.textContent='No se pudo completar la carga. Revise conexión/permisos.'; alert('No se pudo completar la carga. Revise conexión/permisos.')}
+    finally{if(btn){btn.disabled=false;btn.textContent='Subir documento'} setTimeout(()=>{if(prog)prog.textContent=''},9000)}
   }
-  function viewDoc(id){const d=(window.__docsCacheV310||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} window.open(url,'_blank','noopener')}
-  function downloadDoc(id){const d=(window.__docsCacheV310||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
-  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return; const d=(window.__docsCacheV310||{})[id]||{}; if(d._local||String(id).startsWith('local_')){saveLocal(localRows().map(x=>x.id===id?{...x,activo:false}:x));await loadDocs(emb);return} const db=dbx(); if(!db)return; try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),WRITE_TIMEOUT,'Eliminar');await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
+
+  function viewDoc(id){const d=(window.__docsCacheV311||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} window.open(url,'_blank','noopener')}
+  function downloadDoc(id){const d=(window.__docsCacheV311||{})[id]||{};const url=docUrl(d); if(!url){alert('El documento no tiene archivo disponible.');return} const a=document.createElement('a');a.href=url;a.download=d.nombre||'documento.pdf';document.body.appendChild(a);a.click();a.remove()}
+  async function deleteDoc(id,emb){if(!confirm('¿Eliminar este documento del embarque?'))return; const d=(window.__docsCacheV311||{})[id]||{}; if(d._local||String(id).startsWith('local_')){saveLocal(localRows().map(x=>x.id===id?{...x,activo:false}:x));await loadDocs(emb);return} const db=dbx(); if(!db)return; try{await timeout(db.collection(COLLECTION).doc(id).update({activo:false,fechaEliminacion:nowTs()}),WRITE_TIMEOUT,'Eliminar');await loadDocs(emb)}catch(e){console.error(e);alert('No se pudo eliminar el documento.')}}
 
   function embFromCard(card){const txt=card&&card.textContent||'';let m=txt.match(/Emb\.\s*([0-9]{5,8})\b/i)||txt.match(/Embarque\s*([0-9]{5,8})\b/i)||txt.match(/\b([0-9]{5,8})\b/);return m?m[1]:''}
   function flFromCard(card){const m=(card&&card.textContent||'').match(/Flota\s*([A-Za-z0-9_-]+)/i);return m?m[1]:''}
   function enableDocsButtons(){
-    (document.getElementById('transitos')||document).querySelectorAll('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,button').forEach(function(btn){
-      if(btn.closest('#docsOverlayV310')) return;
+    (document.getElementById('transitos')||document).querySelectorAll('.transitDocsBtn228,.transitDocsBtn230,.transitDocsBtn231,.transitDocsBtn233,button').forEach(btn=>{
+      if(btn.closest('#docsOverlayV311')) return;
       const isDocs=/Docs/i.test(btn.textContent||'') || /openDocsModal/i.test(btn.getAttribute('onclick')||'');
       if(!isDocs) return;
       const card=btn.closest('.item,.transitCardV1210,.glassPanel')||btn.closest('div'); const emb=cleanEmb(btn.dataset.embarque||embFromCard(card)); if(!emb) return; const fl=S(btn.dataset.flota||flFromCard(card));
-      btn.disabled=false; btn.removeAttribute('disabled'); btn.classList.remove('disabled','docsNoFiles'); btn.classList.add('docsEnabledV310'); btn.style.pointerEvents='auto'; btn.style.opacity='1'; btn.innerHTML='📄 Docs'; btn.title='Abrir documentación PDF'; btn.onclick=function(ev){ev.preventDefault();ev.stopPropagation();return openDocs(emb,fl)};
+      btn.disabled=false; btn.removeAttribute('disabled'); btn.classList.remove('disabled','docsNoFiles'); btn.classList.add('docsEnabledV311'); btn.style.pointerEvents='auto'; btn.style.opacity='1'; btn.innerHTML='📄 Docs'; btn.title='Abrir documentación PDF'; btn.onclick=ev=>{ev.preventDefault();ev.stopPropagation();return openDocs(emb,fl)};
     });
   }
-  window.openDocsModalV310=openDocs; window.closeDocsModalV310=closeDocs; window.loadDocsV310=loadDocs; window.uploadDocsV310=uploadDocs; window.viewDocV310=viewDoc; window.downloadDocV310=downloadDoc; window.deleteDocV310=deleteDoc;
-  window.openDocsModalV3=openDocs; window.openDocsModalV308=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs;
-  window.closeDocsModalV3=closeDocs; window.closeDocsModalV308=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs;
-  window.loadDocsV3=loadDocs; window.loadDocsV308=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs;
-  window.uploadDocsV3=uploadDocs; window.uploadDocsV308=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
-  function start(){addStyle();applyVersion();enableDocsButtons();[150,700,1600].forEach(ms=>setTimeout(()=>{applyVersion();enableDocsButtons()},ms));}
+
+  window.openDocsModalV311=openDocs; window.closeDocsModalV311=closeDocs; window.loadDocsV311=loadDocs; window.uploadDocsV311=uploadDocs; window.viewDocV311=viewDoc; window.downloadDocV311=downloadDoc; window.deleteDocV311=deleteDoc;
+  window.openDocsModalV310=openDocs; window.openDocsModalV308=openDocs; window.openDocsModalV3=openDocs; window.openDocsModal246=openDocs; window.openDocsModal228=openDocs; window.openEmbarqueDocs228=openDocs;
+  window.closeDocsModalV310=closeDocs; window.closeDocsModalV308=closeDocs; window.closeDocsModalV3=closeDocs; window.closeDocsModal246=closeDocs; window.closeDocsModal228=closeDocs;
+  window.loadDocsV310=loadDocs; window.loadDocsV308=loadDocs; window.loadDocsV3=loadDocs; window.loadDocs246=loadDocs; window.loadDocs228=loadDocs;
+  window.uploadDocsV310=uploadDocs; window.uploadDocsV308=uploadDocs; window.uploadDocsV3=uploadDocs; window.uploadDocs246=uploadDocs; window.uploadDocs228=uploadDocs;
+
+  function start(){addStyle();applyVersion();enableDocsButtons();[100,500,1200,2500].forEach(ms=>setTimeout(()=>{applyVersion();enableDocsButtons()},ms));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start(); window.addEventListener('load',start);
+  if(!window.__docsObserverV311){let t=null; window.__docsObserverV311=new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{applyVersion();enableDocsButtons()},160)}); try{window.__docsObserverV311.observe(document.body,{childList:true,subtree:true})}catch(e){}}
 })();
