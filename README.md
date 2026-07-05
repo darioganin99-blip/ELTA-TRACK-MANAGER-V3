@@ -1,4 +1,4 @@
-# ELTA Track Manager Legacy v3.0.4
+# ELTA Track Manager Legacy v3.0.5
 
 Base limpia con corrección de carga Firebase SDK para ingreso a la app.
 
