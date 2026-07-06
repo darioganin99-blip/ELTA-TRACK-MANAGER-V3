@@ -1,3 +1,2 @@
-ELTA TRACK MANAGER V3
-Version: 3.1.0
-Cambio: version unificada, llamadas setV heredadas desactivadas y Documentos estable.
+3.1.5
+315-bitacora-sprint1

@@ -4378,7 +4378,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4412,7 +4412,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4470,7 +4470,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4650,7 +4650,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4771,7 +4771,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4914,7 +4914,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5095,7 +5095,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5208,7 +5208,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5249,7 +5249,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.4 ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5338,7 +5338,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5458,7 +5458,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5599,7 +5599,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5719,7 +5719,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5894,7 +5894,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6036,7 +6036,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6252,7 +6252,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6505,7 +6505,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6579,7 +6579,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6722,7 +6722,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6793,7 +6793,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7130,7 +7130,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7299,7 +7299,7 @@ if(_refresh_v1250){
 /* ===== V3.1.4 - Menu base limpio: normalizadores anteriores removidos ===== */
 /* ===== V3.1.4 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7452,7 +7452,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7658,7 +7658,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Librerias externas: PDF y mapa ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   function loadScriptV314(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]'))return res(); const sc=document.createElement('script');sc.src=src;sc.onload=res;sc.onerror=rej;document.head.appendChild(sc);});}
   function loadCssV314(href){if(document.querySelector('link[href="'+href+'"]'))return; const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}
   window.ensurePdfEngineV314=async function(){
@@ -7913,7 +7913,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -8149,7 +8149,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8314,7 +8314,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8585,7 +8585,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8757,7 +8757,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8831,7 +8831,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8955,7 +8955,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9406,7 +9406,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9423,7 +9423,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9527,7 +9527,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9589,7 +9589,7 @@ if(_refresh_v1250){
 /* ===== V3.1.4 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -16560,7 +16560,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 /* ===== ELTA v3.1.4 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.4';
+  const VERSION='3.1.5';
   const COLLECTION='embarque_documentos';
   const MAX_MB=12;
   const QUERY_TIMEOUT=5000;
@@ -16758,4 +16758,149 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function start(){injectCss();applyVersion();enableDocsButtons();[150,500,1200,2500].forEach(ms=>setTimeout(()=>{applyVersion();enableDocsButtons();},ms));}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
   document.addEventListener('click',ev=>{const b=ev.target.closest('button'); if(!b||b.closest('#docsOverlayV313'))return; const txt=(b.textContent||'').trim(); if(/^📄?\s*Docs$/i.test(txt)||/openDocs/i.test(b.getAttribute('onclick')||'')){enableButton(b);}},true);
+})();
+
+
+/* ===== V3.1.5 - Bitácora Operativa Sprint 1 (visual, sin modificar módulos existentes) ===== */
+(function(){
+  const VERSION='3.1.5';
+  window.ELTA_APP_VERSION=VERSION;
+
+  function escB(v){
+    return String(v==null?'-':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
+  function pickTransit(){
+    try{
+      const list=Array.isArray(window.trs)?window.trs:[];
+      return list.find(t=>String(t.embarque||'').replace(/^0+/,'')==='20703') || list.find(t=>t && (typeof openT==='function'?openT(t):!t.closed)) || list[0] || null;
+    }catch(e){return null;}
+  }
+  function routeOf(t){try{return typeof ruta==='function'?ruta(t):(t&&t.ruta)||{};}catch(e){return {};}}
+  function fleetOf(t){try{return typeof flota==='function'?flota(t):(t&&t.flota)||'307';}catch(e){return '307';}}
+  function driverOf(t){try{return typeof driverName==='function'?driverName(t):(t&&t.chofer)||'Mena Raul';}catch(e){return 'Mena Raul';}}
+  function locOf(t){try{return typeof locFull==='function'?locFull(t):(typeof loc==='function'?loc(t):'Caballito, CABA');}catch(e){return 'Caballito, CABA';}}
+  function fdB(v){try{return typeof fd==='function'?fd(v):(v?new Date(v).toLocaleString('es-AR'):'-');}catch(e){return '-';}}
+  function openOf(t){try{return typeof openT==='function'?openT(t):!(t&&t.closed);}catch(e){return true;}}
+  function selectedEvent(){
+    return {kind:'Control de carga',level:'Advertencia',date:'03/07/2026',time:'10:15 a. m.',user:'Dario Ganin',origin:'WEB',place:'Belén de Escobar, Buenos Aires, Argentina',coords:'-34.34982, -58.79144',obs:'Control rutinario de la carga - Sin novedades.'};
+  }
+  function timelineHtml(){
+    const events=[
+      ['03/07<br>08:24','▶','green','Inicio de tránsito','Zárate, Bs. As.','APK'],
+      ['03/07<br>08:31','🏛','blue','Ingreso Aduana Uspallata','Uspallata, Mendoza','APK'],
+      ['03/07<br>09:12','🏛','blue','Salida Aduana Uspallata','Uspallata, Mendoza','APK'],
+      ['03/07<br>10:15','⚠','yellow','Control de carga','Belén de Escobar, Bs. As.','WEB'],
+      ['03/07<br>11:42','🌧','purple','Alerta: Niebla','Potrerillos, Mendoza','APK'],
+      ['03/07<br>12:55','▲','red','Alerta: Rotura','Las Cuevas, Mendoza','APK'],
+      ['--<br>--:--','■','gray','Fin de tránsito','STLI - Chile','Pendiente']
+    ];
+    return events.map((e,i)=>`<div class="bitacoraEvent ${i===3?'selected':''}"><div class="bitacoraTime">${e[0]}</div><div class="bitacoraIcon ${e[2]}">${e[1]}</div><div class="bitacoraEventMain"><b>${escB(e[3])}</b><small>${escB(e[4])}</small></div><span class="bitacoraOrigin ${e[5]==='WEB'?'web':'apk'}">${escB(e[5])}</span></div>`).join('');
+  }
+  window.renderBitacoraOperativa=function(){
+    const root=document.getElementById('bitacoraRoot');
+    if(!root)return;
+    const t=pickTransit()||{};
+    const r=routeOf(t)||{};
+    const emb=t.embarque||'020703';
+    const fleet=fleetOf(t)||'307';
+    const chofer=driverOf(t)||'Mena Raul';
+    const cliente=r.cliente||t.cliente||'Porsche - VW';
+    const origen=r.origen||t.origen||'TZ - Puerto Zárate';
+    const destino=r.destino||t.destino||'STLI - Chile';
+    const abierto=openOf(t);
+    const ev=selectedEvent();
+    root.innerHTML=`
+      <div class="bitacoraTitle">
+        <div><h2>Bitácora Operativa</h2><p>Registro y gestión integral de eventos del tránsito</p></div>
+        <div class="bitacoraTopPills"><span class="bitacoraBadgeTop">Sprint 1 · Visual</span><span class="bitacoraVersion">V ${VERSION}</span></div>
+      </div>
+
+      <div class="bitacoraHero">
+        <div class="bitacoraHeroItem"><small>📦 Embarque</small><b class="greenText">${escB(emb)}</b></div>
+        <div class="bitacoraHeroItem"><small>👤 Cliente</small><b>${escB(cliente)}</b></div>
+        <div class="bitacoraHeroItem"><small>🚚 Flota</small><b>${escB(fleet)}</b></div>
+        <div class="bitacoraHeroItem"><small>🧑 Chofer</small><b>${escB(chofer)}</b></div>
+        <div class="bitacoraHeroItem"><small>📍 Origen</small><b>${escB(origen)}</b></div>
+        <div class="bitacoraHeroItem"><small>🇨🇱 Destino</small><b>${escB(destino)}</b></div>
+        <div class="bitacoraHeroItem"><small>Estado</small><b class="statusOpen">● ${abierto?'En tránsito':'Finalizado'}</b></div>
+      </div>
+
+      <div class="bitacoraProgress">
+        <div class="bitacoraRoute">
+          <div class="bitacoraRouteCity"><b>TZ</b><small>Puerto Zárate</small></div>
+          <div class="bitacoraLine"><i></i><span class="bitacoraStep done" style="left:0%"></span><span class="bitacoraStep now" style="left:28%"></span><span class="bitacoraTruck">🚛</span><span class="bitacoraStep" style="left:55%"></span><span class="bitacoraStep" style="left:100%"></span></div>
+          <div class="bitacoraRouteCity"><b>STLI</b><small>Chile</small></div>
+        </div>
+        <div class="bitacoraMetric"><small>Tiempo transcurrido</small><b>1 día 04:32</b></div>
+        <div class="bitacoraMetric"><small>Distancia restante</small><b>642 km</b></div>
+      </div>
+
+      <div class="bitacoraGrid">
+        <div class="bitacoraCard">
+          <div class="bitacoraCardHead"><h3>Línea de tiempo del tránsito</h3><button>Filtrar</button></div>
+          <div class="bitacoraTimeline">${timelineHtml()}<button class="bitacoraCardHead" style="justify-content:center;margin-top:6px;border-radius:12px;">＋ Agregar evento manual</button></div>
+        </div>
+        <div class="bitacoraCard">
+          <div class="bitacoraCardHead"><h3>Detalle del evento seleccionado</h3><span class="bitacoraManualTag">Registrado manualmente (WEB)</span></div>
+          <div class="bitacoraDetail">
+            <div class="bitacoraDetailTitle"><h3>⚠ ${escB(ev.kind)}</h3><span class="bitacoraManualTag">${escB(ev.level)}</span></div>
+            <div class="bitacoraFormGrid">
+              <div class="bitacoraField"><small>Fecha</small><b>${ev.date}</b></div>
+              <div class="bitacoraField"><small>Hora</small><b>${ev.time}</b></div>
+              <div class="bitacoraField"><small>Usuario</small><b>${ev.user}</b></div>
+              <div class="bitacoraField"><small>Origen del registro</small><b>WEB 🖥</b></div>
+              <div class="bitacoraField"><small>Ubicación</small><b>${ev.place}</b></div>
+              <div class="bitacoraField"><small>Coordenadas</small><b>${ev.coords}</b></div>
+            </div>
+            <div class="bitacoraTextBox"><b>Observaciones</b><br>${ev.obs}</div>
+            <div class="bitacoraLocationOptions"><div class="bitacoraOpt">Último GPS</div><div class="bitacoraOpt active">Seleccionar en mapa</div><div class="bitacoraOpt">Buscar localidad</div><div class="bitacoraOpt">Aduana del recorrido</div></div>
+            <div class="bitacoraMapBlock"><div class="bitacoraMiniMap">📍</div><div class="bitacoraPlace"><b>${ev.place}</b><small>Lat.: -34.34982 · Lon.: -58.79144</small><button>Cambiar ubicación</button></div></div>
+            <div class="bitacoraFiles"><div class="bitacoraDrop">☁<br>Arrastrar archivos aquí</div><div class="bitacoraAction"><span>📷</span>Fotos</div><div class="bitacoraAction"><span>📄</span>Docs</div><div class="bitacoraAction"><span>💬</span>Obs.</div></div>
+          </div>
+        </div>
+        <div class="bitacoraCard"><div class="bitacoraCardHead"><h3>Estado actual del tránsito</h3></div><div class="bitacoraSide">
+          <div class="bitacoraSideBox"><h4>Último GPS reportado</h4><strong>03/07/2026, 12:53 p. m.</strong><div class="bitacoraSideMap">🚛</div><p><b>${escB(locOf(t)||'Caballito, CABA')}</b></p><p>Actualizado hace 2 min</p></div>
+          <div class="bitacoraSideBox"><h4>Clima actual</h4><p style="font-size:28px;color:#fff;margin:0;">☁ 13°C</p><p>Nublado · Viento 14 km/h · Humedad 72%</p></div>
+          <div class="bitacoraSideBox"><h4>Próximo hito</h4><p><strong>Aduana Uspallata</strong></p><p>Faltan 254 km</p></div>
+          <div class="bitacoraSideBox"><h4>Información del tránsito</h4><p>Velocidad actual: <b>68 km/h</b></p><p>Distancia recorrida: <b>642 km</b></p><p>Cargas: <b>12 unidades</b></p></div>
+        </div></div>
+      </div>
+      <div class="bitacoraBottomActions"><button class="green">▶ Iniciar tránsito</button><button class="blue">🏛 Nueva aduana</button><button class="yellow">⚠ Nueva alerta</button><button class="green">✅ Checklist OEA</button><button class="purple">📎 Documento</button><button class="cyan">📄 Generar PDF</button><button class="red">■ Cerrar tránsito</button></div>
+      <div class="bitacoraNote">ⓘ Sprint 1: pantalla visual y estructural. En el próximo sprint se conecta a Firebase para alta/edición real de eventos.</div>
+    `;
+  };
+
+  function setVersion315(){
+    document.querySelectorAll('span, small, p, div').forEach(el=>{
+      if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
+        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);
+      }
+    });
+  }
+  function ensureBitacoraMenu(){
+    const nav=document.querySelector('.sideNav'); if(!nav)return;
+    let b=nav.querySelector('button[data-menu-id="bitacora"]');
+    if(!b){
+      b=document.createElement('button');
+      b.setAttribute('onclick',"tab('bitacora')");
+      b.setAttribute('data-menu-id','bitacora');
+      b.innerHTML='<span class="menuIcon">📖</span><span class="menuText">Bitácora Operativa</span>';
+      const entrega=nav.querySelector('button[data-menu-id="entrega"],button[onclick*="entrega"]');
+      if(entrega&&entrega.nextSibling) nav.insertBefore(b,entrega.nextSibling); else nav.appendChild(b);
+    }
+  }
+  const oldTab=window.tab;
+  window.tab=function(id){
+    const r=typeof oldTab==='function'?oldTab.apply(this,arguments):undefined;
+    if(id==='bitacora'){
+      document.querySelectorAll('.sideNav button').forEach(x=>x.classList.remove('active'));
+      document.querySelector('.sideNav button[data-menu-id="bitacora"]')?.classList.add('active');
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      document.getElementById('bitacora')?.classList.add('active');
+      window.renderBitacoraOperativa();
+    }
+    setVersion315(); ensureBitacoraMenu();
+    return r;
+  };
+  document.addEventListener('DOMContentLoaded',()=>{ensureBitacoraMenu(); setVersion315(); setTimeout(()=>{ensureBitacoraMenu(); setVersion315(); if(document.getElementById('bitacora')?.classList.contains('active'))window.renderBitacoraOperativa();},500);});
 })();

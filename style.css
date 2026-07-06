@@ -10263,3 +10263,60 @@ body:not(.sidebarCollapsed) button[onclick*="alertas"] * {
 #docsOverlayV308 .transitDocsBtn228,#docsOverlayV308 .transitDocsBtn230,#docsOverlayV308 .transitDocsBtn231,#docsOverlayV308 .transitDocsBtn233{display:none!important;}
 #transitos .transitDocsBtn228,#transitos .transitDocsBtn230,#transitos .transitDocsBtn231,#transitos .transitDocsBtn233{position:static!important;z-index:auto!important;max-width:132px!important;overflow:hidden!important;white-space:nowrap!important;}
 @media(max-width:980px){.docsBodyV308{grid-template-columns:1fr!important}.docsModalV308{width:98vw!important}.docsHeadV308 h2{font-size:24px!important}}
+
+
+/* ===== V3.1.5 - Bitácora Operativa Sprint 1 ===== */
+#bitacora.bitacoraPanel{padding:0 !important;}
+.bitacoraRoot{display:flex;flex-direction:column;gap:12px;color:#eef5ff;}
+.bitacoraLoading{padding:24px;border:1px solid rgba(148,163,184,.25);border-radius:18px;background:rgba(15,27,42,.86);font-weight:900;}
+.bitacoraTitle{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:4px;}
+.bitacoraTitle h2{margin:0;font-size:30px;line-height:1;font-weight:1000;letter-spacing:.2px;color:#fff;}
+.bitacoraTitle p{margin:5px 0 0;color:#cbd5e1;font-weight:700;font-size:14px;}
+.bitacoraTopPills{display:flex;gap:10px;align-items:center;}
+.bitacoraVersion,.bitacoraBadgeTop{border:1px solid rgba(148,163,184,.3);border-radius:12px;padding:8px 12px;background:rgba(15,23,42,.72);font-weight:900;font-size:12px;color:#dbeafe;}
+.bitacoraHero{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;border:1px solid rgba(148,163,184,.22);border-radius:14px;background:linear-gradient(180deg,rgba(20,34,52,.92),rgba(10,22,36,.88));overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.22);}
+.bitacoraHeroItem{padding:13px 16px;border-right:1px solid rgba(148,163,184,.16);min-height:66px;}
+.bitacoraHeroItem:last-child{border-right:0;}
+.bitacoraHeroItem small{display:flex;gap:6px;align-items:center;color:#c4d0e2;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px;}
+.bitacoraHeroItem b{display:block;font-size:16px;color:#fff;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bitacoraHeroItem .greenText{color:#7dff62;font-size:19px;}
+.bitacoraHeroItem .statusOpen{color:#7dff62;}
+.bitacoraProgress{display:grid;grid-template-columns:1.4fr .55fr .55fr;gap:12px;border:1px solid rgba(148,163,184,.22);border-radius:14px;background:rgba(12,24,39,.9);padding:13px 16px;align-items:center;}
+.bitacoraRoute{display:grid;grid-template-columns:76px 1fr 112px;gap:12px;align-items:center;}
+.bitacoraRouteCity b{display:block;font-size:16px;color:#fff;}
+.bitacoraRouteCity small{color:#cbd5e1;font-weight:700;}
+.bitacoraLine{position:relative;height:42px;display:flex;align-items:center;}
+.bitacoraLine::before{content:"";position:absolute;left:0;right:0;top:50%;height:4px;border-radius:99px;background:rgba(148,163,184,.28);transform:translateY(-50%);}
+.bitacoraLine i{position:absolute;left:0;top:50%;height:4px;width:48%;border-radius:99px;background:linear-gradient(90deg,#55d63a,#8dff65);transform:translateY(-50%);}
+.bitacoraStep{position:absolute;top:50%;width:20px;height:20px;border-radius:999px;background:#64748b;border:3px solid rgba(255,255,255,.26);transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(0,0,0,.16);}
+.bitacoraStep.done{background:#55d63a;}
+.bitacoraStep.now{background:#3b82f6;}
+.bitacoraTruck{position:absolute;left:48%;top:-2px;transform:translateX(-50%);font-size:24px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));}
+.bitacoraMetric{padding:12px 16px;border-radius:13px;background:rgba(31,45,64,.72);border:1px solid rgba(148,163,184,.22);}
+.bitacoraMetric small{display:block;color:#cbd5e1;font-weight:700;margin-bottom:4px;}
+.bitacoraMetric b{font-size:22px;color:#7dff62;}
+.bitacoraGrid{display:grid;grid-template-columns:.9fr 1.25fr .72fr;gap:12px;align-items:stretch;}
+.bitacoraCard{border:1px solid rgba(148,163,184,.22);border-radius:15px;background:rgba(13,25,41,.9);box-shadow:0 14px 34px rgba(0,0,0,.20);overflow:hidden;}
+.bitacoraCardHead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(148,163,184,.13);}
+.bitacoraCardHead h3{margin:0;font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:#f8fafc;}
+.bitacoraCardHead button{border:1px solid rgba(148,163,184,.28);border-radius:10px;background:#213149;color:#f8fafc;padding:8px 11px;font-weight:900;cursor:pointer;}
+.bitacoraTimeline{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;max-height:560px;overflow:auto;}
+.bitacoraEvent{display:grid;grid-template-columns:56px 34px 1fr auto;gap:9px;align-items:center;padding:10px 9px;border:1px solid rgba(148,163,184,.16);border-radius:12px;background:rgba(31,45,64,.55);position:relative;}
+.bitacoraEvent.selected{border-color:#f59e0b;background:linear-gradient(90deg,rgba(245,158,11,.12),rgba(31,45,64,.56));}
+.bitacoraTime{font-size:12px;color:#dbeafe;font-weight:800;line-height:1.15;text-align:right;}
+.bitacoraIcon{width:32px;height:32px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;background:#334155;}
+.bitacoraIcon.green{background:#255b2f;color:#8dff65}.bitacoraIcon.blue{background:#1d4f85;color:#93c5fd}.bitacoraIcon.yellow{background:#5b430e;color:#fbbf24}.bitacoraIcon.purple{background:#4c2872;color:#d8b4fe}.bitacoraIcon.red{background:#6e1f1f;color:#fecaca}.bitacoraIcon.gray{background:#374151;color:#cbd5e1}
+.bitacoraEventMain b{display:block;color:#fff;font-size:14px;margin-bottom:2px;}.bitacoraEventMain small{color:#cbd5e1;font-size:12px;}
+.bitacoraOrigin{font-size:11px;border-radius:8px;padding:5px 8px;font-weight:900;border:1px solid rgba(148,163,184,.18);}.bitacoraOrigin.apk{color:#8dff65;background:rgba(34,197,94,.12)}.bitacoraOrigin.web{color:#fbbf24;background:rgba(245,158,11,.12)}
+.bitacoraDetail{padding:14px;display:flex;flex-direction:column;gap:12px;}
+.bitacoraDetailTitle{display:flex;align-items:center;justify-content:space-between;gap:8px;}.bitacoraDetailTitle h3{margin:0;font-size:20px;color:#fff;}.bitacoraManualTag{border:1px solid rgba(245,158,11,.45);color:#fbbf24;background:rgba(245,158,11,.12);border-radius:9px;padding:6px 9px;font-size:11px;font-weight:900;}
+.bitacoraFormGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}.bitacoraField{border:1px solid rgba(148,163,184,.18);border-radius:11px;background:rgba(15,23,42,.52);padding:10px 12px;}.bitacoraField small{display:block;color:#b6c3d4;font-weight:800;font-size:11px;margin-bottom:5px}.bitacoraField b{font-size:14px;color:#f8fafc;}
+.bitacoraTextBox{border:1px solid rgba(148,163,184,.18);border-radius:12px;background:rgba(15,23,42,.52);padding:12px;color:#e2e8f0;font-weight:700;min-height:54px;}
+.bitacoraLocationOptions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}.bitacoraOpt{border:1px solid rgba(148,163,184,.22);border-radius:10px;background:rgba(31,45,64,.7);padding:10px;font-weight:900;text-align:center;color:#dbeafe;font-size:12px;}.bitacoraOpt.active{border-color:#65d657;background:rgba(76,198,63,.18);color:#b8ffad;}
+.bitacoraMapBlock{display:grid;grid-template-columns:1fr 1fr;gap:10px;}.bitacoraMiniMap{min-height:118px;border-radius:12px;background:radial-gradient(circle at 50% 50%,rgba(76,198,63,.25),transparent 24%),linear-gradient(135deg,#172334,#0d1624);border:1px solid rgba(148,163,184,.22);display:flex;align-items:center;justify-content:center;font-size:34px;}.bitacoraPlace{border:1px solid rgba(148,163,184,.18);border-radius:12px;background:rgba(15,23,42,.52);padding:14px;}.bitacoraPlace b{display:block;font-size:14px;color:#fff;margin-bottom:8px;}.bitacoraPlace small{display:block;color:#cbd5e1;margin-bottom:8px;}.bitacoraPlace button{width:100%;border:1px solid rgba(148,163,184,.25);border-radius:10px;background:#213149;color:#fff;padding:9px;font-weight:900;}
+.bitacoraFiles{display:grid;grid-template-columns:1.2fr repeat(3,.7fr);gap:10px;}.bitacoraDrop{border:1px dashed rgba(148,163,184,.34);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:86px;color:#dbeafe;font-weight:900;background:rgba(15,23,42,.42);}.bitacoraAction{border:1px solid rgba(148,163,184,.18);border-radius:12px;background:rgba(31,45,64,.7);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:#f8fafc;font-weight:900;}.bitacoraAction span{font-size:22px;}
+.bitacoraSide{padding:12px;display:flex;flex-direction:column;gap:10px;}.bitacoraSideBox{border:1px solid rgba(148,163,184,.18);border-radius:12px;background:rgba(15,23,42,.50);padding:12px;}.bitacoraSideBox h4{margin:0 0 8px;font-size:13px;color:#f8fafc;text-transform:uppercase;letter-spacing:.03em}.bitacoraSideBox p{margin:4px 0;color:#cbd5e1;font-size:12px;}.bitacoraSideBox strong{color:#7dff62;}.bitacoraSideMap{height:78px;border-radius:10px;background:linear-gradient(135deg,#1b2c43,#101827);display:flex;align-items:center;justify-content:center;margin:8px 0;font-size:26px;}
+.bitacoraBottomActions{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;padding:12px;border:1px solid rgba(148,163,184,.22);border-radius:14px;background:rgba(12,24,39,.9);}.bitacoraBottomActions button{height:46px;border-radius:12px;border:1px solid rgba(148,163,184,.20);font-weight:1000;color:#fff;cursor:pointer;background:#213149;}.bitacoraBottomActions .green{background:linear-gradient(180deg,#4cc63f,#2f8f2e)}.bitacoraBottomActions .blue{background:#1e4975}.bitacoraBottomActions .yellow{background:#815b14}.bitacoraBottomActions .purple{background:#55327b}.bitacoraBottomActions .cyan{background:#0e6070}.bitacoraBottomActions .red{background:#9b1e1e}
+.bitacoraNote{color:#aebbd0;font-size:12px;font-weight:700;margin-top:-4px;}
+@media(max-width:1300px){.bitacoraHero{grid-template-columns:repeat(4,1fr)}.bitacoraGrid{grid-template-columns:1fr}.bitacoraProgress{grid-template-columns:1fr}.bitacoraBottomActions{grid-template-columns:repeat(3,1fr)}}
+body.sidebarCollapsed .sideNav button[data-menu-id="bitacora"] .menuText{display:none!important;}

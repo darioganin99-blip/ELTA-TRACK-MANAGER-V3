@@ -1,3 +1,5 @@
-ELTA TRACK MANAGER V3 - v3.1.4
+# ELTA TRACK MANAGER V3
 
-Corrección final: app.js limpio desde la sección Docs, versión unificada y módulo Documentación único.
+Versión 3.1.5 - Bitácora Operativa Sprint 1.
+
+Base v3.1.4 congelada. Se agrega módulo visual independiente sin modificar Seguimiento, Documentación, Mapa ni PDF.
