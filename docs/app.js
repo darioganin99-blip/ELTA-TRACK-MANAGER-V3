@@ -4378,7 +4378,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4412,7 +4412,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4470,7 +4470,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4650,7 +4650,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4771,7 +4771,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4914,7 +4914,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5095,7 +5095,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5208,7 +5208,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5249,7 +5249,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.1.4 ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5338,7 +5338,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5458,7 +5458,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5599,7 +5599,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5719,7 +5719,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5894,7 +5894,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6036,7 +6036,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6252,7 +6252,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6505,7 +6505,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6579,7 +6579,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6722,7 +6722,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6793,7 +6793,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7130,7 +7130,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7299,7 +7299,7 @@ if(_refresh_v1250){
 /* ===== V3.1.4 - Menu base limpio: normalizadores anteriores removidos ===== */
 /* ===== V3.1.4 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7452,7 +7452,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7658,7 +7658,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Librerias externas: PDF y mapa ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   function loadScriptV314(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]'))return res(); const sc=document.createElement('script');sc.src=src;sc.onload=res;sc.onerror=rej;document.head.appendChild(sc);});}
   function loadCssV314(href){if(document.querySelector('link[href="'+href+'"]'))return; const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}
   window.ensurePdfEngineV314=async function(){
@@ -7913,7 +7913,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -8149,7 +8149,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8314,7 +8314,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8585,7 +8585,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8757,7 +8757,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8831,7 +8831,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8955,7 +8955,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9406,7 +9406,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9423,7 +9423,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9527,7 +9527,7 @@ if(_refresh_v1250){
 
 /* ===== V3.1.4 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9589,7 +9589,7 @@ if(_refresh_v1250){
 /* ===== V3.1.4 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -16560,7 +16560,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 /* ===== ELTA v3.1.4 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
 (function(){
   'use strict';
-  const VERSION='3.1.5';
+  const VERSION='3.1.4';
   const COLLECTION='embarque_documentos';
   const MAX_MB=12;
   const QUERY_TIMEOUT=5000;
@@ -16760,147 +16760,151 @@ document.addEventListener('DOMContentLoaded',()=>{});
   document.addEventListener('click',ev=>{const b=ev.target.closest('button'); if(!b||b.closest('#docsOverlayV313'))return; const txt=(b.textContent||'').trim(); if(/^📄?\s*Docs$/i.test(txt)||/openDocs/i.test(b.getAttribute('onclick')||'')){enableButton(b);}},true);
 })();
 
-
-/* ===== V3.1.5 - Bitácora Operativa Sprint 1 (visual, sin modificar módulos existentes) ===== */
+/* ===== v3.1.6 - Bitácora Operativa Sprint 2: datos reales solo lectura =====
+   Agrega el módulo Bitácora Operativa sin modificar Seguimiento, Docs, PDF ni mapas.
+   Funciones incluidas:
+   - Menú lateral después de Entregas.
+   - Selector / búsqueda de embarque.
+   - Encabezado con datos reales del embarque/tránsito.
+   - Línea de tiempo desde transitos + alertas + aduana_registros si existen.
+   - Panel de detalle del evento seleccionado.
+*/
 (function(){
-  const VERSION='3.1.5';
+  const VERSION='3.1.6';
   window.ELTA_APP_VERSION=VERSION;
-
-  function escB(v){
-    return String(v==null?'-':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  window.APP_VERSION_V2=VERSION;
+  const state={embarque:'', eventKey:'', extra:{alertas:[],aduana:[],checklists:[]}, loading:false};
+  const S=v=>String(v??'').trim();
+  const low=v=>S(v).toLowerCase();
+  const E=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const byId=id=>document.getElementById(id);
+  const arr=name=>{try{return Array.isArray(window[name])?window[name]:(eval('typeof '+name+'!=="undefined"?'+name+':[]')||[])}catch(e){return[]}};
+  const setArr=(name,val)=>{try{window[name]=val;if(name==='trs')trs=val;if(name==='embarques')embarques=val;if(name==='users')users=val;if(name==='clientes')clientes=val;if(name==='origenes')origenes=val;if(name==='destinos')destinos=val;}catch(e){}};
+  function when(v){try{if(!v)return null;if(v.toDate)return v.toDate();if(v.seconds)return new Date(v.seconds*1000);const d=new Date(v);return isNaN(d.getTime())?null:d;}catch(e){return null}}
+  function fmt(v){const d=when(v);return d?d.toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'-'}
+  function fmtDate(v){const d=when(v);return d?d.toLocaleDateString('es-AR'):'-'}
+  function fmtTime(v){const d=when(v);return d?d.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'}):'-'}
+  function keyEmb(v){return S(v).replace(/^0+/,'')||S(v)}
+  function getEmbNum(o){return S(o?.embarque||o?.emb||o?.numeroEmbarque||o?.nroEmbarque||o?.numero||o?.id||o?._docId)}
+  function sameEmb(a,b){return keyEmb(a)===keyEmb(b)}
+  function routeOf(t){return (typeof ruta==='function'?ruta(t):(t?.route||{}))||{};}
+  function isOpen(t){try{return typeof openT==='function'?openT(t):low(t?.estado)==='abierto'}catch(e){return low(t?.estado)==='abierto'}}
+  function fleetOf(t){try{return typeof flota==='function'?flota(t):S(t?.flota||t?.user?.fleet)}catch(e){return S(t?.flota||t?.user?.fleet)}}
+  function locOf(t){try{return typeof loc==='function'?loc(t):S(t?.localidad||t?.ubicacion)}catch(e){return S(t?.localidad||t?.ubicacion)}}
+  function userNameForFleet(f){const u=arr('users').find(x=>S(x.fleet||x.flota||x.numero)===S(f));return S(u?.nombre||u?.name||u?.chofer||u?.displayName||u?.id||u?._docId)}
+  function textPick(o,keys){for(const k of keys){const v=o&&o[k];if(S(v))return S(v)}return ''}
+  async function readCol(name){
+    try{const dbc=window.db||(typeof db!=='undefined'?db:null);if(!dbc||!dbc.collection)return[];const s=await dbc.collection(name).get();return s.docs.map(d=>({...d.data(),id:d.id,_docId:d.id,_collection:name}))}catch(e){return[]}
   }
-  function pickTransit(){
+  async function ensureData(force=false){
+    if(force || !arr('trs').length || !arr('embarques').length){
+      try{
+        const data=await Promise.all([read('transitos'),read('usuarios'),read('clientes'),read('origenes'),read('destinos'),read('embarque')]);
+        setArr('trs',data[0]);setArr('users',data[1]);setArr('clientes',data[2]);setArr('origenes',data[3]);setArr('destinos',data[4]);setArr('embarques',data[5]);
+      }catch(e){console.warn('Bitácora: no se pudieron leer datos base',e)}
+    }
+  }
+  async function loadExtra(emb){
     try{
-      const list=Array.isArray(window.trs)?window.trs:[];
-      return list.find(t=>String(t.embarque||'').replace(/^0+/,'')==='20703') || list.find(t=>t && (typeof openT==='function'?openT(t):!t.closed)) || list[0] || null;
-    }catch(e){return null;}
+      const [al,ad,chk]=await Promise.all([readCol('alertas'),readCol('aduana_registros'),readCol('checklists_oea')]);
+      state.extra={
+        alertas:al.filter(x=>sameEmb(getEmbNum(x),emb)),
+        aduana:ad.filter(x=>sameEmb(getEmbNum(x),emb)),
+        checklists:chk.filter(x=>sameEmb(getEmbNum(x),emb))
+      };
+    }catch(e){state.extra={alertas:[],aduana:[],checklists:[]}}
   }
-  function routeOf(t){try{return typeof ruta==='function'?ruta(t):(t&&t.ruta)||{};}catch(e){return {};}}
-  function fleetOf(t){try{return typeof flota==='function'?flota(t):(t&&t.flota)||'307';}catch(e){return '307';}}
-  function driverOf(t){try{return typeof driverName==='function'?driverName(t):(t&&t.chofer)||'Mena Raul';}catch(e){return 'Mena Raul';}}
-  function locOf(t){try{return typeof locFull==='function'?locFull(t):(typeof loc==='function'?loc(t):'Caballito, CABA');}catch(e){return 'Caballito, CABA';}}
-  function fdB(v){try{return typeof fd==='function'?fd(v):(v?new Date(v).toLocaleString('es-AR'):'-');}catch(e){return '-';}}
-  function openOf(t){try{return typeof openT==='function'?openT(t):!(t&&t.closed);}catch(e){return true;}}
-  function selectedEvent(){
-    return {kind:'Control de carga',level:'Advertencia',date:'03/07/2026',time:'10:15 a. m.',user:'Dario Ganin',origin:'WEB',place:'Belén de Escobar, Buenos Aires, Argentina',coords:'-34.34982, -58.79144',obs:'Control rutinario de la carga - Sin novedades.'};
+  function findTransit(emb){
+    const list=arr('trs');
+    return list.find(t=>sameEmb(getEmbNum(t),emb)&&isOpen(t))||list.find(t=>sameEmb(getEmbNum(t),emb))||null;
   }
-  function timelineHtml(){
-    const events=[
-      ['03/07<br>08:24','▶','green','Inicio de tránsito','Zárate, Bs. As.','APK'],
-      ['03/07<br>08:31','🏛','blue','Ingreso Aduana Uspallata','Uspallata, Mendoza','APK'],
-      ['03/07<br>09:12','🏛','blue','Salida Aduana Uspallata','Uspallata, Mendoza','APK'],
-      ['03/07<br>10:15','⚠','yellow','Control de carga','Belén de Escobar, Bs. As.','WEB'],
-      ['03/07<br>11:42','🌧','purple','Alerta: Niebla','Potrerillos, Mendoza','APK'],
-      ['03/07<br>12:55','▲','red','Alerta: Rotura','Las Cuevas, Mendoza','APK'],
-      ['--<br>--:--','■','gray','Fin de tránsito','STLI - Chile','Pendiente']
-    ];
-    return events.map((e,i)=>`<div class="bitacoraEvent ${i===3?'selected':''}"><div class="bitacoraTime">${e[0]}</div><div class="bitacoraIcon ${e[2]}">${e[1]}</div><div class="bitacoraEventMain"><b>${escB(e[3])}</b><small>${escB(e[4])}</small></div><span class="bitacoraOrigin ${e[5]==='WEB'?'web':'apk'}">${escB(e[5])}</span></div>`).join('');
+  function findEmbarque(emb){return arr('embarques').find(e=>sameEmb(getEmbNum(e),emb))||null;}
+  function buildOpenOptions(){
+    const vals=new Map();
+    arr('trs').filter(isOpen).forEach(t=>{const n=getEmbNum(t);if(n)vals.set(keyEmb(n),n)});
+    arr('embarques').forEach(e=>{const n=getEmbNum(e);if(n&&!vals.has(keyEmb(n)))vals.set(keyEmb(n),n)});
+    return [...vals.values()].sort((a,b)=>S(a).localeCompare(S(b),'es',{numeric:true}));
   }
-  window.renderBitacoraOperativa=function(){
-    const root=document.getElementById('bitacoraRoot');
-    if(!root)return;
-    const t=pickTransit()||{};
-    const r=routeOf(t)||{};
-    const emb=t.embarque||'020703';
-    const fleet=fleetOf(t)||'307';
-    const chofer=driverOf(t)||'Mena Raul';
-    const cliente=r.cliente||t.cliente||'Porsche - VW';
-    const origen=r.origen||t.origen||'TZ - Puerto Zárate';
-    const destino=r.destino||t.destino||'STLI - Chile';
-    const abierto=openOf(t);
-    const ev=selectedEvent();
-    root.innerHTML=`
-      <div class="bitacoraTitle">
-        <div><h2>Bitácora Operativa</h2><p>Registro y gestión integral de eventos del tránsito</p></div>
-        <div class="bitacoraTopPills"><span class="bitacoraBadgeTop">Sprint 1 · Visual</span><span class="bitacoraVersion">V ${VERSION}</span></div>
-      </div>
-
-      <div class="bitacoraHero">
-        <div class="bitacoraHeroItem"><small>📦 Embarque</small><b class="greenText">${escB(emb)}</b></div>
-        <div class="bitacoraHeroItem"><small>👤 Cliente</small><b>${escB(cliente)}</b></div>
-        <div class="bitacoraHeroItem"><small>🚚 Flota</small><b>${escB(fleet)}</b></div>
-        <div class="bitacoraHeroItem"><small>🧑 Chofer</small><b>${escB(chofer)}</b></div>
-        <div class="bitacoraHeroItem"><small>📍 Origen</small><b>${escB(origen)}</b></div>
-        <div class="bitacoraHeroItem"><small>🇨🇱 Destino</small><b>${escB(destino)}</b></div>
-        <div class="bitacoraHeroItem"><small>Estado</small><b class="statusOpen">● ${abierto?'En tránsito':'Finalizado'}</b></div>
-      </div>
-
-      <div class="bitacoraProgress">
-        <div class="bitacoraRoute">
-          <div class="bitacoraRouteCity"><b>TZ</b><small>Puerto Zárate</small></div>
-          <div class="bitacoraLine"><i></i><span class="bitacoraStep done" style="left:0%"></span><span class="bitacoraStep now" style="left:28%"></span><span class="bitacoraTruck">🚛</span><span class="bitacoraStep" style="left:55%"></span><span class="bitacoraStep" style="left:100%"></span></div>
-          <div class="bitacoraRouteCity"><b>STLI</b><small>Chile</small></div>
-        </div>
-        <div class="bitacoraMetric"><small>Tiempo transcurrido</small><b>1 día 04:32</b></div>
-        <div class="bitacoraMetric"><small>Distancia restante</small><b>642 km</b></div>
-      </div>
-
-      <div class="bitacoraGrid">
-        <div class="bitacoraCard">
-          <div class="bitacoraCardHead"><h3>Línea de tiempo del tránsito</h3><button>Filtrar</button></div>
-          <div class="bitacoraTimeline">${timelineHtml()}<button class="bitacoraCardHead" style="justify-content:center;margin-top:6px;border-radius:12px;">＋ Agregar evento manual</button></div>
-        </div>
-        <div class="bitacoraCard">
-          <div class="bitacoraCardHead"><h3>Detalle del evento seleccionado</h3><span class="bitacoraManualTag">Registrado manualmente (WEB)</span></div>
-          <div class="bitacoraDetail">
-            <div class="bitacoraDetailTitle"><h3>⚠ ${escB(ev.kind)}</h3><span class="bitacoraManualTag">${escB(ev.level)}</span></div>
-            <div class="bitacoraFormGrid">
-              <div class="bitacoraField"><small>Fecha</small><b>${ev.date}</b></div>
-              <div class="bitacoraField"><small>Hora</small><b>${ev.time}</b></div>
-              <div class="bitacoraField"><small>Usuario</small><b>${ev.user}</b></div>
-              <div class="bitacoraField"><small>Origen del registro</small><b>WEB 🖥</b></div>
-              <div class="bitacoraField"><small>Ubicación</small><b>${ev.place}</b></div>
-              <div class="bitacoraField"><small>Coordenadas</small><b>${ev.coords}</b></div>
-            </div>
-            <div class="bitacoraTextBox"><b>Observaciones</b><br>${ev.obs}</div>
-            <div class="bitacoraLocationOptions"><div class="bitacoraOpt">Último GPS</div><div class="bitacoraOpt active">Seleccionar en mapa</div><div class="bitacoraOpt">Buscar localidad</div><div class="bitacoraOpt">Aduana del recorrido</div></div>
-            <div class="bitacoraMapBlock"><div class="bitacoraMiniMap">📍</div><div class="bitacoraPlace"><b>${ev.place}</b><small>Lat.: -34.34982 · Lon.: -58.79144</small><button>Cambiar ubicación</button></div></div>
-            <div class="bitacoraFiles"><div class="bitacoraDrop">☁<br>Arrastrar archivos aquí</div><div class="bitacoraAction"><span>📷</span>Fotos</div><div class="bitacoraAction"><span>📄</span>Docs</div><div class="bitacoraAction"><span>💬</span>Obs.</div></div>
-          </div>
-        </div>
-        <div class="bitacoraCard"><div class="bitacoraCardHead"><h3>Estado actual del tránsito</h3></div><div class="bitacoraSide">
-          <div class="bitacoraSideBox"><h4>Último GPS reportado</h4><strong>03/07/2026, 12:53 p. m.</strong><div class="bitacoraSideMap">🚛</div><p><b>${escB(locOf(t)||'Caballito, CABA')}</b></p><p>Actualizado hace 2 min</p></div>
-          <div class="bitacoraSideBox"><h4>Clima actual</h4><p style="font-size:28px;color:#fff;margin:0;">☁ 13°C</p><p>Nublado · Viento 14 km/h · Humedad 72%</p></div>
-          <div class="bitacoraSideBox"><h4>Próximo hito</h4><p><strong>Aduana Uspallata</strong></p><p>Faltan 254 km</p></div>
-          <div class="bitacoraSideBox"><h4>Información del tránsito</h4><p>Velocidad actual: <b>68 km/h</b></p><p>Distancia recorrida: <b>642 km</b></p><p>Cargas: <b>12 unidades</b></p></div>
-        </div></div>
-      </div>
-      <div class="bitacoraBottomActions"><button class="green">▶ Iniciar tránsito</button><button class="blue">🏛 Nueva aduana</button><button class="yellow">⚠ Nueva alerta</button><button class="green">✅ Checklist OEA</button><button class="purple">📎 Documento</button><button class="cyan">📄 Generar PDF</button><button class="red">■ Cerrar tránsito</button></div>
-      <div class="bitacoraNote">ⓘ Sprint 1: pantalla visual y estructural. En el próximo sprint se conecta a Firebase para alta/edición real de eventos.</div>
-    `;
-  };
-
-  function setVersion315(){
-    document.querySelectorAll('span, small, p, div').forEach(el=>{
-      if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
-        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);
-      }
-    });
+  function buildEvents(t,emb){
+    const ev=[];
+    if(t){
+      const r=routeOf(t);
+      const st=t.start||t.inicio||t.createdAt||t.fechaInicio;
+      ev.push({key:'inicio',type:'Inicio',label:'Inicio de tránsito',icon:'▶',sev:'ok',time:st,loc:S(r.origen||t.origen||'-'),source:'APK',user:S(t.user?.name||t.chofer||userNameForFleet(fleetOf(t))||'-'),obs:'Inicio del tránsito'});
+      (Array.isArray(t.alerts)?t.alerts:[]).forEach((a,i)=>ev.push({key:'alert-'+i,type:'Alerta',label:S(a.tipo||a.type||a.motivo||'Alerta'),icon:'⚠️',sev:'warn',time:a.time||a.fecha||a.createdAt,loc:S(a.localidad||a.ubicacion||a.location||locOf(t)||'-'),source:S(a.origenRegistro||a.source||'APK'),user:S(a.usuario||a.user||t.user?.name||'-'),obs:S(a.observacion||a.obs||a.descripcion||'')}));
+      (Array.isArray(t.aduanas)?t.aduanas:[]).forEach((a,i)=>ev.push({key:'aduana-t-'+i,type:'Aduana',label:S(a.tipo||a.aduana||a.nombre||'Aduana'),icon:'🏛️',sev:'info',time:a.time||a.fecha||a.createdAt,loc:S(a.localidad||a.aduana||a.nombre||'-'),source:S(a.origenRegistro||a.source||'APK'),user:S(a.usuario||a.user||'-'),obs:S(a.observacion||a.obs||'')}));
+      if(!isOpen(t))ev.push({key:'fin',type:'Cierre',label:'Fin de tránsito',icon:'■',sev:'end',time:t.closed?.time||t.closed||t.fechaCierre,loc:S(r.destino||t.destino||'-'),source:'APK',user:S(t.user?.name||'-'),obs:'Cierre del tránsito'});
+      else ev.push({key:'fin-pendiente',type:'Pendiente',label:'Fin de tránsito',icon:'□',sev:'muted',time:null,loc:S(r.destino||t.destino||'-'),source:'-',user:'-',obs:'Pendiente'});
+    }
+    state.extra.alertas.forEach((a,i)=>ev.push({key:'alert-col-'+i,type:'Alerta',label:S(a.tipo||a.nombre||'Alerta'),icon:'⚠️',sev:'warn',time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||a.lugar||'-'),source:S(a.origenRegistro||a.origen||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||a.descripcion||'')}));
+    state.extra.aduana.forEach((a,i)=>ev.push({key:'aduana-col-'+i,type:'Aduana',label:S(a.aduana||a.nombre||a.tipo||'Aduana'),icon:'🏛️',sev:'info',time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.aduana||a.nombre||'-'),source:S(a.origenRegistro||a.origen||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||a.descripcion||'')}));
+    state.extra.checklists.forEach((a,i)=>ev.push({key:'check-col-'+i,type:'Checklist',label:S(a.tipo||'Checklist OEA'),icon:'✅',sev:'ok',time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||'-'),source:S(a.origenRegistro||a.origen||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||a.descripcion||'')}));
+    ev.sort((a,b)=>(when(a.time)?.getTime()||9999999999999)-(when(b.time)?.getTime()||9999999999999));
+    return ev;
   }
-  function ensureBitacoraMenu(){
+  function ensureMenu(){
     const nav=document.querySelector('.sideNav'); if(!nav)return;
-    let b=nav.querySelector('button[data-menu-id="bitacora"]');
-    if(!b){
-      b=document.createElement('button');
-      b.setAttribute('onclick',"tab('bitacora')");
-      b.setAttribute('data-menu-id','bitacora');
-      b.innerHTML='<span class="menuIcon">📖</span><span class="menuText">Bitácora Operativa</span>';
-      const entrega=nav.querySelector('button[data-menu-id="entrega"],button[onclick*="entrega"]');
-      if(entrega&&entrega.nextSibling) nav.insertBefore(b,entrega.nextSibling); else nav.appendChild(b);
+    if(![...nav.querySelectorAll('button')].some(b=>(b.getAttribute('onclick')||'').includes('bitacora'))){
+      const btn=document.createElement('button');btn.setAttribute('onclick',"tab('bitacora')");btn.setAttribute('data-menu-id','bitacora');btn.innerHTML='<span class="menuIcon">📖</span><span class="menuText">Bitácora Operativa</span>';
+      const entrega=[...nav.querySelectorAll('button')].find(b=>(b.getAttribute('onclick')||'').includes('entrega'));
+      if(entrega&&entrega.nextSibling)nav.insertBefore(btn,entrega.nextSibling);else nav.appendChild(btn);
     }
   }
-  const oldTab=window.tab;
-  window.tab=function(id){
-    const r=typeof oldTab==='function'?oldTab.apply(this,arguments):undefined;
-    if(id==='bitacora'){
-      document.querySelectorAll('.sideNav button').forEach(x=>x.classList.remove('active'));
-      document.querySelector('.sideNav button[data-menu-id="bitacora"]')?.classList.add('active');
-      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-      document.getElementById('bitacora')?.classList.add('active');
-      window.renderBitacoraOperativa();
-    }
-    setVersion315(); ensureBitacoraMenu();
-    return r;
+  function ensurePanel(){
+    let p=byId('bitacora'); if(p)return p;
+    const main=document.querySelector('.dashboardShell'); if(!main)return null;
+    p=document.createElement('section');p.id='bitacora';p.className='panel bitacoraPanel';
+    p.innerHTML=`<div class="sectionTitle bitHeader"><div><h2>Bitácora Operativa</h2><p>Registro y gestión integral de eventos del tránsito</p></div><button type="button" class="bitRefresh" onclick="window.renderBitacoraOperativa(true)">Actualizar</button></div><div id="bitacoraRoot"></div>`;
+    main.appendChild(p);return p;
+  }
+  function css(){
+    if(byId('bitacoraSprint2Css'))return;
+    const st=document.createElement('style');st.id='bitacoraSprint2Css';st.textContent=`
+      #bitacora{padding-bottom:26px!important}.bitHeader{margin-bottom:10px!important}.bitRefresh{background:#26364b!important;border:1px solid rgba(148,163,184,.35)!important;color:#f8fafc!important;border-radius:12px!important;padding:10px 18px!important;font-weight:900!important}.bitSearchCard,.bitTopCard,.bitCard,.bitActions{background:rgba(15,29,45,.76);border:1px solid rgba(148,163,184,.24);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.22)}.bitSearchCard{display:grid;grid-template-columns:1.15fr 1fr auto;gap:12px;align-items:end;padding:14px;margin-bottom:12px}.bitField label{display:block;font-size:12px;font-weight:900;color:#b8c7d9;margin-bottom:6px}.bitField input,.bitField select{width:100%;height:42px;border-radius:12px;border:1px solid rgba(148,163,184,.35);background:#243244;color:#f8fafc;padding:0 13px;font-size:15px;font-weight:800}.bitPrimary{height:42px;border:0;border-radius:12px;background:linear-gradient(180deg,#4cc63f,#2e8f2d);color:#fff;font-weight:900;padding:0 20px;cursor:pointer}.bitHint{grid-column:1/-1;color:#aebbd0;font-weight:700;font-size:12px}.bitEmpty{padding:34px;text-align:center;color:#cbd5e1;border:1px dashed rgba(148,163,184,.35);border-radius:16px;background:rgba(15,29,45,.5)}.bitTopCard{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-bottom:12px;overflow:hidden}.bitInfo{padding:13px 14px;border-right:1px solid rgba(148,163,184,.16)}.bitInfo small{display:block;color:#94a3b8;font-weight:800;font-size:11px;text-transform:uppercase}.bitInfo b{display:block;color:#f8fafc;font-size:15px;margin-top:4px}.bitInfo .green{color:#8dff65}.bitProgress{display:grid;grid-template-columns:1fr 270px 270px;gap:12px;margin-bottom:12px}.bitRoute{padding:13px 16px;display:flex;align-items:center;gap:10px}.bitRouteLine{flex:1;height:4px;background:#64748b;border-radius:99px;position:relative}.bitRouteLine::before{content:"";position:absolute;left:0;top:0;bottom:0;width:45%;background:#5ee34a;border-radius:99px}.bitMilestone{font-size:12px;color:#dbeafe;font-weight:900;text-align:center;min-width:86px}.bitSmallCard{padding:12px 14px}.bitSmallCard small{display:block;color:#94a3b8;font-weight:900}.bitSmallCard b{display:block;color:#8dff65;font-size:20px;margin-top:5px}.bitGrid{display:grid;grid-template-columns:360px 1fr 320px;gap:12px}.bitCard{padding:14px;min-height:470px}.bitCard h3{margin:0 0 12px;color:#f8fafc;font-size:16px}.bitTimeline{display:flex;flex-direction:column;gap:8px}.bitEvent{display:grid;grid-template-columns:50px 36px 1fr auto;gap:8px;align-items:center;padding:10px;border-radius:12px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.035);cursor:pointer}.bitEvent.active{border-color:#f59e0b;box-shadow:0 0 0 1px rgba(245,158,11,.25)}.bitDate{font-size:12px;color:#cbd5e1;font-weight:800}.bitIcon{width:30px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#21405a}.bitIcon.ok{background:#275c27}.bitIcon.warn{background:#5f3d08}.bitIcon.info{background:#193f68}.bitIcon.end{background:#555}.bitEventTitle b{display:block;color:#f8fafc;font-size:13px}.bitEventTitle small{display:block;color:#aebbd0;margin-top:2px}.bitSource{font-size:11px;font-weight:900;color:#8dff65;border:1px solid rgba(141,255,101,.25);border-radius:8px;padding:4px 6px;background:rgba(46,125,50,.18)}.bitDetailGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}.bitDetailBox{padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,.2);background:rgba(255,255,255,.035)}.bitDetailBox small{display:block;color:#94a3b8;font-size:11px;font-weight:900}.bitDetailBox b{display:block;color:#f8fafc;margin-top:4px}.bitObs{min-height:70px;padding:12px;border-radius:12px;background:rgba(0,0,0,.18);border:1px solid rgba(148,163,184,.18);color:#dbeafe}.bitLocOptions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.bitLocOptions button{height:40px;border-radius:10px;border:1px solid rgba(148,163,184,.22);background:#172438;color:#cbd5e1;font-weight:900}.bitSideBox{padding:12px;border:1px solid rgba(148,163,184,.18);border-radius:12px;background:rgba(255,255,255,.035);margin-bottom:10px}.bitSideBox small{color:#94a3b8;font-weight:900}.bitSideBox b{display:block;color:#f8fafc;margin-top:4px}.bitActions{display:flex;gap:10px;align-items:center;margin-top:12px;padding:12px}.bitActions button{flex:1;height:42px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:#203044;color:#f8fafc;font-weight:900}.bitActions .green{background:#2f8f2c}.bitActions .red{background:#9f1d1d}.bitActions .yellow{background:#7a4b08}.bitActions .blue{background:#19466f}@media(max-width:1300px){.bitTopCard{grid-template-columns:repeat(3,1fr)}.bitProgress{grid-template-columns:1fr}.bitGrid{grid-template-columns:1fr}.bitSearchCard{grid-template-columns:1fr}}
+    `;document.head.appendChild(st);
+  }
+  function renderEmpty(){
+    const root=byId('bitacoraRoot'); if(!root)return;
+    const opts=buildOpenOptions();
+    root.innerHTML=`<div class="bitSearchCard"><div class="bitField"><label>Nº Embarque</label><input id="bitEmbInput" placeholder="Ej. 020703" value="${E(state.embarque)}"></div><div class="bitField"><label>Embarques disponibles</label><select id="bitEmbSelect"><option value="">Seleccionar embarque</option>${opts.map(n=>`<option value="${E(n)}">Emb. ${E(n)}</option>`).join('')}</select></div><button class="bitPrimary" onclick="window.buscarBitacoraEmbarque()">Buscar</button><div class="bitHint">Seleccione un embarque para cargar cliente, origen, destino, flota, estado y línea de tiempo.</div></div><div class="bitEmpty"><h3>Bitácora Operativa</h3><p>Busque un embarque o seleccione uno disponible para comenzar.</p></div>`;
+    const sel=byId('bitEmbSelect'); if(sel)sel.onchange=()=>{if(sel.value){byId('bitEmbInput').value=sel.value;window.buscarBitacoraEmbarque();}};
+  }
+  function renderData(){
+    const root=byId('bitacoraRoot'); if(!root)return;
+    const emb=state.embarque, t=findTransit(emb), e=findEmbarque(emb), r=routeOf(t)||{};
+    const cliente=S(r.cliente||e?.cliente||t?.cliente||'-'), origen=S(r.origen||e?.origen||t?.origen||'-'), destino=S(r.destino||e?.destino||t?.destino||'-');
+    const fl=fleetOf(t)||S(e?.flota||e?.flotas?.[0]||'-'), chofer=S(t?.user?.name||t?.chofer||userNameForFleet(fl)||'-');
+    const estado=t?(isOpen(t)?'En tránsito':'Finalizado'):'Sin tránsito';
+    const start=t?(t.start?.time||t.start||t.inicio||t.fechaInicio):null;
+    const last=t?(typeof lastU==='function'?lastU(t):null):null;
+    const events=buildEvents(t,emb); if(!state.eventKey&&events[0])state.eventKey=events[0].key;
+    const selected=events.find(x=>x.key===state.eventKey)||events[0]||null;
+    root.innerHTML=`<div class="bitSearchCard"><div class="bitField"><label>Nº Embarque</label><input id="bitEmbInput" value="${E(emb)}"></div><div class="bitField"><label>Seleccionar otro embarque</label><select id="bitEmbSelect"><option value="">Cambiar embarque</option>${buildOpenOptions().map(n=>`<option value="${E(n)}">Emb. ${E(n)}</option>`).join('')}</select></div><button class="bitPrimary" onclick="window.buscarBitacoraEmbarque()">Buscar</button></div>
+    <div class="bitTopCard"><div class="bitInfo"><small>Embarque</small><b class="green">${E(emb)}</b></div><div class="bitInfo"><small>Cliente</small><b>${E(cliente)}</b></div><div class="bitInfo"><small>Flota</small><b>${E(fl)}</b></div><div class="bitInfo"><small>Chofer</small><b>${E(chofer)}</b></div><div class="bitInfo"><small>Origen</small><b>${E(origen)}</b></div><div class="bitInfo"><small>Destino</small><b>${E(destino)}</b></div><div class="bitInfo"><small>Estado</small><b class="green">${E(estado)}</b></div></div>
+    <div class="bitProgress"><div class="bitCard bitRoute"><div class="bitMilestone">${E(origen)}</div><div class="bitRouteLine"></div><div class="bitMilestone">${E(destino)}</div></div><div class="bitSmallCard bitCard"><small>Inicio</small><b>${E(fmt(start))}</b></div><div class="bitSmallCard bitCard"><small>Eventos registrados</small><b>${events.filter(x=>x.type!=='Pendiente').length}</b></div></div>
+    <div class="bitGrid"><div class="bitCard"><h3>Línea de tiempo del tránsito</h3><div class="bitTimeline">${events.map(ev=>`<div class="bitEvent ${ev.key===state.eventKey?'active':''}" onclick="window.selectBitacoraEvent('${E(ev.key)}')"><div class="bitDate">${E(fmt(ev.time))}</div><div class="bitIcon ${E(ev.sev)}">${E(ev.icon)}</div><div class="bitEventTitle"><b>${E(ev.label)}</b><small>${E(ev.loc||'-')}</small></div><span class="bitSource">${E(ev.source||'-')}</span></div>`).join('')||'<div class="bitEmpty">No existen eventos registrados para este tránsito.</div>'}</div></div>
+    <div class="bitCard"><h3>Detalle del evento seleccionado</h3>${selected?`<div class="bitDetailGrid"><div class="bitDetailBox"><small>Tipo</small><b>${E(selected.type)}</b></div><div class="bitDetailBox"><small>Fecha</small><b>${E(fmtDate(selected.time))}</b></div><div class="bitDetailBox"><small>Hora</small><b>${E(fmtTime(selected.time))}</b></div><div class="bitDetailBox"><small>Usuario</small><b>${E(selected.user||'-')}</b></div><div class="bitDetailBox"><small>Origen registro</small><b>${E(selected.source||'-')}</b></div><div class="bitDetailBox"><small>Ubicación</small><b>${E(selected.loc||'-')}</b></div></div><div class="bitObs">${E(selected.obs||'Sin observaciones.')}</div><h3 style="margin-top:14px">Ubicación del evento</h3><div class="bitLocOptions"><button>Último GPS</button><button>Seleccionar mapa</button><button>Buscar localidad</button><button>Aduana</button></div>`:'<div class="bitEmpty">Seleccione un evento de la línea de tiempo.</div>'}</div>
+    <div class="bitCard"><h3>Estado actual del tránsito</h3><div class="bitSideBox"><small>Último GPS reportado</small><b>${E(last?fmt(last.time||last.fecha||last.createdAt):'-')}</b><div>${E(locOf(t)||'-')}</div></div><div class="bitSideBox"><small>Próximo hito</small><b>${E(destino)}</b><div>Calculado por ruta del embarque.</div></div><div class="bitSideBox"><small>Resumen</small><b>${E(events.filter(x=>x.type!=='Pendiente').length)} eventos</b><div>Estado: ${E(estado)}</div></div></div></div>
+    <div class="bitActions"><button class="green">Iniciar tránsito</button><button class="blue">Nueva aduana</button><button class="yellow">Nueva alerta</button><button>Checklist OEA</button><button>Documento</button><button>Generar PDF</button><button class="red">Cerrar tránsito</button></div>`;
+    const sel=byId('bitEmbSelect'); if(sel)sel.onchange=()=>{if(sel.value){byId('bitEmbInput').value=sel.value;window.buscarBitacoraEmbarque();}};
+  }
+  async function render(force=false){
+    css(); ensureMenu(); ensurePanel();
+    const root=byId('bitacoraRoot'); if(!root)return;
+    if(!state.embarque){await ensureData(force); renderEmpty(); return;}
+    root.innerHTML='<div class="bitEmpty">Cargando bitácora del embarque...</div>';
+    await ensureData(force); await loadExtra(state.embarque); renderData();
+  }
+  window.buscarBitacoraEmbarque=async function(){
+    const val=S(byId('bitEmbInput')?.value||byId('bitEmbSelect')?.value); if(!val){alert('Ingrese o seleccione un número de embarque.');return;}
+    state.embarque=val; state.eventKey=''; await render(true);
   };
-  document.addEventListener('DOMContentLoaded',()=>{ensureBitacoraMenu(); setVersion315(); setTimeout(()=>{ensureBitacoraMenu(); setVersion315(); if(document.getElementById('bitacora')?.classList.contains('active'))window.renderBitacoraOperativa();},500);});
+  window.selectBitacoraEvent=function(k){state.eventKey=k;renderData();};
+  window.renderBitacoraOperativa=render;
+  const oldTab=window.tab;
+  window.tab=function(id){const r=oldTab&&oldTab.apply(this,arguments); if(id==='bitacora')setTimeout(()=>render(false),0); return r;};
+  function setVersion(){document.querySelectorAll('span,small,p,div,footer').forEach(el=>{if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION)}})}
+  document.addEventListener('DOMContentLoaded',()=>{ensureMenu();ensurePanel();setVersion();});
+  window.addEventListener('load',()=>{ensureMenu();ensurePanel();setVersion();});
+  setTimeout(()=>{ensureMenu();ensurePanel();setVersion();},600);
 })();
