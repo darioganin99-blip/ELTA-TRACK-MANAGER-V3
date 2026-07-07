@@ -1,6 +1,6 @@
 # ELTA TRACK MANAGER V3
 
-Versión 3.1.14 - Bitácora Operativa Sprint 2
+Versión 3.1.15 - Bitácora Operativa Sprint 2
 
 Cambios principales:
 - Nuevo menú Bitácora Operativa después de Entregas.

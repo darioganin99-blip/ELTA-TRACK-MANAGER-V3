@@ -17539,3 +17539,120 @@ document.addEventListener('DOMContentLoaded',()=>{});
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',apply); else apply();
   window.addEventListener('load',()=>[0,400,1000,2200].forEach(ms=>setTimeout(apply,ms)));
 })();
+
+/* ===== v3.1.15 - Bitacora resumen ejecutivo una linea mejorado ===== */
+(function(){
+  const VERSION='3.1.15';
+  window.ELTA_APP_VERSION=VERSION;
+  window.APP_VERSION=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
+  function qsa(s,c=document){return Array.from(c.querySelectorAll(s));}
+  function qs(s,c=document){return c.querySelector(s);}
+  function setVersion315(){
+    try{
+      document.title='ELTA ITS - Versión '+VERSION;
+      qsa('span,small,p,div,footer,title').forEach(el=>{
+        if(el && el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/.test(el.textContent||'')){
+          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/g,'Versión '+VERSION);
+        }
+      });
+    }catch(e){}
+  }
+  function installCss(){
+    if(document.getElementById('bitacora315CardsCss')) return;
+    const st=document.createElement('style');
+    st.id='bitacora315CardsCss';
+    st.textContent=`
+      #bitacora .bitExec317{
+        display:grid!important;
+        grid-template-columns:minmax(105px,.75fr) minmax(140px,1fr) minmax(170px,1.12fr) minmax(145px,.95fr) minmax(180px,1.2fr) minmax(135px,.85fr)!important;
+        gap:0!important;
+        align-items:center!important;
+        min-height:46px!important;
+        padding:0 8px!important;
+        overflow:hidden!important;
+      }
+      #bitacora .bitExec317 .bitInfo317{
+        min-height:42px!important;
+        height:42px!important;
+        padding:0 10px!important;
+        display:flex!important;
+        align-items:center!important;
+        gap:7px!important;
+        border-right:1px solid rgba(148,163,184,.16)!important;
+        white-space:nowrap!important;
+        overflow:hidden!important;
+      }
+      #bitacora .bitExec317 .bitInfo317:last-child{border-right:0!important;}
+      #bitacora .bitExec317 .bitInfo317 small{
+        display:inline!important;
+        flex:0 0 auto!important;
+        color:#aebbd0!important;
+        font-size:10px!important;
+        line-height:1!important;
+        letter-spacing:.035em!important;
+        margin:0!important;
+        text-transform:uppercase!important;
+      }
+      #bitacora .bitExec317 .bitInfo317 b{
+        display:inline-block!important;
+        min-width:0!important;
+        flex:1 1 auto!important;
+        overflow:hidden!important;
+        text-overflow:ellipsis!important;
+        white-space:nowrap!important;
+        font-size:13px!important;
+        line-height:1!important;
+        margin:0!important;
+        color:#f8fafc!important;
+      }
+      #bitacora .bitExec317 .bitInfo317 b.green{color:#8dff65!important;}
+      #bitacora .bitExec317 .bitInfo317[data-key="estado"] b{color:#8dff65!important;}
+      @media(max-width:1350px){
+        #bitacora .bitExec317{grid-template-columns:repeat(3,minmax(0,1fr))!important;min-height:auto!important;}
+        #bitacora .bitExec317 .bitInfo317{height:38px!important;}
+      }
+    `;
+    document.head.appendChild(st);
+  }
+  function shortRouteValue(label,value){
+    const t=(value||'').trim();
+    if(!t) return t;
+    if(/^origen$/i.test(label) && t.includes(' - ')) return t.split(' - ')[0].trim();
+    return t;
+  }
+  function compactExec315(){
+    try{
+      const exec=qs('#bitacora .bitExec317'); if(!exec) return;
+      exec.classList.add('bitExec315');
+      const cells=qsa('.bitInfo317',exec).filter(c=>c.style.display!=='none');
+      cells.forEach(c=>{
+        const lab=qs('small',c); const val=qs('b',c);
+        if(!lab||!val) return;
+        const label=(lab.textContent||'').trim();
+        c.dataset.key=label.toLowerCase().replace(/\s+\/\s+/g,'_').replace(/\s+/g,'_');
+        const full=(val.getAttribute('data-full-text')||val.textContent||'').trim();
+        val.setAttribute('data-full-text',full);
+        val.title=full;
+        const compact=shortRouteValue(label,full);
+        if(compact && compact!==val.textContent) val.textContent=compact;
+      });
+    }catch(e){}
+  }
+  function post315(){installCss();compactExec315();setVersion315();}
+  ['renderBitacoraOperativa','buscarBitacoraEmbarque','selectBitacoraEvent'].forEach(name=>{
+    const old=window[name];
+    if(typeof old==='function' && !old.__bit315){
+      const wrap=function(){const r=old.apply(this,arguments);Promise.resolve(r).finally(()=>{setTimeout(post315,0);setTimeout(post315,150);setTimeout(post315,600);});return r;};
+      wrap.__bit315=true; window[name]=wrap;
+    }
+  });
+  const oldTab=window.tab;
+  if(typeof oldTab==='function' && !oldTab.__bit315){
+    const wrapTab=function(){const r=oldTab.apply(this,arguments);setTimeout(post315,80);setTimeout(post315,350);setTimeout(post315,900);return r;};
+    wrapTab.__bit315=true; window.tab=wrapTab;
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',post315);else post315();
+  window.addEventListener('load',()=>{post315();setTimeout(post315,700);});
+  [250,800,1600,3200].forEach(ms=>setTimeout(post315,ms));
+})();
