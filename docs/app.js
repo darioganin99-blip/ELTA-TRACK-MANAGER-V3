@@ -16999,3 +16999,103 @@ document.addEventListener('DOMContentLoaded',()=>{});
   window.addEventListener('load',()=>{start();setTimeout(applyVersion,700);});
   [300,1200,2500].forEach(ms=>setTimeout(applyVersion,ms));
 })();
+
+
+/* ===== v3.1.8 - Bitacora cabecera compacta y buscador horizontal ===== */
+(function(){
+  const VERSION='3.1.8';
+  window.ELTA_APP_VERSION=VERSION;
+  window.APP_VERSION_V2=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
+  function qs(sel,ctx=document){return ctx.querySelector(sel)}
+  function qsa(sel,ctx=document){return Array.from(ctx.querySelectorAll(sel))}
+  function applyVersion(){
+    try{
+      qsa('span,small,p,div,footer').forEach(el=>{
+        if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
+          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);
+        }
+      });
+      document.title='ELTA ITS - Versión '+VERSION;
+    }catch(e){}
+  }
+  function css(){
+    if(document.getElementById('bitacora318Css')) return;
+    const st=document.createElement('style');
+    st.id='bitacora318Css';
+    st.textContent=`
+      #bitacora.bitacoraPanel{padding-top:8px!important;}
+      #bitacora .bitHeader317{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:14px!important;margin:0 0 8px!important;}
+      #bitacora .bitHeader317 h2{font-size:25px!important;line-height:1.05!important;margin:0!important;}
+      #bitacora .bitHeader317 p{font-size:14px!important;margin:3px 0 0!important;}
+      #bitacora .bitRefresh317{margin-left:auto!important;align-self:flex-start!important;height:36px!important;min-width:132px!important;border-radius:10px!important;padding:0 14px!important;}
+      #bitacora .bitSearch317{display:grid!important;grid-template-columns:minmax(180px,240px) minmax(340px,1fr) 190px!important;gap:10px!important;align-items:end!important;padding:10px 12px!important;margin-bottom:9px!important;}
+      #bitacora .bitSearch317 .bitHint317{grid-column:1 / -1!important;font-size:11px!important;line-height:1.2!important;margin-top:0!important;}
+      #bitacora .bitField317 input,#bitacora .bitField317 select,#bitacora .bitPrimary317{height:34px!important;font-size:13px!important;border-radius:9px!important;}
+      #bitacora .bitField317 label{font-size:10px!important;margin-bottom:4px!important;}
+      #bitacora .bitExec317{grid-template-columns:1fr 1.15fr 1.25fr 1.55fr 1.4fr 1fr!important;margin-bottom:8px!important;}
+      #bitacora .bitExec317 .bitInfo317{padding:8px 10px!important;min-height:50px!important;}
+      #bitacora .bitExec317 .bitInfo317 small{font-size:9.5px!important;}
+      #bitacora .bitExec317 .bitInfo317 b{font-size:13.5px!important;margin-top:3px!important;}
+      #bitacora .bitProgress317{margin-bottom:8px!important;}
+      #bitacora .bitRoute317{padding:10px 12px!important;}
+      #bitacora .bitGrid317{gap:8px!important;grid-template-columns:minmax(265px,28%) minmax(420px,1fr) minmax(250px,24%)!important;}
+      #bitacora .bitCard317{padding:10px!important;min-height:360px!important;}
+      #bitacora .bitActions317{margin-top:8px!important;padding:8px!important;}
+      #bitacora .bitActions317 button{height:35px!important;font-size:11px!important;}
+      @media(max-width:1350px){#bitacora .bitSearch317{grid-template-columns:1fr 1fr 160px!important}#bitacora .bitExec317{grid-template-columns:repeat(3,1fr)!important}}
+    `;
+    document.head.appendChild(st);
+  }
+  function compactSummary(){
+    try{
+      const box=qs('#bitacora .bitExec317');
+      if(!box) return;
+      const cells=qsa('.bitInfo317',box).filter(x=>x.style.display!=='none');
+      if(cells.length>=7){
+        const fl=cells[2]?.querySelector('b')?.textContent?.trim()||'-';
+        const ch=cells[3]?.querySelector('b')?.textContent?.trim()||'-';
+        const lab=cells[2]?.querySelector('small');
+        const val=cells[2]?.querySelector('b');
+        if(lab) lab.textContent='Flota / Chofer';
+        if(val) val.textContent=fl+' / '+ch;
+        cells[3].style.display='none';
+      }
+    }catch(e){}
+  }
+  function improveSearchSelect(){
+    try{
+      const sel=qs('#bitEmbSelect');
+      if(!sel) return;
+      Array.from(sel.options).forEach(opt=>{
+        if(/^Emb\.\s*/.test(opt.textContent||'')) opt.textContent=(opt.textContent||'').replace(/^Emb\.\s*/,'');
+      });
+    }catch(e){}
+  }
+  function post(){css();compactSummary();improveSearchSelect();applyVersion();}
+  const oldRender=window.renderBitacoraOperativa;
+  if(typeof oldRender==='function'){
+    window.renderBitacoraOperativa=async function(){
+      const r=await oldRender.apply(this,arguments);
+      setTimeout(post,0);setTimeout(post,120);setTimeout(post,600);
+      return r;
+    };
+  }
+  const oldBuscar=window.buscarBitacoraEmbarque;
+  if(typeof oldBuscar==='function'){
+    window.buscarBitacoraEmbarque=async function(){
+      const r=await oldBuscar.apply(this,arguments);
+      setTimeout(post,0);setTimeout(post,120);setTimeout(post,600);
+      return r;
+    };
+  }
+  const oldSelect=window.selectBitacoraEvent;
+  if(typeof oldSelect==='function'){
+    window.selectBitacoraEvent=function(){const r=oldSelect.apply(this,arguments);setTimeout(post,0);return r;};
+  }
+  const oldTab=window.tab;
+  window.tab=function(){const r=oldTab&&oldTab.apply(this,arguments);setTimeout(post,120);setTimeout(post,700);return r;};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',post);else post();
+  window.addEventListener('load',()=>{post();setTimeout(post,700);});
+  [300,1200,2500,5000].forEach(ms=>setTimeout(post,ms));
+})();
