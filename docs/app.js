@@ -17656,3 +17656,107 @@ document.addEventListener('DOMContentLoaded',()=>{});
   window.addEventListener('load',()=>{post315();setTimeout(post315,700);});
   [250,800,1600,3200].forEach(ms=>setTimeout(post315,ms));
 })();
+
+
+/* ===== v3.1.16 - Bitacora resumen estable + version final ===== */
+(function(){
+  const VERSION='3.1.16';
+  window.ELTA_APP_VERSION=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
+  window.APP_VERSION=VERSION;
+  window.APP_VERSION_V2=VERSION;
+  function qs(s,c=document){return c.querySelector(s)}
+  function qsa(s,c=document){return Array.from(c.querySelectorAll(s))}
+  function txt(v){return String(v||'').trim()}
+  function esc(v){return txt(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+  function oneLineValue(label, value){
+    const v=txt(value);
+    if(!v) return '-';
+    if(/^origen$/i.test(label) && v.includes(' - ')) return v.split(' - ')[0].trim();
+    return v;
+  }
+  function setVersion(){
+    try{
+      qsa('span,small,p,div,footer,title').forEach(el=>{
+        if(!el || el.childElementCount!==0) return;
+        if(/Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/.test(el.textContent||'')){
+          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/g,'Versión '+VERSION);
+        }
+      });
+      document.title='ELTA ITS - Versión '+VERSION;
+    }catch(e){}
+  }
+  function installCss(){
+    if(qs('#bitacora316Css')) return;
+    const st=document.createElement('style');
+    st.id='bitacora316Css';
+    st.textContent=`
+      #bitacora{position:relative!important;padding-top:6px!important;}
+      #bitacora .bitHeader317{position:relative!important;display:block!important;padding-right:168px!important;margin:0 0 9px!important;min-height:42px!important;}
+      #bitacora .bitHeader317 h2{font-size:25px!important;line-height:1!important;margin:0!important;}
+      #bitacora .bitHeader317 p{font-size:13px!important;margin:3px 0 0!important;color:#c3cfde!important;}
+      #bitacora .bitRefresh317,#bitacora .bitHeader317>button,#bitacora .sectionTitle>button{position:absolute!important;top:0!important;right:0!important;left:auto!important;margin:0!important;min-width:142px!important;height:36px!important;border-radius:11px!important;background:#26364b!important;border:1px solid rgba(148,163,184,.36)!important;color:#fff!important;font-weight:900!important;box-shadow:none!important;z-index:8!important;}
+      #bitacora .bitSearch317{display:grid!important;grid-template-columns:minmax(170px,230px) minmax(340px,1fr) minmax(135px,170px) minmax(130px,160px)!important;gap:10px!important;align-items:end!important;padding:9px 12px!important;margin-bottom:8px!important;}
+      #bitacora .bitSearch317 .bitHint317{grid-column:1/-1!important;margin:0!important;font-size:11px!important;line-height:1.15!important;color:#aebbd0!important;}
+      #bitacora .bitField317 input,#bitacora .bitField317 select,#bitacora .bitPrimary317{height:34px!important;border-radius:9px!important;font-size:13px!important;}
+      #bitacora .bitField317 label{font-size:10px!important;margin-bottom:4px!important;}
+      #bitacora .bitPrimary317{white-space:nowrap!important;}
+      #bitacora .bitExec317{display:block!important;margin:0 0 8px!important;padding:0!important;overflow:hidden!important;min-height:0!important;}
+      #bitacora .bitExec316{display:grid!important;grid-template-columns:minmax(115px,.75fr) minmax(150px,.95fr) minmax(185px,1.15fr) minmax(130px,.95fr) minmax(190px,1.2fr) minmax(120px,.75fr)!important;align-items:center!important;min-height:44px!important;width:100%!important;}
+      #bitacora .bitExec316Item{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important;height:44px!important;padding:7px 10px!important;border-right:1px solid rgba(148,163,184,.16)!important;white-space:nowrap!important;overflow:hidden!important;}
+      #bitacora .bitExec316Item:last-child{border-right:0!important;}
+      #bitacora .bitExec316Item small{font-size:10px!important;color:#aebbd0!important;text-transform:uppercase!important;font-weight:900!important;letter-spacing:.02em!important;flex:0 0 auto!important;line-height:1!important;}
+      #bitacora .bitExec316Item b{font-size:13.5px!important;color:#f8fafc!important;line-height:1!important;min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;}
+      #bitacora .bitExec316Item b.green{color:#8dff65!important;}
+      @media(max-width:1350px){
+        #bitacora .bitSearch317{grid-template-columns:1fr 1fr!important;}
+        #bitacora .bitExec316{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+      }
+    `;
+    document.head.appendChild(st);
+  }
+  function readExecValues(exec){
+    const vals={};
+    qsa('.bitInfo317,.bitExecItem313,.bitExec316Item',exec).forEach(c=>{
+      const label=txt(qs('small',c)?.textContent).toLowerCase();
+      const b=qs('b',c);
+      const value=txt(b?.getAttribute('data-full-text') || b?.textContent || '');
+      if(label) vals[label]=value;
+    });
+    return vals;
+  }
+  function rebuildExec(){
+    const exec=qs('#bitacora .bitExec317');
+    if(!exec) return;
+    const vals=readExecValues(exec);
+    const emb=vals['embarque'] || txt(qs('#bitEmbInput')?.value) || '-';
+    const cliente=vals['cliente'] || '-';
+    const flch=vals['flota / chofer'] || ((vals['flota']||'-') + ((vals['chofer']&&vals['chofer']!=='-') ? ' / '+vals['chofer'] : ''));
+    const origen=oneLineValue('origen', vals['origen'] || '-');
+    const destino=oneLineValue('destino', vals['destino'] || '-');
+    const estado=vals['estado'] || '-';
+    exec.innerHTML=`<div class="bitExec316">
+      <div class="bitExec316Item"><small>Embarque</small><b class="green" title="${esc(emb)}">${esc(emb)}</b></div>
+      <div class="bitExec316Item"><small>Cliente</small><b title="${esc(cliente)}">${esc(cliente)}</b></div>
+      <div class="bitExec316Item"><small>Flota / Chofer</small><b title="${esc(flch)}">${esc(flch)}</b></div>
+      <div class="bitExec316Item"><small>Origen</small><b title="${esc(vals['origen']||origen)}">${esc(origen)}</b></div>
+      <div class="bitExec316Item"><small>Destino</small><b title="${esc(destino)}">${esc(destino)}</b></div>
+      <div class="bitExec316Item"><small>Estado</small><b class="green" title="${esc(estado)}">${esc(estado)}</b></div>
+    </div>`;
+  }
+  function post(){installCss();rebuildExec();setVersion();}
+  ['renderBitacoraOperativa','buscarBitacoraEmbarque','selectBitacoraEvent'].forEach(name=>{
+    const old=window[name];
+    if(typeof old==='function' && !old.__bit316){
+      const fn=function(){const r=old.apply(this,arguments);Promise.resolve(r).finally(()=>{[0,80,250,700].forEach(ms=>setTimeout(post,ms));});return r;};
+      fn.__bit316=true; window[name]=fn;
+    }
+  });
+  const oldTab=window.tab;
+  if(typeof oldTab==='function' && !oldTab.__bit316){
+    const fn=function(){const r=oldTab.apply(this,arguments);[80,300,900,1600].forEach(ms=>setTimeout(post,ms));return r;};
+    fn.__bit316=true; window.tab=fn;
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',post);else post();
+  window.addEventListener('load',()=>{[0,500,1400,3000].forEach(ms=>setTimeout(post,ms));});
+})();
