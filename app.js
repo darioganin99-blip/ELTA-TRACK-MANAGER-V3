@@ -17875,3 +17875,102 @@ document.addEventListener('DOMContentLoaded',()=>{});
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',normalize320); else normalize320();
   window.addEventListener('load',()=>{[0,400,1000,2200].forEach(ms=>setTimeout(normalize320,ms));});
 })();
+
+/* ===== v3.2.1 - Bitacora resumen estable desde datos reales ===== */
+(function(){
+  const VERSION='3.2.1';
+  window.ELTA_APP_VERSION=VERSION;
+  window.APP_VERSION=VERSION;
+  window.APP_VERSION_V2=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
+  const q=(s,c=document)=>c.querySelector(s);
+  const qa=(s,c=document)=>Array.from(c.querySelectorAll(s));
+  const S=v=>String(v==null?'':v).trim();
+  const esc=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const norm=v=>S(v).replace(/^0+/,'')||S(v);
+  function arr(n){try{return Array.isArray(window[n])?window[n]:[]}catch(e){return[]}}
+  function embOf(o){return S(o?.embarque||o?.emb||o?.numeroEmbarque||o?.nroEmbarque||o?.numero||o?.id||o?._docId||o?.carga||o?.lote)}
+  function matchEmb(o, emb){return norm(embOf(o))===norm(emb)}
+  function findObj(list, emb){return list.find(o=>matchEmb(o,emb))||null}
+  function isOpen(o){const st=S(o?.estado||o?.status||o?.state).toLowerCase();return o?.activo===true||['abierto','open','en tránsito','en transito','activo'].includes(st)}
+  function routeFrom(o){
+    const r=o?.route||o?.ruta||o?.embarqueData||{};
+    return {
+      cliente:S(r.cliente||o?.cliente||o?.client||''),
+      origen:S(r.origen||o?.origen||o?.origin||''),
+      destino:S(r.destino||o?.destino||o?.destination||'')
+    };
+  }
+  function fleetOf(o,e){return S(o?.flota||o?.fleet||o?.unidad||o?.camion||o?.user?.fleet||e?.flota||e?.flotas?.[0]||e?.flotaAsignada||'')}
+  function choferOf(o,fl){return S(o?.chofer||o?.driver||o?.user?.name||o?.usuario||o?.nombreChofer||'') || (typeof window.userNameForFleet==='function'?S(window.userNameForFleet(fl)):'')}
+  function shortPlace(v){v=S(v);return v.includes(' - ')?v.split(' - ')[0].trim():v}
+  function currentEmb(){return S(q('#bitEmbInput')?.value||q('#bitEmbSelect')?.value||q('#bitacora .bitExec320Item b')?.textContent||'')}
+  function getData(){
+    const emb=currentEmb();
+    const t=findObj(arr('trs'),emb)||findObj(arr('transitos'),emb)||null;
+    const e=findObj(arr('embarques'),emb)||findObj(arr('cargas'),emb)||null;
+    const rt={...routeFrom(e||{}),...routeFrom(t||{})};
+    const fl=fleetOf(t||{},e||{});
+    const ch=choferOf(t||{},fl);
+    const estado=t?(isOpen(t)?'En tránsito':'Finalizado'):(S(e?.estado)||'-');
+    return {
+      emb: emb||embOf(t)||embOf(e)||'-',
+      cliente: rt.cliente||'-',
+      flch: (fl||'-') + (ch?(' / '+ch):''),
+      origen: shortPlace(rt.origen||'-'),
+      destino: rt.destino||'-',
+      estado: estado||'-'
+    };
+  }
+  function setVersion(){
+    try{
+      document.title='ELTA ITS - Versión '+VERSION;
+      qa('span,small,p,div,b,footer').forEach(el=>{
+        if(el && el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/.test(el.textContent||'')){
+          el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+(?:\.\d+)?/g,'Versión '+VERSION);
+        }
+      });
+    }catch(e){}
+  }
+  function css(){
+    let st=q('#bitacora321Css');
+    if(!st){st=document.createElement('style');st.id='bitacora321Css';document.head.appendChild(st)}
+    st.textContent=`
+      #bitacora .bitSearch317{display:grid!important;grid-template-columns:minmax(150px,220px) minmax(360px,1fr) minmax(120px,170px) minmax(135px,165px)!important;gap:10px!important;align-items:end!important;padding:9px 12px!important;margin-bottom:8px!important;}
+      #bitacora .bitSearch317 .bitHint317{grid-column:1/-1!important;margin:0!important;font-size:11px!important;line-height:1.15!important;color:#aebbd0!important;}
+      #bitacora .bitField317 input,#bitacora .bitField317 select,#bitacora .bitPrimary317{height:36px!important;border-radius:9px!important;font-size:13px!important;font-weight:900!important;}
+      #bitacora .bitExec317{display:block!important;margin:0 0 8px!important;padding:0!important;overflow:hidden!important;background:rgba(15,29,45,.80)!important;border:1px solid rgba(148,163,184,.24)!important;border-radius:14px!important;}
+      #bitacora .bitExec321{display:grid!important;grid-template-columns:11% 16% 20% 17% 22% 14%!important;align-items:center!important;min-height:44px!important;width:100%!important;}
+      #bitacora .bitExec321Item{display:flex!important;align-items:center!important;gap:8px!important;height:44px!important;padding:7px 10px!important;border-right:1px solid rgba(148,163,184,.16)!important;white-space:nowrap!important;overflow:hidden!important;min-width:0!important;}
+      #bitacora .bitExec321Item:last-child{border-right:0!important;}
+      #bitacora .bitExec321Item small{font-size:10px!important;color:#aebbd0!important;text-transform:uppercase!important;font-weight:900!important;letter-spacing:.02em!important;flex:0 0 auto!important;line-height:1!important;}
+      #bitacora .bitExec321Item b{font-size:13.5px!important;color:#f8fafc!important;line-height:1!important;min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;}
+      #bitacora .bitExec321Item b.green{color:#8dff65!important;}
+      @media(max-width:1100px){#bitacora .bitSearch317{grid-template-columns:1fr 1fr!important;}#bitacora .bitExec321{grid-template-columns:repeat(3,minmax(0,1fr))!important;}}
+    `;
+  }
+  function rebuildExec(){
+    const exec=q('#bitacora .bitExec317'); if(!exec) return;
+    const d=getData();
+    exec.innerHTML=`<div class="bitExec321">
+      <div class="bitExec321Item"><small>Embarque</small><b class="green" title="${esc(d.emb)}">${esc(d.emb)}</b></div>
+      <div class="bitExec321Item"><small>Cliente</small><b title="${esc(d.cliente)}">${esc(d.cliente)}</b></div>
+      <div class="bitExec321Item"><small>Flota / Chofer</small><b title="${esc(d.flch)}">${esc(d.flch)}</b></div>
+      <div class="bitExec321Item"><small>Origen</small><b title="${esc(d.origen)}">${esc(d.origen)}</b></div>
+      <div class="bitExec321Item"><small>Destino</small><b title="${esc(d.destino)}">${esc(d.destino)}</b></div>
+      <div class="bitExec321Item"><small>Estado</small><b class="green" title="${esc(d.estado)}">${esc(d.estado)}</b></div>
+    </div>`;
+  }
+  function normalize(){css();rebuildExec();setVersion();}
+  function schedule(){[0,80,250,700,1400].forEach(ms=>setTimeout(normalize,ms));}
+  ['renderBitacoraOperativa','buscarBitacoraEmbarque','selectBitacoraEvent'].forEach(name=>{
+    const old=window[name];
+    if(typeof old==='function' && !old.__bit321){
+      const fn=function(){const r=old.apply(this,arguments);Promise.resolve(r).finally(schedule);return r};fn.__bit321=true;window[name]=fn;
+    }
+  });
+  const oldTab=window.tab;
+  if(typeof oldTab==='function' && !oldTab.__bit321){const fn=function(){const r=oldTab.apply(this,arguments);schedule();return r};fn.__bit321=true;window.tab=fn;}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',schedule);else schedule();
+  window.addEventListener('load',schedule);
+})();
