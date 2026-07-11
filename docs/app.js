@@ -764,7 +764,7 @@ function initSeguimientoMap(items){
   let bounds=[];
   withPos.forEach(({t,pos})=>{
     let icon=L.divIcon({className:"eltaTruckMarker",html:"🚚",iconSize:[28,28],iconAnchor:[14,14]});
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup"><b>Flota ${esc(flota(t)||"-")}</b><br>Emb.: ${esc(t.embarque||"-")}<br>Ubicación: ${esc(locFull(t))}<br>Cliente: ${esc(ruta(t).cliente||"-")}<br>Estado: ${openT(t)?"Abierto":"Finalizado"}</div>`);
     seguimientoMarkers.push(marker);
     bounds.push([pos.lat,pos.lng]);
@@ -832,7 +832,7 @@ function initSeguimientoMap(items){
   let bounds=[];
   withPos.forEach(({t,pos})=>{
     let icon=L.divIcon({className:"eltaTruckMarker",html:"🚚",iconSize:[28,28],iconAnchor:[14,14]});
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup">
       <b>Flota ${esc(flota(t)||"-")}</b><br>
       Emb.: ${esc(t.embarque||"-")}<br>
@@ -910,7 +910,7 @@ function initSeguimientoMap(items){
       iconAnchor:[27,17]
     });
 
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup">
       <div class="fleetPopupTitle">🚚 Flota ${esc(flota(t)||"-")}</div>
       Emb.: ${esc(t.embarque||"-")}<br>
@@ -993,7 +993,7 @@ function initSeguimientoMap(items){
       popupAnchor:[0,-38]
     });
 
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup">
       <div class="fleetPopupTitle">Flota ${esc(flota(t)||"-")}</div>
       Emb.: ${esc(t.embarque||"-")}<br>
@@ -1092,7 +1092,7 @@ function initSeguimientoMap(items){
       popupAnchor:[0,-46]
     });
 
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup">
       <div class="fleetPopupTitle">Flota ${esc(flota(t)||"-")}</div>
       Emb.: ${esc(t.embarque||"-")}<br>
@@ -1201,7 +1201,7 @@ function initSeguimientoMap(items){
       popupAnchor:[0,-24]
     });
 
-    let marker=L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
+    let marker=window.L.marker([pos.lat,pos.lng],{icon}).addTo(seguimientoMap);
     marker.bindPopup(`<div class="mapPopup">
       <div class="fleetPopupTitle">Flota ${esc(flota(t)||"-")}</div>
       Emb.: ${esc(t.embarque||"-")}<br>
@@ -16785,8 +16785,8 @@ document.addEventListener('DOMContentLoaded',()=>{});
   async function readCol(name){try{const dbc=window.db||(typeof db!=='undefined'?db:null);if(!dbc?.collection)return[];const snap=await dbc.collection(name).get();return snap.docs.map(d=>({...d.data(),id:d.id,_docId:d.id,_collection:name}))}catch(e){console.warn('Bitácora:',name,e);return[]}}
   async function loadBase(force=false){
     if(!force&&list('trs').length&&list('embarques').length)return;
-    const [tr,u,c,o,d,e]=await Promise.all(['transitos','usuarios','clientes','origenes','destinos','embarque'].map(readCol));
-    setList('trs',tr);setList('users',u);setList('clientes',c);setList('origenes',o);setList('destinos',d);setList('embarques',e);
+    const [tr,u,c,o,d,e,carga,cargas]=await Promise.all(['transitos','usuarios','clientes','origenes','destinos','embarque','carga','cargas'].map(readCol));
+    setList('trs',tr);setList('users',u);setList('clientes',c);setList('origenes',o);setList('destinos',d);setList('embarques',e);setList('cgs',[...(carga||[]),...(cargas||[])]);
   }
   async function loadExtra(emb){
     const [a,d,c,cat]=await Promise.all([readCol('alertas'),readCol('aduana_registros'),readCol('checklists_oea'),readCol('aduana')]);
@@ -16857,51 +16857,26 @@ document.addEventListener('DOMContentLoaded',()=>{});
     const box=byId('b344EventMap'),status=byId('b344MapStatus');
     if(!box)return;
     if(status)status.textContent='Cargando ubicación...';
-    const safeRemove=()=>{if(bitacoraEventMap){try{bitacoraEventMap.remove()}catch(_){ } bitacoraEventMap=null;}};
-    const recordPos=(text)=>{
-      const q=L(text);
-      const pools=[...list('destinos'),...list('aduanas'),...list('destinations')];
-      const hit=pools.find(x=>{
-        const n=L(x?.nombre||x?.destino||x?.name||x?.localidad||x?.aduana||x?.id||x?._docId);
-        return n&&q&&(n===q||n.includes(q)||q.includes(n));
-      });
-      return coordOfObj(hit);
-    };
-    let pos=coordOfObj(ev?.raw)||coordOfObj(ev)||recordPos(ev?.loc);
-    if(!pos)pos=await Promise.race([
-      geocodeEventLocation(ev?.loc),
-      new Promise(resolve=>setTimeout(()=>resolve(null),5200))
-    ]);
+    let pos=coordOfObj(ev?.raw)||coordOfObj(ev);
+    if(!pos)pos=await geocodeEventLocation(ev?.loc);
     if(!pos){
-      safeRemove();
-      box.innerHTML='<div style="height:100%;display:flex;align-items:center;justify-content:center;color:#aebbcf;font-size:12px;text-align:center;padding:20px">No se encontraron coordenadas para este evento.</div>';
-      if(status)status.textContent='Sin coordenadas registradas.';
+      if(bitacoraEventMap){try{bitacoraEventMap.remove()}catch(_){ } bitacoraEventMap=null;}
+      box.innerHTML='';
+      if(status)status.textContent='No se encontraron coordenadas para este evento.';
       return;
     }
-    safeRemove();
-    box.innerHTML='';
-    const label=E(ev?.label||ev?.type||'Evento');
-    const loc=E(ev?.loc||'');
-    try{
-      const ok=typeof window.ensureLeafletV314==='function'?await Promise.race([window.ensureLeafletV314(),new Promise(r=>setTimeout(()=>r(false),5000))]):!!window.L;
-      if(ok&&window.L&&document.body.contains(box)){
-        bitacoraEventMap=L.map(box,{zoomControl:true,preferCanvas:true,attributionControl:true});
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(bitacoraEventMap);
-        const icon=L.divIcon({className:'',html:'<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:#55d83f;border:3px solid #fff;transform:rotate(-45deg);box-shadow:0 3px 10px rgba(0,0,0,.55)"><span style="display:block;transform:rotate(45deg);text-align:center;line-height:22px;font-size:13px">●</span></div>',iconSize:[30,30],iconAnchor:[15,28]});
-        L.marker([pos.lat,pos.lng],{icon}).addTo(bitacoraEventMap).bindPopup(`<b>${label}</b><br>${loc}`).openPopup();
-        bitacoraEventMap.setView([pos.lat,pos.lng],14);
-        requestAnimationFrame(()=>{try{bitacoraEventMap&&bitacoraEventMap.invalidateSize(true)}catch(_){}});
-        setTimeout(()=>{try{bitacoraEventMap&&bitacoraEventMap.invalidateSize(true)}catch(_){}},450);
-      }else{
-        throw new Error('Leaflet no disponible');
-      }
-    }catch(err){
-      console.warn('Mapa Bitácora: usando respaldo embebido',err);
-      const d=.012;
-      const bbox=[pos.lng-d,pos.lat-d,pos.lng+d,pos.lat+d].join('%2C');
-      box.innerHTML=`<iframe title="Mapa del evento" src="https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${pos.lat}%2C${pos.lng}" style="width:100%;height:100%;border:0" loading="eager"></iframe>`;
-    }
+    const ok=typeof window.ensureLeafletV314==='function'?await window.ensureLeafletV314():!!window.L;
+    if(!ok||!window.L){if(status)status.textContent='No se pudo cargar el mapa. Verifique la conexión.';return;}
+    if(!document.body.contains(box))return;
+    if(bitacoraEventMap){try{bitacoraEventMap.remove()}catch(_){ } bitacoraEventMap=null;}
+    bitacoraEventMap=window.L.map(box,{zoomControl:true,preferCanvas:true,attributionControl:true});
+    window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(bitacoraEventMap);
+    const icon=window.L.divIcon({className:'',html:'<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:#55d83f;border:3px solid #fff;transform:rotate(-45deg);box-shadow:0 3px 10px rgba(0,0,0,.55)"><span style="display:block;transform:rotate(45deg);text-align:center;line-height:22px;font-size:13px">●</span></div>',iconSize:[30,30],iconAnchor:[15,28]});
+    window.L.marker([pos.lat,pos.lng],{icon}).addTo(bitacoraEventMap).bindPopup(`<b>${E(ev?.label||ev?.type||'Evento')}</b><br>${E(ev?.loc||'')}`).openPopup();
+    bitacoraEventMap.setView([pos.lat,pos.lng],14);
     if(status)status.textContent=`${pos.lat.toFixed(6)}, ${pos.lng.toFixed(6)}`;
+    requestAnimationFrame(()=>{try{bitacoraEventMap&&bitacoraEventMap.invalidateSize(true)}catch(_){}});
+    setTimeout(()=>{try{bitacoraEventMap&&bitacoraEventMap.invalidateSize(true)}catch(_){}},350);
   }
   function optionsData(){
     const map=new Map();
@@ -16921,7 +16896,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function ensureMenu(){const nav=document.querySelector('.sideNav');if(!nav)return;const all=[...nav.querySelectorAll('button')].filter(b=>(b.getAttribute('onclick')||'').includes("bitacora"));all.slice(1).forEach(b=>b.remove());if(all[0])return;const b=document.createElement('button');b.setAttribute('onclick',"tab('bitacora')");b.innerHTML='<span class="menuIcon">📖</span><span class="menuText">Bitácora Operativa</span>';const entrega=[...nav.querySelectorAll('button')].find(x=>(x.getAttribute('onclick')||'').includes('entrega'));entrega?.after(b)}
   function ensurePanel(){let p=byId('bitacora');if(!p){const main=document.querySelector('.dashboardShell');if(!main)return null;p=document.createElement('section');p.id='bitacora';p.className='panel';const footer=main.querySelector('.appFooter');footer?main.insertBefore(p,footer):main.appendChild(p)}p.innerHTML='<div class="bit344Header"><div><h2>Bitácora Operativa</h2><p>Registro y gestión integral de eventos del tránsito</p></div><button type="button" onclick="window.renderBitacoraOperativa(true)">Actualizar</button></div><div id="bitacoraRoot"></div>';return p}
   function ensureCss(){if(byId('bit344Css'))return;const s=document.createElement('style');s.id='bit344Css';s.textContent=`
-    #bitacora{position:relative;padding:4px 0 14px!important}.bit344Header{display:flex;justify-content:space-between;align-items:flex-start;margin:0 0 8px}.bit344Header h2{margin:0;font-size:26px;line-height:1}.bit344Header p{margin:4px 0 0;color:#bdc9d8;font-size:13px}.bit344Header button{height:36px;min-width:140px;padding:0 16px;border-radius:10px;border:1px solid #52627a;background:#2a3b54;color:#fff;font-weight:900}.b344Card{background:rgba(15,29,45,.82);border:1px solid rgba(148,163,184,.28);border-radius:14px}.b344Search{display:grid;grid-template-columns:210px minmax(340px,1fr) 180px 150px;gap:10px;align-items:end;padding:10px 12px;margin-bottom:8px}.b344Field label{display:block;color:#bdc9d8;font-size:10.5px;font-weight:900;text-transform:uppercase;margin:0 0 5px}.b344Field input,.b344Field select,.b344Search>button{width:100%;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.35);background:#26364b;color:#fff;padding:0 12px;font-weight:800}.b344Search>button{border:0;background:linear-gradient(#50c93d,#318e28);font-weight:900}.b344Hint{grid-column:1/-1;color:#aab8cb;font-size:11px;font-weight:700}.b344Summary{display:grid;grid-template-columns:150px 190px 240px minmax(175px,1fr) minmax(210px,1fr) 145px;overflow-x:auto;margin-bottom:8px}.b344Info{display:flex;align-items:center;gap:7px;padding:9px 12px;border-right:1px solid rgba(148,163,184,.16);white-space:nowrap;min-width:0}.b344Info small{color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Info b{color:#fff;font-size:13.5px;overflow:visible}.b344Info b.green{color:#8dff65}.b344Progress{display:grid;grid-template-columns:1fr 155px 155px 190px;overflow:hidden;margin-bottom:8px}.b344Route{display:grid;grid-template-columns:165px 1fr 165px;align-items:center;gap:10px;padding:11px 14px;border-right:1px solid rgba(148,163,184,.16)}.b344Route span{font-weight:900;color:#eef5ff;font-size:12px}.b344Route span:last-child{text-align:right}.b344Line{height:4px;background:#697a91;border-radius:99px;position:relative}.b344Line:before{content:'';position:absolute;inset:0 48% 0 0;background:#63e84d;border-radius:99px}.b344Line:after{content:'🚛';position:absolute;left:47%;top:-18px}.b344ProgressNew{padding:8px 18px 12px;margin-bottom:8px;overflow:hidden}.b344RouteTimeline{position:relative;height:104px;padding:0 52px}.b344RouteLabels{display:flex;justify-content:space-between;align-items:center;color:#eef5ff;font-size:12px;font-weight:900;margin-bottom:10px}.b344TimelineTrack{position:absolute;left:52px;right:52px;top:41px;height:3px;border-radius:99px;background:#9aa9bb}.b344TimelineTrack i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#84cc16,#f59e0b)}.b344TimelineStep{position:absolute;top:31px;transform:translateX(-50%);min-width:100px;text-align:center;z-index:2}.b344TimelineStep span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 9px;background:#0f2033;border:3px solid #dbeafe;box-shadow:0 0 0 2px rgba(15,32,51,.8)}.b344TimelineStep.done span{background:#43d63b;border-color:#8dff65}.b344TimelineStep.current span{background:#f59e0b;border-color:#fdba74;box-shadow:0 0 0 5px rgba(245,158,11,.18)}.b344TimelineStep b{display:block;color:#f8fafc;font-size:10px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.b344TimelineStep em{display:block;color:#b9c6d6;font-size:9.5px;font-style:normal;margin-top:4px}.b344TimelineStep.start{left:52px!important;transform:none;text-align:left}.b344TimelineStep.start span{margin-left:0}.b344TimelineStep.start b,.b344TimelineStep.start em{text-align:left}.b344TimelineStep.end{left:auto!important;right:52px;transform:none;text-align:right}.b344TimelineStep.end span{margin-right:0}.b344TimelineStep.end b,.b344TimelineStep.end em{text-align:right}.b344TimelineTruck{position:absolute;top:10px;transform:translateX(-50%);z-index:3;filter:drop-shadow(0 4px 5px rgba(0,0,0,.55));pointer-events:none}.b344TimelineTruck img{display:block;width:48px;height:auto;object-fit:contain;transform:none}.b344TimelineDash{position:absolute;left:52px;right:52px;top:87px;border-top:2px dashed rgba(148,163,184,.48)}.b344Metric{padding:9px 12px;border-right:1px solid rgba(148,163,184,.16)}.b344Metric small{display:block;color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Metric b{display:block;color:#8dff65;margin-top:4px;font-size:14px}.b344Grid{display:grid;grid-template-columns:minmax(280px,30%) minmax(420px,1fr) minmax(250px,24%);gap:8px}.b344Pane{padding:12px;min-height:360px}.b344Pane h3{margin:0 0 14px;color:#fff;font-size:13px;text-transform:uppercase}.b344Event{display:grid;grid-template-columns:92px 30px 1fr auto;gap:7px;align-items:center;padding:8px;margin-bottom:6px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.035);cursor:pointer}.b344Event.active{border-color:#f5a623;background:rgba(245,166,35,.09)}.b344Event .date{font-size:10px;color:#cbd5e1;white-space:nowrap;overflow:visible;line-height:1.15}.b344Event .ico{font-size:17px}.b344Event b{display:block;font-size:12px;color:#fff}.b344Event small{display:block;font-size:10.5px;color:#aab8cb}.b344Event em{font-style:normal;color:#8dff65;font-size:9.5px;font-weight:900}.b344DetailPane{padding-top:14px}.b344Detail{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.b344Box{padding:8px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03)}.b344Box small{display:block;color:#aebbcf;font-size:9px;text-transform:uppercase;font-weight:900}.b344Box b{display:block;color:#fff;font-size:12px;margin-top:3px}.b344Obs,.b344Side{margin-top:8px;padding:9px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03);color:#dbeafe;font-size:12px}.b344EventMapWrap{margin-top:8px}.b344EventMapTitle{display:flex;justify-content:space-between;align-items:center;margin:0 0 6px;color:#fff;font-size:11px;font-weight:900;text-transform:uppercase}.b344EventMap{height:275px;border-radius:10px;overflow:hidden;border:1px solid rgba(148,163,184,.28);background:#0b1725}.b344MapStatus{margin-top:5px;color:#aebbcf;font-size:10px;text-align:right}.b344Empty{padding:24px;text-align:center;color:#cbd5e1}.b344Actions{display:flex;gap:7px;margin-top:8px;padding:9px}.b344Actions button{flex:1;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.25);background:#24364d;color:#fff;font-weight:900;font-size:11px}.b344Actions .green{background:#318e28}.b344Actions .yellow{background:#80520d}.b344Actions .blue{background:#19527f}.b344Actions .red{background:#a42525}@media(max-width:1250px){.b344Search{grid-template-columns:170px 1fr 145px 130px}.b344Summary{grid-template-columns:repeat(6,minmax(165px,1fr))}.b344Progress{grid-template-columns:1fr}.b344Grid{grid-template-columns:1fr}.b344Actions{flex-wrap:wrap}.b344Actions button{min-width:150px}}
+    #bitacora{position:relative;padding:4px 0 14px!important}.bit344Header{display:flex;justify-content:space-between;align-items:flex-start;margin:0 0 8px}.bit344Header h2{margin:0;font-size:26px;line-height:1}.bit344Header p{margin:4px 0 0;color:#bdc9d8;font-size:13px}.bit344Header button{height:36px;min-width:140px;padding:0 16px;border-radius:10px;border:1px solid #52627a;background:#2a3b54;color:#fff;font-weight:900}.b344Card{background:rgba(15,29,45,.82);border:1px solid rgba(148,163,184,.28);border-radius:14px}.b344Search{display:grid;grid-template-columns:210px minmax(340px,1fr) 180px 150px;gap:10px;align-items:end;padding:10px 12px;margin-bottom:8px}.b344Field label{display:block;color:#bdc9d8;font-size:10.5px;font-weight:900;text-transform:uppercase;margin:0 0 5px}.b344Field input,.b344Field select,.b344Search>button{width:100%;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.35);background:#26364b;color:#fff;padding:0 12px;font-weight:800}.b344Search>button{border:0;background:linear-gradient(#50c93d,#318e28);font-weight:900}.b344Hint{grid-column:1/-1;color:#aab8cb;font-size:11px;font-weight:700}.b344Summary{display:grid;grid-template-columns:150px 190px 240px minmax(175px,1fr) minmax(210px,1fr) 145px;overflow-x:auto;margin-bottom:8px}.b344Info{display:flex;align-items:center;gap:7px;padding:9px 12px;border-right:1px solid rgba(148,163,184,.16);white-space:nowrap;min-width:0}.b344Info small{color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Info b{color:#fff;font-size:13.5px;overflow:visible}.b344Info b.green{color:#8dff65}.b344Progress{display:grid;grid-template-columns:1fr 155px 155px 190px;overflow:hidden;margin-bottom:8px}.b344Route{display:grid;grid-template-columns:165px 1fr 165px;align-items:center;gap:10px;padding:11px 14px;border-right:1px solid rgba(148,163,184,.16)}.b344Route span{font-weight:900;color:#eef5ff;font-size:12px}.b344Route span:last-child{text-align:right}.b344Line{height:4px;background:#697a91;border-radius:99px;position:relative}.b344Line:before{content:'';position:absolute;inset:0 48% 0 0;background:#63e84d;border-radius:99px}.b344Line:after{content:'🚛';position:absolute;left:47%;top:-18px}.b344ProgressNew{padding:8px 18px 12px;margin-bottom:8px;overflow:hidden}.b344RouteTimeline{position:relative;height:104px;padding:0 52px}.b344RouteLabels{display:flex;justify-content:space-between;align-items:center;color:#eef5ff;font-size:12px;font-weight:900;margin-bottom:10px}.b344TimelineTrack{position:absolute;left:52px;right:52px;top:41px;height:3px;border-radius:99px;background:#9aa9bb}.b344TimelineTrack i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#84cc16,#f59e0b)}.b344TimelineStep{position:absolute;top:31px;transform:translateX(-50%);min-width:100px;text-align:center;z-index:2}.b344TimelineStep span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 9px;background:#0f2033;border:3px solid #dbeafe;box-shadow:0 0 0 2px rgba(15,32,51,.8)}.b344TimelineStep.done span{background:#43d63b;border-color:#8dff65}.b344TimelineStep.current span{background:#f59e0b;border-color:#fdba74;box-shadow:0 0 0 5px rgba(245,158,11,.18)}.b344TimelineStep b{display:block;color:#f8fafc;font-size:10px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.b344TimelineStep em{display:block;color:#b9c6d6;font-size:9.5px;font-style:normal;margin-top:4px}.b344TimelineStep.start{left:52px!important;transform:none;text-align:left}.b344TimelineStep.start span{margin-left:0}.b344TimelineStep.start b,.b344TimelineStep.start em{text-align:left}.b344TimelineStep.end{left:auto!important;right:52px;transform:none;text-align:right}.b344TimelineStep.end span{margin-right:0}.b344TimelineStep.end b,.b344TimelineStep.end em{text-align:right}.b344TimelineTruck{position:absolute;top:10px;transform:translateX(-50%);z-index:3;filter:drop-shadow(0 4px 5px rgba(0,0,0,.55));pointer-events:none}.b344TimelineTruck img{display:block;width:48px;height:auto;object-fit:contain;transform:none}.b344TimelineDash{position:absolute;left:52px;right:52px;top:87px;border-top:2px dashed rgba(148,163,184,.48)}.b344Metric{padding:9px 12px;border-right:1px solid rgba(148,163,184,.16)}.b344Metric small{display:block;color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Metric b{display:block;color:#8dff65;margin-top:4px;font-size:14px}.b344Grid{display:grid;grid-template-columns:minmax(280px,30%) minmax(420px,1fr) minmax(250px,24%);gap:8px}.b344Pane{padding:12px;min-height:360px}.b344Pane h3{margin:0 0 10px;color:#fff;font-size:13px;text-transform:uppercase}.b344DetailPane>h3{margin-bottom:18px}.b344DetailPane .b344EventMapWrap{margin-top:14px}.b344DetailPane .b344EventMap{position:relative;z-index:1;min-height:260px}.b344Event{display:grid;grid-template-columns:92px 30px 1fr auto;gap:7px;align-items:center;padding:8px;margin-bottom:6px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.035);cursor:pointer}.b344Event.active{border-color:#f5a623;background:rgba(245,166,35,.09)}.b344Event .date{font-size:10px;color:#cbd5e1;white-space:nowrap;overflow:visible;line-height:1.15}.b344Event .ico{font-size:17px}.b344Event b{display:block;font-size:12px;color:#fff}.b344Event small{display:block;font-size:10.5px;color:#aab8cb}.b344Event em{font-style:normal;color:#8dff65;font-size:9.5px;font-weight:900}.b344Detail{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.b344Box{padding:8px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03)}.b344Box small{display:block;color:#aebbcf;font-size:9px;text-transform:uppercase;font-weight:900}.b344Box b{display:block;color:#fff;font-size:12px;margin-top:3px}.b344Obs,.b344Side{margin-top:8px;padding:9px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03);color:#dbeafe;font-size:12px}.b344EventMapWrap{margin-top:8px}.b344EventMapTitle{display:flex;justify-content:space-between;align-items:center;margin:0 0 6px;color:#fff;font-size:11px;font-weight:900;text-transform:uppercase}.b344EventMap{height:260px;border-radius:10px;overflow:hidden;border:1px solid rgba(148,163,184,.28);background:#0b1725}.b344MapStatus{margin-top:5px;color:#aebbcf;font-size:10px;text-align:right}.b344Empty{padding:24px;text-align:center;color:#cbd5e1}.b344Actions{display:flex;gap:7px;margin-top:8px;padding:9px}.b344Actions button{flex:1;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.25);background:#24364d;color:#fff;font-weight:900;font-size:11px}.b344Actions .green{background:#318e28}.b344Actions .yellow{background:#80520d}.b344Actions .blue{background:#19527f}.b344Actions .red{background:#a42525}@media(max-width:1250px){.b344Search{grid-template-columns:170px 1fr 145px 130px}.b344Summary{grid-template-columns:repeat(6,minmax(165px,1fr))}.b344Progress{grid-template-columns:1fr}.b344Grid{grid-template-columns:1fr}.b344Actions{flex-wrap:wrap}.b344Actions button{min-width:150px}}
   `;document.head.appendChild(s)}
   function renderSearch(data){const fleets=[...new Set(data.map(x=>x._fleet).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));const selectedFleet=fleet(findTransit(state.embarque))||fleet(findShipment(state.embarque));return `<div class="b344Card b344Search"><div class="b344Field"><label>Nº Embarque</label><input id="b344Emb" value="${E(state.embarque)}" placeholder="Ej. 020703"></div><div class="b344Field"><label>Embarques abiertos / disponibles</label><select id="b344EmbSelect"><option value="">Seleccionar embarque</option>${data.map(x=>`<option value="${E(x._emb)}" ${same(x._emb,state.embarque)?'selected':''}>${E(x._emb)}${x.cliente?' - '+E(x.cliente):''}${x._fleet?' - Flota '+E(x._fleet):''}</option>`).join('')}</select></div><div class="b344Field"><label>Flota</label><select id="b344Fleet"><option value="">Todas</option>${fleets.map(f=>`<option value="${E(f)}" ${S(f)===S(selectedFleet)?'selected':''}>${E(f)}</option>`).join('')}</select></div><button onclick="window.buscarBitacoraEmbarque()">Buscar</button><div class="b344Hint">Seleccione un tránsito para ver bitácora, línea de tiempo y estado actual.</div></div>`}
   function bindFilters(){const embSel=byId('b344EmbSelect'),fleetSel=byId('b344Fleet'),input=byId('b344Emb');if(embSel)embSel.onchange=()=>{if(embSel.value){input.value=embSel.value;const t=findTransit(embSel.value),e=findShipment(embSel.value);if(fleetSel)fleetSel.value=fleet(t)||fleet(e)||''}};if(fleetSel)fleetSel.onchange=()=>{const f=fleetSel.value;[...embSel.options].forEach((o,i)=>{if(i===0)return;o.hidden=!!f&&!o.textContent.includes('Flota '+f)});if(f&&!embSel.selectedOptions[0]?.textContent.includes('Flota '+f)){embSel.value='';input.value=''}}}
@@ -17021,17 +16996,16 @@ document.addEventListener('DOMContentLoaded',()=>{});
     </div>`;
   }
 
-  function sharedFleetsForShipment(emb){
-    const values=new Set();
-    [...list('trs'),...list('embarques'),...list('cargas')].forEach(o=>{
-      if(!same(embNum(o),emb))return;
-      const candidates=[fleet(o),o?.flota,o?.fleet,o?.unidad,o?.flotaAsignada];
-      if(Array.isArray(o?.flotas))candidates.push(...o.flotas);
-      candidates.flat().forEach(v=>{const x=S(v);if(x&&x!=='-')values.add(x)});
-    });
-    return [...values].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
+  function sharedFleetsForEmb(emb,t,e){
+    const values=[];
+    const add=v=>{if(Array.isArray(v))v.forEach(add);else{const x=S(v);if(x&&x!=='-')values.push(x)}};
+    list('trs').filter(x=>same(embNum(x),emb)).forEach(x=>add(fleet(x)));
+    list('cgs').filter(x=>same(embNum(x),emb)).forEach(x=>add(fleet(x)));
+    [e,t].filter(Boolean).forEach(x=>{add(x.flotas);add(x.flota);add(x.fleet);add(x.flotaAsignada);add(x.unidades)});
+    return [...new Set(values)].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
   }
-  function controlCount(events){return events.filter(ev=>L(ev.type).includes('control de carga')||L(ev.label).includes('control de carga')).length}
+  function controlCount(events){return (events||[]).filter(x=>/control\s*de\s*carga|control.*carga/i.test(`${x.type||''} ${x.label||''}`)).length}
+
   function renderData(){
     const root=byId('bitacoraRoot');if(!root)return;
     const t=findTransit(state.embarque),e=findShipment(state.embarque),r=route(t);
@@ -17040,11 +17014,22 @@ document.addEventListener('DOMContentLoaded',()=>{});
     if(!state.eventKey&&events[0])state.eventKey=events[0].key;
     const selected=events.find(x=>x.key===state.eventKey)||events[0];
     const count=events.filter(x=>x.type!=='Pendiente').length;
-    const controls=controlCount(events);
-    const fleets=sharedFleetsForShipment(state.embarque);
-    root.innerHTML=renderSearch(optionsData())+`<div class="b344Card b344Summary"><div class="b344Info"><small>Embarque</small><b class="green">${E(state.embarque)}</b></div><div class="b344Info"><small>Cliente</small><b>${E(cliente)}</b></div><div class="b344Info"><small>Flota / Chofer</small><b>${E(fl)} / ${E(chofer)}</b></div><div class="b344Info"><small>Origen</small><b>${E(origen)}</b></div><div class="b344Info"><small>Destino</small><b>${E(destino)}</b></div><div class="b344Info"><small>Estado</small><b class="green">${E(estado)}</b></div></div><div class="b344Card b344ProgressNew">${renderRouteTimeline(events,origen,destino,estado)}</div><div class="b344Grid"><div class="b344Card b344Pane"><h3>Línea de tiempo del tránsito</h3>${events.map(ev=>`<div class="b344Event ${ev.key===state.eventKey?'active':''}" onclick="window.selectBitacoraEvent('${E(ev.key)}')"><span class="date">${E(fmt(ev.time))}</span><span class="ico">${eventIcon(ev.type)}</span><span><b>${E(ev.label)}</b><small>${E(ev.loc)}</small></span><em>${E(ev.source)}</em></div>`).join('')||'<div class="b344Empty">Sin eventos registrados.</div>'}</div><div class="b344Card b344Pane b344DetailPane"><h3>Detalle del evento seleccionado</h3>${selected?`<div class="b344Detail"><div class="b344Box"><small>Tipo</small><b>${E(selected.type)}</b></div><div class="b344Box"><small>Fecha / Hora</small><b>${E(fmt(selected.time))}</b></div><div class="b344Box"><small>Usuario</small><b>${E(selected.user)}</b></div><div class="b344Box"><small>Origen registro</small><b>${E(selected.source)}</b></div><div class="b344Box"><small>Ubicación</small><b>${E(selected.loc)}</b></div></div><div class="b344Obs">${E(selected.obs||'Sin observaciones.')}</div><div class="b344EventMapWrap"><div class="b344EventMapTitle"><span>Mapa del evento</span><span>${E(selected.loc||'')}</span></div><div id="b344EventMap" class="b344EventMap"></div><div id="b344MapStatus" class="b344MapStatus">Cargando ubicación...</div></div>`:'<div class="b344Empty">Seleccione un evento.</div>'}</div><div class="b344Card b344Pane"><h3>Estado actual del tránsito</h3><div class="b344Side"><small>Último GPS</small><b>${E(last?fmt(last.time||last.fecha||last.createdAt):'-')}</b><div>${E(locationOf(t)||'-')}</div></div><div class="b344Side"><small>Próximo hito</small><b>${E(destino)}</b></div><div class="b344Side"><small>Controles de carga</small><b>${controls}</b></div><div class="b344Side"><small>Flotas del embarque</small><b>${E(fleets.join(', ')||fl||'-')}</b></div><div class="b344Side"><small>Resumen</small><b>${count} eventos</b><div>Estado: ${E(estado)}</div></div></div></div><div class="b344Card b344Actions"><button class="green">Iniciar tránsito</button><button class="blue">Nueva aduana</button><button class="yellow">Nueva alerta</button><button>Checklist OEA</button><button>Documento</button><button>Generar PDF</button><button class="red">Cerrar tránsito</button></div>`;
-    bindFilters();setTimeout(()=>renderSelectedEventMap(selected),60)
+    const controles=controlCount(events);
+    const flotasCompartidas=sharedFleetsForEmb(state.embarque,t,e);
+    root.innerHTML=renderSearch(optionsData())+
+      `<div class="b344Card b344Summary"><div class="b344Info"><small>Embarque</small><b class="green">${E(state.embarque)}</b></div><div class="b344Info"><small>Cliente</small><b>${E(cliente)}</b></div><div class="b344Info"><small>Flota / Chofer</small><b>${E(fl)} / ${E(chofer)}</b></div><div class="b344Info"><small>Origen</small><b>${E(origen)}</b></div><div class="b344Info"><small>Destino</small><b>${E(destino)}</b></div><div class="b344Info"><small>Estado</small><b class="green">${E(estado)}</b></div></div>`+
+      `<div class="b344Card b344ProgressNew">${renderRouteTimeline(events,origen,destino,estado)}</div>`+
+      `<div class="b344Grid">`+
+        `<div class="b344Card b344Pane"><h3>Línea de tiempo del tránsito</h3>${events.map(ev=>`<div class="b344Event ${ev.key===state.eventKey?'active':''}" onclick="window.selectBitacoraEvent('${E(ev.key)}')"><span class="date">${E(fmt(ev.time))}</span><span class="ico">${eventIcon(ev.type)}</span><span><b>${E(ev.label)}</b><small>${E(ev.loc)}</small></span><em>${E(ev.source)}</em></div>`).join('')||'<div class="b344Empty">Sin eventos registrados.</div>'}</div>`+
+        `<div class="b344Card b344Pane b344DetailPane"><h3>Detalle del evento seleccionado</h3>${selected?`<div class="b344Detail"><div class="b344Box"><small>Tipo</small><b>${E(selected.type)}</b></div><div class="b344Box"><small>Fecha / Hora</small><b>${E(fmt(selected.time))}</b></div><div class="b344Box"><small>Usuario</small><b>${E(selected.user)}</b></div><div class="b344Box"><small>Origen registro</small><b>${E(selected.source)}</b></div><div class="b344Box"><small>Ubicación</small><b>${E(selected.loc)}</b></div></div><div class="b344Obs">${E(selected.obs||'Sin observaciones.')}</div><div class="b344EventMapWrap"><div class="b344EventMapTitle"><span>Mapa del evento</span><span>${E(selected.loc||'')}</span></div><div id="b344EventMap" class="b344EventMap"></div><div id="b344MapStatus" class="b344MapStatus">Cargando ubicación...</div></div>`:'<div class="b344Empty">Seleccione un evento.</div>'}</div>`+
+        `<div class="b344Card b344Pane"><h3>Estado actual del tránsito</h3><div class="b344Side"><small>Último GPS</small><b>${E(last?fmt(last.time||last.fecha||last.createdAt):'-')}</b><div>${E(locationOf(t)||'-')}</div></div><div class="b344Side"><small>Próximo hito</small><b>${E(destino)}</b></div><div class="b344Side"><small>Controles de carga</small><b>${controles}</b></div><div class="b344Side"><small>Flotas del embarque</small><b>${E(flotasCompartidas.join(' · ')||fl||'-')}</b></div><div class="b344Side"><small>Resumen</small><b>${count} eventos</b><div>Estado: ${E(estado)}</div></div></div>`+
+      `</div>`+
+      `<div class="b344Card b344Actions"><button class="green">Iniciar tránsito</button><button class="blue">Nueva aduana</button><button class="yellow">Nueva alerta</button><button>Checklist OEA</button><button>Documento</button><button>Generar PDF</button><button class="red">Cerrar tránsito</button></div>`;
+    bindFilters();
+    setTimeout(()=>renderSelectedEventMap(selected),80);
   }
+  async function render(force=false){ensureCss();ensureMenu();ensurePanel();applyVersion();const root=byId('bitacoraRoot');if(!root)return;if(!state.embarque){await loadBase(force);renderEmpty();return}root.innerHTML='<div class="b344Card b344Empty">Cargando bitácora...</div>';await loadBase(force);await loadExtra(state.embarque);renderData()}
+  window.buscarBitacoraEmbarque=async()=>{const v=S(byId('b344Emb')?.value||byId('b344EmbSelect')?.value);if(!v){alert('Ingrese o seleccione un embarque.');return}state.embarque=v;state.eventKey='';await render(true)};
   window.selectBitacoraEvent=k=>{state.eventKey=k;renderData()};
   window.renderBitacoraOperativa=render;
   const originalTab=window.tab;window.tab=function(id){const result=typeof originalTab==='function'?originalTab.apply(this,arguments):undefined;if(id==='bitacora')requestAnimationFrame(()=>render(false));return result};
