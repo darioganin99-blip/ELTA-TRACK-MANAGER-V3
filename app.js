@@ -3986,7 +3986,7 @@ tab = function(id){
 };
 
 /* ===== V1.2.50 - Publicacion desde docs: version unica + filtros sin cambiar formato ===== */
-const ELTA_APP_VERSION='3.3.9';
+const ELTA_APP_VERSION='3.3.10';
 
 function updateVersionLabels(){
   document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4204,9 +4204,9 @@ if(_refresh_v1250){
 
 
 
-/* ===== V3.3.9 - Nombre oficial del sistema ===== */
+/* ===== V3.3.10 - Nombre oficial del sistema ===== */
 (function(){
-  const APP_VERSION_V2='3.3.9';
+  const APP_VERSION_V2='3.3.10';
 
   function setVersionV2(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4376,9 +4376,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Version y menu lateral robustos ===== */
+/* ===== V3.3.10 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4410,9 +4410,9 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== V3.3.9 - Anti-cache y normalizacion final menu/version ===== */
+/* ===== V3.3.10 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4468,9 +4468,9 @@ if(_refresh_v1250){
   window.ELTA_FORCE_UI_REFRESH=applyFinal;
 })();
 
-/* ===== V3.3.9 - Correcciones GPS, clima, alertas y seguimiento ===== */
+/* ===== V3.3.10 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4648,9 +4648,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Ajustes finales clima, KM y alertas ===== */
+/* ===== V3.3.10 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4769,9 +4769,9 @@ if(_refresh_v1250){
   if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments);apply210();return r;};
 })();
 
-/* ===== V3.3.9 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
+/* ===== V3.3.10 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4912,9 +4912,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
+/* ===== V3.3.10 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5093,9 +5093,9 @@ if(_refresh_v1250){
   if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(()=>{refreshAll(); if(id==='alertas') window.renderAlerts(); if(id==='clima' && typeof renderWeatherFleets==='function') renderWeatherFleets();},0);return r;};
 })();
 
-/* ===== V3.3.9 - Vista Alertas compacta: boton Verificar visible ===== */
+/* ===== V3.3.10 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5206,9 +5206,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Torre de Control: Últimas alertas formato linea unica ===== */
+/* ===== V3.3.10 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5247,9 +5247,9 @@ if(_refresh_v1250){
   const oldTab=window.tab; if(typeof oldTab==='function') window.tab=function(id){const r=oldTab.apply(this,arguments);setTimeout(apply,0);return r;};
 })();
 
-/* ===== V3.3.9 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.3.9 ===== */
+/* ===== V3.3.10 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.3.10 ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5336,9 +5336,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); setTimeout(updateVersion,250); setTimeout(updateVersion,1000);});
 })();
 
-/* ===== V3.3.9 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
+/* ===== V3.3.10 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5456,9 +5456,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.3.10 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5597,9 +5597,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.3.10 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5717,9 +5717,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
+/* ===== V3.3.10 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5892,9 +5892,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(q('clima')?.classList.contains('active')) window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
+/* ===== V3.3.10 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6034,9 +6034,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
+/* ===== V3.3.10 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6250,9 +6250,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
+/* ===== V3.3.10 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6503,9 +6503,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
+/* ===== V3.3.10 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6577,9 +6577,9 @@ if(_refresh_v1250){
   const oldRefresh=window.refresh; if(typeof oldRefresh==='function') window.refresh=async function(){const r=await oldRefresh.apply(this,arguments); updateVersion(); if(document.getElementById('clima')?.classList.contains('active')) await window.renderClima(); return r;};
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
+/* ===== V3.3.10 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6720,9 +6720,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Clima: layout compacto definitivo y Paso con consulta online ===== */
+/* ===== V3.3.10 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6791,9 +6791,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
+/* ===== V3.3.10 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6940,9 +6940,9 @@ if(_refresh_v1250){
   if(typeof oldTab234==='function') window.tab=function(id){oldTab234.apply(this,arguments); setVersionText(); if(id==='alertas') window.renderAlerts();};
 })();
 
-/* ===== V3.3.9 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
+/* ===== V3.3.10 - Alertas: graficos en una linea, campana completa, contador funcional ===== */
 (function(){
-  const VERSION_ALERTS_2035 = "3.3.9";
+  const VERSION_ALERTS_2035 = "3.3.10";
   const $ = (id)=>document.getElementById(id);
   const esc2 = (v)=>{ try { return typeof esc === 'function' ? esc(v) : String(v ?? '').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); } catch(e){ return String(v ?? ''); } };
   const clean = (v)=>String(v ?? '').trim() || '-';
@@ -7070,7 +7070,7 @@ if(_refresh_v1250){
   if(typeof oldTab35==='function') window.tab=function(id){ oldTab35.apply(this,arguments); setVersion35(); setCounter35(); if(id==='alertas') window.renderAlerts(); };
 })();
 
-/* ===== V3.3.9 - Menu lateral: badge y efecto de campana segun pendientes ===== */
+/* ===== V3.3.10 - Menu lateral: badge y efecto de campana segun pendientes ===== */
 (function(){
   function getPendingCount236(){
     try{
@@ -7128,9 +7128,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Normalizacion final del menu lateral ===== */
+/* ===== V3.3.10 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7198,7 +7198,7 @@ if(_refresh_v1250){
   };
 })();
 
-/* ===== V3.3.9 - Refuerzo campana menu lateral ===== */
+/* ===== V3.3.10 - Refuerzo campana menu lateral ===== */
 (function(){
   function pendingCount(){
     try{
@@ -7225,9 +7225,9 @@ if(_refresh_v1250){
   setInterval(applyBellClass,1500);
 })();
 
-/* ===== V3.3.9 - contador real y badge compacto de menu ===== */
+/* ===== V3.3.10 - contador real y badge compacto de menu ===== */
 (function(){
-  const APP_VERSION_MENU_2173 = '3.3.9';
+  const APP_VERSION_MENU_2173 = '3.3.10';
   function setVersions2039(){
     document.querySelectorAll('span,small,p,div').forEach(el=>{
       if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
@@ -7296,10 +7296,10 @@ if(_refresh_v1250){
   setInterval(normalizeMenu2039,1200);
 })();
 
-/* ===== V3.3.9 - Menu base limpio: normalizadores anteriores removidos ===== */
-/* ===== V3.3.9 - Nuevo modulo Embarques ===== */
+/* ===== V3.3.10 - Menu base limpio: normalizadores anteriores removidos ===== */
+/* ===== V3.3.10 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7450,9 +7450,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(window.renderEmbarquesV244,300)));
 })();
 
-/* ===== V3.3.9 - Embarques: combos desde colecciones Firestore y estructura real ===== */
+/* ===== V3.3.10 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7656,9 +7656,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Librerias externas: PDF y mapa ===== */
+/* ===== V3.3.10 - Librerias externas: PDF y mapa ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   function loadScriptV314(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]'))return res(); const sc=document.createElement('script');sc.src=src;sc.onload=res;sc.onerror=rej;document.head.appendChild(sc);});}
   function loadCssV314(href){if(document.querySelector('link[href="'+href+'"]'))return; const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}
   window.ensurePdfEngineV314=async function(){
@@ -7675,9 +7675,9 @@ if(_refresh_v1250){
   window.addEventListener('load',()=>setTimeout(retryMap,800));
 })();
 
-/* ===== v3.3.9 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
+/* ===== v3.3.10 - PDF profesional con logo original ELTA para Vista Tránsitos ===== */
 (function(){
-  const APP_VERSION_PDF = '3.3.9';
+  const APP_VERSION_PDF = '3.3.10';
   function sx53(v){return String(v ?? '').trim() || '-';}
   function escAttr53(v){return String(v ?? '').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,' ');}
   function route53(t){try{return typeof ruta==='function' ? (ruta(t)||{}) : {};}catch(e){return {};}}
@@ -7907,13 +7907,13 @@ if(_refresh_v1250){
       <div class="transitRight"><h4 class="alertsTitle">⚠️ Alertas del tránsito</h4>${typeof transitAlertsCompact==='function'?transitAlertsCompact(t):''}</div>
     </div>`;
   };
-  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.3.9';});
+  document.querySelectorAll('.loginFooter span, .headerTitle span').forEach(el=>{if(/Versi[oó]n/i.test(el.textContent||''))el.textContent='Versión 3.3.10';});
 })();
 
 
-/* ===== V3.3.9 - Fix botones Actualizar global + version unificada ===== */
+/* ===== V3.3.10 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -8001,9 +8001,9 @@ if(_refresh_v1250){
   setInterval(setVersionLabels,1200);
 })();
 
-/* ===== V3.3.9 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
+/* ===== V3.3.10 - Configuracion redisenada sin JSON y sin pestana Embarques ===== */
 (function(){
-  const APP_VERSION_CFG = "3.3.9";
+  const APP_VERSION_CFG = "3.3.10";
   function byId(id){return document.getElementById(id)}
   function safe(v){return (typeof esc==='function'?esc(String(v ?? "")):String(v ?? "").replace(/[&<>'"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[m])))}
   function getActiveText(v){return v===false||String(v).toLowerCase()==='false'?'Inactivo':'Activo'}
@@ -8147,9 +8147,9 @@ if(_refresh_v1250){
   ['DOMContentLoaded','load'].forEach(ev=>window.addEventListener(ev,()=>setTimeout(()=>{fixVersion(); if(byId('abm')?.classList.contains('active'))renderABM();},500)));
 })();
 
-/* ===== V3.3.9 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
+/* ===== V3.3.10 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8312,9 +8312,9 @@ if(_refresh_v1250){
   document.addEventListener('DOMContentLoaded',()=>{updateVersion(); if(qid('clima')?.classList.contains('active'))window.ensureClimaDataAndRender();});
 })();
 
-/* ===== V3.3.9 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
+/* ===== V3.3.10 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8479,9 +8479,9 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Datos reales del usuario logueado en sidebar ===== */
+/* ===== V3.3.10 - Datos reales del usuario logueado en sidebar ===== */
 (function(){
-  const APP_VERSION_LOGGED_USER_FIX = "3.3.9";
+  const APP_VERSION_LOGGED_USER_FIX = "3.3.10";
 
   function _q(id){ return document.getElementById(id); }
   function _txt(v){ return (v===undefined || v===null) ? '' : String(v).trim(); }
@@ -8583,9 +8583,9 @@ if(_refresh_v1250){
   });
 })();
 
-/* ===== V3.3.9 - Clima compacto + PDF OEA + correcciones puntuales ===== */
+/* ===== V3.3.10 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8755,9 +8755,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== V3.3.9 - Version + flotas del combo desde usuarios role=flota ===== */
+/* ===== V3.3.10 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8829,9 +8829,9 @@ if(_refresh_v1250){
   setVersion();
 })();
 
-/* ===== V3.3.9 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
+/* ===== V3.3.10 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8953,9 +8953,9 @@ if(_refresh_v1250){
   setVersionFinal();
 })();
 
-/* ===== V3.3.9 - Embarques: boton Ver cargas en Agregar carga ===== */
+/* ===== V3.3.10 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9191,9 +9191,9 @@ if(_refresh_v1250){
   setVersionV267();
 })();
 
-/* ===== V3.3.9 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
+/* ===== V3.3.10 - Recuperar password, ajustes Configuracion, Embarques y KM Alertas ===== */
 (function(){
-  const APP_VERSION_FIX='3.3.9';
+  const APP_VERSION_FIX='3.3.10';
   window.ELTA_APP_VERSION=APP_VERSION_FIX;
   window.APP_VERSION_V2=APP_VERSION_FIX;
   const $=(id)=>document.getElementById(id);
@@ -9322,9 +9322,9 @@ if(_refresh_v1250){
   setInterval(applyAllV270,1500);
 })();
 
-/* ===== V3.3.9 - Password visible en Configuracion y version unificada ===== */
+/* ===== V3.3.10 - Password visible en Configuracion y version unificada ===== */
 (function(){
-  const APP_VERSION_273='3.3.9';
+  const APP_VERSION_273='3.3.10';
   window.ELTA_APP_VERSION=APP_VERSION_273;
   window.APP_VERSION_V2=APP_VERSION_273;
 
@@ -9400,13 +9400,13 @@ if(_refresh_v1250){
   }
   document.addEventListener('DOMContentLoaded',()=>{setVersionLabelsV273();setTimeout(configPasswordAndLabelsV273,800);});
   window.addEventListener('load',()=>{setVersionLabelsV273();setTimeout(configPasswordAndLabelsV273,800);});
-  // setInterval(setVersionLabelsV273,1000); // desactivado v3.3.9
+  // setInterval(setVersionLabelsV273,1000); // desactivado v3.3.10
 })();
 
 
-/* ===== V3.3.9 - Version lock definitivo ===== */
+/* ===== V3.3.10 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9417,13 +9417,13 @@ if(_refresh_v1250){
     });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', applyVersionLock); else applyVersionLock();
-  // setInterval(applyVersionLock, 800); // desactivado v3.3.9
+  // setInterval(applyVersionLock, 800); // desactivado v3.3.10
 })();
 
 
-/* ===== V3.3.9 - Embarques: eliminar registro con confirmacion ===== */
+/* ===== V3.3.10 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9449,7 +9449,7 @@ if(_refresh_v1250){
     [...tbody.querySelectorAll('tr')].forEach(tr=>{const n=embFromRow(tr); if(n && del.has(n))tr.remove();});
     if(!tbody.children.length){tbody.innerHTML='<tr><td colspan="8" class="emptyRow">No hay embarques para mostrar.</td></tr>';}
   }
-  function enhanceDeleteButtons(){ /* v3.3.9 neutralizado: eliminar ya nace en el render */ return; }
+  function enhanceDeleteButtons(){ /* v3.3.10 neutralizado: eliminar ya nace en el render */ return; }
   async function deleteLocal(numero){
     ['elta_cargas_embarque_v245','elta_cargas_embarque_v244'].forEach(k=>{
       try{const arr=JSON.parse(localStorage.getItem(k)||'[]')||[]; localStorage.setItem(k,JSON.stringify(arr.filter(c=>S(c?.embarque)!==S(numero))));}catch(e){}
@@ -9517,7 +9517,7 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - Embarques: papelera sin fondo ===== */
+/* ===== V3.3.10 - Embarques: papelera sin fondo ===== */
 (function(){
   const css=document.createElement('style');
   css.id='v2080-delete-icon-clean';
@@ -9525,9 +9525,9 @@ if(_refresh_v1250){
   document.head.appendChild(css);
 })();
 
-/* ===== V3.3.9 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
+/* ===== V3.3.10 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9586,10 +9586,10 @@ if(_refresh_v1250){
 })();
 
 
-/* ===== V3.3.9 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
+/* ===== V3.3.10 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -9702,7 +9702,7 @@ if(_refresh_v1250){
 
 
 
-/* ===== v3.3.9 - Entregas: abreviatura en origen del render ===== */
+/* ===== v3.3.10 - Entregas: abreviatura en origen del render ===== */
 window.abreviarHitoEntrega186 = function(txt){
   const original = String(txt || '').trim();
   const n = original.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
@@ -9711,9 +9711,9 @@ window.abreviarHitoEntrega186 = function(txt){
   return original;
 };
 
-/* ===== v3.3.9 - Entregas compact override after dynamic CSS ===== */
+/* ===== v3.3.10 - Entregas compact override after dynamic CSS ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas compacto: filtros y linea de tiempo =====\n   Solo afecta #entrega. No modifica otros menus ni modulos. */\n\n#entrega .entregaHeader{\n  margin-bottom:8px !important;\n}\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  display:grid !important;\n  grid-template-columns:1.15fr 1fr 1.15fr 1.15fr .85fr !important;\n  gap:10px !important;\n  padding:10px 12px !important;\n  margin-bottom:12px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaToolbar label,\n#entrega .entregaFilterLabel{\n  display:block !important;\n  margin:0 !important;\n  padding:0 !important;\n  font-size:0 !important;\n  color:transparent !important;\n}\n\n#entrega .entregaToolbar label span,\n#entrega .entregaFilterLabel span{\n  display:none !important;\n}\n\n#entrega .entregaToolbar select{\n  width:100% !important;\n  height:42px !important;\n  min-height:42px !important;\n  border-radius:12px !important;\n  border:1px solid rgba(148,163,184,.34) !important;\n  background:#243244 !important;\n  color:#f1f5f9 !important;\n  padding:0 36px 0 16px !important;\n  font-size:15px !important;\n  font-weight:800 !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaCards{\n  gap:10px !important;\n}\n\n#entrega .entregaCard{\n  padding:10px 14px !important;\n  border-radius:14px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaTop{\n  grid-template-columns:1.08fr .92fr .92fr .92fr .82fr .58fr !important;\n  gap:9px !important;\n  align-items:center !important;\n}\n\n#entrega .entregaFleet{\n  gap:9px !important;\n}\n\n#entrega .entregaFleetIcon{\n  width:38px !important;\n  height:38px !important;\n  font-size:18px !important;\n}\n\n#entrega .entregaFleet h3{\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStatus{\n  padding:3px 8px !important;\n  font-size:10px !important;\n  border-radius:7px !important;\n}\n\n#entrega .entregaFleet small{\n  margin-top:4px !important;\n  font-size:11px !important;\n}\n\n#entrega .entregaMeta{\n  padding-left:9px !important;\n}\n\n#entrega .entregaMeta span{\n  font-size:10px !important;\n  margin-bottom:3px !important;\n}\n\n#entrega .entregaMeta b{\n  font-size:12px !important;\n}\n\n#entrega .entregaFlags strong{\n  font-size:12px !important;\n  margin-bottom:2px !important;\n}\n\n#entrega .entregaFlags div{\n  font-size:17px !important;\n  gap:5px !important;\n}\n\n/* Linea de tiempo dentro del contenedor y con hitos arriba de la linea */\n#entrega .entregaTimeline{\n  height:82px !important;\n  margin-top:8px !important;\n  padding:0 46px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:46px !important;\n  right:46px !important;\n  top:38px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:4px !important;\n  min-width:74px !important;\n  max-width:104px !important;\n  text-align:center !important;\n}\n\n#entrega .entregaStep b{\n  margin:0 0 0 0 !important;\n  font-size:9px !important;\n  line-height:1.05 !important;\n  max-height:22px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaStep::after{\n  top:29px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  margin-top:26px !important;\n  font-size:9px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaVehicle{\n  top:57px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:30px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:46px !important;\n  right:46px !important;\n  top:68px !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:2px !important;\n  padding:7px 10px !important;\n  gap:8px !important;\n  font-size:11px !important;\n  border-radius:10px !important;\n}\n\n@media(max-width:1250px){\n  #entrega .entregaToolbar,\n  #entrega .entregaToolbarCompact{\n    grid-template-columns:1fr 1fr !important;\n  }\n  #entrega .entregaTop{\n    grid-template-columns:1fr 1fr !important;\n  }\n}\n';
   function injectEntrega151(){
     let st=document.getElementById('entrega-v151-compact-css');
     if(!st){
@@ -9738,9 +9738,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final Entregas tarjeta ===== */
+/* ===== v3.3.10 - CSS final Entregas tarjeta ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
+  const CSS = '\n/* ===== v3.3.10 - Mejora puntual tarjeta Entregas =====\n   Solo afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaCard{padding:9px 13px !important;border-radius:14px !important;overflow:hidden !important;}\n#entrega .entregaTop{grid-template-columns:.92fr .9fr .9fr .9fr .78fr .46fr !important;gap:8px !important;align-items:center !important;}\n#entrega .entregaFleet{gap:8px !important;}\n#entrega .entregaFleetIcon{width:34px !important;height:34px !important;font-size:16px !important;}\n#entrega .entregaFleet h3{font-size:16px !important;line-height:1 !important;}\n#entrega .entregaStatus{font-size:9px !important;padding:3px 7px !important;}\n#entrega .entregaFleet small{font-size:10px !important;margin-top:3px !important;}\n#entrega .entregaMeta{padding-left:8px !important;}\n#entrega .entregaMeta span{display:flex !important;align-items:center !important;gap:4px !important;font-size:10px !important;line-height:1 !important;margin-bottom:3px !important;color:#dbeafe !important;}\n#entrega .entregaMeta span i{font-style:normal !important;font-size:12px !important;line-height:1 !important;}\n#entrega .entregaMeta b{font-size:11px !important;line-height:1.1 !important;}\n#entrega .entregaFlags{min-width:74px !important;text-align:center !important;align-self:center !important;}\n#entrega .entregaFlags strong{display:none !important;}\n#entrega .entregaFlags div{display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;font-size:20px !important;line-height:1 !important;padding:5px 7px !important;border-radius:10px !important;border:1px solid rgba(148,163,184,.22) !important;background:rgba(255,255,255,.035) !important;}\n#entrega .entregaFlags i{color:#8dff65 !important;font-weight:900 !important;font-style:normal !important;}\n#entrega .entregaTimeline{height:96px !important;margin-top:7px !important;padding:0 56px !important;overflow:hidden !important;}\n#entrega .entregaLine{left:56px !important;right:56px !important;top:40px !important;height:3px !important;}\n#entrega .entregaStep{top:2px !important;min-width:70px !important;max-width:100px !important;}\n#entrega .entregaStep b{font-size:8.5px !important;line-height:1.05 !important;max-height:20px !important;overflow:hidden !important;margin:0 !important;}\n#entrega .entregaStep::after{top:31px !important;width:11px !important;height:11px !important;}\n#entrega .entregaStep em{margin-top:32px !important;font-size:8.5px !important;line-height:1 !important;color:#cbd5e1 !important;}\n#entrega .entregaTimeline::after{left:56px !important;right:56px !important;top:78px !important;border-top:2px dashed rgba(148,163,184,.48) !important;}\n#entrega .entregaVehicle{top:66px !important;}\n#entrega .entregaCarrierImg{width:28px !important;}\n#entrega .entregaBottom{margin-top:2px !important;padding:7px 10px !important;font-size:10.5px !important;gap:8px !important;}\n#entrega .entregaStep[style*="left:0%"]{transform:none !important;text-align:left !important;}\n#entrega .entregaStep[style*="left:100%"]{transform:translateX(-100%) !important;text-align:right !important;}\n';
   function injectEntrega152(){
     let st=document.getElementById('entrega-v152-card-css');
     if(!st){
@@ -9765,9 +9765,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final Entregas filtros/timeline ===== */
+/* ===== v3.3.10 - CSS final Entregas filtros/timeline ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: filtros compactos y timeline sin superposicion =====\n   Solo afecta #entrega. No modifica otros modulos. */\n\n#entrega .entregaToolbar,\n#entrega .entregaToolbarCompact{\n  grid-template-columns:1.05fr 1fr 1.08fr 1.08fr .78fr !important;\n  gap:8px !important;\n  padding:8px 10px !important;\n  margin-bottom:10px !important;\n}\n\n#entrega .entregaToolbar select{\n  height:34px !important;\n  min-height:34px !important;\n  border-radius:10px !important;\n  background:#223142 !important;\n  border:1px solid rgba(148,163,184,.28) !important;\n  color:#dbe4ee !important;\n  padding:0 30px 0 12px !important;\n  font-size:13px !important;\n  font-weight:600 !important;\n  letter-spacing:0 !important;\n  box-shadow:none !important;\n}\n\n#entrega .entregaToolbar select option{\n  font-size:13px !important;\n  font-weight:500 !important;\n  color:#e5edf7 !important;\n  background:#1f2d3d !important;\n}\n\n#entrega .entregaCard{\n  padding:9px 13px !important;\n}\n\n#entrega .entregaTimeline{\n  height:112px !important;\n  margin-top:8px !important;\n  padding:0 60px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:60px !important;\n  right:60px !important;\n  top:56px !important;\n  height:3px !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  min-width:76px !important;\n  max-width:112px !important;\n  height:88px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n}\n\n#entrega .entregaStep::after{\n  top:49px !important;\n  width:11px !important;\n  height:11px !important;\n  border-width:2px !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:38px !important;\n  font-size:8.5px !important;\n  line-height:1 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:60px !important;\n  right:60px !important;\n  top:92px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:80px !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega153(){
     let st=document.getElementById('entrega-v153-filters-timeline-css');
     if(!st){
@@ -9792,9 +9792,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final timeline Entregas ===== */
+/* ===== v3.3.10 - CSS final timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: timeline sin textos superpuestos =====\n   SOLO afecta la vista #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  position:relative !important;\n  height:126px !important;\n  margin-top:8px !important;\n  padding:0 66px !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaLine{\n  left:66px !important;\n  right:66px !important;\n  top:72px !important;\n  height:3px !important;\n  z-index:1 !important;\n}\n\n#entrega .entregaStep{\n  top:0 !important;\n  height:104px !important;\n  min-width:92px !important;\n  max-width:118px !important;\n  text-align:center !important;\n  pointer-events:none !important;\n  z-index:3 !important;\n}\n\n#entrega .entregaStep b{\n  display:block !important;\n  margin:0 auto !important;\n  padding:0 2px !important;\n  font-size:8.5px !important;\n  line-height:1.08 !important;\n  max-height:24px !important;\n  overflow:hidden !important;\n  white-space:normal !important;\n  text-transform:uppercase !important;\n  color:#f8fafc !important;\n}\n\n#entrega .entregaStep em{\n  display:block !important;\n  margin-top:10px !important;\n  font-size:8.5px !important;\n  line-height:1.05 !important;\n  max-height:18px !important;\n  overflow:hidden !important;\n  color:#cbd5e1 !important;\n  font-style:normal !important;\n  white-space:normal !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  width:12px !important;\n  height:12px !important;\n  border-width:2px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:66px !important;\n  right:66px !important;\n  top:106px !important;\n  border-top:2px dashed rgba(148,163,184,.45) !important;\n}\n\n#entrega .entregaVehicle{\n  top:94px !important;\n  z-index:5 !important;\n}\n\n#entrega .entregaCarrierImg{\n  width:28px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]{\n  transform:translateX(-100%) !important;\n  text-align:right !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n#entrega .entregaBottom{\n  margin-top:0 !important;\n}\n';
   function injectEntrega154(){
     let st=document.getElementById('entrega-v154-timeline-css');
     if(!st){
@@ -9819,9 +9819,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final linea vertical hitos Entregas ===== */
+/* ===== v3.3.10 - CSS final linea vertical hitos Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: linea vertical solo en hitos con fecha =====\n   SOLO afecta la vista #entrega. No modifica otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50px !important;\n  height:15px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega155(){
     let st=document.getElementById('entrega-v155-vertical-line-css');
     if(!st){
@@ -9846,9 +9846,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final linea desde circulo Entregas ===== */
+/* ===== v3.3.10 - CSS final linea desde circulo Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: linea vertical nace desde el circulo =====\n   SOLO afecta la vista #entrega. No modifica icono de camion ni otros modulos. */\n\n#entrega .entregaStep.hasDate::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:32px !important;\n  height:33px !important;\n  border-left:2px dotted rgba(226,232,240,.72) !important;\n  transform:translateX(-50%) !important;\n  z-index:2 !important;\n}\n\n#entrega .entregaStep::after{\n  top:65px !important;\n  z-index:4 !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:6px !important;\n  transform:none !important;\n}\n\n#entrega .entregaStep:not(.hasDate)::before{\n  content:none !important;\n  display:none !important;\n}\n';
   function injectEntrega156(){
     let st=document.getElementById('entrega-v156-linea-circulo-css');
     if(!st){
@@ -9873,9 +9873,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final hito/banderas Entregas ===== */
+/* ===== v3.3.10 - CSS final hito/banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: primer hito alineado y banderas =====\n   SOLO afecta #entrega. No modifica otros módulos ni icono del camión. */\n\n/* Primer hito: fecha y línea vertical alineadas con el círculo de inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:66px !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Último hito: mantener alineación con el círculo final */\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:66px !important;\n  transform:translateX(50%) !important;\n}\n\n/* Mantener los textos de los extremos dentro de la tarjeta */\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n\n/* Vértice superior derecho: códigos + iconos de bandera país origen/destino */\n#entrega .entregaFlags strong{\n  display:none !important;\n}\n\n#entrega .entregaFlags div{\n  display:flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  gap:7px !important;\n  min-width:112px !important;\n  padding:6px 10px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .entregaFlags div span{\n  display:inline-flex !important;\n  align-items:center !important;\n  justify-content:center !important;\n  font-size:18px !important;\n  line-height:1 !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega157(){
     let st=document.getElementById('entrega-v157-hito-banderas-css');
     if(!st){
@@ -9900,9 +9900,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final banderas Entregas ===== */
+/* ===== v3.3.10 - CSS final banderas Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: banderas visuales origen/destino =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaFlags div{\n  min-width:128px !important;\n  gap:7px !important;\n  padding:6px 9px !important;\n}\n\n#entrega .entregaFlags div b{\n  display:inline-block !important;\n  color:#f8fafc !important;\n  font-size:13px !important;\n  line-height:1 !important;\n  font-weight:900 !important;\n  letter-spacing:.02em !important;\n}\n\n#entrega .countryFlag{\n  display:inline-flex !important;\n  width:23px !important;\n  height:23px !important;\n  min-width:23px !important;\n  border-radius:50% !important;\n  border:1px solid rgba(255,255,255,.78) !important;\n  box-shadow:0 2px 7px rgba(0,0,0,.35) !important;\n  overflow:hidden !important;\n  position:relative !important;\n  background:#64748b !important;\n}\n\n/* Argentina */\n#entrega .flag-ar{\n  background:linear-gradient(to bottom,#74b9ff 0 33.33%,#ffffff 33.33% 66.66%,#74b9ff 66.66% 100%) !important;\n}\n#entrega .flag-ar::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Chile */\n#entrega .flag-cl{\n  background:\n    linear-gradient(to bottom,#ffffff 0 50%,#d91e36 50% 100%) !important;\n}\n#entrega .flag-cl::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:50% !important;\n  height:50% !important;\n  background:#1e3a8a !important;\n}\n#entrega .flag-cl::after{\n  content:"★" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:0 !important;\n  color:#fff !important;\n  font-size:7px !important;\n  line-height:11px !important;\n}\n\n/* Paraguay */\n#entrega .flag-py{\n  background:linear-gradient(to bottom,#d91e36 0 33.33%,#ffffff 33.33% 66.66%,#21468b 66.66% 100%) !important;\n}\n#entrega .flag-py::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:4px !important;\n  height:4px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n/* Uruguay */\n#entrega .flag-uy{\n  background:repeating-linear-gradient(to bottom,#ffffff 0 3px,#ffffff 3px 5px,#4aa3df 5px 7px,#4aa3df 7px 9px) !important;\n}\n#entrega .flag-uy::before{\n  content:"" !important;\n  position:absolute !important;\n  left:0 !important;\n  top:0 !important;\n  width:42% !important;\n  height:42% !important;\n  background:#fff !important;\n}\n#entrega .flag-uy::after{\n  content:"" !important;\n  position:absolute !important;\n  left:12% !important;\n  top:12% !important;\n  width:5px !important;\n  height:5px !important;\n  border-radius:50% !important;\n  background:#f6c343 !important;\n}\n\n/* Brasil */\n#entrega .flag-br{\n  background:#229e45 !important;\n}\n#entrega .flag-br::before{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:14px !important;\n  height:14px !important;\n  background:#f7df1e !important;\n  transform:translate(-50%,-50%) rotate(45deg) !important;\n}\n#entrega .flag-br::after{\n  content:"" !important;\n  position:absolute !important;\n  left:50% !important;\n  top:50% !important;\n  width:7px !important;\n  height:7px !important;\n  border-radius:50% !important;\n  background:#1e3a8a !important;\n  transform:translate(-50%,-50%) !important;\n}\n\n#entrega .entregaFlags div i{\n  color:#8dff65 !important;\n  font-weight:900 !important;\n  font-style:normal !important;\n}\n';
   function injectEntrega158(){
     let st=document.getElementById('entrega-v158-flags-css');
     if(!st){
@@ -9927,9 +9927,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final Entregas ajustes solicitados ===== */
+/* ===== v3.3.10 - CSS final Entregas ajustes solicitados ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: ajustes finales solicitados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Sacar la línea vertical punteada del primer hito/inicio */\n#entrega .entregaStep.hasDate[style*="left:0%"]::before,\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n/* Mantener primer punto y texto de inicio dentro del contenedor */\n#entrega .entregaStep[style*="left:0%"]{\n  transform:none !important;\n  text-align:left !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n/* Banderas origen/destino dentro del contenedor superior derecho */\n#entrega .entregaTop{\n  grid-template-columns:.92fr .85fr .85fr .85fr .72fr minmax(128px,148px) !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags{\n  justify-self:end !important;\n  align-self:center !important;\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  overflow:hidden !important;\n}\n\n#entrega .entregaFlags div{\n  width:100% !important;\n  max-width:148px !important;\n  min-width:0 !important;\n  box-sizing:border-box !important;\n  padding:5px 7px !important;\n  gap:5px !important;\n  overflow:hidden !important;\n  flex-wrap:nowrap !important;\n}\n\n#entrega .entregaFlags div b{\n  font-size:12px !important;\n  line-height:1 !important;\n  min-width:auto !important;\n}\n\n#entrega .countryFlag{\n  width:20px !important;\n  height:20px !important;\n  min-width:20px !important;\n  flex:0 0 20px !important;\n}\n\n#entrega .entregaFlags div i{\n  flex:0 0 auto !important;\n  font-size:16px !important;\n  line-height:1 !important;\n}\n';
   function injectEntrega159(){
     let st=document.getElementById('entrega-v159-final-css');
     if(!st){
@@ -9954,9 +9954,9 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - CSS final extremos timeline Entregas ===== */
+/* ===== v3.3.10 - CSS final extremos timeline Entregas ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: extremos de timeline corregidos =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n/* Mantener la linea dentro del area util */\n#entrega .entregaTimeline{\n  padding-left:64px !important;\n  padding-right:64px !important;\n}\n\n#entrega .entregaLine{\n  left:64px !important;\n  right:64px !important;\n}\n\n#entrega .entregaTimeline::after{\n  left:64px !important;\n  right:64px !important;\n}\n\n/* Primer hito: texto y punto dentro de la tarjeta, sin linea vertical */\n#entrega .entregaStep[style*="left:0%"]{\n  left:64px !important;\n  transform:none !important;\n  text-align:left !important;\n  min-width:110px !important;\n  max-width:130px !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::before{\n  content:none !important;\n  display:none !important;\n  border:0 !important;\n}\n\n#entrega .entregaStep[style*="left:0%"]::after{\n  left:0 !important;\n  right:auto !important;\n  transform:translateX(-50%) !important;\n}\n\n#entrega .entregaStep[style*="left:0%"] b,\n#entrega .entregaStep[style*="left:0%"] em{\n  text-align:left !important;\n  margin-left:0 !important;\n  margin-right:auto !important;\n}\n\n/* Ultimo hito: texto y punto dentro de la tarjeta */\n#entrega .entregaStep[style*="left:100%"]{\n  left:auto !important;\n  right:64px !important;\n  transform:none !important;\n  text-align:right !important;\n  min-width:120px !important;\n  max-width:150px !important;\n}\n\n#entrega .entregaStep[style*="left:100%"]::after{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep.hasDate[style*="left:100%"]::before{\n  left:auto !important;\n  right:0 !important;\n  transform:translateX(50%) !important;\n}\n\n#entrega .entregaStep[style*="left:100%"] b,\n#entrega .entregaStep[style*="left:100%"] em{\n  text-align:right !important;\n  margin-left:auto !important;\n  margin-right:0 !important;\n}\n';
   function injectEntrega160(){
     let st=document.getElementById('entrega-v160-extremos-css');
     if(!st){
@@ -9981,7 +9981,7 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - Entregas: avance por registros + bandera Tierra del Fuego =====
+/* ===== v3.3.10 - Entregas: avance por registros + bandera Tierra del Fuego =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
@@ -10124,7 +10124,7 @@ window.abreviarHitoEntrega186 = function(txt){
   }
 
   function replaceEntregaCards161(){
-    // v3.3.9: desactivado.
+    // v3.3.10: desactivado.
     // Este post-procesador heredado reconstruía la línea de tiempo después del render actual
     // y provocaba el flash con hitos/paises antiguos y salto del camión.
     return;
@@ -10138,11 +10138,11 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - Entregas: timeline por registros reales corregido =====
+/* ===== v3.3.10 - Entregas: timeline por registros reales corregido =====
    Solo afecta la vista Entregas. No modifica diseño ni otros módulos. */
 (function(){
   const CSS = `
-/* ===== v3.3.9 - Entregas: extremos y registros reales =====
+/* ===== v3.3.10 - Entregas: extremos y registros reales =====
    SOLO afecta #entrega. No modifica otros módulos ni el diseño base. */
 
 /* Mantener la línea y los extremos dentro del contenedor */
@@ -10380,7 +10380,7 @@ window.abreviarHitoEntrega186 = function(txt){
     return Math.min(idx, stages.length-1);
   }
 
-  function attach(){ /* v3.3.9: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
+  function attach(){ /* v3.3.10: wrapper v162 desactivado para evitar segundo render de Entregas */ return; }
 
   document.addEventListener('DOMContentLoaded',()=>{injectEntrega162(); attach();});
   window.addEventListener('load',()=>{injectEntrega162(); attach();});
@@ -10390,10 +10390,10 @@ window.abreviarHitoEntrega186 = function(txt){
 
 
 
-/* ===== v3.3.9 - Entregas: hitos desde Aduanas + camión por último registro ===== */
+/* ===== v3.3.10 - Entregas: hitos desde Aduanas + camión por último registro ===== */
 (function(){
 const CSS=`
-/* v3.3.9 - Entregas: aduanas y avance real */
+/* v3.3.10 - Entregas: aduanas y avance real */
 #entrega .entregaTimeline{padding-left:72px!important;padding-right:72px!important;overflow:hidden!important}
 #entrega .entregaLine{left:72px!important;right:72px!important}
 #entrega .entregaTimeline::after{left:72px!important;right:72px!important}
@@ -10427,16 +10427,16 @@ function records(t){const out=[];const push=r=>{if(!r||typeof r!=='object')retur
 function match(r,h){r=norm(r);h=norm(h);return r&&h&&(r===h||r.includes(h)||h.includes(r))}
 function update(){const trs=Array.isArray(window.trs)?window.trs:[], embs=Array.isArray(window.embarques)?window.embarques:[];document.querySelectorAll('#entrega .entregaCard').forEach(card=>{try{const fl=(card.querySelector('.entregaFleet h3')?.textContent.match(/\d+/)||[])[0]||'';const en=(card.querySelector('.entregaFleet small')?.textContent.match(/\d+/)||[])[0]||'';const t=trs.find(x=>clean(get(x,['flota','fleet','usuario','user']))===fl)||{};const e=embs.find(x=>clean(get(x,['numero','embarque','idEmbarque','codigo'])||x.id)===en)||{};const orig=clean(get(e,['origen','origin']))||clean(get(t,['origen','origin']))||'Inicio';const dest=clean(get(e,['destino','destination']))||clean(get(t,['destino','destination']))||'Cierre';const ini=get(t,['start','inicio','fechaInicio','createdAt'])||get(e,['fecha','createdAt','fechaHora']);const fin=get(t,['cierre','fechaCierre','closedAt','end','finalizadoEn'])||get(e,['cierre','fechaCierre','closedAt','end','finalizadoEn']);const names=hitos(dest,orig);const namesFiltrados187=window.filtrarHitosEntrega187?window.filtrarHitosEntrega187(names):names;
     const stages=namesFiltrados187.map((name,i)=>({name,time:i===0?ini:(i===names.length-1?fin:''),kind:i===0?'start':(i===names.length-1?'end':'aduana')}));records(t).forEach(r=>{let idx=stages.findIndex((s,i)=>i>0&&i<stages.length-1&&match(r.name,s.name));if(idx<0)idx=stages.findIndex((s,i)=>i>0&&match(r.name,s.name));if(idx>=0&&!hasDate(stages[idx].time))stages[idx].time=r.time});let pi=0;stages.forEach((s,i)=>{if(hasDate(s.time))pi=i});const max=Math.max(1,stages.length-1),pct=Math.max(0,Math.min(100,(pi/max)*100));const tl=card.querySelector('.entregaTimeline');if(!tl)return;const prog=tl.querySelector('.entregaLine i');if(prog)prog.style.width=pct+'%';tl.querySelectorAll('.entregaStep').forEach(x=>x.remove());const veh=tl.querySelector('.entregaVehicle');stages.forEach((s,i)=>{const d=fmt(s.time),has=d&&d!=='-';const step=document.createElement('div');step.className=['entregaStep',i===0?'timelineStart':'',i===stages.length-1?'timelineEnd':'',i<=pi?'done':'',i===pi?'current':'',has&&i>0?'hasDate':''].filter(Boolean).join(' ');step.style.left=((i/max)*100)+'%';step.innerHTML=`<b>${esc(s.name)}</b><em>${esc(d)}</em>`;tl.insertBefore(step,veh||null)});if(veh)veh.style.left=pct+'%'}catch(e){console.warn('Entregas v163',e)}})}
-function attach(){/* v3.3.9: wrapper v163 desactivado para evitar segundo render de Entregas */return}
+function attach(){/* v3.3.10: wrapper v163 desactivado para evitar segundo render de Entregas */return}
 document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.addEventListener('load',()=>{inject();attach();});setTimeout(()=>{inject();attach();},500);
 })();
 
 
 
 
-/* ===== v3.3.9 - Entregas: ajuste final camion/textos ===== */
+/* ===== v3.3.10 - Entregas: ajuste final camion/textos ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: camion sobre linea y textos de hitos destacados =====\n   SOLO afecta #entrega. No modifica otros módulos. */\n\n#entrega .entregaTimeline{\n  --entrega-progress:0;\n}\n\n/* Camión anclado al mismo eje útil de la línea de tiempo.\n   Evita que quede fuera cuando el avance es 0%. */\n#entrega .entregaVehicle{\n  left:calc(72px + (100% - 144px) * var(--entrega-progress)) !important;\n  transform:translateX(-50%) !important;\n  z-index:6 !important;\n}\n\n/* Texto de hitos con fondo claro y texto negro para mejorar lectura */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(255,255,255,.92) !important;\n  color:#111827 !important;\n  border-radius:6px !important;\n  padding:3px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.28) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n}\n\n#entrega .entregaStep em{\n  display:inline-block !important;\n  background:rgba(255,255,255,.84) !important;\n  color:#111827 !important;\n  border-radius:5px !important;\n  padding:2px 5px !important;\n  margin-top:5px !important;\n  box-shadow:0 2px 5px rgba(0,0,0,.22) !important;\n}\n\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega164(){
     let st=document.getElementById('entrega-v164-camion-textos-css');
     if(!st){
@@ -10484,9 +10484,9 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.3.9 - Entregas: CSS final textos integrados ===== */
+/* ===== v3.3.10 - Entregas: CSS final textos integrados ===== */
 (function(){
-  const CSS = '\n/* ===== v3.3.9 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
+  const CSS = '\n/* ===== v3.3.10 - Entregas: textos de hitos integrados =====\n   SOLO afecta #entrega. No modifica lógica, camión, avance, banderas ni otros módulos. */\n\n/* Reemplaza los chips blancos por cápsulas oscuras integradas al diseño */\n#entrega .entregaStep b{\n  display:inline-block !important;\n  background:rgba(35,48,64,.86) !important;\n  color:#f8fafc !important;\n  border:1px solid rgba(148,163,184,.30) !important;\n  border-radius:6px !important;\n  padding:2px 6px !important;\n  box-shadow:0 2px 6px rgba(0,0,0,.18) !important;\n  line-height:1.05 !important;\n  max-width:100% !important;\n  font-weight:800 !important;\n}\n\n/* Fecha sin cápsula, gris claro y más discreta */\n#entrega .entregaStep em{\n  display:block !important;\n  background:transparent !important;\n  color:#cbd5e1 !important;\n  border:0 !important;\n  border-radius:0 !important;\n  padding:0 !important;\n  margin-top:6px !important;\n  box-shadow:none !important;\n  font-style:normal !important;\n  font-weight:500 !important;\n  line-height:1.05 !important;\n}\n\n/* Mantener alineación de extremos */\n#entrega .entregaStep.timelineStart b,\n#entrega .entregaStep.timelineStart em{\n  text-align:left !important;\n}\n\n#entrega .entregaStep.timelineEnd b,\n#entrega .entregaStep.timelineEnd em{\n  text-align:right !important;\n}\n';
   function injectEntrega165(){
     let st=document.getElementById('entrega-v165-textos-integrados-css');
     if(!st){
@@ -10513,7 +10513,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.3.9 - Entregas: abreviatura visual de hitos =====
+/* ===== v3.3.10 - Entregas: abreviatura visual de hitos =====
    Solo afecta la presentación de nombres en la línea de tiempo de Entregas.
    No modifica datos, lógica de avance, camión, banderas ni otros módulos. */
 (function(){
@@ -10575,7 +10575,7 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
 
 
 
-/* ===== v3.3.9 - Entregas: hitos desde colección aduana por campo destino =====
+/* ===== v3.3.10 - Entregas: hitos desde colección aduana por campo destino =====
    Solo afecta la lógica de hitos de Entregas.
    No modifica estética, camión, textos, banderas ni otros módulos. */
 (function(){
@@ -10829,8 +10829,8 @@ document.addEventListener('DOMContentLoaded',()=>{inject();attach();});window.ad
     });
   }
 
-  async function run167(){ /* v3.3.9 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
-function attach167(){ /* v3.3.9 desactivado */ return; }
+  async function run167(){ /* v3.3.10 desactivado: causaba segundo render heredado de Entregas */ return Promise.resolve(); }
+function attach167(){ /* v3.3.10 desactivado */ return; }
 document.addEventListener('DOMContentLoaded',()=>{});
   window.addEventListener('load',()=>{});
 })();
@@ -10838,7 +10838,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: botón Actualizar refresca timeline =====
+/* ===== v3.3.10 - Entregas: botón Actualizar refresca timeline =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol168(name){
@@ -10967,7 +10967,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: Actualizar reconstruye la línea como al reingresar =====
+/* ===== v3.3.10 - Entregas: Actualizar reconstruye la línea como al reingresar =====
    Solo afecta el botón Actualizar de Entregas. No modifica estética ni otros módulos. */
 (function(){
   async function readCol169(name){
@@ -11098,7 +11098,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: Actualizar sin parpadeo =====
+/* ===== v3.3.10 - Entregas: Actualizar sin parpadeo =====
    Solo afecta el botón Actualizar de Entregas.
    Corrige el efecto visual eliminando renders repetidos y reconstrucción múltiple. */
 (function(){
@@ -11228,7 +11228,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
+/* ===== v3.3.10 - Entregas: Actualizar in-place sin reconstruir tarjeta =====
    Solo afecta el botón Actualizar de Entregas.
    No modifica estética ni otros módulos. */
 (function(){
@@ -11514,7 +11514,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: Actualizar aislado, sin render viejo =====
+/* ===== v3.3.10 - Entregas: Actualizar aislado, sin render viejo =====
    Solo afecta el botón Actualizar de Entregas.
    No llama a renderEntrega(), no limpia entregaCards y no reconstruye tarjetas completas. */
 (function(){
@@ -11813,9 +11813,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Version final + Entregas boton aislado dominante ===== */
+/* ===== v3.3.10 - Version final + Entregas boton aislado dominante ===== */
 (function(){
-  const VERSION_FINAL_173 = '3.3.9';
+  const VERSION_FINAL_173 = '3.3.10';
   window.ELTA_APP_VERSION = VERSION_FINAL_173;
   window.APP_VERSION_V2 = VERSION_FINAL_173;
 
@@ -11919,11 +11919,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: botón Actualizar sin bucle =====
+/* ===== v3.3.10 - Entregas: botón Actualizar sin bucle =====
    Corrige el botón que quedaba en "Actualizando..." por delegación recursiva.
    Solo afecta Entregas. No modifica estética. */
 (function(){
-  const VERSION_174 = '3.3.9';
+  const VERSION_174 = '3.3.10';
   let busy174 = false;
 
   function setVersion174(){
@@ -12063,10 +12063,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Reporte PDF: hitos desde colección aduana =====
+/* ===== v3.3.10 - Reporte PDF: hitos desde colección aduana =====
    Solo modifica la lógica de Hitos del tránsito del reporte. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V; window.APP_VERSION_V2=V;
   const clean=v=>{
     if(v==null)return '';
@@ -12170,9 +12170,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Forzado final de versión visible y PDF ===== */
+/* ===== v3.3.10 - Forzado final de versión visible y PDF ===== */
 (function(){
-  const VERSION_FINAL_177 = '3.3.9';
+  const VERSION_FINAL_177 = '3.3.10';
   window.ELTA_APP_VERSION = VERSION_FINAL_177;
   window.APP_VERSION_V2 = VERSION_FINAL_177;
   window.APP_VERSION_PDF = VERSION_FINAL_177;
@@ -12192,10 +12192,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Alertas: sin KM heredado, sin observers =====
-   Base v3.3.9. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
+/* ===== v3.3.10 - Alertas: sin KM heredado, sin observers =====
+   Base v3.3.10. Solo afecta Alertas. No toca Tránsitos, Entregas, PDF ni estética. */
 (function(){
-  const VERSION_ALERTAS_183='3.3.9';
+  const VERSION_ALERTAS_183='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_183;
   window.APP_VERSION_V2=VERSION_ALERTAS_183;
 
@@ -12252,10 +12252,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Alertas: columnas alineadas sin KM =====
+/* ===== v3.3.10 - Alertas: columnas alineadas sin KM =====
    Solo ajusta la tabla de detalle de Alertas. No toca otros modulos. */
 (function(){
-  const VERSION_ALERTAS_185='3.3.9';
+  const VERSION_ALERTAS_185='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ALERTAS_185;
   window.APP_VERSION_V2=VERSION_ALERTAS_185;
   function setVersion185(){
@@ -12272,10 +12272,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: evitar flash de hito inicio largo =====
+/* ===== v3.3.10 - Entregas: evitar flash de hito inicio largo =====
    Solo afecta el texto visual del hito de inicio CLZ/CLC. */
 (function(){
-  const VERSION_ENTREGA_186='3.3.9';
+  const VERSION_ENTREGA_186='3.3.10';
   function apply186(){
     document.querySelectorAll('#entrega .entregaStep b').forEach(el=>{
       const full=el.getAttribute('data-full-hito') || el.getAttribute('title') || el.textContent || '';
@@ -12313,10 +12313,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: quitar país como hito intermedio =====
+/* ===== v3.3.10 - Entregas: quitar país como hito intermedio =====
    Solo afecta la línea de tiempo de Entregas. No toca Alertas, Tránsitos, PDF ni Firebase. */
 (function(){
-  const VERSION_ENTREGA_187='3.3.9';
+  const VERSION_ENTREGA_187='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_187;
   window.APP_VERSION_V2=VERSION_ENTREGA_187;
 
@@ -12379,10 +12379,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: render único sin postproceso heredado =====
+/* ===== v3.3.10 - Entregas: render único sin postproceso heredado =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_188='3.3.9';
+  const VERSION_ENTREGA_188='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_188;
   window.APP_VERSION_V2=VERSION_ENTREGA_188;
 
@@ -12430,10 +12430,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: render único, sin wrappers heredados =====
+/* ===== v3.3.10 - Entregas: render único, sin wrappers heredados =====
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética. */
 (function(){
-  const VERSION_ENTREGA_189='3.3.9';
+  const VERSION_ENTREGA_189='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_189;
   window.APP_VERSION_V2=VERSION_ENTREGA_189;
 
@@ -12475,11 +12475,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: render definitivo unico =====
+/* ===== v3.3.10 - Entregas: render definitivo unico =====
    Reemplaza el render de Entregas al final del archivo para evitar wrappers heredados.
    Solo afecta Entregas. No toca Alertas, Tránsitos, PDF, Firebase ni estética general. */
 (function(){
-  const VERSION_ENTREGAS_190 = '3.3.9';
+  const VERSION_ENTREGAS_190 = '3.3.10';
   window.ELTA_APP_VERSION = VERSION_ENTREGAS_190;
   window.APP_VERSION_V2 = VERSION_ENTREGAS_190;
 
@@ -12837,10 +12837,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: marcar hito final cuando el tránsito está cerrado =====
+/* ===== v3.3.10 - Entregas: marcar hito final cuando el tránsito está cerrado =====
    Solo afecta la línea de tiempo de Entregas. */
 (function(){
-  const VERSION_ENTREGA_191='3.3.9';
+  const VERSION_ENTREGA_191='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_191;
   window.APP_VERSION_V2=VERSION_ENTREGA_191;
 })();
@@ -12848,10 +12848,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: cierre marca último hito =====
+/* ===== v3.3.10 - Entregas: cierre marca último hito =====
    Solo afecta la marcación visual de tarjetas cerradas en Entregas. */
 (function(){
-  const VERSION_ENTREGA_192='3.3.9';
+  const VERSION_ENTREGA_192='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_192;
   window.APP_VERSION_V2=VERSION_ENTREGA_192;
 
@@ -12926,10 +12926,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: cierre gana contra render heredado tardío =====
+/* ===== v3.3.10 - Entregas: cierre gana contra render heredado tardío =====
    Solo afecta la vista Entregas. Corrección finita, sin observer ni intervalos. */
 (function(){
-  const VERSION_ENTREGA_193='3.3.9';
+  const VERSION_ENTREGA_193='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_193;
   window.APP_VERSION_V2=VERSION_ENTREGA_193;
 
@@ -13033,11 +13033,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: cierre 100% verde =====
+/* ===== v3.3.10 - Entregas: cierre 100% verde =====
    Solo afecta Entregas. Cuando el tránsito está cerrado:
    línea completa, todos los círculos verdes y camión al último hito. */
 (function(){
-  const VERSION_ENTREGA_194='3.3.9';
+  const VERSION_ENTREGA_194='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_194;
   window.APP_VERSION_V2=VERSION_ENTREGA_194;
 
@@ -13140,11 +13140,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: botón Actualizar con render único =====
+/* ===== v3.3.10 - Entregas: botón Actualizar con render único =====
    Solo afecta el botón Actualizar de Entregas.
    Evita que un handler heredado vuelva a pintar datos anteriores, especialmente Última act. */
 (function(){
-  const VERSION_ENTREGA_195='3.3.9';
+  const VERSION_ENTREGA_195='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_195;
   window.APP_VERSION_V2=VERSION_ENTREGA_195;
   let busy195=false;
@@ -13219,7 +13219,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
       applyClosed195();
 
       // Gana contra renders tardíos heredados: todos usan los mismos datos frescos.
-      /* v3.3.9: renders tardíos heredados desactivados */
+      /* v3.3.10: renders tardíos heredados desactivados */
     }finally{
       setTimeout(()=>{
         if(b){ b.disabled=false; b.textContent=old || 'Actualizar'; }
@@ -13269,10 +13269,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: fecha correcta de cierre y última actualización =====
+/* ===== v3.3.10 - Entregas: fecha correcta de cierre y última actualización =====
    Solo afecta Entregas. Toma la fecha más nueva de registros del tránsito para cerrado. */
 (function(){
-  const VERSION_ENTREGA_196='3.3.9';
+  const VERSION_ENTREGA_196='3.3.10';
   window.ELTA_APP_VERSION=VERSION_ENTREGA_196;
   window.APP_VERSION_V2=VERSION_ENTREGA_196;
 
@@ -13338,9 +13338,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Forzar version visible ===== */
+/* ===== v3.3.10 - Forzar version visible ===== */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function setV207(){
@@ -13360,11 +13360,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Embarques only: sin render heredado =====
+/* ===== v3.3.10 - Embarques only: sin render heredado =====
    Solo afecta Embarques. No toca Tránsitos, Entregas, Alertas ni PDF.
    El botón eliminar nace en el render; no se agrega con post-render. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13415,12 +13415,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Eliminar embarque real + hitos intermedios Entregas =====
+/* ===== v3.3.10 - Eliminar embarque real + hitos intermedios Entregas =====
    Corrige:
    1) Eliminar embarque: borra por docId y tambien por campos numero/embarque/idEmbarque/codigo.
    2) Entregas: asegura lectura de coleccion aduana antes de renderizar. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -13582,11 +13582,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Limpieza definitiva Entregas + Embarques =====
+/* ===== v3.3.10 - Limpieza definitiva Entregas + Embarques =====
    Solo se reemplazan los renderizadores activos de Entregas y Embarques.
    No se toca Tránsitos, Alertas, Clima, PDF ni estilos generales. */
 (function(){
-  const VERSION_210='3.3.9';
+  const VERSION_210='3.3.10';
   window.ELTA_APP_VERSION=VERSION_210;
   window.APP_VERSION_V2=VERSION_210;
 
@@ -13975,9 +13975,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Forzado final de version visible ===== */
+/* ===== v3.3.10 - Forzado final de version visible ===== */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   function forceVersion211(){
@@ -13997,13 +13997,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Confirmación eliminar + hitos Entregas por embarque =====
+/* ===== v3.3.10 - Confirmación eliminar + hitos Entregas por embarque =====
    Ajuste puntual:
    - Embarques: vuelve el modal de confirmación antes de eliminar.
    - Entregas: cuando el tránsito está cerrado, cruza tránsito con embarque por N° embarque
      para tomar origen/destino reales y construir hitos intermedios. */
 (function(){
-  const VERSION_212='3.3.9';
+  const VERSION_212='3.3.10';
   window.ELTA_APP_VERSION=VERSION_212;
   window.APP_VERSION_V2=VERSION_212;
 
@@ -14320,12 +14320,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Ajustes Embarques + Entregas =====
+/* ===== v3.3.10 - Ajustes Embarques + Entregas =====
    - Modal eliminar embarque más compacto.
    - Embarques: toma flota desde cargas cuando el embarque no tiene flota directa.
    - Entregas: agrega filtro Programados y fuerza el render correcto si aparece el render heredado Inicio/Cierre. */
 (function(){
-  const VERSION_213='3.3.9';
+  const VERSION_213='3.3.10';
   window.ELTA_APP_VERSION=VERSION_213;
   window.APP_VERSION_V2=VERSION_213;
 
@@ -14646,13 +14646,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Proyecto limpio deploy =====
+/* ===== v3.3.10 - Proyecto limpio deploy =====
    Version final del proyecto completo:
    - Sin referencias a versiones anteriores en index.
    - Embarques: modal compacto, flota desde carga y eliminar con confirmacion.
    - Entregas: Programados en filtro y refuerzo anti-render Inicio/Cierre. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
   const S=v=>String(v??'').trim();
@@ -14762,7 +14762,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Corrección final línea de tiempo Entregas =====
+/* ===== v3.3.10 - Corrección final línea de tiempo Entregas =====
    Sólo corrige el modelo de datos de la línea de tiempo:
    - Convierte Timestamp Firebase / objetos {seconds,nanoseconds} / {_seconds,_nanoseconds}.
    - Evita mostrar [object Object].
@@ -14771,7 +14771,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - En tránsito no marca el destino como alcanzado hasta el cierre.
    - Cerrado marca todos los hitos en verde. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15093,11 +15093,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Bloqueo del último hito Entregas =====
-   Mantiene la lógica de v3.3.9, pero evita que un render heredado posterior
+/* ===== v3.3.10 - Bloqueo del último hito Entregas =====
+   Mantiene la lógica de v3.3.10, pero evita que un render heredado posterior
    cambie sólo el último hito de la línea de tiempo. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15259,9 +15259,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
+/* ===== v3.3.10 - Entregas: bloqueo fuerte render heredado ultimo hito + modal rojo ===== */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15432,13 +15432,13 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Bloqueo del render heredado que escribe INICIO =====
+/* ===== v3.3.10 - Bloqueo del render heredado que escribe INICIO =====
    Corrige únicamente Entregas:
    - Si un render posterior vuelve a escribir "INICIO" en el primer hito, se reemplaza
      inmediatamente por el origen real de la tarjeta: CLZ / CLC / TZ - PUERTO ZARATE, etc.
    - Mantiene la lógica de línea de tiempo ya corregida. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15576,7 +15576,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: render final estable sin refresh heredado =====
+/* ===== v3.3.10 - Entregas: render final estable sin refresh heredado =====
    Corrige sólo Entregas:
    - No llama al render heredado de Entregas.
    - Recupera fecha real de inicio desde embarque/transito/carga.
@@ -15584,7 +15584,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
    - Reemplaza INICIO por origen real.
    - Separa la línea punteada vertical del texto del hito. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -15918,11 +15918,11 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
-   Base: v3.3.9 estable. No modifica Firebase, refresh ni render principal.
+/* ===== v3.3.10 - Entregas: bloqueo mínimo de INICIO sin tocar carga de datos =====
+   Base: v3.3.10 estable. No modifica Firebase, refresh ni render principal.
    Sólo corrige el texto INICIO si aparece después del render. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16014,12 +16014,12 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: fechas cierre + separación línea punteada =====
-   Base v3.3.9. No toca Firebase ni render principal.
+/* ===== v3.3.10 - Entregas: fechas cierre + separación línea punteada =====
+   Base v3.3.10. No toca Firebase ni render principal.
    Corrige fechas visibles de inicio/cierre cuando el tránsito está cerrado
    y evita superposición visual de la línea punteada con fecha/hora. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16188,10 +16188,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
-   Base v3.3.9. No toca la carga de datos. Corrige sólo visualización final. */
+/* ===== v3.3.10 - Entregas: fechas inicio/cierre desde objetos Firebase + línea corta =====
+   Base v3.3.10. No toca la carga de datos. Corrige sólo visualización final. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16368,10 +16368,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== v3.3.9 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
+/* ===== v3.3.10 - Entregas: fechas inicio/cierre robustas + línea vertical mínima =====
    No modifica carga de datos. Lee arrays globales o variables del script y completa los hitos cerrados. */
 (function(){
-  const V='3.3.9';
+  const V='3.3.10';
   window.ELTA_APP_VERSION=V;
   window.APP_VERSION_V2=V;
 
@@ -16557,10 +16557,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 
 
 
-/* ===== ELTA v3.3.9 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
+/* ===== ELTA v3.3.10 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   const COLLECTION='embarque_documentos';
   const MAX_MB=12;
   const QUERY_TIMEOUT=5000;
@@ -16761,10 +16761,10 @@ document.addEventListener('DOMContentLoaded',()=>{});
 })();
 
 
-/* ===== v3.3.9 - BITACORA OPERATIVA: MODULO UNICO SIN RENDER HEREDADO ===== */
+/* ===== v3.3.10 - BITACORA OPERATIVA: MODULO UNICO SIN RENDER HEREDADO ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.9';
+  const VERSION='3.3.10';
   const state={embarque:'',eventKey:'',extra:{alertas:[],aduana:[],checklists:[],aduanaCatalogo:[]},ready:false};
   const S=v=>String(v??'').trim();
   const L=v=>S(v).toLowerCase();
@@ -16800,6 +16800,49 @@ document.addEventListener('DOMContentLoaded',()=>{});
   const findTransit=emb=>list('trs').find(t=>same(embNum(t),emb)&&open(t))||list('trs').find(t=>same(embNum(t),emb))||null;
   const findShipment=emb=>list('embarques').find(e=>same(embNum(e),emb))||null;
   function userForFleet(f){const u=list('users').find(x=>S(x.fleet||x.flota||x.numero)===S(f));return S(u?.nombre||u?.name||u?.chofer||u?.displayName)}
+  function coordOfObj(obj){
+    if(!obj||typeof obj!=='object')return null;
+    const candidates=[obj,obj.gps,obj.position,obj.posicion,obj.location,obj.ubicacionGps,obj.coordenadasGps,obj.start,obj.closed].filter(Boolean);
+    for(const c of candidates){
+      if(typeof c==='string'){
+        const m=c.match(/(-?\d+(?:\.\d+)?)\s*[,;]\s*(-?\d+(?:\.\d+)?)/);
+        if(m){const lat=Number(m[1]),lng=Number(m[2]);if(Number.isFinite(lat)&&Number.isFinite(lng))return{lat,lng};}
+        continue;
+      }
+      const lat=Number(c.lat??c.latitude??c.latitud);
+      const lng=Number(c.lng??c.lon??c.longitude??c.longitud);
+      if(Number.isFinite(lat)&&Number.isFinite(lng)&&Math.abs(lat)<=90&&Math.abs(lng)<=180)return{lat,lng};
+      for(const k of ['coords','coord','coordenadas']){
+        const v=c[k]; if(typeof v==='string'){
+          const m=v.match(/(-?\d+(?:\.\d+)?)\s*[,;]\s*(-?\d+(?:\.\d+)?)/);
+          if(m){const a=Number(m[1]),b=Number(m[2]);if(Number.isFinite(a)&&Number.isFinite(b))return{lat:a,lng:b};}
+        }
+      }
+    }
+    return null;
+  }
+  let bitacoraEventMap=null;
+  async function renderSelectedEventMap(ev){
+    const box=byId('b344EventMap'),status=byId('b344MapStatus');
+    if(!box)return;
+    const pos=coordOfObj(ev?.raw)||coordOfObj(ev);
+    if(!pos){
+      if(bitacoraEventMap){try{bitacoraEventMap.remove()}catch(_){ } bitacoraEventMap=null;}
+      box.innerHTML='';
+      if(status)status.textContent='Este evento no tiene coordenadas GPS registradas.';
+      return;
+    }
+    const ok=typeof window.ensureLeafletV314==='function'?await window.ensureLeafletV314():!!window.L;
+    if(!ok||!window.L){if(status)status.textContent='No se pudo cargar el mapa.';return;}
+    if(bitacoraEventMap){try{bitacoraEventMap.remove()}catch(_){ } bitacoraEventMap=null;}
+    bitacoraEventMap=L.map(box,{zoomControl:true,preferCanvas:true,attributionControl:true});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(bitacoraEventMap);
+    const icon=L.divIcon({className:'',html:'<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:#55d83f;border:3px solid #fff;transform:rotate(-45deg);box-shadow:0 3px 10px rgba(0,0,0,.55)"><span style="display:block;transform:rotate(45deg);text-align:center;line-height:22px;font-size:13px">●</span></div>',iconSize:[30,30],iconAnchor:[15,28]});
+    L.marker([pos.lat,pos.lng],{icon}).addTo(bitacoraEventMap).bindPopup(`<b>${E(ev?.label||ev?.type||'Evento')}</b><br>${E(ev?.loc||'')}`).openPopup();
+    bitacoraEventMap.setView([pos.lat,pos.lng],14);
+    if(status)status.textContent=`${pos.lat.toFixed(6)}, ${pos.lng.toFixed(6)}`;
+    setTimeout(()=>bitacoraEventMap&&bitacoraEventMap.invalidateSize(true),120);
+  }
   function optionsData(){
     const map=new Map();
     const put=(o,priority)=>{const n=embNum(o);if(!n)return;const k=key(n),old=map.get(k)||{};map.set(k,{...old,...o,_emb:n,_fleet:fleet(o)||old._fleet||'',_priority:priority})};
@@ -16808,17 +16851,17 @@ document.addEventListener('DOMContentLoaded',()=>{});
   }
   function eventIcon(type){const s=L(type);if(s.includes('aduana'))return'🏛️';if(s.includes('check'))return'✅';if(s.includes('niebla'))return'🌧️';if(s.includes('rotura'))return'🔧';if(s.includes('accidente'))return'🚨';if(s.includes('alert')||s.includes('control'))return'⚠️';if(s.includes('fin')||s.includes('cierre'))return'■';return'▶'}
   function buildEvents(t){
-    const out=[];if(t){const r=route(t),start=t.start?.time||t.start||t.inicio||t.fechaInicio||t.createdAt;out.push({key:'start',type:'Inicio',label:'Inicio de tránsito',time:start,loc:S(r.origen||t.origen||'-'),source:'APK',user:S(t.user?.name||t.chofer||userForFleet(fleet(t))||'-'),obs:'Inicio del tránsito'});(t.alerts||[]).forEach((a,i)=>out.push({key:'ta'+i,type:S(a.tipo||a.type||'Alerta'),label:S(a.tipo||a.type||'Alerta'),time:a.time||a.fecha||a.createdAt,loc:S(a.localidad||a.ubicacion||locationOf(t)||'-'),source:S(a.origenRegistro||a.source||'APK'),user:S(a.usuario||a.user||'-'),obs:S(a.observacion||a.descripcion||'')}));if(!open(t))out.push({key:'end',type:'Fin',label:'Fin de tránsito',time:t.closed?.time||t.closed||t.fechaCierre,loc:S(r.destino||t.destino||'-'),source:'APK',user:S(t.user?.name||'-'),obs:'Cierre del tránsito'});else out.push({key:'pending',type:'Pendiente',label:'Fin de tránsito',time:null,loc:S(r.destino||t.destino||'-'),source:'-',user:'-',obs:'Pendiente'})}
-    state.extra.alertas.forEach((a,i)=>out.push({key:'a'+i,type:S(a.tipo||a.nombre||'Alerta'),label:S(a.tipo||a.nombre||'Alerta'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||a.descripcion||'')}));
-    state.extra.aduana.forEach((a,i)=>out.push({key:'d'+i,type:'Aduana',label:S(a.aduana||a.nombre||'Aduana'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.aduana||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||'')}));
-    state.extra.checklists.forEach((a,i)=>out.push({key:'c'+i,type:'Checklist',label:S(a.tipo||'Checklist OEA'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||'')}));
+    const out=[];if(t){const r=route(t),start=t.start?.time||t.start||t.inicio||t.fechaInicio||t.createdAt;out.push({key:'start',type:'Inicio',label:'Inicio de tránsito',time:start,loc:S(r.origen||t.origen||'-'),source:'APK',user:S(t.user?.name||t.chofer||userForFleet(fleet(t))||'-'),obs:'Inicio del tránsito',raw:t});(t.alerts||[]).forEach((a,i)=>out.push({key:'ta'+i,type:S(a.tipo||a.type||'Alerta'),label:S(a.tipo||a.type||'Alerta'),time:a.time||a.fecha||a.createdAt,loc:S(a.localidad||a.ubicacion||locationOf(t)||'-'),source:S(a.origenRegistro||a.source||'APK'),user:S(a.usuario||a.user||'-'),obs:S(a.observacion||a.descripcion||''),raw:a}));if(!open(t))out.push({key:'end',type:'Fin',label:'Fin de tránsito',time:t.closed?.time||t.closed||t.fechaCierre,loc:S(r.destino||t.destino||'-'),source:'APK',user:S(t.user?.name||'-'),obs:'Cierre del tránsito',raw:t.closed||t});else out.push({key:'pending',type:'Pendiente',label:'Fin de tránsito',time:null,loc:S(r.destino||t.destino||'-'),source:'-',user:'-',obs:'Pendiente',raw:t})}
+    state.extra.alertas.forEach((a,i)=>out.push({key:'a'+i,type:S(a.tipo||a.nombre||'Alerta'),label:S(a.tipo||a.nombre||'Alerta'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||a.descripcion||''),raw:a}));
+    state.extra.aduana.forEach((a,i)=>out.push({key:'d'+i,type:'Aduana',label:S(a.aduana||a.nombre||'Aduana'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.aduana||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||''),raw:a}));
+    state.extra.checklists.forEach((a,i)=>out.push({key:'c'+i,type:'Checklist',label:S(a.tipo||'Checklist OEA'),time:a.fecha||a.time||a.createdAt,loc:S(a.localidad||a.ubicacion||'-'),source:S(a.origenRegistro||'WEB'),user:S(a.usuario||a.creadoPor||'-'),obs:S(a.observacion||''),raw:a}));
     return out.sort((a,b)=>(when(a.time)?.getTime()||9e15)-(when(b.time)?.getTime()||9e15));
   }
   function applyVersion(){window.ELTA_APP_VERSION=VERSION;window.APP_VERSION=VERSION;document.title='ELTA ITS - Versión '+VERSION;document.querySelectorAll('[data-app-version],.appVersion,.loginVersion,.footerVersion').forEach(el=>el.textContent='Versión '+VERSION);document.querySelectorAll('span,small,p,div,footer').forEach(el=>{if(el.childElementCount===0&&/Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||''))el.textContent=el.textContent.replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION)})}
   function ensureMenu(){const nav=document.querySelector('.sideNav');if(!nav)return;const all=[...nav.querySelectorAll('button')].filter(b=>(b.getAttribute('onclick')||'').includes("bitacora"));all.slice(1).forEach(b=>b.remove());if(all[0])return;const b=document.createElement('button');b.setAttribute('onclick',"tab('bitacora')");b.innerHTML='<span class="menuIcon">📖</span><span class="menuText">Bitácora Operativa</span>';const entrega=[...nav.querySelectorAll('button')].find(x=>(x.getAttribute('onclick')||'').includes('entrega'));entrega?.after(b)}
   function ensurePanel(){let p=byId('bitacora');if(!p){const main=document.querySelector('.dashboardShell');if(!main)return null;p=document.createElement('section');p.id='bitacora';p.className='panel';const footer=main.querySelector('.appFooter');footer?main.insertBefore(p,footer):main.appendChild(p)}p.innerHTML='<div class="bit344Header"><div><h2>Bitácora Operativa</h2><p>Registro y gestión integral de eventos del tránsito</p></div><button type="button" onclick="window.renderBitacoraOperativa(true)">Actualizar</button></div><div id="bitacoraRoot"></div>';return p}
   function ensureCss(){if(byId('bit344Css'))return;const s=document.createElement('style');s.id='bit344Css';s.textContent=`
-    #bitacora{position:relative;padding:4px 0 14px!important}.bit344Header{display:flex;justify-content:space-between;align-items:flex-start;margin:0 0 8px}.bit344Header h2{margin:0;font-size:26px;line-height:1}.bit344Header p{margin:4px 0 0;color:#bdc9d8;font-size:13px}.bit344Header button{height:36px;min-width:140px;padding:0 16px;border-radius:10px;border:1px solid #52627a;background:#2a3b54;color:#fff;font-weight:900}.b344Card{background:rgba(15,29,45,.82);border:1px solid rgba(148,163,184,.28);border-radius:14px}.b344Search{display:grid;grid-template-columns:210px minmax(340px,1fr) 180px 150px;gap:10px;align-items:end;padding:10px 12px;margin-bottom:8px}.b344Field label{display:block;color:#bdc9d8;font-size:10.5px;font-weight:900;text-transform:uppercase;margin:0 0 5px}.b344Field input,.b344Field select,.b344Search>button{width:100%;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.35);background:#26364b;color:#fff;padding:0 12px;font-weight:800}.b344Search>button{border:0;background:linear-gradient(#50c93d,#318e28);font-weight:900}.b344Hint{grid-column:1/-1;color:#aab8cb;font-size:11px;font-weight:700}.b344Summary{display:grid;grid-template-columns:150px 190px 240px minmax(175px,1fr) minmax(210px,1fr) 145px;overflow-x:auto;margin-bottom:8px}.b344Info{display:flex;align-items:center;gap:7px;padding:9px 12px;border-right:1px solid rgba(148,163,184,.16);white-space:nowrap;min-width:0}.b344Info small{color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Info b{color:#fff;font-size:13.5px;overflow:visible}.b344Info b.green{color:#8dff65}.b344Progress{display:grid;grid-template-columns:1fr 155px 155px 190px;overflow:hidden;margin-bottom:8px}.b344Route{display:grid;grid-template-columns:165px 1fr 165px;align-items:center;gap:10px;padding:11px 14px;border-right:1px solid rgba(148,163,184,.16)}.b344Route span{font-weight:900;color:#eef5ff;font-size:12px}.b344Route span:last-child{text-align:right}.b344Line{height:4px;background:#697a91;border-radius:99px;position:relative}.b344Line:before{content:'';position:absolute;inset:0 48% 0 0;background:#63e84d;border-radius:99px}.b344Line:after{content:'🚛';position:absolute;left:47%;top:-18px}.b344ProgressNew{padding:8px 18px 12px;margin-bottom:8px;overflow:hidden}.b344RouteTimeline{position:relative;height:104px;padding:0 52px}.b344RouteLabels{display:flex;justify-content:space-between;align-items:center;color:#eef5ff;font-size:12px;font-weight:900;margin-bottom:10px}.b344TimelineTrack{position:absolute;left:52px;right:52px;top:41px;height:3px;border-radius:99px;background:#9aa9bb}.b344TimelineTrack i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#84cc16,#f59e0b)}.b344TimelineStep{position:absolute;top:31px;transform:translateX(-50%);min-width:100px;text-align:center;z-index:2}.b344TimelineStep span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 9px;background:#0f2033;border:3px solid #dbeafe;box-shadow:0 0 0 2px rgba(15,32,51,.8)}.b344TimelineStep.done span{background:#43d63b;border-color:#8dff65}.b344TimelineStep.current span{background:#f59e0b;border-color:#fdba74;box-shadow:0 0 0 5px rgba(245,158,11,.18)}.b344TimelineStep b{display:block;color:#f8fafc;font-size:10px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.b344TimelineStep em{display:block;color:#b9c6d6;font-size:9.5px;font-style:normal;margin-top:4px}.b344TimelineStep.start{left:52px!important;transform:none;text-align:left}.b344TimelineStep.start span{margin-left:0}.b344TimelineStep.start b,.b344TimelineStep.start em{text-align:left}.b344TimelineStep.end{left:auto!important;right:52px;transform:none;text-align:right}.b344TimelineStep.end span{margin-right:0}.b344TimelineStep.end b,.b344TimelineStep.end em{text-align:right}.b344TimelineTruck{position:absolute;top:10px;transform:translateX(-50%);z-index:3;filter:drop-shadow(0 4px 5px rgba(0,0,0,.55));pointer-events:none}.b344TimelineTruck img{display:block;width:48px;height:auto;object-fit:contain;transform:none}.b344TimelineDash{position:absolute;left:52px;right:52px;top:87px;border-top:2px dashed rgba(148,163,184,.48)}.b344Metric{padding:9px 12px;border-right:1px solid rgba(148,163,184,.16)}.b344Metric small{display:block;color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Metric b{display:block;color:#8dff65;margin-top:4px;font-size:14px}.b344Grid{display:grid;grid-template-columns:minmax(280px,30%) minmax(420px,1fr) minmax(250px,24%);gap:8px}.b344Pane{padding:12px;min-height:360px}.b344Pane h3{margin:0 0 10px;color:#fff;font-size:13px;text-transform:uppercase}.b344Event{display:grid;grid-template-columns:64px 30px 1fr auto;gap:7px;align-items:center;padding:8px;margin-bottom:6px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.035);cursor:pointer}.b344Event.active{border-color:#f5a623;background:rgba(245,166,35,.09)}.b344Event .date{font-size:10px;color:#cbd5e1}.b344Event .ico{font-size:17px}.b344Event b{display:block;font-size:12px;color:#fff}.b344Event small{display:block;font-size:10.5px;color:#aab8cb}.b344Event em{font-style:normal;color:#8dff65;font-size:9.5px;font-weight:900}.b344Detail{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.b344Box{padding:8px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03)}.b344Box small{display:block;color:#aebbcf;font-size:9px;text-transform:uppercase;font-weight:900}.b344Box b{display:block;color:#fff;font-size:12px;margin-top:3px}.b344Obs,.b344Side{margin-top:8px;padding:9px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03);color:#dbeafe;font-size:12px}.b344Empty{padding:24px;text-align:center;color:#cbd5e1}.b344Actions{display:flex;gap:7px;margin-top:8px;padding:9px}.b344Actions button{flex:1;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.25);background:#24364d;color:#fff;font-weight:900;font-size:11px}.b344Actions .green{background:#318e28}.b344Actions .yellow{background:#80520d}.b344Actions .blue{background:#19527f}.b344Actions .red{background:#a42525}@media(max-width:1250px){.b344Search{grid-template-columns:170px 1fr 145px 130px}.b344Summary{grid-template-columns:repeat(6,minmax(165px,1fr))}.b344Progress{grid-template-columns:1fr}.b344Grid{grid-template-columns:1fr}.b344Actions{flex-wrap:wrap}.b344Actions button{min-width:150px}}
+    #bitacora{position:relative;padding:4px 0 14px!important}.bit344Header{display:flex;justify-content:space-between;align-items:flex-start;margin:0 0 8px}.bit344Header h2{margin:0;font-size:26px;line-height:1}.bit344Header p{margin:4px 0 0;color:#bdc9d8;font-size:13px}.bit344Header button{height:36px;min-width:140px;padding:0 16px;border-radius:10px;border:1px solid #52627a;background:#2a3b54;color:#fff;font-weight:900}.b344Card{background:rgba(15,29,45,.82);border:1px solid rgba(148,163,184,.28);border-radius:14px}.b344Search{display:grid;grid-template-columns:210px minmax(340px,1fr) 180px 150px;gap:10px;align-items:end;padding:10px 12px;margin-bottom:8px}.b344Field label{display:block;color:#bdc9d8;font-size:10.5px;font-weight:900;text-transform:uppercase;margin:0 0 5px}.b344Field input,.b344Field select,.b344Search>button{width:100%;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.35);background:#26364b;color:#fff;padding:0 12px;font-weight:800}.b344Search>button{border:0;background:linear-gradient(#50c93d,#318e28);font-weight:900}.b344Hint{grid-column:1/-1;color:#aab8cb;font-size:11px;font-weight:700}.b344Summary{display:grid;grid-template-columns:150px 190px 240px minmax(175px,1fr) minmax(210px,1fr) 145px;overflow-x:auto;margin-bottom:8px}.b344Info{display:flex;align-items:center;gap:7px;padding:9px 12px;border-right:1px solid rgba(148,163,184,.16);white-space:nowrap;min-width:0}.b344Info small{color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Info b{color:#fff;font-size:13.5px;overflow:visible}.b344Info b.green{color:#8dff65}.b344Progress{display:grid;grid-template-columns:1fr 155px 155px 190px;overflow:hidden;margin-bottom:8px}.b344Route{display:grid;grid-template-columns:165px 1fr 165px;align-items:center;gap:10px;padding:11px 14px;border-right:1px solid rgba(148,163,184,.16)}.b344Route span{font-weight:900;color:#eef5ff;font-size:12px}.b344Route span:last-child{text-align:right}.b344Line{height:4px;background:#697a91;border-radius:99px;position:relative}.b344Line:before{content:'';position:absolute;inset:0 48% 0 0;background:#63e84d;border-radius:99px}.b344Line:after{content:'🚛';position:absolute;left:47%;top:-18px}.b344ProgressNew{padding:8px 18px 12px;margin-bottom:8px;overflow:hidden}.b344RouteTimeline{position:relative;height:104px;padding:0 52px}.b344RouteLabels{display:flex;justify-content:space-between;align-items:center;color:#eef5ff;font-size:12px;font-weight:900;margin-bottom:10px}.b344TimelineTrack{position:absolute;left:52px;right:52px;top:41px;height:3px;border-radius:99px;background:#9aa9bb}.b344TimelineTrack i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#84cc16,#f59e0b)}.b344TimelineStep{position:absolute;top:31px;transform:translateX(-50%);min-width:100px;text-align:center;z-index:2}.b344TimelineStep span{display:block;width:14px;height:14px;border-radius:50%;margin:0 auto 9px;background:#0f2033;border:3px solid #dbeafe;box-shadow:0 0 0 2px rgba(15,32,51,.8)}.b344TimelineStep.done span{background:#43d63b;border-color:#8dff65}.b344TimelineStep.current span{background:#f59e0b;border-color:#fdba74;box-shadow:0 0 0 5px rgba(245,158,11,.18)}.b344TimelineStep b{display:block;color:#f8fafc;font-size:10px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.b344TimelineStep em{display:block;color:#b9c6d6;font-size:9.5px;font-style:normal;margin-top:4px}.b344TimelineStep.start{left:52px!important;transform:none;text-align:left}.b344TimelineStep.start span{margin-left:0}.b344TimelineStep.start b,.b344TimelineStep.start em{text-align:left}.b344TimelineStep.end{left:auto!important;right:52px;transform:none;text-align:right}.b344TimelineStep.end span{margin-right:0}.b344TimelineStep.end b,.b344TimelineStep.end em{text-align:right}.b344TimelineTruck{position:absolute;top:10px;transform:translateX(-50%);z-index:3;filter:drop-shadow(0 4px 5px rgba(0,0,0,.55));pointer-events:none}.b344TimelineTruck img{display:block;width:48px;height:auto;object-fit:contain;transform:none}.b344TimelineDash{position:absolute;left:52px;right:52px;top:87px;border-top:2px dashed rgba(148,163,184,.48)}.b344Metric{padding:9px 12px;border-right:1px solid rgba(148,163,184,.16)}.b344Metric small{display:block;color:#aebbcf;font-size:10px;font-weight:900;text-transform:uppercase}.b344Metric b{display:block;color:#8dff65;margin-top:4px;font-size:14px}.b344Grid{display:grid;grid-template-columns:minmax(280px,30%) minmax(420px,1fr) minmax(250px,24%);gap:8px}.b344Pane{padding:12px;min-height:360px}.b344Pane h3{margin:0 0 10px;color:#fff;font-size:13px;text-transform:uppercase}.b344Event{display:grid;grid-template-columns:64px 30px 1fr auto;gap:7px;align-items:center;padding:8px;margin-bottom:6px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.035);cursor:pointer}.b344Event.active{border-color:#f5a623;background:rgba(245,166,35,.09)}.b344Event .date{font-size:10px;color:#cbd5e1}.b344Event .ico{font-size:17px}.b344Event b{display:block;font-size:12px;color:#fff}.b344Event small{display:block;font-size:10.5px;color:#aab8cb}.b344Event em{font-style:normal;color:#8dff65;font-size:9.5px;font-weight:900}.b344Detail{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.b344Box{padding:8px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03)}.b344Box small{display:block;color:#aebbcf;font-size:9px;text-transform:uppercase;font-weight:900}.b344Box b{display:block;color:#fff;font-size:12px;margin-top:3px}.b344Obs,.b344Side{margin-top:8px;padding:9px;border-radius:9px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.03);color:#dbeafe;font-size:12px}.b344EventMapWrap{margin-top:8px}.b344EventMapTitle{display:flex;justify-content:space-between;align-items:center;margin:0 0 6px;color:#fff;font-size:11px;font-weight:900;text-transform:uppercase}.b344EventMap{height:260px;border-radius:10px;overflow:hidden;border:1px solid rgba(148,163,184,.28);background:#0b1725}.b344MapStatus{margin-top:5px;color:#aebbcf;font-size:10px;text-align:right}.b344Empty{padding:24px;text-align:center;color:#cbd5e1}.b344Actions{display:flex;gap:7px;margin-top:8px;padding:9px}.b344Actions button{flex:1;height:36px;border-radius:9px;border:1px solid rgba(148,163,184,.25);background:#24364d;color:#fff;font-weight:900;font-size:11px}.b344Actions .green{background:#318e28}.b344Actions .yellow{background:#80520d}.b344Actions .blue{background:#19527f}.b344Actions .red{background:#a42525}@media(max-width:1250px){.b344Search{grid-template-columns:170px 1fr 145px 130px}.b344Summary{grid-template-columns:repeat(6,minmax(165px,1fr))}.b344Progress{grid-template-columns:1fr}.b344Grid{grid-template-columns:1fr}.b344Actions{flex-wrap:wrap}.b344Actions button{min-width:150px}}
   `;document.head.appendChild(s)}
   function renderSearch(data){const fleets=[...new Set(data.map(x=>x._fleet).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));const selectedFleet=fleet(findTransit(state.embarque))||fleet(findShipment(state.embarque));return `<div class="b344Card b344Search"><div class="b344Field"><label>Nº Embarque</label><input id="b344Emb" value="${E(state.embarque)}" placeholder="Ej. 020703"></div><div class="b344Field"><label>Embarques abiertos / disponibles</label><select id="b344EmbSelect"><option value="">Seleccionar embarque</option>${data.map(x=>`<option value="${E(x._emb)}" ${same(x._emb,state.embarque)?'selected':''}>${E(x._emb)}${x.cliente?' - '+E(x.cliente):''}${x._fleet?' - Flota '+E(x._fleet):''}</option>`).join('')}</select></div><div class="b344Field"><label>Flota</label><select id="b344Fleet"><option value="">Todas</option>${fleets.map(f=>`<option value="${E(f)}" ${S(f)===S(selectedFleet)?'selected':''}>${E(f)}</option>`).join('')}</select></div><button onclick="window.buscarBitacoraEmbarque()">Buscar</button><div class="b344Hint">Seleccione un tránsito para ver bitácora, línea de tiempo y estado actual.</div></div>`}
   function bindFilters(){const embSel=byId('b344EmbSelect'),fleetSel=byId('b344Fleet'),input=byId('b344Emb');if(embSel)embSel.onchange=()=>{if(embSel.value){input.value=embSel.value;const t=findTransit(embSel.value),e=findShipment(embSel.value);if(fleetSel)fleetSel.value=fleet(t)||fleet(e)||''}};if(fleetSel)fleetSel.onchange=()=>{const f=fleetSel.value;[...embSel.options].forEach((o,i)=>{if(i===0)return;o.hidden=!!f&&!o.textContent.includes('Flota '+f)});if(f&&!embSel.selectedOptions[0]?.textContent.includes('Flota '+f)){embSel.value='';input.value=''}}}
@@ -16918,7 +16961,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
     </div>`;
   }
 
-  function renderData(){const root=byId('bitacoraRoot');if(!root)return;const t=findTransit(state.embarque),e=findShipment(state.embarque),r=route(t);const cliente=S(r.cliente||e?.cliente||t?.cliente||'-'),origen=S(r.origen||e?.origen||t?.origen||'-'),destino=S(r.destino||e?.destino||t?.destino||'-'),fl=fleet(t)||fleet(e)||'-',chofer=S(t?.user?.name||t?.chofer||userForFleet(fl)||'-'),estado=t?(open(t)?'En tránsito':'Finalizado'):'Sin tránsito',start=t?.start?.time||t?.start||t?.inicio||t?.fechaInicio,last=(()=>{try{return typeof lastU==='function'?lastU(t):null}catch(_){return null}})(),events=buildEvents(t);if(!state.eventKey&&events[0])state.eventKey=events[0].key;const selected=events.find(x=>x.key===state.eventKey)||events[0];const count=events.filter(x=>x.type!=='Pendiente').length;root.innerHTML=renderSearch(optionsData())+`<div class="b344Card b344Summary"><div class="b344Info"><small>Embarque</small><b class="green">${E(state.embarque)}</b></div><div class="b344Info"><small>Cliente</small><b>${E(cliente)}</b></div><div class="b344Info"><small>Flota / Chofer</small><b>${E(fl)} / ${E(chofer)}</b></div><div class="b344Info"><small>Origen</small><b>${E(origen)}</b></div><div class="b344Info"><small>Destino</small><b>${E(destino)}</b></div><div class="b344Info"><small>Estado</small><b class="green">${E(estado)}</b></div></div><div class="b344Card b344ProgressNew">${renderRouteTimeline(events,origen,destino,estado)}</div><div class="b344Grid"><div class="b344Card b344Pane"><h3>Línea de tiempo del tránsito</h3>${events.map(ev=>`<div class="b344Event ${ev.key===state.eventKey?'active':''}" onclick="window.selectBitacoraEvent('${E(ev.key)}')"><span class="date">${E(fmtDate(ev.time))}</span><span class="ico">${eventIcon(ev.type)}</span><span><b>${E(ev.label)}</b><small>${E(ev.loc)}</small></span><em>${E(ev.source)}</em></div>`).join('')||'<div class="b344Empty">Sin eventos registrados.</div>'}</div><div class="b344Card b344Pane"><h3>Detalle del evento seleccionado</h3>${selected?`<div class="b344Detail"><div class="b344Box"><small>Tipo</small><b>${E(selected.type)}</b></div><div class="b344Box"><small>Fecha / Hora</small><b>${E(fmt(selected.time))}</b></div><div class="b344Box"><small>Usuario</small><b>${E(selected.user)}</b></div><div class="b344Box"><small>Origen registro</small><b>${E(selected.source)}</b></div><div class="b344Box"><small>Ubicación</small><b>${E(selected.loc)}</b></div></div><div class="b344Obs">${E(selected.obs||'Sin observaciones.')}</div>`:'<div class="b344Empty">Seleccione un evento.</div>'}</div><div class="b344Card b344Pane"><h3>Estado actual del tránsito</h3><div class="b344Side"><small>Último GPS</small><b>${E(last?fmt(last.time||last.fecha||last.createdAt):'-')}</b><div>${E(locationOf(t)||'-')}</div></div><div class="b344Side"><small>Próximo hito</small><b>${E(destino)}</b></div><div class="b344Side"><small>Resumen</small><b>${count} eventos</b><div>Estado: ${E(estado)}</div></div></div></div><div class="b344Card b344Actions"><button class="green">Iniciar tránsito</button><button class="blue">Nueva aduana</button><button class="yellow">Nueva alerta</button><button>Checklist OEA</button><button>Documento</button><button>Generar PDF</button><button class="red">Cerrar tránsito</button></div>`;bindFilters()}
+  function renderData(){const root=byId('bitacoraRoot');if(!root)return;const t=findTransit(state.embarque),e=findShipment(state.embarque),r=route(t);const cliente=S(r.cliente||e?.cliente||t?.cliente||'-'),origen=S(r.origen||e?.origen||t?.origen||'-'),destino=S(r.destino||e?.destino||t?.destino||'-'),fl=fleet(t)||fleet(e)||'-',chofer=S(t?.user?.name||t?.chofer||userForFleet(fl)||'-'),estado=t?(open(t)?'En tránsito':'Finalizado'):'Sin tránsito',start=t?.start?.time||t?.start||t?.inicio||t?.fechaInicio,last=(()=>{try{return typeof lastU==='function'?lastU(t):null}catch(_){return null}})(),events=buildEvents(t);if(!state.eventKey&&events[0])state.eventKey=events[0].key;const selected=events.find(x=>x.key===state.eventKey)||events[0];const count=events.filter(x=>x.type!=='Pendiente').length;root.innerHTML=renderSearch(optionsData())+`<div class="b344Card b344Summary"><div class="b344Info"><small>Embarque</small><b class="green">${E(state.embarque)}</b></div><div class="b344Info"><small>Cliente</small><b>${E(cliente)}</b></div><div class="b344Info"><small>Flota / Chofer</small><b>${E(fl)} / ${E(chofer)}</b></div><div class="b344Info"><small>Origen</small><b>${E(origen)}</b></div><div class="b344Info"><small>Destino</small><b>${E(destino)}</b></div><div class="b344Info"><small>Estado</small><b class="green">${E(estado)}</b></div></div><div class="b344Card b344ProgressNew">${renderRouteTimeline(events,origen,destino,estado)}</div><div class="b344Grid"><div class="b344Card b344Pane"><h3>Línea de tiempo del tránsito</h3>${events.map(ev=>`<div class="b344Event ${ev.key===state.eventKey?'active':''}" onclick="window.selectBitacoraEvent('${E(ev.key)}')"><span class="date">${E(fmtDate(ev.time))}</span><span class="ico">${eventIcon(ev.type)}</span><span><b>${E(ev.label)}</b><small>${E(ev.loc)}</small></span><em>${E(ev.source)}</em></div>`).join('')||'<div class="b344Empty">Sin eventos registrados.</div>'}</div><div class="b344Card b344Pane"><h3>Detalle del evento seleccionado</h3>${selected?`<div class="b344Detail"><div class="b344Box"><small>Tipo</small><b>${E(selected.type)}</b></div><div class="b344Box"><small>Fecha / Hora</small><b>${E(fmt(selected.time))}</b></div><div class="b344Box"><small>Usuario</small><b>${E(selected.user)}</b></div><div class="b344Box"><small>Origen registro</small><b>${E(selected.source)}</b></div><div class="b344Box"><small>Ubicación</small><b>${E(selected.loc)}</b></div></div><div class="b344Obs">${E(selected.obs||'Sin observaciones.')}</div><div class="b344EventMapWrap"><div class="b344EventMapTitle"><span>Mapa del evento</span><span>${E(selected.loc||'')}</span></div><div id="b344EventMap" class="b344EventMap"></div><div id="b344MapStatus" class="b344MapStatus">Cargando ubicación...</div></div>`:'<div class="b344Empty">Seleccione un evento.</div>'}</div><div class="b344Card b344Pane"><h3>Estado actual del tránsito</h3><div class="b344Side"><small>Último GPS</small><b>${E(last?fmt(last.time||last.fecha||last.createdAt):'-')}</b><div>${E(locationOf(t)||'-')}</div></div><div class="b344Side"><small>Próximo hito</small><b>${E(destino)}</b></div><div class="b344Side"><small>Resumen</small><b>${count} eventos</b><div>Estado: ${E(estado)}</div></div></div></div><div class="b344Card b344Actions"><button class="green">Iniciar tránsito</button><button class="blue">Nueva aduana</button><button class="yellow">Nueva alerta</button><button>Checklist OEA</button><button>Documento</button><button>Generar PDF</button><button class="red">Cerrar tránsito</button></div>`;bindFilters();setTimeout(()=>renderSelectedEventMap(selected),0)}
   async function render(force=false){ensureCss();ensureMenu();ensurePanel();applyVersion();const root=byId('bitacoraRoot');if(!root)return;if(!state.embarque){await loadBase(force);renderEmpty();return}root.innerHTML='<div class="b344Card b344Empty">Cargando bitácora...</div>';await loadBase(force);await loadExtra(state.embarque);renderData()}
   window.buscarBitacoraEmbarque=async()=>{const v=S(byId('b344Emb')?.value||byId('b344EmbSelect')?.value);if(!v){alert('Ingrese o seleccione un embarque.');return}state.embarque=v;state.eventKey='';await render(true)};
   window.selectBitacoraEvent=k=>{state.eventKey=k;renderData()};
