@@ -4378,7 +4378,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -4412,7 +4412,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Anti-cache y normalizacion final menu/version ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function setVersionFinal(){
@@ -4470,7 +4470,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Correcciones GPS, clima, alertas y seguimiento ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4650,7 +4650,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Ajustes finales clima, KM y alertas ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4771,7 +4771,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Ajuste final: menu, clima compacto, KM y alertas alineadas ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -4914,7 +4914,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Correccion funcional final: menu, clima, KM y alertas compactas ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5095,7 +5095,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Vista Alertas compacta: boton Verificar visible ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5208,7 +5208,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Torre de Control: Últimas alertas formato linea unica ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const $=(id)=>document.getElementById(id);
@@ -5249,7 +5249,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Tránsitos: alertas a la derecha y todas las alertas / Seguimiento vuelve a base 3.3.22 ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5338,7 +5338,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Iconos por tipo de alerta en Tránsitos y Seguimiento ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5458,7 +5458,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: diseño aprobado Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5599,7 +5599,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: formato operativo compacto Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5719,7 +5719,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: filtro por embarque y orden Flotas -> Pasos -> Destinos ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -5894,7 +5894,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: filtro embarques activos + layout compacto corregido ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6036,7 +6036,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: tarjetas compactas + datos operativos + paso real oficial ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6252,7 +6252,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: actualizar funcional, tarjetas compactas y Paso oficial ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6505,7 +6505,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: columnas Flotas | Paso+Destinos, tarjetas compactas ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6579,7 +6579,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: reorganizacion final compacta + paso oficial bajo demanda ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6722,7 +6722,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Clima: layout compacto definitivo y Paso con consulta online ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -6793,7 +6793,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Vista Alertas: resumen con graficos + tabla compacta funcional ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7130,7 +7130,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Normalizacion final del menu lateral ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const items=[
@@ -7299,7 +7299,7 @@ if(_refresh_v1250){
 /* ===== V3.3.22 - Menu base limpio: normalizadores anteriores removidos ===== */
 /* ===== V3.3.22 - Nuevo modulo Embarques ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7452,7 +7452,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Embarques: combos desde colecciones Firestore y estructura real ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -7658,7 +7658,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Librerias externas: PDF y mapa ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   function loadScriptV314(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]'))return res(); const sc=document.createElement('script');sc.src=src;sc.onload=res;sc.onerror=rej;document.head.appendChild(sc);});}
   function loadCssV314(href){if(document.querySelector('link[href="'+href+'"]'))return; const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}
   window.ensurePdfEngineV314=async function(){
@@ -7913,7 +7913,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Fix botones Actualizar global + version unificada ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   function syncGlobals(){
@@ -8149,7 +8149,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - SOLO vista Clima: filtro embarque corrige destino exacto del embarque ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8314,7 +8314,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - FIX DEFINITIVO SOLO CLIMA: filtro por embarque trae destino/paso aunque no haya flota ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -8585,7 +8585,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Clima compacto + PDF OEA + correcciones puntuales ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   function $id(id){return document.getElementById(id);}
   function S(v){return v===undefined||v===null?'':String(v).trim();}
@@ -8757,7 +8757,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Version + flotas del combo desde usuarios role=flota ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const E=(v)=>String(v==null?'':v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -8831,7 +8831,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - FIX DEFINITIVO: version, clima compacto y combo flotas desde Firebase ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -8955,7 +8955,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Embarques: boton Ver cargas en Agregar carga ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const S=v=>String(v==null?'':v).trim();
@@ -9406,7 +9406,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Version lock definitivo ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION = VERSION;
   window.APP_VERSION_V2 = VERSION;
   function applyVersionLock(){
@@ -9423,7 +9423,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - Embarques: eliminar registro con confirmacion ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   const S=v=>String(v==null?'':v).trim();
   const E=v=>S(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const deletedKey='elta_deleted_embarques_v275';
@@ -9527,7 +9527,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.22 - MENU LATERAL ESTABLE: sin intervalos ni reescrituras repetidas ===== */
 (function(){
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
   const MENU=[
@@ -9589,7 +9589,7 @@ if(_refresh_v1250){
 /* ===== V3.3.22 - ENTREGAS: ROUTING UNICO SIN REFRESH ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   window.ELTA_APP_VERSION=VERSION;
   window.APP_VERSION_V2=VERSION;
 
@@ -16560,7 +16560,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 /* ===== ELTA v3.3.22 - VERSION Y DOCUMENTACION FINAL LIMPIA ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   const COLLECTION='embarque_documentos';
   const MAX_MB=12;
   const QUERY_TIMEOUT=5000;
@@ -16764,7 +16764,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 /* ===== v3.3.22 - BITACORA OPERATIVA: MODULO UNICO SIN RENDER HEREDADO ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   const state={embarque:'',eventKey:'',extra:{alertas:[],aduana:[],checklists:[],aduanaCatalogo:[]},ready:false};
   const S=v=>String(v??'').trim();
   const L=v=>S(v).toLowerCase();
@@ -17146,7 +17146,7 @@ document.addEventListener('DOMContentLoaded',()=>{});
 /* ===== ELTA v3.3.22 - PANEL OPERATIVO INICIAR TRANSITO ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.22';
+  const VERSION='3.3.23';
   const $=id=>document.getElementById(id);
   const S=v=>String(v??'').trim();
   const L=v=>S(v).toLowerCase();
@@ -17159,6 +17159,16 @@ document.addEventListener('DOMContentLoaded',()=>{});
   const isOpen=t=>{const e=L(t?.estado||t?.status||t?.state);return t?.activo===true||e==='abierto'||e==='open'||e==='en tránsito'||e==='en transito'||e==='iniciado'||e==='activo'||(t?.closed==null&&!!embNum(t));};
   let data={shipment:null,fleets:[],fleet:'',driver:'',originPos:null,lastPos:null,selectedPos:null,map:null,marker:null,collections:{}};
   async function readCol(name){const db=dbx();if(!db?.collection)return[];try{const snap=await db.collection(name).get();return snap.docs.map(d=>({...d.data(),_docId:d.id,id:d.id}))}catch(e){console.warn('Inicio tránsito',name,e);return[]}}
+  async function readShipmentLoads(emb,matchingShips=[]){
+    const db=dbx();const out=[];if(!db?.collection)return out;
+    const refs=[];const pushRef=id=>{id=S(id);if(id&&!refs.includes(id))refs.push(id)};
+    pushRef(emb);matchingShips.forEach(x=>pushRef(x?._docId||x?.id||embNum(x)));
+    for(const id of refs){
+      try{const ref=db.collection('embarque').doc(id);const snap=await ref.collection('cargas').get();snap.docs.forEach(d=>out.push({...d.data(),_docId:d.id,id:d.id,embarque:emb}))}catch(e){console.warn('No se pudo leer subcolección cargas',id,e)}
+      try{const doc=await db.collection('embarque').doc(id).get();const row=doc?.exists&&doc.data?doc.data():null;if(Array.isArray(row?.cargas))row.cargas.forEach((c,i)=>out.push({...c,_docId:`array_${i}`,embarque:emb}))}catch(e){}
+    }
+    return out;
+  }
   function addFleet(set,v){if(Array.isArray(v))return v.forEach(x=>addFleet(set,x));if(v&&typeof v==='object')return Object.values(v).forEach(x=>addFleet(set,x));const x=S(v);if(x&&x!=='-'&&!/^(sin|ninguna|null)$/i.test(x))set.add(x)}
   function getRoute(sh){return sh?.ruta||sh?.route||{}}
   function getClient(sh){const r=getRoute(sh);return S(sh?.cliente||r.cliente||sh?.client||'-')}
@@ -17178,9 +17188,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function bindPanel(){$('startTransitClose').onclick=closePanel;$('startCancel').onclick=closePanel;$('startValidateEmb').onclick=validateShipment;$('startFleet').onchange=validateFleet;document.querySelectorAll('input[name="startLocation"]').forEach(r=>r.onchange=updateLocationMode);$('startConfirm').onclick=saveTransit;$('startEmb').addEventListener('keydown',e=>{if(e.key==='Enter')validateShipment()})}
   async function validateShipment(){
     const emb=S($('startEmb').value);if(!emb){setStatus('Ingrese un número de embarque.','error');return}const btn=$('startValidateEmb');btn.disabled=true;btn.textContent='Validando...';setStatus('Consultando Firebase...','info');
-    try{const [ships,loads,loads2,loads3,loads4,loads5,transits,users,origins,dests]=await Promise.all(['embarque','carga','cargas','embarque_cargas','cargas_embarque','embarque_detalle','transitos','usuarios','origenes','destinos'].map(readCol));const allLoads=[...loads,...loads2,...loads3,...loads4,...loads5];data.collections={ships,loads:allLoads,transits,users,origins,dests};const matchingShips=ships.filter(x=>same(embNum(x),emb));if(!matchingShips.length)throw new Error('El embarque ingresado no existe en Firebase.');const sh=matchingShips.find(x=>getClient(x)!=='-'&&getOrigin(x)!=='-'&&getDestination(x)!=='-')||matchingShips[0];const cliente=getClient(sh),origen=getOrigin(sh),destino=getDestination(sh);if(!cliente||cliente==='-'||!origen||origen==='-'||!destino||destino==='-')throw new Error('El embarque no tiene Cliente, Origen y Destino completos.');const set=new Set();const fleetKeys=['flotas','flota','fleet','flotaAsignada','unidades','unidad','camiones','camion','numeroFlota','nroFlota'];matchingShips.forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));allLoads.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));transits.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));const fls=[...set].map(S).filter(Boolean).sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));if(!fls.length)throw new Error('El embarque no tiene flotas declaradas.');data.shipment=sh;data.fleets=fls;data.fleet='';data.driver='';const originDoc=byName(origins,origen);data.originPos=coord(originDoc)||coord(sh?.origenGps)||coord(sh?.gpsOrigen)||coord(sh);$('startEmbCard').className='st320Result ok';$('startEmbCard').innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><p>Flotas declaradas en el embarque: <b>${fls.length}</b></p>`;$('startFleet').innerHTML='<option value="">Seleccione una flota</option>'+fls.map(f=>`<option value="${esc(f)}">${esc(f)}</option>`).join('');$('startFleet').disabled=false;renderTransitData();setStatus('Embarque validado correctamente. Seleccione una flota.','ok');initMap()}catch(e){data.shipment=null;$('startEmbCard').className='st320Result error';$('startEmbCard').textContent=e.message||'No se pudo validar el embarque.';$('startFleet').disabled=true;$('startConfirm').disabled=true;setStatus(e.message,'error')}finally{btn.disabled=false;btn.textContent='🔎 Validar'}
+    try{const [ships,loads,loads2,loads3,loads4,loads5,transits,users,origins,dests]=await Promise.all(['embarque','carga','cargas','embarque_cargas','cargas_embarque','embarque_detalle','transitos','usuarios','origenes','destinos'].map(readCol));const matchingShips=ships.filter(x=>same(embNum(x),emb));if(!matchingShips.length)throw new Error('El embarque ingresado no existe en Firebase.');const nestedLoads=await readShipmentLoads(emb,matchingShips);const allLoads=[...loads,...loads2,...loads3,...loads4,...loads5,...nestedLoads];data.collections={ships,loads:allLoads,transits,users,origins,dests};const sh=matchingShips.find(x=>getClient(x)!=='-'&&getOrigin(x)!=='-'&&getDestination(x)!=='-')||matchingShips[0];const cliente=getClient(sh),origen=getOrigin(sh),destino=getDestination(sh);if(!cliente||cliente==='-'||!origen||origen==='-'||!destino||destino==='-')throw new Error('El embarque no tiene Cliente, Origen y Destino completos.');const set=new Set();const fleetKeys=['flotas','flota','fleet','flotaAsignada','unidades','unidad','camiones','camion','numeroFlota','nroFlota'];matchingShips.forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));allLoads.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));transits.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));const fls=[...set].map(S).filter(Boolean).sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));if(!fls.length)throw new Error('El embarque no tiene flotas declaradas.');data.shipment=sh;data.fleets=fls;data.fleet='';data.driver='';const originDoc=byName(origins,origen);data.originPos=coord(originDoc)||coord(sh?.origenGps)||coord(sh?.gpsOrigen)||coord(sh);$('startEmbCard').className='st320Result ok';$('startEmbCard').innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><p>Flotas declaradas en el embarque: <b>${fls.length}</b></p>`;$('startFleet').innerHTML='<option value="">Seleccione una flota</option>'+fls.map(f=>`<option value="${esc(f)}">${esc(f)}</option>`).join('');$('startFleet').disabled=false;renderTransitData();setStatus('Embarque validado correctamente. Seleccione una flota.','ok');initMap()}catch(e){data.shipment=null;$('startEmbCard').className='st320Result error';$('startEmbCard').textContent=e.message||'No se pudo validar el embarque.';$('startFleet').disabled=true;$('startConfirm').disabled=true;setStatus(e.message,'error')}finally{btn.disabled=false;btn.textContent='🔎 Validar'}
   }
-  async function validateFleet(){const f=S($('startFleet').value);data.fleet=f;data.driver='';data.lastPos=null;$('startConfirm').disabled=true;if(!f){$('startFleetState').className='st320FleetState muted';$('startFleetState').textContent='Pendiente de validación';renderTransitData();return}const active=data.collections.transits.find(t=>S(fleet(t))===f&&isOpen(t));if(active){$('startFleetState').className='st320FleetState error';$('startFleetState').innerHTML=`⛔ Flota con tránsito abierto<br><small>Emb. ${esc(embNum(active)||'-')} · ${esc(getDestination(active)||'-')}</small>`;setStatus('La flota seleccionada ya tiene un tránsito abierto.','error');renderTransitData();return}const u=data.collections.users.find(x=>S(x.fleet||x.flota||x.numero||x.usuario)===f);data.driver=S(u?.nombre||u?.name||u?.chofer||u?.displayName||'-');const previous=data.collections.transits.filter(t=>S(fleet(t))===f).sort((a,b)=>new Date(b.updatedAt||b.createdAt||b.inicio||0)-new Date(a.updatedAt||a.createdAt||a.inicio||0))[0];data.lastPos=coord(previous);$('startFleetState').className='st320FleetState ok';$('startFleetState').innerHTML=`✅ Disponible<br><small>${esc(data.driver)}</small>`;$('startConfirm').disabled=false;setStatus('Flota validada y disponible.','ok');renderTransitData();updateLocationMode()}
+  async function validateFleet(){const f=S($('startFleet').value);data.fleet=f;data.driver='';data.lastPos=null;$('startConfirm').disabled=true;if(!f){$('startFleetState').className='st320FleetState muted';$('startFleetState').textContent='Pendiente de validación';renderTransitData();return}const active=data.collections.transits.find(t=>S(fleet(t))===f&&isOpen(t));if(active){$('startFleetState').className='st320FleetState error';$('startFleetState').textContent='⛔ Flota con tránsito abierto';setStatus('La flota seleccionada ya tiene un tránsito abierto.','error');renderTransitData();return}const u=data.collections.users.find(x=>S(x.fleet||x.flota||x.numero||x.usuario)===f);data.driver=S(u?.nombre||u?.name||u?.chofer||u?.displayName||'-');const previous=data.collections.transits.filter(t=>S(fleet(t))===f).sort((a,b)=>new Date(b.updatedAt||b.createdAt||b.inicio||0)-new Date(a.updatedAt||a.createdAt||a.inicio||0))[0];data.lastPos=coord(previous);$('startFleetState').className='st320FleetState ok';$('startFleetState').innerHTML=`✅ Disponible<br><small>${esc(data.driver)}</small>`;$('startConfirm').disabled=false;setStatus('Flota validada y disponible.','ok');renderTransitData();updateLocationMode()}
   function renderTransitData(){const sh=data.shipment,cliente=sh?getClient(sh):'-',origen=sh?getOrigin(sh):'-',destino=sh?getDestination(sh):'-';const el=$('startTransitData');if(!el)return;el.innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><div><small>Flota / Chofer</small><b>${esc(data.fleet||'-')} / ${esc(data.driver||'-')}</b></div><div><small>Usuario que inicia</small><b>${esc(currentUser())}</b></div><div><small>Fecha / hora</small><b>${new Date().toLocaleString('es-AR')}</b></div>`}
   function initMap(){const box=$('startMap');if(!box)return;if(!window.L){box.innerHTML='<span>No se pudo cargar el mapa.</span>';return}try{if(data.map)data.map.remove()}catch(_){}box.innerHTML='';data.map=window.L.map(box,{zoomControl:true}).setView([-34.6,-58.45],7);window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(data.map);data.map.on('click',e=>{const manual=document.querySelector('input[name="startLocation"][value="manual"]');if(manual)manual.checked=true;setSelectedPos({lat:e.latlng.lat,lng:e.latlng.lng})});setTimeout(()=>data.map?.invalidateSize(true),200);updateLocationMode()}
   function setSelectedPos(pos){data.selectedPos=pos||null;if(data.map&&pos){if(data.marker)data.marker.setLatLng([pos.lat,pos.lng]);else data.marker=window.L.marker([pos.lat,pos.lng]).addTo(data.map);data.map.setView([pos.lat,pos.lng],14)}const c=$('startCoords');if(c)c.textContent=pos?`Latitud: ${pos.lat.toFixed(6)}   Longitud: ${pos.lng.toFixed(6)}`:'Latitud: -   Longitud: -'}
