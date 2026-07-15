@@ -4378,7 +4378,7 @@ if(_refresh_v1250){
 
 /* ===== V3.3.24 - Version y menu lateral robustos ===== */
 (function(){
-  const VERSION='3.3.24';
+  const VERSION='3.3.25';
   window.ELTA_APP_VERSION = VERSION;
   function setVersion(){
     document.querySelectorAll('span, small, p, div').forEach(el=>{
@@ -17174,7 +17174,57 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function getClient(sh){const r=getRoute(sh);return S(sh?.cliente||r.cliente||sh?.client||'-')}
   function getOrigin(sh){const r=getRoute(sh);return S(sh?.origen||r.origen||sh?.origin||'-')}
   function getDestination(sh){const r=getRoute(sh);return S(sh?.destino||r.destino||sh?.destination||'-')}
-  function coord(o){if(!o)return null;const lat=Number(o.lat??o.latitude??o.latitud??o._lat??o.gps?.lat??o.position?.lat??o.coords?.latitude);const lng=Number(o.lng??o.lon??o.longitude??o.longitud??o._long??o.gps?.lng??o.gps?.lon??o.position?.lng??o.coords?.longitude);return Number.isFinite(lat)&&Number.isFinite(lng)&&Math.abs(lat)<=90&&Math.abs(lng)<=180?{lat,lng}:null}
+  function coord(o){
+    if(!o)return null;
+    if(typeof o==='string'){
+      const m=o.match(/(-?\d{1,2}(?:[.,]\d+)?)\s*[,;|/]\s*(-?\d{1,3}(?:[.,]\d+)?)/);
+      if(m){const lat=Number(m[1].replace(',','.')),lng=Number(m[2].replace(',','.'));if(Number.isFinite(lat)&&Number.isFinite(lng)&&Math.abs(lat)<=90&&Math.abs(lng)<=180)return{lat,lng}}
+      return null;
+    }
+    const lat=Number(o.lat??o.latitude??o.latitud??o._lat??o.Latitud??o.LATITUD??o.y);
+    const lng=Number(o.lng??o.lon??o.long??o.longitude??o.longitud??o._long??o.Longitud??o.LONGITUD??o.x);
+    return Number.isFinite(lat)&&Number.isFinite(lng)&&Math.abs(lat)<=90&&Math.abs(lng)<=180?{lat,lng}:null
+  }
+  function coordDeep(value,seen=new Set(),depth=0){
+    if(value==null||depth>8)return null;
+    const direct=coord(value);if(direct)return direct;
+    if(typeof value!=='object')return null;
+    if(seen.has(value))return null;seen.add(value);
+    const priority=['gps','ultimaPosicion','ultimoGps','lastGps','lastPosition','position','posicion','location','ubicacion','coordenadas','coords','inicioGps','origenGps','gpsOrigen','punto','geopoint'];
+    for(const k of priority){if(value[k]!=null){const c=coordDeep(value[k],seen,depth+1);if(c)return c}}
+    if(Array.isArray(value)){
+      for(let i=value.length-1;i>=0;i--){const c=coordDeep(value[i],seen,depth+1);if(c)return c}
+    }else{
+      for(const [k,v] of Object.entries(value)){if(priority.includes(k))continue;const c=coordDeep(v,seen,depth+1);if(c)return c}
+    }
+    return null
+  }
+  function timeValue(o){const v=o?.updatedAt||o?.fechaHora||o?.timestamp||o?.time||o?.fecha||o?.createdAt||o?.ts||o?.inicio||0;try{return typeof v?.toDate==='function'?v.toDate().getTime():new Date(v).getTime()||0}catch(_){return 0}}
+  function findNamedCoords(rows,name){
+    const exact=byName(rows,name);let c=coordDeep(exact);if(c)return c;
+    const n=L(name).normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    for(const row of rows){const blob=L(JSON.stringify(row)).normalize('NFD').replace(/[\u0300-\u036f]/g,'');if(blob.includes(n)){c=coordDeep(row);if(c)return c}}
+    return null
+  }
+  async function readFleetLastPos(f,user){
+    let candidates=[];
+    if(user)candidates.push(user);
+    candidates.push(...data.collections.transits.filter(t=>S(fleet(t))===f));
+    candidates.sort((a,b)=>timeValue(b)-timeValue(a));
+    for(const row of candidates){const c=coordDeep(row);if(c)return c}
+    const db=dbx();if(!db?.collection)return null;
+    const ids=[user?._docId,user?.id,f].map(S).filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i);
+    const subs=['gps','posiciones','ubicaciones','historialGps','tracking','reportes','actualizaciones'];
+    for(const id of ids){
+      for(const sub of subs){
+        try{const snap=await db.collection('usuarios').doc(id).collection(sub).get();const rows=snap.docs.map(d=>({...d.data(),_docId:d.id})).sort((a,b)=>timeValue(b)-timeValue(a));for(const row of rows){const c=coordDeep(row);if(c)return c}}catch(_){}
+      }
+    }
+    for(const col of ['gps','posiciones','ubicaciones','tracking']){
+      try{const rows=await readCol(col);const matched=rows.filter(r=>S(r.flota||r.fleet||r.unidad||r.usuario||r.userId)===f).sort((a,b)=>timeValue(b)-timeValue(a));for(const row of matched){const c=coordDeep(row);if(c)return c}}catch(_){}
+    }
+    return null
+  }
   function byName(rows,name){const n=L(name).normalize('NFD').replace(/[\u0300-\u036f]/g,'');return rows.find(x=>[x.nombre,x.name,x.codigo,x.id,x._docId,x.origen,x.destino,x.localidad].map(v=>L(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')).some(v=>v&&(v===n||n.includes(v)||v.includes(n))))||null}
   function currentUser(){try{return S(window.currentUser?.user||window.currentUser?.id||window.currentUser?.nombre||window.currentUser?.name||window.firebase?.auth?.()?.currentUser?.email||'admin')}catch(_){return'admin'}}
   function setStatus(text,kind='info'){const el=$('startTransitStatus');if(!el)return;el.textContent=text||'';el.className='st320Status '+kind}
@@ -17188,9 +17238,9 @@ document.addEventListener('DOMContentLoaded',()=>{});
   function bindPanel(){$('startTransitClose').onclick=closePanel;$('startCancel').onclick=closePanel;$('startValidateEmb').onclick=validateShipment;$('startFleet').onchange=validateFleet;document.querySelectorAll('input[name="startLocation"]').forEach(r=>r.onchange=updateLocationMode);$('startConfirm').onclick=saveTransit;$('startEmb').addEventListener('keydown',e=>{if(e.key==='Enter')validateShipment()})}
   async function validateShipment(){
     const emb=S($('startEmb').value);if(!emb){setStatus('Ingrese un número de embarque.','error');return}const btn=$('startValidateEmb');btn.disabled=true;btn.textContent='Validando...';setStatus('Consultando Firebase...','info');
-    try{const [ships,loads,loads2,loads3,loads4,loads5,transits,users,origins,dests]=await Promise.all(['embarque','carga','cargas','embarque_cargas','cargas_embarque','embarque_detalle','transitos','usuarios','origenes','destinos'].map(readCol));const matchingShips=ships.filter(x=>same(embNum(x),emb));if(!matchingShips.length)throw new Error('El embarque ingresado no existe en Firebase.');const nestedLoads=await readShipmentLoads(emb,matchingShips);const allLoads=[...loads,...loads2,...loads3,...loads4,...loads5,...nestedLoads];data.collections={ships,loads:allLoads,transits,users,origins,dests};const sh=matchingShips.find(x=>getClient(x)!=='-'&&getOrigin(x)!=='-'&&getDestination(x)!=='-')||matchingShips[0];const cliente=getClient(sh),origen=getOrigin(sh),destino=getDestination(sh);if(!cliente||cliente==='-'||!origen||origen==='-'||!destino||destino==='-')throw new Error('El embarque no tiene Cliente, Origen y Destino completos.');const set=new Set();const fleetKeys=['flotas','flota','fleet','flotaAsignada','unidades','unidad','camiones','camion','numeroFlota','nroFlota'];matchingShips.forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));allLoads.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));transits.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));const fls=[...set].map(S).filter(Boolean).sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));if(!fls.length)throw new Error('El embarque no tiene flotas declaradas.');data.shipment=sh;data.fleets=fls;data.fleet='';data.driver='';const originDoc=byName(origins,origen);data.originPos=coord(originDoc)||coord(sh?.origenGps)||coord(sh?.gpsOrigen)||coord(sh);$('startEmbCard').className='st320Result ok';$('startEmbCard').innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><p>Flotas declaradas en el embarque: <b>${fls.length}</b></p>`;$('startFleet').innerHTML='<option value="">Seleccione una flota</option>'+fls.map(f=>`<option value="${esc(f)}">${esc(f)}</option>`).join('');$('startFleet').disabled=false;renderTransitData();setStatus('Embarque validado correctamente. Seleccione una flota.','ok');initMap()}catch(e){data.shipment=null;$('startEmbCard').className='st320Result error';$('startEmbCard').textContent=e.message||'No se pudo validar el embarque.';$('startFleet').disabled=true;$('startConfirm').disabled=true;setStatus(e.message,'error')}finally{btn.disabled=false;btn.textContent='🔎 Validar'}
+    try{const [ships,loads,loads2,loads3,loads4,loads5,transits,users,origins,dests]=await Promise.all(['embarque','carga','cargas','embarque_cargas','cargas_embarque','embarque_detalle','transitos','usuarios','origenes','destinos'].map(readCol));const matchingShips=ships.filter(x=>same(embNum(x),emb));if(!matchingShips.length)throw new Error('El embarque ingresado no existe en Firebase.');const nestedLoads=await readShipmentLoads(emb,matchingShips);const allLoads=[...loads,...loads2,...loads3,...loads4,...loads5,...nestedLoads];data.collections={ships,loads:allLoads,transits,users,origins,dests};const sh=matchingShips.find(x=>getClient(x)!=='-'&&getOrigin(x)!=='-'&&getDestination(x)!=='-')||matchingShips[0];const cliente=getClient(sh),origen=getOrigin(sh),destino=getDestination(sh);if(!cliente||cliente==='-'||!origen||origen==='-'||!destino||destino==='-')throw new Error('El embarque no tiene Cliente, Origen y Destino completos.');const set=new Set();const fleetKeys=['flotas','flota','fleet','flotaAsignada','unidades','unidad','camiones','camion','numeroFlota','nroFlota'];matchingShips.forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));allLoads.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));transits.filter(x=>same(embNum(x),emb)).forEach(row=>fleetKeys.forEach(k=>addFleet(set,row?.[k])));const fls=[...set].map(S).filter(Boolean).sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));if(!fls.length)throw new Error('El embarque no tiene flotas declaradas.');data.shipment=sh;data.fleets=fls;data.fleet='';data.driver='';data.originPos=findNamedCoords(origins,origen)||findNamedCoords(dests,origen)||coordDeep(sh?.origenGps)||coordDeep(sh?.gpsOrigen)||coordDeep(sh?.ruta?.origen)||coordDeep(sh?.route?.origin)||coordDeep(sh);$('startEmbCard').className='st320Result ok';$('startEmbCard').innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><p>Flotas declaradas en el embarque: <b>${fls.length}</b></p>`;$('startFleet').innerHTML='<option value="">Seleccione una flota</option>'+fls.map(f=>`<option value="${esc(f)}">${esc(f)}</option>`).join('');$('startFleet').disabled=false;renderTransitData();setStatus('Embarque validado correctamente. Seleccione una flota.','ok');initMap()}catch(e){data.shipment=null;$('startEmbCard').className='st320Result error';$('startEmbCard').textContent=e.message||'No se pudo validar el embarque.';$('startFleet').disabled=true;$('startConfirm').disabled=true;setStatus(e.message,'error')}finally{btn.disabled=false;btn.textContent='🔎 Validar'}
   }
-  async function validateFleet(){const f=S($('startFleet').value);data.fleet=f;data.driver='';data.lastPos=null;$('startConfirm').disabled=true;if(!f){$('startFleetState').className='st320FleetState muted';$('startFleetState').textContent='Pendiente de validación';renderTransitData();return}const active=data.collections.transits.find(t=>S(fleet(t))===f&&isOpen(t));if(active){$('startFleetState').className='st320FleetState error';$('startFleetState').textContent='⛔ Flota con tránsito abierto';setStatus('La flota seleccionada ya tiene un tránsito abierto.','error');renderTransitData();return}const u=data.collections.users.find(x=>S(x.fleet||x.flota||x.numero||x.usuario)===f);data.driver=S(u?.nombre||u?.name||u?.chofer||u?.displayName||'-');const previous=data.collections.transits.filter(t=>S(fleet(t))===f).sort((a,b)=>new Date(b.updatedAt||b.createdAt||b.inicio||0)-new Date(a.updatedAt||a.createdAt||a.inicio||0))[0];data.lastPos=coord(previous);$('startFleetState').className='st320FleetState ok';$('startFleetState').innerHTML=`✅ Disponible<br><small>${esc(data.driver)}</small>`;$('startConfirm').disabled=false;setStatus('Flota validada y disponible.','ok');renderTransitData();updateLocationMode()}
+  async function validateFleet(){const f=S($('startFleet').value);data.fleet=f;data.driver='';data.lastPos=null;$('startConfirm').disabled=true;if(!f){$('startFleetState').className='st320FleetState muted';$('startFleetState').textContent='Pendiente de validación';renderTransitData();return}const active=data.collections.transits.find(t=>S(fleet(t))===f&&isOpen(t));if(active){$('startFleetState').className='st320FleetState error';$('startFleetState').textContent='⛔ Flota con tránsito abierto';setStatus('La flota seleccionada ya tiene un tránsito abierto.','error');renderTransitData();return}const u=data.collections.users.find(x=>S(x.fleet||x.flota||x.numero||x.usuario||x.user?.fleet)===f);data.driver=S(u?.nombre||u?.name||u?.chofer||u?.displayName||'-');data.lastPos=await readFleetLastPos(f,u);$('startFleetState').className='st320FleetState ok';$('startFleetState').innerHTML=`✅ Disponible<br><small>${esc(data.driver)}</small>`;$('startConfirm').disabled=false;setStatus('Flota validada y disponible.','ok');renderTransitData();updateLocationMode()}
   function renderTransitData(){const sh=data.shipment,cliente=sh?getClient(sh):'-',origen=sh?getOrigin(sh):'-',destino=sh?getDestination(sh):'-';const el=$('startTransitData');if(!el)return;el.innerHTML=`<div><small>Cliente</small><b>${esc(cliente)}</b></div><div><small>Origen</small><b>${esc(origen)}</b></div><div><small>Destino</small><b>${esc(destino)}</b></div><div><small>Flota / Chofer</small><b>${esc(data.fleet||'-')} / ${esc(data.driver||'-')}</b></div><div><small>Usuario que inicia</small><b>${esc(currentUser())}</b></div><div><small>Fecha / hora</small><b>${new Date().toLocaleString('es-AR')}</b></div>`}
   function initMap(){const box=$('startMap');if(!box)return;if(!window.L){box.innerHTML='<span>No se pudo cargar el mapa.</span>';return}try{if(data.map)data.map.remove()}catch(_){}box.innerHTML='';data.map=window.L.map(box,{zoomControl:true}).setView([-34.6,-58.45],7);window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(data.map);data.map.on('click',e=>{const manual=document.querySelector('input[name="startLocation"][value="manual"]');if(manual)manual.checked=true;setSelectedPos({lat:e.latlng.lat,lng:e.latlng.lng})});setTimeout(()=>data.map?.invalidateSize(true),200);updateLocationMode()}
   function setSelectedPos(pos){data.selectedPos=pos||null;if(data.map&&pos){if(data.marker)data.marker.setLatLng([pos.lat,pos.lng]);else data.marker=window.L.marker([pos.lat,pos.lng]).addTo(data.map);data.map.setView([pos.lat,pos.lng],14)}const c=$('startCoords');if(c)c.textContent=pos?`Latitud: ${pos.lat.toFixed(6)}   Longitud: ${pos.lng.toFixed(6)}`:'Latitud: -   Longitud: -'}
