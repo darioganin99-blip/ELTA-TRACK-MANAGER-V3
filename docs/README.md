@@ -1,3 +1,3 @@
 # ELTA TRACK MANAGER V3
 
-Version 3.3.27 - Bitacora resumen corregido y version unificada.
+Version 3.3.28 - Bitacora resumen corregido y version unificada.
