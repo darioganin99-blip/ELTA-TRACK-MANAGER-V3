@@ -17624,3 +17624,23 @@ Localidad destino: ${destPlace}`))return;
   document.addEventListener('click',e=>{const b=e.target.closest('.b344Actions button');if(!b)return;if(/Nueva\s+alerta/i.test(b.textContent||'')){e.preventDefault();e.stopPropagation();show()}},true);
   css();window.openNewAlertPanel=show;
 })();
+
+
+/* ===== v3.3.42 - Normalizacion definitiva de version visible ===== */
+(()=>{
+  const VERSION='3.3.42';
+  window.ELTA_APP_VERSION=VERSION;
+  window.APP_VERSION_V2=VERSION;
+  window.ELTA_FORCE_VERSION=VERSION;
+  const applyVersion=()=>{
+    document.querySelectorAll('span,small,p,div').forEach(el=>{
+      if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/.test(el.textContent||'')){
+        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/g,'Versión '+VERSION);
+      }
+    });
+  };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',applyVersion,{once:true});
+  else applyVersion();
+  const observer=new MutationObserver(applyVersion);
+  observer.observe(document.documentElement,{subtree:true,childList:true,characterData:true});
+})();
