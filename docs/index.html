@@ -348,6 +348,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
         <button type="button" class="confPdfTop" onclick="window.confGenerarPDF && window.confGenerarPDF()">Generar informe de daños (PDF)</button>
       </div>
 
+      <div class="confLayout">
       <div class="glassPanel confSearchPanel">
         <h3><span>1</span> Seleccionar embarque</h3>
         <div class="confFilters">
@@ -363,11 +364,9 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
         <div id="confPagination" class="confPagination"></div>
       </div>
 
-      <div id="confWorkspace" style="display:none">
-        <div class="confTopGrid">
-          <div class="glassPanel confDataPanel"><h3><span>2</span> Datos del embarque seleccionado</h3><div id="confDatos" class="confDataGrid"></div></div>
-          <div class="glassPanel confSummary"><h3>Resumen del embarque</h3><div id="confResumen"></div></div>
-        </div>
+      <div id="confWorkspace">
+        <div class="glassPanel confDataPanel"><h3><span>2</span> Datos del embarque seleccionado</h3><div id="confDatos" class="confDataGrid"></div></div>
+        <div class="glassPanel confSummary"><h3>Resumen del embarque</h3><div id="confResumen"></div></div>
 
         <div class="glassPanel confDamagePanel">
           <div class="confPanelHead"><h3><span>3</span> Registrar vehículo con daño</h3><button type="button" onclick="window.confLimpiarFormulario && window.confLimpiarFormulario()">+ Agregar vehículo con avería</button></div>
@@ -389,6 +388,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
           <div class="confBottomActions"><button type="button" onclick="window.confExportarCSV && window.confExportarCSV()">Exportar reporte</button><button type="button" class="primaryAction" onclick="window.confGenerarPDF && window.confGenerarPDF()">Generar informe de daños (PDF)</button></div>
         </div>
         <div class="confFootNote">ⓘ Solo se registran los vehículos que presentan daños. Los vehículos entregados sin daños no se registran.</div>
+      </div>
       </div>
     </section>
 

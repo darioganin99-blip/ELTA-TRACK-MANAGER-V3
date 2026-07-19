@@ -10529,7 +10529,7 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 #conformidad .confPreview span{background:#1c2d40!important;color:#f8fafc!important}
 #conformidad .confFootNote{background:rgba(39,123,46,.16)!important;color:#dff5df!important;border-color:#3d8545!important}
 
-/* v3.3.48 - Conformidad de entrega: redistribucion compacta */
+/* v3.3.49 - Conformidad de entrega: redistribucion compacta */
 #conformidad .confTopGrid{
   align-items:start!important;
   grid-template-columns:minmax(0,1fr) 230px!important;
@@ -10653,4 +10653,69 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
   #conformidad .confDataGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
   #conformidad .confDamageGrid{grid-template-columns:1fr!important}
   #conformidad .confEvidence{grid-template-columns:1fr!important}
+}
+
+
+/* v3.3.49 - Conformidad: columna principal alineada y resumen a doble altura */
+#conformidad .confLayout{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 280px!important;
+  grid-template-rows:auto auto auto auto!important;
+  gap:12px!important;
+  align-items:start!important;
+}
+#conformidad .confSearchPanel{
+  grid-column:1!important;
+  grid-row:1!important;
+  margin:0!important;
+  min-width:0!important;
+}
+#conformidad #confWorkspace{display:none}
+#conformidad #confWorkspace.active{display:contents!important}
+#conformidad .confDataPanel{
+  grid-column:1!important;
+  grid-row:2!important;
+  margin:0!important;
+  width:auto!important;
+  min-width:0!important;
+}
+#conformidad .confSummary{
+  grid-column:2!important;
+  grid-row:1 / span 2!important;
+  margin:0!important;
+  width:auto!important;
+  height:100%!important;
+  min-height:0!important;
+  box-sizing:border-box!important;
+}
+#conformidad .confDamagePanel{
+  grid-column:1!important;
+  grid-row:3!important;
+  margin:0!important;
+  width:auto!important;
+  min-width:0!important;
+}
+#conformidad .confListPanel{
+  grid-column:1 / -1!important;
+  grid-row:4!important;
+  margin:0!important;
+  min-width:0!important;
+}
+#conformidad .confFootNote{
+  grid-column:1 / -1!important;
+  margin:0!important;
+}
+#conformidad .confTopGrid{display:contents!important}
+@media(max-width:1180px){
+  #conformidad .confLayout{grid-template-columns:minmax(0,1fr) 230px!important}
+}
+@media(max-width:900px){
+  #conformidad .confLayout{display:block!important}
+  #conformidad .confSearchPanel,
+  #conformidad .confDataPanel,
+  #conformidad .confSummary,
+  #conformidad .confDamagePanel,
+  #conformidad .confListPanel,
+  #conformidad .confFootNote{margin-bottom:12px!important;width:auto!important;height:auto!important}
+  #conformidad #confWorkspace.active{display:block!important}
 }
