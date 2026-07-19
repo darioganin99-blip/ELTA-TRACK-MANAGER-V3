@@ -19,13 +19,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ITS Intelligent Traffic System</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="style.css?v=351-conformidad-layout">
+<link rel="stylesheet" href="style.css?v=354-conformidad-compacta">
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="app.js?v=351-conformidad-layout"></script>
+<script src="app.js?v=354-conformidad-compacta"></script>
 <style id="elta-menu-logo-line-fallback">
 body:not(.sidebarCollapsed) .sideNav:has(img:first-child)::before{
   content:"";
@@ -377,9 +377,9 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
             <label class="confLocation">Localización *<input id="confLocalizacion" placeholder="Ej: Techo, Puerta delantera derecha"></label>
             <label class="confObs">Observación (opcional)<textarea id="confObservacion" rows="5" placeholder="Detalle adicional del daño..."></textarea></label>
             <div class="confEvidence"><label>Fotos (opcional)<div class="confDrop"><input id="confFotos" type="file" accept="image/*" multiple onchange="window.confPrevisualizar && window.confPrevisualizar('fotos')"><b>📷 Agregar fotos</b><small>JPG, PNG (máx. 10 MB c/u)</small></div><div id="confFotosPreview" class="confPreview"></div></label><label>Videos (opcional)<div class="confDrop"><input id="confVideos" type="file" accept="video/*" multiple onchange="window.confPrevisualizar && window.confPrevisualizar('videos')"><b>🎥 Agregar video</b><small>MP4 (máx. 50 MB c/u)</small></div><div id="confVideosPreview" class="confPreview"></div></label></div>
+            <div class="confFormActions"><button type="button" onclick="window.confLimpiarFormulario && window.confLimpiarFormulario()">Limpiar</button><button type="button" class="primaryAction" id="confGuardar" onclick="window.confGuardarDano && window.confGuardarDano()">Guardar daño</button></div>
           </div>
           <div id="confStatus" class="confStatus"></div>
-          <div class="confFormActions"><button type="button" onclick="window.confLimpiarFormulario && window.confLimpiarFormulario()">Limpiar</button><button type="button" class="primaryAction" id="confGuardar" onclick="window.confGuardarDano && window.confGuardarDano()">Guardar daño</button></div>
         </div>
 
         <div class="glassPanel confListPanel">
