@@ -10719,3 +10719,47 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
   #conformidad .confFootNote{margin-bottom:12px!important;width:auto!important;height:auto!important}
   #conformidad #confWorkspace.active{display:block!important}
 }
+
+/* v3.3.50 - Resumen alineado con Paso 2 y mas compacto */
+#conformidad .confSummary{
+  grid-column:2!important;
+  grid-row:2!important;
+  align-self:start!important;
+  height:auto!important;
+  min-height:0!important;
+  padding:14px 14px!important;
+}
+#conformidad .confSummary h3{
+  margin:0 0 8px!important;
+  font-size:20px!important;
+  line-height:1.1!important;
+}
+#conformidad .confSummary #confResumen{
+  display:block!important;
+}
+#conformidad .confSummary .confRing{
+  width:108px!important;
+  height:108px!important;
+  margin:4px auto 10px!important;
+}
+#conformidad .confSummary .confRing b{
+  font-size:20px!important;
+}
+#conformidad .confSummary p{
+  margin:4px 0!important;
+  line-height:1.2!important;
+  font-size:13px!important;
+}
+#conformidad .confSummary hr{
+  margin:8px 0!important;
+}
+#conformidad .confDataPanel{
+  padding-top:14px!important;
+  padding-bottom:14px!important;
+}
+#conformidad .confDataPanel h3{
+  margin-bottom:10px!important;
+}
+#conformidad .confDataGrid{
+  row-gap:8px!important;
+}
