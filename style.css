@@ -10528,3 +10528,129 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 #conformidad .confFormActions button:last-child{background:#247b2e!important;border-color:#247b2e!important}
 #conformidad .confPreview span{background:#1c2d40!important;color:#f8fafc!important}
 #conformidad .confFootNote{background:rgba(39,123,46,.16)!important;color:#dff5df!important;border-color:#3d8545!important}
+
+/* v3.3.48 - Conformidad de entrega: redistribucion compacta */
+#conformidad .confTopGrid{
+  align-items:start!important;
+  grid-template-columns:minmax(0,1fr) 230px!important;
+}
+#conformidad .confDataPanel,
+#conformidad .confSummary,
+#conformidad .confDamagePanel{
+  align-self:start!important;
+}
+#conformidad .confDataPanel{
+  min-height:0!important;
+  height:auto!important;
+}
+#conformidad .confDataGrid{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:8px 18px!important;
+}
+#conformidad .confDataGrid div{
+  gap:2px!important;
+  min-width:0;
+}
+#conformidad .confDataGrid small{
+  font-size:11px!important;
+  line-height:1.15!important;
+}
+#conformidad .confDataGrid b,
+#conformidad .confDataGrid strong{
+  font-size:14px!important;
+  line-height:1.2!important;
+}
+#conformidad .confSummary{
+  padding:12px!important;
+}
+#conformidad .confSummary h3{
+  margin-bottom:6px!important;
+}
+#conformidad .confRing{
+  width:86px!important;
+  height:86px!important;
+  border-width:10px!important;
+  margin:2px auto 8px!important;
+}
+#conformidad .confRing b{font-size:22px!important}
+#conformidad .confSummary p{
+  margin:4px 0!important;
+  font-size:11px!important;
+}
+#conformidad .confDamagePanel{
+  padding:12px 14px!important;
+}
+#conformidad .confDamagePanel .confPanelHead{
+  margin-bottom:8px!important;
+}
+#conformidad .confDamagePanel .confPanelHead h3{
+  margin:0!important;
+}
+#conformidad .confDamageGrid{
+  display:grid!important;
+  grid-template-columns:1.45fr 1fr .95fr 1.25fr!important;
+  gap:8px 10px!important;
+  align-items:start!important;
+}
+#conformidad .confVin{grid-column:auto!important}
+#conformidad .confObs{grid-column:span 2!important}
+#conformidad .confEvidence{
+  grid-column:span 2!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+#conformidad .confDamageGrid>label,
+#conformidad .confEvidence label,
+#conformidad .confSeverity legend{
+  font-size:11px!important;
+}
+#conformidad .confDamageGrid input,
+#conformidad .confDamageGrid select{
+  padding:7px 9px!important;
+  min-height:36px!important;
+}
+#conformidad .confDamageGrid textarea{
+  min-height:70px!important;
+  height:70px!important;
+  resize:vertical!important;
+  padding:8px 10px!important;
+}
+#conformidad .confSeverity label{
+  padding:3px 10px!important;
+  min-width:44px!important;
+}
+#conformidad .confSeverity label b{
+  font-size:16px!important;
+  line-height:1!important;
+}
+#conformidad .confDrop{
+  min-height:70px!important;
+  height:70px!important;
+}
+#conformidad .confDrop b{font-size:12px!important}
+#conformidad .confDrop small{font-size:9px!important}
+#conformidad .confPreview{
+  max-height:42px!important;
+  overflow:auto!important;
+}
+#conformidad .confStatus{
+  min-height:14px!important;
+  margin-top:4px!important;
+}
+#conformidad .confFormActions{
+  margin-top:6px!important;
+}
+#conformidad .confFormActions button{
+  padding:7px 14px!important;
+}
+@media(max-width:1250px){
+  #conformidad .confDamageGrid{grid-template-columns:1fr 1fr!important}
+  #conformidad .confVin,#conformidad .confObs,#conformidad .confEvidence{grid-column:auto!important}
+  #conformidad .confEvidence{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:900px){
+  #conformidad .confDataGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #conformidad .confDamageGrid{grid-template-columns:1fr!important}
+  #conformidad .confEvidence{grid-template-columns:1fr!important}
+}
