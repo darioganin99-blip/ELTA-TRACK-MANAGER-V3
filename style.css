@@ -10763,3 +10763,45 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 #conformidad .confDataGrid{
   row-gap:8px!important;
 }
+
+/* v3.3.51 - Paso 1 ancho completo; resumen alineado con Paso 2 */
+#conformidad .confLayout{
+  grid-template-columns:minmax(0,1fr) 280px!important;
+  grid-template-rows:auto auto auto auto!important;
+  align-items:start!important;
+}
+#conformidad .confSearchPanel{
+  grid-column:1 / -1!important;
+  grid-row:1!important;
+  width:auto!important;
+  min-width:0!important;
+}
+#conformidad .confDataPanel{
+  grid-column:1!important;
+  grid-row:2!important;
+  align-self:start!important;
+  height:auto!important;
+}
+#conformidad .confSummary{
+  grid-column:2!important;
+  grid-row:2!important;
+  align-self:start!important;
+  height:auto!important;
+}
+#conformidad .confDamagePanel{
+  grid-column:1!important;
+  grid-row:3!important;
+  align-self:start!important;
+  margin-top:0!important;
+}
+#conformidad .confListPanel{
+  grid-column:1 / -1!important;
+  grid-row:4!important;
+}
+@media(max-width:900px){
+  #conformidad .confSearchPanel,
+  #conformidad .confDataPanel,
+  #conformidad .confSummary,
+  #conformidad .confDamagePanel,
+  #conformidad .confListPanel{width:auto!important;height:auto!important}
+}
