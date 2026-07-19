@@ -17916,14 +17916,53 @@ Localidad destino: ${destPlace}`))return;
   function clearForm(){C.editing=null;['confVin','confLocalizacion','confObservacion'].forEach(id=>{if($(id))$(id).value=''});if($('confTipo'))$('confTipo').value='';document.querySelectorAll('input[name="confDimension"]').forEach(x=>x.checked=false);if($('confFotos'))$('confFotos').value='';if($('confVideos'))$('confVideos').value='';if($('confFotosPreview'))$('confFotosPreview').innerHTML='';if($('confVideosPreview'))$('confVideosPreview').innerHTML='';if($('confGuardar'))$('confGuardar').textContent='Guardar daño';setStatus('');vinCount()}
   function vinCount(){const el=$('confVin'),c=$('confVinCount');if(el){el.value=el.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,17);if(c)c.textContent=`${el.value.length} / 17`}}
   function preview(kind){const input=$(kind==='fotos'?'confFotos':'confVideos'),box=$(kind==='fotos'?'confFotosPreview':'confVideosPreview');if(!input||!box)return;box.innerHTML=[...input.files].map(f=>`<span>${kind==='fotos'?'📷':'🎥'} ${H(f.name)}</span>`).join('')}
-  async function uploadFiles(files,kind){if(!files.length)return[];const st=window.firebase?.storage?.();if(!st)throw new Error('Firebase Storage no está disponible.');const out=[];for(const f of files){const safe=f.name.replace(/[^a-zA-Z0-9._-]/g,'_');const ref=st.ref(`conformidad_entrega/${embNo(C.selected)}/${Date.now()}-${Math.random().toString(36).slice(2)}-${safe}`);await ref.put(f);out.push({nombre:f.name,url:await ref.getDownloadURL(),tipo:f.type,tamano:f.size,clase:kind})}return out}
+  function withTimeout(promise,ms,message){return Promise.race([promise,new Promise((_,reject)=>setTimeout(()=>reject(new Error(message)),ms))])}
+  async function uploadFiles(files,kind,onProgress){
+    if(!files.length)return[];
+    const st=window.firebase?.storage?.();
+    if(!st)throw new Error('Firebase Storage no está disponible.');
+    const out=[];
+    for(let i=0;i<files.length;i++){
+      const f=files[i];
+      const safe=f.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+      const path=`conformidad_entrega/${embNo(C.selected)}/${Date.now()}-${Math.random().toString(36).slice(2)}-${safe}`;
+      const ref=st.ref().child(path);
+      if(onProgress)onProgress(i+1,files.length,f.name);
+      const task=ref.put(f,{contentType:f.type||undefined,customMetadata:{embarque:embNo(C.selected),clase:kind}});
+      await withTimeout(new Promise((resolve,reject)=>task.on('state_changed',()=>{},reject,resolve)),90000,`La carga de ${f.name} superó el tiempo máximo.`);
+      const url=await withTimeout(ref.getDownloadURL(),30000,`No se pudo obtener la URL de ${f.name}.`);
+      out.push({nombre:f.name,url,tipo:f.type,tamano:f.size,clase:kind,ruta:path});
+    }
+    return out;
+  }
   async function saveDamage(){
-    if(!C.selected)return setStatus('Seleccione un embarque.','error');const vin=S($('confVin')?.value).toUpperCase(),tipo=S($('confTipo')?.value),dim=S(document.querySelector('input[name="confDimension"]:checked')?.value),local=S($('confLocalizacion')?.value),obs=S($('confObservacion')?.value);
-    if(vin.length!==17)return setStatus('El VIN debe tener exactamente 17 caracteres.','error');if(!tipo||!dim||!local)return setStatus('Complete tipo, dimensión y localización.','error');if(C.damages.some(d=>S(d.vin).toUpperCase()===vin&&d._docId!==C.editing))return setStatus('Este VIN ya tiene un daño registrado en el embarque.','error');
-    const pics=[...($('confFotos')?.files||[])],vids=[...($('confVideos')?.files||[])];if(pics.some(f=>f.size>10*1024*1024))return setStatus('Cada foto debe pesar como máximo 10 MB.','error');if(vids.some(f=>f.size>50*1024*1024))return setStatus('Cada video debe pesar como máximo 50 MB.','error');
-    const btn=$('confGuardar');btn.disabled=true;btn.textContent='Guardando...';setStatus('Subiendo evidencias...');
-    try{const old=C.damages.find(d=>d._docId===C.editing)||{};const [nf,nv]=await Promise.all([uploadFiles(pics,'foto'),uploadFiles(vids,'video')]);const data={embarque:embNo(C.selected),embarqueId:C.selected._docId||C.selected.id||'',transitoId:C.selected._transitId||'',cliente:client(C.selected),flota:fleet(C.selected),chofer:driver(C.selected),origen:origin(C.selected),destino:destination(C.selected),estadoEmbarque:isOpen(C.selected)?'abierto':'cerrado',vin,tipo,dimension:dim,localizacion:local,observacion:obs,fotos:[...(old.fotos||[]),...nf],videos:[...(old.videos||[]),...nv],actualizadoEn:firebase.firestore.FieldValue.serverTimestamp(),actualizadoPor:S($('user')?.value)||'admin'};if(C.editing)await db.collection('conformidad_entrega_danos').doc(C.editing).set(data,{merge:true});else{data.creadoEn=firebase.firestore.FieldValue.serverTimestamp();data.creadoPor=S($('user')?.value)||'admin';await db.collection('conformidad_entrega_danos').add(data)}setStatus('Daño guardado correctamente.','ok');clearForm();await loadDamages()}
-    catch(e){console.error(e);setStatus('No se pudo guardar: '+(e.message||e),'error')}finally{btn.disabled=false;btn.textContent='Guardar daño'}
+    if(!C.selected)return setStatus('Seleccione un embarque.','error');
+    const vin=S($('confVin')?.value).toUpperCase(),tipo=S($('confTipo')?.value),dim=S(document.querySelector('input[name="confDimension"]:checked')?.value),local=S($('confLocalizacion')?.value),obs=S($('confObservacion')?.value);
+    if(vin.length!==17)return setStatus('El VIN debe tener exactamente 17 caracteres.','error');
+    if(!tipo||!dim||!local)return setStatus('Complete tipo, dimensión y localización.','error');
+    if(C.damages.some(d=>S(d.vin).toUpperCase()===vin&&d._docId!==C.editing))return setStatus('Este VIN ya tiene un daño registrado en el embarque.','error');
+    const pics=[...($('confFotos')?.files||[])],vids=[...($('confVideos')?.files||[])];
+    if(pics.some(f=>f.size>10*1024*1024))return setStatus('Cada foto debe pesar como máximo 10 MB.','error');
+    if(vids.some(f=>f.size>50*1024*1024))return setStatus('Cada video debe pesar como máximo 50 MB.','error');
+    const btn=$('confGuardar');btn.disabled=true;btn.textContent='Guardando...';
+    let docRef=null;
+    try{
+      const old=C.damages.find(d=>d._docId===C.editing)||{};
+      const base={embarque:embNo(C.selected),embarqueId:C.selected._docId||C.selected.id||'',transitoId:C.selected._transitId||'',cliente:client(C.selected),flota:fleet(C.selected),chofer:driver(C.selected),origen:origin(C.selected),destino:destination(C.selected),estadoEmbarque:isOpen(C.selected)?'abierto':'cerrado',vin,tipo,dimension:dim,localizacion:local,observacion:obs,fotos:[...(old.fotos||[])],videos:[...(old.videos||[])],actualizadoEn:firebase.firestore.FieldValue.serverTimestamp(),actualizadoPor:S($('user')?.value)||'admin',evidenciasEstado:(pics.length||vids.length)?'subiendo':'completo'};
+      setStatus('Guardando registro...');
+      if(C.editing){docRef=db.collection('conformidad_entrega_danos').doc(C.editing);await docRef.set(base,{merge:true})}
+      else{base.creadoEn=firebase.firestore.FieldValue.serverTimestamp();base.creadoPor=S($('user')?.value)||'admin';docRef=await db.collection('conformidad_entrega_danos').add(base)}
+      const nf=await uploadFiles(pics,'foto',(n,total,name)=>setStatus(`Subiendo foto ${n} de ${total}: ${name}`));
+      const nv=await uploadFiles(vids,'video',(n,total,name)=>setStatus(`Subiendo video ${n} de ${total}: ${name}`));
+      await docRef.set({fotos:[...(old.fotos||[]),...nf],videos:[...(old.videos||[]),...nv],evidenciasEstado:'completo',evidenciasError:firebase.firestore.FieldValue.delete(),actualizadoEn:firebase.firestore.FieldValue.serverTimestamp()},{merge:true});
+      setStatus('Daño guardado correctamente.','ok');
+      clearForm();
+      await loadDamages();
+    }catch(e){
+      console.error('Error guardando daño/evidencias',e);
+      if(docRef){try{await docRef.set({evidenciasEstado:'error',evidenciasError:S(e.message||e),actualizadoEn:firebase.firestore.FieldValue.serverTimestamp()},{merge:true})}catch(_){}setStatus('El daño quedó guardado, pero no se pudieron cargar todas las imágenes: '+(e.message||e),'error');await loadDamages()}
+      else setStatus('No se pudo guardar el registro: '+(e.message||e),'error');
+    }finally{btn.disabled=false;btn.textContent=C.editing?'Actualizar daño':'Guardar daño'}
   }
   function editDamage(id){const d=C.damages.find(x=>x._docId===id);if(!d)return;C.editing=id;$('confVin').value=d.vin||'';$('confTipo').value=d.tipo||'';$('confLocalizacion').value=d.localizacion||'';$('confObservacion').value=d.observacion||'';const r=document.querySelector(`input[name="confDimension"][value="${d.dimension}"]`);if(r)r.checked=true;$('confGuardar').textContent='Actualizar daño';vinCount();$('confVin').scrollIntoView({behavior:'smooth',block:'center'})}
   function viewDamage(id){const d=C.damages.find(x=>x._docId===id);if(!d)return;const links=[...(d.fotos||[]),...(d.videos||[])].map(x=>`<a href="${H(x.url)}" target="_blank" rel="noopener">${H(x.nombre||'Evidencia')}</a>`).join('\n');alert(`VIN: ${d.vin}\nTipo: ${d.tipo} - ${typeLabels[d.tipo]||''}\nDimensión: ${d.dimension} - ${dimLabels[d.dimension]||''}\nLocalización: ${d.localizacion}\nObservación: ${d.observacion||'-'}\n\nEvidencias: ${(d.fotos||[]).length} fotos / ${(d.videos||[]).length} videos${links?'\nAbra los vínculos desde la tabla o el informe.':''}`)}
