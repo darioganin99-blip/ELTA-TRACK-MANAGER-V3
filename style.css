@@ -10843,3 +10843,54 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 @media(max-width:900px){
   #conformidad .confSummary{height:auto!important}
 }
+
+
+/* v3.3.53 - Formulario de daños: localización debajo del VIN y severidades por color */
+#conformidad .confDamageGrid{
+  grid-template-columns:1.35fr .95fr 1.15fr!important;
+  grid-template-areas:
+    "vin tipo severity"
+    "location obs obs"
+    "evidence evidence evidence"!important;
+  align-items:start!important;
+}
+#conformidad .confVin{grid-area:vin!important}
+#conformidad .confTipo{grid-area:tipo!important}
+#conformidad .confSeverity{grid-area:severity!important;display:flex!important;flex-wrap:wrap!important;align-items:flex-end!important;gap:6px!important}
+#conformidad .confSeverity legend{width:100%!important;margin-bottom:0!important}
+#conformidad .confLocation{grid-area:location!important}
+#conformidad .confObs{grid-area:obs!important;grid-column:auto!important}
+#conformidad .confEvidence{grid-area:evidence!important;grid-column:auto!important}
+#conformidad .confSeverity label{
+  min-width:62px!important;
+  min-height:54px!important;
+  margin:0!important;
+  border:0!important;
+  color:#111827!important;
+  font-weight:800!important;
+  justify-content:center!important;
+}
+#conformidad .confSeverity label.severity1{background:#facc15!important}
+#conformidad .confSeverity label.severity2{background:#fb923c!important}
+#conformidad .confSeverity label.severity3{background:#ef4444!important;color:#fff!important}
+#conformidad .confSeverity label:has(input:checked){
+  outline:3px solid #ffffff!important;
+  box-shadow:0 0 0 2px #1d6f2b!important;
+}
+#conformidad .confSeverity input{accent-color:#1d6f2b!important}
+@media(max-width:1250px){
+  #conformidad .confDamageGrid{
+    grid-template-columns:1fr 1fr!important;
+    grid-template-areas:
+      "vin tipo"
+      "location severity"
+      "obs obs"
+      "evidence evidence"!important;
+  }
+}
+@media(max-width:900px){
+  #conformidad .confDamageGrid{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"vin" "location" "tipo" "severity" "obs" "evidence"!important;
+  }
+}
