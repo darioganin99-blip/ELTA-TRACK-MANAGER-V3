@@ -18125,10 +18125,10 @@ Localidad destino: ${destPlace}`))return;
   window.confRenderEmbarques=renderShipments;window.confSeleccionarEmbarque=selectShipment;window.confPagina=n=>{C.page=n;renderShipments()};window.confGuardarDano=saveDamage;window.confLimpiarFormulario=clearForm;window.confVinCount=vinCount;window.confPrevisualizar=preview;window.confEditarDano=editDamage;window.confVerDano=viewDamage;window.confEliminarDano=deleteDamage;window.confExportarCSV=exportCSV;window.confGenerarPDF=pdf;
 })();
 
-/* ===== V3.3.61 - NORMALIZACION DEFINITIVA DEL MENU COMPLETO ===== */
+/* ===== V3.3.62 - MENU COMPLETO Y NAVEGACION OPERATIVA ===== */
 (function(){
   'use strict';
-  const VERSION='3.3.61';
+  const VERSION='3.3.62';
   const MENU=[
     ['dash','🏠','Torre de Control'],
     ['transitos','🚚','Tránsitos'],
@@ -18158,9 +18158,10 @@ Localidad destino: ${destPlace}`))return;
     if(!btn){
       btn=document.createElement('button');
       btn.type='button';
-      btn.setAttribute('onclick',"tab('"+id+"')");
     }
+    btn.type='button';
     btn.dataset.menuId=id;
+    btn.setAttribute('onclick',"tab('"+id+"')");
     let iconEl=btn.querySelector(':scope > .menuIcon');
     let textEl=btn.querySelector(':scope > .menuText');
     if(!iconEl || !textEl){
@@ -18180,9 +18181,14 @@ Localidad destino: ${destPlace}`))return;
   function normalizeMenu(){
     const nav=document.querySelector('.sideNav');
     if(!nav) return;
-    const fragment=document.createDocumentFragment();
-    MENU.forEach(item=>fragment.appendChild(ensureButton(nav,item[0],item[1],item[2])));
-    nav.appendChild(fragment);
+    const desired=MENU.map(item=>ensureButton(nav,item[0],item[1],item[2]));
+    const current=[...nav.querySelectorAll(':scope > button')];
+    const alreadyOrdered=current.length===desired.length && desired.every((btn,i)=>current[i]===btn);
+    if(!alreadyOrdered){
+      const fragment=document.createDocumentFragment();
+      desired.forEach(btn=>fragment.appendChild(btn));
+      nav.appendChild(fragment);
+    }
     document.querySelectorAll('.brandBox img').forEach(img=>{
       img.src='assets/logo-elta.png';
       img.alt='ELTA';
@@ -18197,26 +18203,31 @@ Localidad destino: ${destPlace}`))return;
     document.title='ELTA ITS - Versión '+VERSION;
   }
 
-  let scheduled=false;
-  function scheduleNormalize(){
-    if(scheduled) return;
-    scheduled=true;
-    requestAnimationFrame(()=>{scheduled=false;normalizeMenu();});
-  }
-
-  const previousToggle=window.toggleSidebar;
   window.toggleSidebar=function(){
     document.body.classList.toggle('sidebarCollapsed');
-    scheduleNormalize();
+    normalizeMenu();
   };
 
-  document.addEventListener('DOMContentLoaded',()=>{
-    normalizeMenu();
-    const nav=document.querySelector('.sideNav');
-    if(nav){
-      new MutationObserver(scheduleNormalize).observe(nav,{childList:true,subtree:false});
-    }
-  });
+  function activateMenu(id){
+    if(typeof window.tab==='function') window.tab(id);
+  }
+
+  document.addEventListener('click',function(ev){
+    const btn=ev.target.closest('.sideNav button[data-menu-id]');
+    if(!btn) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    activateMenu(btn.dataset.menuId);
+  },true);
+
+  document.addEventListener('keydown',function(ev){
+    const btn=ev.target.closest?.('.sideNav button[data-menu-id]');
+    if(!btn || (ev.key!=='Enter' && ev.key!==' ')) return;
+    ev.preventDefault();
+    activateMenu(btn.dataset.menuId);
+  },true);
+
+  document.addEventListener('DOMContentLoaded',normalizeMenu);
   window.addEventListener('load',normalizeMenu);
   setTimeout(normalizeMenu,150);
   setTimeout(normalizeMenu,800);
