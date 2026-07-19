@@ -19,13 +19,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ITS Intelligent Traffic System</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="style.css?v=343-checklist-oea">
+<link rel="stylesheet" href="style.css?v=346-conformidad-entrega">
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="app.js?v=343-checklist-oea"></script>
+<script src="app.js?v=346-conformidad-entrega"></script>
 <style id="elta-menu-logo-line-fallback">
 body:not(.sidebarCollapsed) .sideNav:has(img:first-child)::before{
   content:"";
@@ -40,8 +40,8 @@ body:not(.sidebarCollapsed) .sideNav:has(img:first-child)::before{
 
 
 <script>
-window.ELTA_FORCE_VERSION='3.3.45';
-window.ELTA_BUILD_TAG = "v3.3.45-bitacora-header-final";
+window.ELTA_FORCE_VERSION='3.3.46';
+window.ELTA_BUILD_TAG = "v3.3.46-bitacora-header-final";
 if ("serviceWorker" in navigator) { navigator.serviceWorker.getRegistrations().then(function(regs){ regs.forEach(function(r){ r.unregister(); }); }); }
 try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(function(k){ caches.delete(k); }); }); } } catch(e) {}
 </script>
@@ -79,7 +79,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
   <footer class="loginFooter">
     <span>🛡 Sistema seguro</span>
     <span>© 2025 ELTA Tracking Solutions</span>
-    <span>Versión 3.3.45</span>
+    <span>Versión 3.3.46</span>
   </footer>
 </section>
 
@@ -100,7 +100,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
       <button onclick="tab('clima')"><span class="menuIcon">🌦️</span><span class="menuText">Clima</span></button>
       <button onclick="tab('alertas')"><span class="menuIcon">🔔</span><span class="menuText">Alertas</span></button>
       <button onclick="tab('embarques')"><span class="menuIcon">📦</span><span class="menuText">Embarques</span></button>
-      <button onclick="tab('entrega')" data-menu-id="entrega"><span class="menuIcon">🏁</span><span class="menuText">Entregas</span></button>
+      <button onclick="tab('conformidad')" data-menu-id="conformidad"><span class="menuIcon">🚙</span><span class="menuText">Conformidad de entrega</span></button>
       <button onclick="tab('unidades')"><span class="menuIcon">🚛</span><span class="menuText">Unidades / Choferes</span></button>
       <button onclick="tab('clientes')"><span class="menuIcon">🏢</span><span class="menuText">Clientes / Destinos</span></button>
       <button onclick="tab('abm')"><span class="menuIcon">⚙️</span><span class="menuText">Configuración</span></button>
@@ -124,7 +124,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
       <div class="headerTitle">
         <h1 class="systemTitleSmall">ITS Intelligent Traffic System</h1>
         <p>Panel tráfico / coordinación</p>
-        <span>Versión 3.3.45</span>
+        <span>Versión 3.3.46</span>
       </div>
 
       <div class="headerActions">
@@ -341,6 +341,57 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
       <div id="embarqueDetailPanel" class="glassPanel embarqueDetailPanel" style="display:none"></div>
     </section>
 
+
+    <section id="conformidad" class="panel">
+      <div class="sectionTitle confTitle">
+        <div><h2>Conformidad de entrega</h2><p>Registro de vehículos entregados con daños</p></div>
+        <button type="button" class="confPdfTop" onclick="window.confGenerarPDF && window.confGenerarPDF()">Generar informe de daños (PDF)</button>
+      </div>
+
+      <div class="glassPanel confSearchPanel">
+        <h3><span>1</span> Seleccionar embarque</h3>
+        <div class="confFilters">
+          <label>Buscar embarque<input id="confBuscar" placeholder="N.º de embarque" oninput="window.confRenderEmbarques && window.confRenderEmbarques()"></label>
+          <label>Cliente<select id="confCliente" onchange="window.confRenderEmbarques && window.confRenderEmbarques()"><option value="">Todos</option></select></label>
+          <label>Flota<select id="confFlota" onchange="window.confRenderEmbarques && window.confRenderEmbarques()"><option value="">Todas</option></select></label>
+          <label>Estado<select id="confEstado" onchange="window.confRenderEmbarques && window.confRenderEmbarques()"><option value="">Todos</option><option value="abierto">Abiertos</option><option value="cerrado">Cerrados</option></select></label>
+          <label>Fecha desde<input id="confDesde" type="date" onchange="window.confRenderEmbarques && window.confRenderEmbarques()"></label>
+          <label>Fecha hasta<input id="confHasta" type="date" onchange="window.confRenderEmbarques && window.confRenderEmbarques()"></label>
+          <button type="button" class="primaryAction" onclick="window.confRenderEmbarques && window.confRenderEmbarques()">Buscar</button>
+        </div>
+        <div class="confTableWrap"><table class="confTable"><thead><tr><th></th><th>Embarque</th><th>Cliente</th><th>Flota</th><th>Origen</th><th>Destino</th><th>Fecha entrega</th><th>Estado</th></tr></thead><tbody id="confEmbarquesBody"></tbody></table></div>
+        <div id="confPagination" class="confPagination"></div>
+      </div>
+
+      <div id="confWorkspace" style="display:none">
+        <div class="confTopGrid">
+          <div class="glassPanel confDataPanel"><h3><span>2</span> Datos del embarque seleccionado</h3><div id="confDatos" class="confDataGrid"></div></div>
+          <div class="glassPanel confSummary"><h3>Resumen del embarque</h3><div id="confResumen"></div></div>
+        </div>
+
+        <div class="glassPanel confDamagePanel">
+          <div class="confPanelHead"><h3><span>3</span> Registrar vehículo con daño</h3><button type="button" onclick="window.confLimpiarFormulario && window.confLimpiarFormulario()">+ Agregar vehículo con avería</button></div>
+          <div class="confDamageGrid">
+            <label class="confVin">VIN (17 dígitos) *<div class="confInputCount"><input id="confVin" maxlength="17" placeholder="Ingrese VIN" oninput="window.confVinCount && window.confVinCount()"><small id="confVinCount">0 / 17</small></div></label>
+            <label>Tipo de daño *<select id="confTipo"><option value="">Seleccionar tipo</option><option value="A">A - Bollos / Chapa</option><option value="G">G - Rayas</option><option value="F">F - Faltantes</option><option value="U">U - Otros</option><option value="M">M - Manchas / Suciedad</option><option value="R">R - Rotura</option></select></label>
+            <fieldset class="confSeverity"><legend>Dimensión *</legend><label><input type="radio" name="confDimension" value="1"><b>1</b><small>Menor</small></label><label><input type="radio" name="confDimension" value="2"><b>2</b><small>Media</small></label><label><input type="radio" name="confDimension" value="3"><b>3</b><small>Severa</small></label></fieldset>
+            <label>Localización *<input id="confLocalizacion" placeholder="Ej: Techo, Puerta delantera derecha"></label>
+            <label class="confObs">Observación (opcional)<textarea id="confObservacion" rows="5" placeholder="Detalle adicional del daño..."></textarea></label>
+            <div class="confEvidence"><label>Fotos (opcional)<div class="confDrop"><input id="confFotos" type="file" accept="image/*" multiple onchange="window.confPrevisualizar && window.confPrevisualizar('fotos')"><b>📷 Agregar fotos</b><small>JPG, PNG (máx. 10 MB c/u)</small></div><div id="confFotosPreview" class="confPreview"></div></label><label>Videos (opcional)<div class="confDrop"><input id="confVideos" type="file" accept="video/*" multiple onchange="window.confPrevisualizar && window.confPrevisualizar('videos')"><b>🎥 Agregar video</b><small>MP4 (máx. 50 MB c/u)</small></div><div id="confVideosPreview" class="confPreview"></div></label></div>
+          </div>
+          <div id="confStatus" class="confStatus"></div>
+          <div class="confFormActions"><button type="button" onclick="window.confLimpiarFormulario && window.confLimpiarFormulario()">Limpiar</button><button type="button" class="primaryAction" id="confGuardar" onclick="window.confGuardarDano && window.confGuardarDano()">Guardar daño</button></div>
+        </div>
+
+        <div class="glassPanel confListPanel">
+          <h3><span>4</span> Vehículos con daños registrados en este embarque <b id="confDamageCount">(0)</b></h3>
+          <div class="confTableWrap"><table class="confTable"><thead><tr><th>VIN</th><th>Tipo</th><th>Dimensión</th><th>Localización</th><th>Observación</th><th>Fotos / Videos</th><th>Acciones</th></tr></thead><tbody id="confDanosBody"></tbody></table></div>
+          <div class="confBottomActions"><button type="button" onclick="window.confExportarCSV && window.confExportarCSV()">Exportar reporte</button><button type="button" class="primaryAction" onclick="window.confGenerarPDF && window.confGenerarPDF()">Generar informe de daños (PDF)</button></div>
+        </div>
+        <div class="confFootNote">ⓘ Solo se registran los vehículos que presentan daños. Los vehículos entregados sin daños no se registran.</div>
+      </div>
+    </section>
+
     <section id="clientes" class="panel">
       <div class="sectionTitle"><h2>Clientes / Destinos</h2><p>Clientes y destinos registrados</p></div>
       <div class="clientesDestinosGrid">
@@ -398,7 +449,7 @@ try { if (window.caches) { caches.keys().then(function(keys){ keys.forEach(funct
     <footer class="appFooter">
       <span>🛡 Sistema seguro</span>
       <span>© 2025 ELTA Tracking Solutions</span>
-      <span>Versión 3.3.45</span>
+      <span>Versión 3.3.46</span>
     </footer>
   </main>
 </section>
