@@ -11001,3 +11001,58 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 @media(max-width:1250px){
   #conformidad .confDamageGrid{grid-template-columns:1fr 1fr!important;grid-template-areas:"vin tipo" "location severity" "obs obs" "evidence actions"!important}
 }
+
+/* v3.3.56 - Tarjetas de dimension corregidas */
+#conformidad .confSeverity{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(82px,1fr))!important;
+  gap:10px!important;
+  align-items:start!important;
+  overflow:visible!important;
+}
+#conformidad .confSeverity legend{
+  grid-column:1 / -1!important;
+  width:auto!important;
+  margin:0 0 5px!important;
+}
+#conformidad .confSeverity label{
+  box-sizing:border-box!important;
+  width:100%!important;
+  min-width:82px!important;
+  height:76px!important;
+  min-height:76px!important;
+  padding:6px 8px!important;
+  margin:0!important;
+  display:grid!important;
+  grid-template-rows:18px 30px 16px!important;
+  place-items:center!important;
+  align-content:center!important;
+  overflow:hidden!important;
+  border-radius:9px!important;
+}
+#conformidad .confSeverity label input{
+  width:17px!important;
+  height:17px!important;
+  margin:0!important;
+  padding:0!important;
+  align-self:center!important;
+}
+#conformidad .confSeverity label b{
+  display:block!important;
+  font-size:25px!important;
+  line-height:30px!important;
+  margin:0!important;
+}
+#conformidad .confSeverity label small{
+  display:block!important;
+  font-size:11px!important;
+  line-height:16px!important;
+  margin:0!important;
+  font-weight:800!important;
+  color:#111827!important;
+}
+#conformidad .confSeverity label.severity3 small{color:#fff!important}
+#conformidad .confDamageGrid{overflow:visible!important}
+@media(max-width:1250px){
+  #conformidad .confSeverity{grid-template-columns:repeat(3,minmax(74px,1fr))!important}
+}
