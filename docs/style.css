@@ -11002,7 +11002,7 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
   #conformidad .confDamageGrid{grid-template-columns:1fr 1fr!important;grid-template-areas:"vin tipo" "location severity" "obs obs" "evidence actions"!important}
 }
 
-/* v3.3.56 - Tarjetas de dimension corregidas */
+/* v3.3.57 - Tarjetas de dimension corregidas */
 #conformidad .confSeverity{
   display:grid!important;
   grid-template-columns:repeat(3,minmax(82px,1fr))!important;
