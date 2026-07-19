@@ -11056,3 +11056,219 @@ body:not(.sidebarCollapsed) .logoutBtn{height:32px !important;min-height:32px !i
 @media(max-width:1250px){
   #conformidad .confSeverity{grid-template-columns:repeat(3,minmax(74px,1fr))!important}
 }
+
+/* ===== V3.3.61 - MENU LATERAL COMPLETO Y LOGO CORREGIDO ===== */
+:root{
+  --elta-sidebar-expanded: 292px;
+  --elta-sidebar-collapsed: 78px;
+}
+
+.sidebar{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100vh !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+
+body:not(.sidebarCollapsed) .sidebar{
+  width:var(--elta-sidebar-expanded) !important;
+  min-width:var(--elta-sidebar-expanded) !important;
+  max-width:var(--elta-sidebar-expanded) !important;
+  padding:14px 14px 12px !important;
+}
+body:not(.sidebarCollapsed) .dashboardShell{
+  margin-left:var(--elta-sidebar-expanded) !important;
+  width:calc(100vw - var(--elta-sidebar-expanded)) !important;
+  max-width:calc(100vw - var(--elta-sidebar-expanded)) !important;
+}
+body:not(.sidebarCollapsed) .brandBox{
+  flex:0 0 108px !important;
+  height:108px !important;
+  min-height:108px !important;
+  padding:4px 8px 12px !important;
+  margin:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:12px !important;
+  overflow:visible !important;
+}
+body:not(.sidebarCollapsed) .brandBox img{
+  display:block !important;
+  width:174px !important;
+  max-width:174px !important;
+  height:58px !important;
+  max-height:58px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+}
+body:not(.sidebarCollapsed) .brandDivider{
+  display:block !important;
+  width:86% !important;
+  height:1px !important;
+  min-height:1px !important;
+  margin:0 auto !important;
+  background:rgba(255,255,255,.68) !important;
+}
+
+.sideNav{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  scrollbar-width:thin !important;
+  scrollbar-color:rgba(78,180,55,.75) rgba(255,255,255,.05) !important;
+}
+.sideNav::-webkit-scrollbar{width:5px !important;}
+.sideNav::-webkit-scrollbar-thumb{background:rgba(78,180,55,.75) !important;border-radius:10px !important;}
+.sideNav::-webkit-scrollbar-track{background:rgba(255,255,255,.04) !important;}
+
+body:not(.sidebarCollapsed) .sideNav{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:3px !important;
+  margin:0 !important;
+  padding:2px 4px 8px 0 !important;
+}
+body:not(.sidebarCollapsed) .sideNav button{
+  flex:0 0 auto !important;
+  width:100% !important;
+  min-height:42px !important;
+  height:auto !important;
+  max-height:none !important;
+  padding:8px 10px !important;
+  margin:0 !important;
+  display:grid !important;
+  grid-template-columns:34px minmax(0,1fr) !important;
+  align-items:center !important;
+  justify-content:stretch !important;
+  gap:10px !important;
+  border-radius:12px !important;
+  overflow:visible !important;
+  text-align:left !important;
+  white-space:normal !important;
+}
+body:not(.sidebarCollapsed) .sideNav button .menuIcon{
+  display:inline-flex !important;
+  width:34px !important;
+  min-width:34px !important;
+  height:30px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:20px !important;
+  line-height:1 !important;
+}
+body:not(.sidebarCollapsed) .sideNav button .menuText{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:none !important;
+  overflow:visible !important;
+  text-overflow:clip !important;
+  white-space:normal !important;
+  word-break:normal !important;
+  line-height:1.13 !important;
+  font-size:14.5px !important;
+  font-weight:800 !important;
+}
+
+body:not(.sidebarCollapsed) .adminBox{
+  flex:0 0 auto !important;
+  margin-top:6px !important;
+  padding:9px 8px !important;
+}
+body:not(.sidebarCollapsed) .logoutBtn{
+  flex:0 0 38px !important;
+  min-height:38px !important;
+  margin-top:2px !important;
+}
+
+body.sidebarCollapsed .sidebar{
+  width:var(--elta-sidebar-collapsed) !important;
+  min-width:var(--elta-sidebar-collapsed) !important;
+  max-width:var(--elta-sidebar-collapsed) !important;
+  padding:12px 7px 10px !important;
+}
+body.sidebarCollapsed .dashboardShell{
+  margin-left:var(--elta-sidebar-collapsed) !important;
+  width:calc(100vw - var(--elta-sidebar-collapsed)) !important;
+  max-width:calc(100vw - var(--elta-sidebar-collapsed)) !important;
+}
+body.sidebarCollapsed .brandBox{
+  flex:0 0 76px !important;
+  width:64px !important;
+  height:76px !important;
+  min-height:76px !important;
+  padding:4px 0 10px !important;
+  margin:0 auto 4px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:visible !important;
+}
+body.sidebarCollapsed .brandBox img{
+  display:block !important;
+  width:62px !important;
+  max-width:62px !important;
+  height:48px !important;
+  max-height:48px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  clip-path:none !important;
+}
+body.sidebarCollapsed .brandDivider{display:none !important;}
+body.sidebarCollapsed .sideNav{
+  align-items:center !important;
+  gap:5px !important;
+  padding:0 !important;
+}
+body.sidebarCollapsed .sideNav button{
+  flex:0 0 46px !important;
+  width:58px !important;
+  min-width:58px !important;
+  max-width:58px !important;
+  height:46px !important;
+  min-height:46px !important;
+  max-height:46px !important;
+  padding:0 !important;
+  margin:0 auto !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:12px !important;
+  overflow:visible !important;
+}
+body.sidebarCollapsed .sideNav button .menuIcon{
+  display:inline-flex !important;
+  width:34px !important;
+  min-width:34px !important;
+  height:34px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:21px !important;
+  line-height:1 !important;
+}
+body.sidebarCollapsed .sideNav button .menuText,
+body.sidebarCollapsed .adminBox > div:not(.adminAvatar),
+body.sidebarCollapsed .logoutBtn{
+  display:none !important;
+}
+body.sidebarCollapsed .adminBox{
+  flex:0 0 auto !important;
+  justify-content:center !important;
+  padding:8px 0 !important;
+}
+
+@media(max-height:760px){
+  body:not(.sidebarCollapsed) .brandBox{flex-basis:88px !important;height:88px !important;min-height:88px !important;gap:8px !important;padding-bottom:8px !important;}
+  body:not(.sidebarCollapsed) .brandBox img{width:150px !important;height:48px !important;}
+  body:not(.sidebarCollapsed) .sideNav button{min-height:38px !important;padding:6px 9px !important;}
+  body:not(.sidebarCollapsed) .sideNav button .menuText{font-size:13.5px !important;}
+}

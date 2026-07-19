@@ -18124,3 +18124,100 @@ Localidad destino: ${destPlace}`))return;
   const oldTab=window.tab;window.tab=function(id){oldTab(id);if(id==='conformidad'){renderShipments();if(C.selected)loadDamages()}};
   window.confRenderEmbarques=renderShipments;window.confSeleccionarEmbarque=selectShipment;window.confPagina=n=>{C.page=n;renderShipments()};window.confGuardarDano=saveDamage;window.confLimpiarFormulario=clearForm;window.confVinCount=vinCount;window.confPrevisualizar=preview;window.confEditarDano=editDamage;window.confVerDano=viewDamage;window.confEliminarDano=deleteDamage;window.confExportarCSV=exportCSV;window.confGenerarPDF=pdf;
 })();
+
+/* ===== V3.3.61 - NORMALIZACION DEFINITIVA DEL MENU COMPLETO ===== */
+(function(){
+  'use strict';
+  const VERSION='3.3.61';
+  const MENU=[
+    ['dash','🏠','Torre de Control'],
+    ['transitos','🚚','Tránsitos'],
+    ['mapa','📍','Seguimiento'],
+    ['clima','🌦️','Clima'],
+    ['alertas','🔔','Alertas'],
+    ['embarques','📦','Embarques'],
+    ['entrega','🏁','Entregas'],
+    ['bitacora','📖','Bitácora Operativa'],
+    ['conformidad','🚙','Conformidad de entrega'],
+    ['unidades','🚛','Unidades / Choferes'],
+    ['clientes','🏢','Clientes / Destinos'],
+    ['abm','⚙️','Configuración']
+  ];
+  window.ELTA_APP_VERSION=VERSION;
+  window.APP_VERSION_V2=VERSION;
+
+  function findButton(nav,id){
+    return [...nav.querySelectorAll(':scope > button')].find(btn=>{
+      const onclick=btn.getAttribute('onclick')||'';
+      return btn.dataset.menuId===id || onclick.includes("tab('"+id+"')") || onclick.includes('tab("'+id+'")');
+    });
+  }
+
+  function ensureButton(nav,id,icon,label){
+    let btn=findButton(nav,id);
+    if(!btn){
+      btn=document.createElement('button');
+      btn.type='button';
+      btn.setAttribute('onclick',"tab('"+id+"')");
+    }
+    btn.dataset.menuId=id;
+    let iconEl=btn.querySelector(':scope > .menuIcon');
+    let textEl=btn.querySelector(':scope > .menuText');
+    if(!iconEl || !textEl){
+      const badges=[...btn.querySelectorAll('.sideAlertBadge,.badgeCount,.alertBadge,.topAlertCount')];
+      btn.innerHTML='<span class="menuIcon" aria-hidden="true"></span><span class="menuText"></span>';
+      badges.forEach(b=>btn.appendChild(b));
+      iconEl=btn.querySelector('.menuIcon');
+      textEl=btn.querySelector('.menuText');
+    }
+    iconEl.textContent=icon;
+    textEl.textContent=label;
+    btn.title=label;
+    btn.setAttribute('aria-label',label);
+    return btn;
+  }
+
+  function normalizeMenu(){
+    const nav=document.querySelector('.sideNav');
+    if(!nav) return;
+    const fragment=document.createDocumentFragment();
+    MENU.forEach(item=>fragment.appendChild(ensureButton(nav,item[0],item[1],item[2])));
+    nav.appendChild(fragment);
+    document.querySelectorAll('.brandBox img').forEach(img=>{
+      img.src='assets/logo-elta.png';
+      img.alt='ELTA';
+      img.removeAttribute('width');
+      img.removeAttribute('height');
+    });
+    document.querySelectorAll('span,small,p,footer,div').forEach(el=>{
+      if(el.childElementCount===0 && /Versi[oó]n\s+\d+\.\d+\.\d+/i.test(el.textContent||'')){
+        el.textContent=(el.textContent||'').replace(/Versi[oó]n\s+\d+\.\d+\.\d+/gi,'Versión '+VERSION);
+      }
+    });
+    document.title='ELTA ITS - Versión '+VERSION;
+  }
+
+  let scheduled=false;
+  function scheduleNormalize(){
+    if(scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(()=>{scheduled=false;normalizeMenu();});
+  }
+
+  const previousToggle=window.toggleSidebar;
+  window.toggleSidebar=function(){
+    document.body.classList.toggle('sidebarCollapsed');
+    scheduleNormalize();
+  };
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    normalizeMenu();
+    const nav=document.querySelector('.sideNav');
+    if(nav){
+      new MutationObserver(scheduleNormalize).observe(nav,{childList:true,subtree:false});
+    }
+  });
+  window.addEventListener('load',normalizeMenu);
+  setTimeout(normalizeMenu,150);
+  setTimeout(normalizeMenu,800);
+})();
